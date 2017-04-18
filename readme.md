@@ -1,5 +1,5 @@
 jonnowitts.com Version 2017
-The time has come again for a fresh new design and code build-out of jonnowitts.com. This time I'll be using Git along the way to document the progress as I go.
+The time has come again for a fresh new design and code build-out of jonnowitts.com. This time I'll be using Git along the way to document the progress as I go. I think this is probably version 3 or 4, although not all versions of my site have made it to the web so in reality this is probably version 6.
 
 The current roadmap is:
 - v1 Flat HTML structure, basic pages, no blog
