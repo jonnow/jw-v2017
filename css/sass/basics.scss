@@ -1,0 +1,120 @@
+// Colours
+$primary_teal: #14B4B5;
+$primary_orange: #F57F3F;
+$primary_black: #373331;
+$primary_white: #F0F0F0;
+
+$tertiary_dull_blue: #4870CB;
+$tertiary_dull_yellow: #FFC247;
+$tertiary_dull_red: #FF4747;
+
+$tertiary_bright_blue: #16C1F3;
+$tertiary_bright_yellow: #FFB31C;
+$tertiary_bright_red: #FF1C1C;
+
+
+// Fonts
+$primary_font: 'Woodford Bourne', 'Futura', 'Helvetica', 'Arial', sans-serif;
+
+@font-face {
+    font-family: 'Woodford Bourne';
+    src: url(fonts/woodfordbourne-regular.otf);
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Woodford Bourne';
+    src: url(fonts/woodfordbourne-bold.otf);
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'Woodford Bourne';
+    src: url(fonts/woodfordbourne-regular.otf);
+    font-weight: italic;
+}
+
+//$secondary_font: 'Aleo', 'Adelle', 'Georgia', serif;
+
+@mixin mixin_h1 {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+@mixin mixin_p {
+    font-family: $primary_font;
+}
+
+// Resets
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+html {
+    font-size: 10px;
+}
+body {
+    line-height:1;
+    font-family: $primary_font;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section { 
+    display:block;
+}
+
+nav ul {
+    list-style:none;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+/* change border colour to suit your needs */
+hr {
+    display:block;
+    height:1px;
+    border:0;   
+    border-top:1px solid $primary_white;
+    margin:1em 0;
+    padding:0;
+}
+
+input, select {
+    vertical-align:middle;
+}
+
+*, *:before, *:after {
+    box-sizing: border-box;
+}

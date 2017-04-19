@@ -1,0 +1,111 @@
+@font-face {
+  font-family: 'Woodford Bourne';
+  src: url(fonts/woodfordbourne-regular.otf);
+  font-weight: normal; }
+@font-face {
+  font-family: 'Woodford Bourne';
+  src: url(fonts/woodfordbourne-bold.otf);
+  font-weight: bold; }
+@font-face {
+  font-family: 'Woodford Bourne';
+  src: url(fonts/woodfordbourne-regular.otf);
+  font-weight: italic; }
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent; }
+
+html {
+  font-size: 10px; }
+
+body {
+  line-height: 1;
+  font-family: "Woodford Bourne", "Futura", "Helvetica", "Arial", sans-serif; }
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+nav ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent; }
+
+/* change border colour to suit your needs */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #F0F0F0;
+  margin: 1em 0;
+  padding: 0; }
+
+input, select {
+  vertical-align: middle; }
+
+*, *:before, *:after {
+  box-sizing: border-box; }
+
+.home {
+  position: relative; }
+  .home h1 {
+    font-weight: bold;
+    text-transform: uppercase; }
+  .home p {
+    font-family: "Woodford Bourne", "Futura", "Helvetica", "Arial", sans-serif; }
+  .home header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    font-size: 3.2rem;
+    height: 100px;
+    width: 100%;
+    padding-top: 3.2rem;
+    padding-bottom: 3.2rem;
+    padding-left: 3.2rem;
+    padding-right: 3.2rem; }
+    .home header a {
+      color: #F0F0F0;
+      text-decoration: none;
+      font-weight: bold;
+      text-transform: uppercase; }
+    .home header nav a {
+      margin-left: 8.5rem; }
+  .home main {
+    height: 100vh;
+    width: 100%;
+    background-color: #14B4B5;
+    color: #F0F0F0;
+    padding-top: 100px; }
+
+/*# sourceMappingURL=main.css.map */
