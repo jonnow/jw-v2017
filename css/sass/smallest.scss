@@ -24,12 +24,12 @@ $font_large_standard: 2.4rem;
 
 body {
     letter-spacing: 0.03rem;
+    overflow-x: hidden;
 }
 
 // Home
 .home {
     position: relative;
-    overflow-x: hidden;
     h1 {
         @include mixin_title;
     }

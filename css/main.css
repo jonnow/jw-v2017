@@ -167,11 +167,11 @@ input, select {
   color: #373331; }
 
 body {
-  letter-spacing: 0.03rem; }
+  letter-spacing: 0.03rem;
+  overflow-x: hidden; }
 
 .home {
-  position: relative;
-  overflow-x: hidden; }
+  position: relative; }
   .home h1 {
     font-weight: bold;
     text-transform: uppercase; }
