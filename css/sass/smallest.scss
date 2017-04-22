@@ -1,0 +1,161 @@
+@import 'basics.scss'; // REMOVE BEFORE COMPLETE
+
+$padding_smallest: 1.5rem;
+$padding_standard: 3.2rem;
+
+$margin_smallest: 1.5rem;
+
+$font_smallest_header: 2.2rem;
+$font_smallest_menuSpan: 1.2rem;
+$font_smallest_p: 2.1rem;
+$font_smallest_footer: 1.7rem;
+$font_large_standard: 2.4rem;
+
+@mixin wrap_padding {
+    padding-left: $padding_standard;
+    padding-right: $padding_standard;
+}
+
+@mixin full_padding {
+    padding-top: $padding_standard;
+    padding-bottom: $padding_standard;
+    @include wrap_padding;
+}
+
+body {
+    letter-spacing: 0.03rem;
+}
+
+// Home
+.home {
+    position: relative;
+    overflow-x: hidden;
+    h1 {
+        @include mixin_title;
+    }
+
+    p {
+        @include mixin_p;
+        font-size: $font_smallest_p;
+        line-height: 150%;
+        margin-bottom: $margin_smallest * 2;
+    }
+
+    // header {
+    //     position: fixed;
+    //     top: 0;
+    //     left: 0;
+    //     display: flex;
+    //     justify-content: space-between;
+
+    //     font-size: 3.2rem;
+
+    //     height: 100px;
+    //     width: 100%;
+    //     @include full_padding;
+
+    //     nav a {
+    //         margin-left: 8.5rem;
+    //     }
+    // }
+
+    main {
+       background-color: $primary_teal;
+       color: $primary_white;
+       padding-top: 10rem;
+    }
+}
+
+header {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+
+    background-color: transparent;
+
+    width: 100%;
+    padding: $padding_smallest;
+    
+    h1 {
+        font-size: $font_smallest_header;
+    }
+
+    a {
+        text-decoration: none;
+        
+    }
+    
+    span.menu-control-open, 
+    span.menu-control-close,
+    nav, 
+    a {
+        @include mixin_title;
+        color: $primary_white;
+    }
+
+    span.menu-control-open, 
+    span.menu-control-close,
+    nav a { 
+        font-size: $font_smallest_header;
+        margin-bottom: $margin_smallest;
+    }
+    
+    span.menu-control-open {
+        font-size: $font_smallest_menuSpan;
+        line-height: 150%;
+    }
+
+    span.menu-control-open,
+    span.menu-control-close {
+        display: block;
+        cursor: pointer;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: column;
+        
+        a {
+        }
+    }
+}
+
+.menu {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100vh;
+
+    background-color: $primary_orange;
+    color: $primary_white;  
+
+    width: 80%;
+    padding: $padding_smallest;
+    transform: translate3d(100%, 0, 0);
+    transition: transform .3s ease;
+}
+
+.menu--active {
+    overflow-y: hidden;
+    .menu {
+        transform: translate3d(0,0,0);
+    }
+}
+
+main {
+    padding-left: $padding_smallest;
+    padding-right: $padding_smallest;
+    section {
+        min-height: 100vh;
+    }
+}
+
+footer {
+    background-color: $primary_black;
+    color: $primary_white;
+    text-align: center;
+    @include mixin_title;
+    font-size: $font_smallest_footer;
+    padding-top: $padding_standard;
+    padding-bottom: $padding_standard;
+}

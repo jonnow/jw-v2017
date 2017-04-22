@@ -15,18 +15,22 @@
 
         <link rel="stylesheet" href="css/main.css" />
     </head>
-    <body class="home">
+    <body id="body" class="home">
         <header>
             <h1><a href="/">Jonno Witts</a></h1>
-            <nav>
-                <a href="#">Work</a>
-                <a href="#">Notes</a>
-                <a href="#">Info</a>
-            </nav>
+            <span class="menu-control-open" id="menuControlOpen">Menu</span>
+            <div class="menu">
+                <span class="menu-control-close" id="menuControlClose">Close</span>
+                <nav>
+                    <a href="#">Work</a>
+                    <a href="#">Notes</a>
+                    <a href="#">Info</a>
+                </nav>
+            </div>
         </header>
         <main>
             <section class="intro">
-                <p>I’m [NAME]. A full-stack developer with a particular fondness for user experience and front-end development.</p>
+                <p>I’m Jonno Witts. A full-stack developer with a particular fondness for user experience and front-end development.</p>
                 <p>I’m currently building the systems that support medical trials at the University of York.</p>
                 <span class="version">2017.0.1</span>
                 <span class="madeIn">Made in England</span>
@@ -56,5 +60,20 @@
             </section>
         </main>
         <footer>&copy; 2017 Jonno Witts</footer>
+        <script>
+            var body = document.body;
+            var openMenu = document.getElementById('menuControlOpen'); // or whatever triggers the toggle
+            var closeMenu = document.getElementById('menuControlClose'); // or whatever triggers the toggle
+
+            openMenu.addEventListener('click', function(e) {
+               body.classList.toggle('menu--active'); // or whatever your active class is
+            });
+
+             closeMenu.addEventListener('click', function(e) {
+                body.classList.toggle('menu--active'); // or whatever your active class is
+            });
+
+
+        </script>
     </body>
 </html>

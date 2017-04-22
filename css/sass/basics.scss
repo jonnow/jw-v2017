@@ -18,25 +18,25 @@ $primary_font: 'Woodford Bourne', 'Futura', 'Helvetica', 'Arial', sans-serif;
 
 @font-face {
     font-family: 'Woodford Bourne';
-    src: url(fonts/woodfordbourne-regular.otf);
+    src: url(../fonts/woodfordbourne-regular.otf);
     font-weight: normal;
 }
 
 @font-face {
     font-family: 'Woodford Bourne';
-    src: url(fonts/woodfordbourne-bold.otf);
+    src: url(../fonts/woodfordbourne-bold.otf);
     font-weight: bold;
 }
 
 @font-face {
     font-family: 'Woodford Bourne';
-    src: url(fonts/woodfordbourne-regular.otf);
+    src: url(../fonts/woodfordbourne-regular.otf);
     font-weight: italic;
 }
 
 //$secondary_font: 'Aleo', 'Adelle', 'Georgia', serif;
 
-@mixin mixin_h1 {
+@mixin mixin_title {
     font-weight: bold;
     text-transform: uppercase;
 }
@@ -117,4 +117,13 @@ input, select {
 
 *, *:before, *:after {
     box-sizing: border-box;
+}
+
+::-moz-selection {
+    background: lighten($tertiary_dull_red, 5%);
+    color: $primary_black;
+}
+::selection {
+    background: lighten($tertiary_dull_red, 5%);
+    color: $primary_black;
 }
