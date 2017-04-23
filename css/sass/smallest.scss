@@ -24,7 +24,11 @@ $font_large_standard: 2.4rem;
 
 body {
     letter-spacing: 0.03rem;
-    overflow-x: hidden;
+    width: 100%;
+}
+
+.wrapper {
+    overflow: hidden;
 }
 
 // Home
@@ -41,24 +45,6 @@ body {
         margin-bottom: $margin_smallest * 2;
     }
 
-    // header {
-    //     position: fixed;
-    //     top: 0;
-    //     left: 0;
-    //     display: flex;
-    //     justify-content: space-between;
-
-    //     font-size: 3.2rem;
-
-    //     height: 100px;
-    //     width: 100%;
-    //     @include full_padding;
-
-    //     nav a {
-    //         margin-left: 8.5rem;
-    //     }
-    // }
-
     main {
        background-color: $primary_teal;
        color: $primary_white;
@@ -68,16 +54,15 @@ body {
 
 header {
     position: absolute;
-    display: flex;
-    justify-content: space-between;
+    overflow: hidden;
 
     background-color: transparent;
-
+    
     width: 100%;
     padding: $padding_smallest;
-    
     h1 {
         font-size: $font_smallest_header;
+        float: left;
     }
 
     a {
@@ -103,6 +88,7 @@ header {
     span.menu-control-open {
         font-size: $font_smallest_menuSpan;
         line-height: 150%;
+        float: right;
     }
 
     span.menu-control-open,
@@ -114,31 +100,29 @@ header {
     nav {
         display: flex;
         flex-direction: column;
-        
-        a {
-        }
     }
 }
 
 .menu {
-    position: absolute;
-    right: 0;
-    top: 0;
+    position: relative;
     height: 100vh;
+    width: 80%;
 
     background-color: $primary_orange;
     color: $primary_white;  
 
-    width: 80%;
     padding: $padding_smallest;
-    transform: translate3d(100%, 0, 0);
+    margin-top: -$margin_smallest;
+    
+    transform: translate3d(135%, 0, 0);
     transition: transform .3s ease;
 }
 
 .menu--active {
-    overflow-y: hidden;
+    height: 100vh;
+    overflow: hidden;
     .menu {
-        transform: translate3d(0,0,0);
+        transform: translate3d(35%,0,0);
     }
 }
 

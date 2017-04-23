@@ -168,7 +168,10 @@ input, select {
 
 body {
   letter-spacing: 0.03rem;
-  overflow-x: hidden; }
+  width: 100%; }
+
+.wrapper {
+  overflow: hidden; }
 
 .home {
   position: relative; }
@@ -187,13 +190,13 @@ body {
 
 header {
   position: absolute;
-  display: flex;
-  justify-content: space-between;
+  overflow: hidden;
   background-color: transparent;
   width: 100%;
   padding: 1.5rem; }
   header h1 {
-    font-size: 2.2rem; }
+    font-size: 2.2rem;
+    float: left; }
   header a {
     text-decoration: none; }
   header span.menu-control-open,
@@ -210,7 +213,8 @@ header {
     margin-bottom: 1.5rem; }
   header span.menu-control-open {
     font-size: 1.2rem;
-    line-height: 150%; }
+    line-height: 150%;
+    float: right; }
   header span.menu-control-open,
   header span.menu-control-close {
     display: block;
@@ -220,21 +224,21 @@ header {
     flex-direction: column; }
 
 .menu {
-  position: absolute;
-  right: 0;
-  top: 0;
+  position: relative;
   height: 100vh;
+  width: 80%;
   background-color: #F57F3F;
   color: #F0F0F0;
-  width: 80%;
   padding: 1.5rem;
-  transform: translate3d(100%, 0, 0);
+  margin-top: -1.5rem;
+  transform: translate3d(135%, 0, 0);
   transition: transform .3s ease; }
 
 .menu--active {
-  overflow-y: hidden; }
+  height: 100vh;
+  overflow: hidden; }
   .menu--active .menu {
-    transform: translate3d(0, 0, 0); }
+    transform: translate3d(35%, 0, 0); }
 
 main {
   padding-left: 1.5rem;
