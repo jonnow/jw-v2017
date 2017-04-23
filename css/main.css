@@ -186,7 +186,11 @@ body {
   .home main {
     background-color: #14B4B5;
     color: #F0F0F0;
-    padding-top: 10rem; }
+    padding-top: 6rem; }
+    .home main .intro img {
+      display: block;
+      width: 55%;
+      margin: 0 auto 1.5rem; }
 
 header {
   position: absolute;

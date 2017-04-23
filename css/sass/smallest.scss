@@ -48,7 +48,14 @@ body {
     main {
        background-color: $primary_teal;
        color: $primary_white;
-       padding-top: 10rem;
+       padding-top: 6rem;
+       .intro {
+           img {
+               display: block;
+               width: 55%;
+               margin: 0 auto 1.5rem;
+           }
+       }
     }
 }
 
