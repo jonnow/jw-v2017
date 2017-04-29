@@ -7,7 +7,8 @@ $margin_smallest: 1.5rem;
 
 $font_smallest_header: 2.2rem;
 $font_smallest_menuSpan: 1.2rem;
-$font_smallest_p: 2.1rem;
+$font_smallest_p: 1.9rem;
+$font_smallest_footNote: 1.2rem;
 $font_smallest_footer: 1.7rem;
 $font_large_standard: 2.4rem;
 
@@ -123,6 +124,16 @@ header {
     
     transform: translate3d(135%, 0, 0);
     transition: transform .3s ease;
+
+    .version, .madeIn {
+        position: absolute;
+        bottom: $margin_smallest;
+        font-size: $font_smallest_footNote;
+    }
+
+    .madeIn {
+        right: $margin_smallest;
+    }
 }
 
 .menu--active {
@@ -139,6 +150,13 @@ main {
     section {
         min-height: 100vh;
     }
+}
+
+.scroll {
+    display: block;
+    text-align: center;
+    width: 50%;
+    margin: 0 auto;
 }
 
 footer {
