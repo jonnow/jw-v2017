@@ -51,6 +51,8 @@ body {
        color: $primary_white;
        padding-top: 5rem;
        .intro {
+           padding-left: $padding_smallest;
+           padding-right: $padding_smallest;
            img {
                display: block;
                width: 55%;
