@@ -21,14 +21,16 @@
                 <h1><a href="/">Jonno Witts</a></h1>
                 <span class="menu-control-open" id="menuControlOpen">Menu</span>
                 <div class="menu">
-                    <span class="menu-control-close" id="menuControlClose">Close</span>
-                    <nav>
-                        <a href="#">Work</a>
-                        <a href="#">Notes</a>
-                        <a href="#">Info</a>
-                    </nav>
-                    <span class="version">2017.0.1</span>
-                    <span class="madeIn">Made in England</span>
+                    <div class="menu-inner">
+                        <span class="menu-control-close" id="menuControlClose">Close</span>
+                        <nav>
+                            <a href="#">Work</a>
+                            <a href="#">Notes</a>
+                            <a href="#">Info</a>
+                        </nav>
+                        <span class="version">2017.0.1</span>
+                        <span class="madeIn">Made in England</span>
+                    </div>
                 </div>
             </header>
             <main>
@@ -39,11 +41,13 @@
                     <a href="#" class="scroll"><i class="fa fa-chevron-down"></i>Down</a>
                 </section>
                 <section class="featured">
-                    <div class="projectWrapper">
+                    <div class="projectWrapper blue">
                         <h2>So, Which Band is your Boyfriend In?</h2>
                         <div class="mobileProject">
                             <picture>
-                                <source srcset="images/projects/min720/swbiybi_mobile.png" media="(min-width: 780px)">
+                                <source srcset="images/projects/swbiybi_mobile@0.5x.png" media="(min-width: 320px)">
+                                <source srcset="images/projects/swbiybi_mobile@0.75x.png" media="(min-width: 640px)">
+                                <source srcset="images/projects/swbiybi_mobile.png" media="(min-width: 780px)">
                                 <img src="images/projects/swbiybi_mobile.png" alt="A screenshot of the 'So, Which Band is your Boyfriend In?' homepage as it appears on a mobile device." />
                             </picture>
                         </div>
@@ -52,7 +56,7 @@
                         <span>Design, development, Wordpress</span>
                         <span>2017</span>
                     </div>
-                    <div class="projectWrapper">
+                    <div class="projectWrapper orange">
                         <h2>[PROJECT NAME]</h2>
                         <p>Duis pharetra ipsum magna, nec sodales metus iaculis at. Etiam sagittis sit amet risus et consectetur.</p>
                         <p>Morbi aliquam non lacus ac posuere. Donec blandit justo eu enim lobortis vehicula. Donec rutrum dolor nec turpis dapibus malesuada.</p>

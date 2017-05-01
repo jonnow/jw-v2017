@@ -43,13 +43,13 @@ body {
         @include mixin_p;
         font-size: $font_smallest_p;
         line-height: 150%;
-        margin-bottom: $margin_smallest * 2;
+        margin-bottom: $margin_smallest;
     }
 
     main {
        background-color: $primary_teal;
        color: $primary_white;
-       padding-top: 6rem;
+       padding-top: 5rem;
        .intro {
            img {
                display: block;
@@ -62,11 +62,12 @@ body {
 
 header {
     position: absolute;
-    overflow: hidden;
+    overflow: visible;
 
     background-color: transparent;
     
     width: 100%;
+    height: 5rem;
     padding: $padding_smallest;
     h1 {
         font-size: $font_smallest_header;
@@ -92,6 +93,12 @@ header {
         font-size: $font_smallest_header;
         margin-bottom: $margin_smallest;
     }
+
+    span.menu-control-open,
+    span.menu-control-close {
+        display: block;
+        cursor: pointer;
+    }
     
     span.menu-control-open {
         font-size: $font_smallest_menuSpan;
@@ -99,11 +106,10 @@ header {
         float: right;
     }
 
-    span.menu-control-open,
-    span.menu-control-close {
-        display: block;
-        cursor: pointer;
-    }
+   span.menu-control-close {
+       font-size: $font_smallest_menuSpan;
+       text-align: right;
+   }
 
     nav {
         display: flex;
@@ -112,18 +118,25 @@ header {
 }
 
 .menu {
-    position: relative;
-    height: 100vh;
-    width: 80%;
+    position: absolute;
+    right: 0;
+    top: 0;
 
-    background-color: $primary_orange;
+    background-color: $primary_black;
     color: $primary_white;  
 
-    padding: $padding_smallest;
-    margin-top: -$margin_smallest;
+    height: 100vh;
+    width: 0;
+    overflow: hidden;
     
-    transform: translate3d(135%, 0, 0);
-    transition: transform .3s ease;
+    transition: all .3s ease;
+    
+    .menu-inner {
+        position: relative;
+        height: 100%;
+        width: 80vw;
+        padding: $padding_smallest;
+    }
 
     .version, .madeIn {
         position: absolute;
@@ -131,7 +144,7 @@ header {
         font-size: $font_smallest_footNote;
     }
 
-    .madeIn {
+    .version {
         right: $margin_smallest;
     }
 }
@@ -139,16 +152,61 @@ header {
 .menu--active {
     height: 100vh;
     overflow: hidden;
+    
     .menu {
-        transform: translate3d(35%,0,0);
+        width: 80%;
     }
 }
 
 main {
-    padding-left: $padding_smallest;
-    padding-right: $padding_smallest;
     section {
-        min-height: 100vh;
+        .projectWrapper {
+            min-height: 100vh;
+            padding: $padding_smallest;
+            
+
+            h2 {
+                font-size: $font_smallest_header;
+                line-height: 130%;
+            }
+
+            h2, .mobileProject {
+                margin-bottom: $margin_smallest;
+            }
+
+            .mobileProject {
+                display: flex;
+                background: url('../images/phone.svg') no-repeat 0 0;
+                background-size: cover;
+                height: 80.5vh;
+                width: 66%;
+                margin: 0 auto $margin_smallest;
+                padding: 5rem 1rem 3.5rem;
+                picture {
+                    border: 2px solid $primary_white;
+                }
+
+                img, source {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+            span {
+                font-size: $font_smallest_footNote;
+                &:last-of-type {
+                    float: right;
+                }
+            }
+            
+            &.blue {
+                background-color: $tertiary_dull_blue;
+            }
+
+            &.orange {
+                background-color: $primary_orange;
+            }
+        }
     }
 }
 
@@ -156,7 +214,7 @@ main {
     display: block;
     text-align: center;
     width: 50%;
-    margin: 0 auto;
+    margin: 0 auto $margin_smallest;
 }
 
 footer {

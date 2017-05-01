@@ -182,11 +182,11 @@ body {
     font-family: "Woodford Bourne", "Futura", "Helvetica", "Arial", sans-serif;
     font-size: 1.9rem;
     line-height: 150%;
-    margin-bottom: 3rem; }
+    margin-bottom: 1.5rem; }
   .home main {
     background-color: #14B4B5;
     color: #F0F0F0;
-    padding-top: 6rem; }
+    padding-top: 5rem; }
     .home main .intro img {
       display: block;
       width: 55%;
@@ -194,9 +194,10 @@ body {
 
 header {
   position: absolute;
-  overflow: hidden;
+  overflow: visible;
   background-color: transparent;
   width: 100%;
+  height: 5rem;
   padding: 1.5rem; }
   header h1 {
     font-size: 2.2rem;
@@ -215,52 +216,84 @@ header {
   header nav a {
     font-size: 2.2rem;
     margin-bottom: 1.5rem; }
-  header span.menu-control-open {
-    font-size: 1.2rem;
-    line-height: 150%;
-    float: right; }
   header span.menu-control-open,
   header span.menu-control-close {
     display: block;
     cursor: pointer; }
+  header span.menu-control-open {
+    font-size: 1.2rem;
+    line-height: 150%;
+    float: right; }
+  header span.menu-control-close {
+    font-size: 1.2rem;
+    text-align: right; }
   header nav {
     display: flex;
     flex-direction: column; }
 
 .menu {
-  position: relative;
-  height: 100vh;
-  width: 80%;
-  background-color: #F57F3F;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: #373331;
   color: #F0F0F0;
-  padding: 1.5rem;
-  margin-top: -1.5rem;
-  transform: translate3d(135%, 0, 0);
-  transition: transform .3s ease; }
+  height: 100vh;
+  width: 0;
+  overflow: hidden;
+  transition: all .3s ease; }
+  .menu .menu-inner {
+    position: relative;
+    height: 100%;
+    width: 80vw;
+    padding: 1.5rem; }
   .menu .version, .menu .madeIn {
     position: absolute;
     bottom: 1.5rem;
     font-size: 1.2rem; }
-  .menu .madeIn {
+  .menu .version {
     right: 1.5rem; }
 
 .menu--active {
   height: 100vh;
   overflow: hidden; }
   .menu--active .menu {
-    transform: translate3d(35%, 0, 0); }
+    width: 80%; }
 
-main {
-  padding-left: 1.5rem;
-  padding-right: 1.5rem; }
-  main section {
-    min-height: 100vh; }
+main section .projectWrapper {
+  min-height: 100vh;
+  padding: 1.5rem; }
+  main section .projectWrapper h2 {
+    font-size: 2.2rem;
+    line-height: 130%; }
+  main section .projectWrapper h2, main section .projectWrapper .mobileProject {
+    margin-bottom: 1.5rem; }
+  main section .projectWrapper .mobileProject {
+    display: flex;
+    background: url("../images/phone.svg") no-repeat 0 0;
+    background-size: cover;
+    height: 80.5vh;
+    width: 66%;
+    margin: 0 auto 1.5rem;
+    padding: 5rem 1rem 3.5rem; }
+    main section .projectWrapper .mobileProject picture {
+      border: 2px solid #F0F0F0; }
+    main section .projectWrapper .mobileProject img, main section .projectWrapper .mobileProject source {
+      width: 100%;
+      height: 100%; }
+  main section .projectWrapper span {
+    font-size: 1.2rem; }
+    main section .projectWrapper span:last-of-type {
+      float: right; }
+  main section .projectWrapper.blue {
+    background-color: #4870CB; }
+  main section .projectWrapper.orange {
+    background-color: #F57F3F; }
 
 .scroll {
   display: block;
   text-align: center;
   width: 50%;
-  margin: 0 auto; }
+  margin: 0 auto 1.5rem; }
 
 footer {
   background-color: #373331;
