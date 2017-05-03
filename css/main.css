@@ -274,10 +274,10 @@ main section .projectWrapper {
     display: flex;
     background: url("../images/phone.svg") no-repeat 0 0;
     background-size: cover;
-    height: 80.5vh;
-    width: 66%;
+    height: 82vh;
+    width: 72vw;
     margin: 0 auto 1.5rem;
-    padding: 5rem 1rem 3.5rem; }
+    padding: 10vh 1rem 7vh; }
     main section .projectWrapper .mobileProject picture {
       border: 2px solid #F0F0F0; }
     main section .projectWrapper .mobileProject img, main section .projectWrapper .mobileProject source {
@@ -307,5 +307,261 @@ footer {
   font-size: 1.7rem;
   padding-top: 3.2rem;
   padding-bottom: 3.2rem; }
+
+@font-face {
+  font-family: 'Woodford Bourne';
+  src: url(../fonts/woodfordbourne-regular.otf);
+  font-weight: normal; }
+@font-face {
+  font-family: 'Woodford Bourne';
+  src: url(../fonts/woodfordbourne-bold.otf);
+  font-weight: bold; }
+@font-face {
+  font-family: 'Woodford Bourne';
+  src: url(../fonts/woodfordbourne-regular.otf);
+  font-weight: italic; }
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent; }
+
+html {
+  font-size: 10px; }
+
+body {
+  line-height: 1;
+  font-family: "Woodford Bourne", "Futura", "Helvetica", "Arial", sans-serif; }
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+nav ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent; }
+
+/* change border colour to suit your needs */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #F0F0F0;
+  margin: 1em 0;
+  padding: 0; }
+
+input, select {
+  vertical-align: middle; }
+
+*, *:before, *:after {
+  box-sizing: border-box; }
+
+::-moz-selection {
+  background: #ff6060;
+  color: #373331; }
+
+::selection {
+  background: #ff6060;
+  color: #373331; }
+
+body {
+  letter-spacing: 0.03rem;
+  width: 100%; }
+
+.wrapper {
+  overflow: hidden; }
+
+.home {
+  position: relative; }
+  .home h1 {
+    font-weight: bold;
+    text-transform: uppercase; }
+  .home p {
+    font-family: "Woodford Bourne", "Futura", "Helvetica", "Arial", sans-serif;
+    font-size: 1.9rem;
+    line-height: 150%;
+    margin-bottom: 1.5rem; }
+  .home main {
+    background-color: #14B4B5;
+    color: #F0F0F0;
+    padding-top: 5rem; }
+    .home main .intro {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem; }
+      .home main .intro img {
+        display: block;
+        width: 55%;
+        margin: 0 auto 1.5rem; }
+
+header {
+  position: absolute;
+  overflow: visible;
+  background-color: transparent;
+  width: 100%;
+  height: 5rem;
+  padding: 1.5rem; }
+  header h1 {
+    font-size: 2.2rem;
+    float: left; }
+  header a {
+    text-decoration: none; }
+  header span.menu-control-open,
+  header span.menu-control-close,
+  header nav,
+  header a {
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #F0F0F0; }
+  header span.menu-control-open,
+  header span.menu-control-close,
+  header nav a {
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem; }
+  header span.menu-control-open,
+  header span.menu-control-close {
+    display: block;
+    cursor: pointer; }
+  header span.menu-control-open {
+    font-size: 1.2rem;
+    line-height: 150%;
+    float: right; }
+  header span.menu-control-close {
+    font-size: 1.2rem;
+    text-align: right; }
+  header nav {
+    display: flex;
+    flex-direction: column; }
+
+.menu {
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: #373331;
+  color: #F0F0F0;
+  height: 100vh;
+  width: 0;
+  overflow: hidden;
+  transition: all .3s ease; }
+  .menu .menu-inner {
+    position: relative;
+    height: 100%;
+    width: 80vw;
+    padding: 1.5rem; }
+  .menu .version, .menu .madeIn {
+    position: absolute;
+    bottom: 1.5rem;
+    font-size: 1.2rem; }
+  .menu .version {
+    right: 1.5rem; }
+
+.menu--active {
+  height: 100vh;
+  overflow: hidden; }
+  .menu--active .menu {
+    width: 80%; }
+
+main section .projectWrapper {
+  min-height: 100vh;
+  padding: 1.5rem; }
+  main section .projectWrapper h2 {
+    font-size: 2.2rem;
+    line-height: 130%; }
+  main section .projectWrapper h2, main section .projectWrapper .mobileProject {
+    margin-bottom: 1.5rem; }
+  main section .projectWrapper .mobileProject {
+    display: flex;
+    background: url("../images/phone.svg") no-repeat 0 0;
+    background-size: cover;
+    height: 82vh;
+    width: 72vw;
+    margin: 0 auto 1.5rem;
+    padding: 10vh 1rem 7vh; }
+    main section .projectWrapper .mobileProject picture {
+      border: 2px solid #F0F0F0; }
+    main section .projectWrapper .mobileProject img, main section .projectWrapper .mobileProject source {
+      width: 100%;
+      height: 100%; }
+  main section .projectWrapper span {
+    font-size: 1.2rem; }
+    main section .projectWrapper span:last-of-type {
+      float: right; }
+  main section .projectWrapper.blue {
+    background-color: #4870CB; }
+  main section .projectWrapper.orange {
+    background-color: #F57F3F; }
+
+.scroll {
+  display: block;
+  text-align: center;
+  width: 50%;
+  margin: 0 auto 1.5rem; }
+
+footer {
+  background-color: #373331;
+  color: #F0F0F0;
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 1.7rem;
+  padding-top: 3.2rem;
+  padding-bottom: 3.2rem; }
+
+@media screen and (min-width: 768px) {
+  .menu--active .menu {
+    width: 40%; }
+    .menu--active .menu .menu-inner {
+      width: 40vw; }
+
+  .home main {
+    background-color: #14B4B5;
+    color: #F0F0F0;
+    padding-top: 7rem; }
+    .home main .intro {
+      display: grid;
+      grid-template-columns: 50% 45%;
+      grid-gap: 5%;
+      padding-left: 6rem;
+      padding-right: 5rem;
+      height: 50vh; }
+      .home main .intro .grid-p {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        grid-column: 1;
+        grid-row: 1;
+        padding-top: 2rem; }
+      .home main .intro img {
+        grid-column: 2;
+        grid-row: 1;
+        width: 90%;
+        margin-bottom: 0; } }
 
 /*# sourceMappingURL=main.css.map */

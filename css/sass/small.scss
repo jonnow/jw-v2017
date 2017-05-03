@@ -1,0 +1,56 @@
+@import 'smallest.scss';
+
+$padding_tablet: 4rem;
+$margin_tablet: 4rem;
+
+$font_smallest_header: 2.2rem;
+$font_smallest_menuSpan: 1.2rem;
+$font_smallest_p: 1.9rem;
+$font_smallest_footNote: 1.2rem;
+$font_smallest_footer: 1.7rem;
+
+
+@media screen and (min-width: 768px) {
+
+        // TODO: Update padding sizes
+    
+
+    .menu--active {   
+        .menu {
+            width: 40%;
+            .menu-inner {
+                width: 40vw;
+            }
+        }
+    }
+
+    .home main {
+       background-color: $primary_teal;
+       color: $primary_white;
+       padding-top: 7rem;
+       .intro {
+           display: grid;
+           grid-template-columns: 50% 45%;
+           grid-gap: 5%;
+
+           padding-left: $padding_tablet + 2;
+           padding-right: $padding_tablet + 1;
+           height: 50vh;
+           .grid-p {
+               display: flex;
+               flex-direction: column;
+               justify-content: center;
+               grid-column: 1;
+               grid-row: 1;
+               padding-top: $padding_tablet - 2;
+           }
+           img {
+               grid-column: 2;
+               grid-row: 1;
+
+               width: 90%;
+               margin-bottom: 0;
+           }
+       }
+    }
+}
