@@ -576,24 +576,37 @@ footer {
     background-color: #14B4B5;
     color: #F0F0F0;
     padding-top: 7rem; }
-    .home main .intro {
+    .home main .intro, .home main .projectWrapper {
       display: grid;
       grid-template-columns: 50% 45%;
       grid-gap: 5%;
       align-items: center;
       padding-left: 6rem;
       padding-right: 5rem;
-      height: 50vh; }
-      .home main .intro .grid-p {
+      min-height: 50vh; }
+      .home main .intro .grid-p, .home main .projectWrapper .grid-p {
         display: flex;
         flex-direction: column;
         justify-content: center;
         grid-column: 1;
         grid-row: 1; }
-      .home main .intro img {
+      .home main .intro img, .home main .projectWrapper img {
         grid-column: 2;
         grid-row: 1;
         width: 90%;
-        margin-bottom: 0; } }
+        margin-bottom: 0; }
+      .home main .intro.projectWrapper-imageFirst, .home main .projectWrapper.projectWrapper-imageFirst {
+        grid-template-columns: 45% 50%; }
+        .home main .intro.projectWrapper-imageFirst .grid-p, .home main .projectWrapper.projectWrapper-imageFirst .grid-p {
+          grid-column-start: 2; }
+        .home main .intro.projectWrapper-imageFirst .mobileProject, .home main .projectWrapper.projectWrapper-imageFirst .mobileProject {
+          background-size: auto;
+          width: auto;
+          max-height: 100%; }
+          .home main .intro.projectWrapper-imageFirst .mobileProject picture, .home main .projectWrapper.projectWrapper-imageFirst .mobileProject picture {
+            width: 81.5%; }
+    .home main .projectWrapper {
+      padding-top: 4rem;
+      padding-bottom: 4rem; } }
 
 /*# sourceMappingURL=main.css.map */
