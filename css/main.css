@@ -293,10 +293,26 @@ main section .projectWrapper {
     background-color: #F57F3F; }
 
 .scroll {
+  position: relative;
+  overflow: hidden;
   display: block;
+  grid-column-start: 1;
+  grid-column-end: col2-end;
   text-align: center;
-  width: 50%;
+  text-decoration: none;
+  font-size: 4.4rem;
+  color: #F0F0F0;
+  width: auto;
   margin: 0 auto 1.5rem; }
+  .scroll i {
+    font-style: normal; }
+  .scroll span {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0); }
 
 footer {
   background-color: #373331;
@@ -519,10 +535,26 @@ main section .projectWrapper {
     background-color: #F57F3F; }
 
 .scroll {
+  position: relative;
+  overflow: hidden;
   display: block;
+  grid-column-start: 1;
+  grid-column-end: col2-end;
   text-align: center;
-  width: 50%;
+  text-decoration: none;
+  font-size: 4.4rem;
+  color: #F0F0F0;
+  width: auto;
   margin: 0 auto 1.5rem; }
+  .scroll i {
+    font-style: normal; }
+  .scroll span {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0); }
 
 footer {
   background-color: #373331;
@@ -548,6 +580,7 @@ footer {
       display: grid;
       grid-template-columns: 50% 45%;
       grid-gap: 5%;
+      align-items: center;
       padding-left: 6rem;
       padding-right: 5rem;
       height: 50vh; }
@@ -556,8 +589,7 @@ footer {
         flex-direction: column;
         justify-content: center;
         grid-column: 1;
-        grid-row: 1;
-        padding-top: 2rem; }
+        grid-row: 1; }
       .home main .intro img {
         grid-column: 2;
         grid-row: 1;

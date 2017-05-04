@@ -213,10 +213,30 @@ main {
 }
 
 .scroll {
+    position: relative;
+    overflow: hidden;
+    
     display: block;
+    grid-column-start: 1;
+    grid-column-end: col2-end;
+
     text-align: center;
-    width: 50%;
+    text-decoration: none;
+    font-size: $font_smallest_header * 2;
+    color: $primary_white;
+    width: auto;
     margin: 0 auto $margin_smallest;
+    i {
+        font-style: normal;
+    }
+    span {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0,0,0,0);
+    }
 }
 
 footer {
