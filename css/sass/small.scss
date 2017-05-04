@@ -11,10 +11,6 @@ $font_smallest_footer: 1.7rem;
 
 
 @media screen and (min-width: 768px) {
-
-        // TODO: Update padding sizes
-    
-
     .menu--active {   
         .menu {
             width: 40%;
@@ -51,6 +47,7 @@ $font_smallest_footer: 1.7rem;
                width: 90%;
                margin-bottom: 0;
            }
+
            &.projectWrapper-imageFirst {
                grid-template-columns: 45% 50%;
                .grid-p {
@@ -58,12 +55,14 @@ $font_smallest_footer: 1.7rem;
                }
 
                .mobileProject  {
-                   background-size: auto;
                    width: auto;
-                   max-height: 100%;
-                   picture {
-                       width: 81.5%;
-                   }
+                    picture {
+                        width: 90%;
+                        height: auto;
+                        img, source {
+                            width: 100%;
+                        }
+                    }
                }
            }
        }

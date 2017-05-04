@@ -272,17 +272,16 @@ main section .projectWrapper {
     margin-bottom: 1.5rem; }
   main section .projectWrapper .mobileProject {
     display: flex;
-    background: url("../images/phone.svg") no-repeat 0 0;
-    background-size: cover;
-    height: 82vh;
+    justify-content: center;
+    background: url("../images/phone.svg") no-repeat center 0;
     width: 72vw;
     margin: 0 auto 1.5rem;
-    padding: 10vh 1rem 7vh; }
+    padding: 10vh 4rem 7vh; }
     main section .projectWrapper .mobileProject picture {
-      border: 2px solid #F0F0F0; }
+      border: 2px solid #F0F0F0;
+      overflow: hidden; }
     main section .projectWrapper .mobileProject img, main section .projectWrapper .mobileProject source {
-      width: 100%;
-      height: 100%; }
+      max-width: 100%; }
   main section .projectWrapper span {
     font-size: 1.2rem; }
     main section .projectWrapper span:last-of-type {
@@ -514,17 +513,16 @@ main section .projectWrapper {
     margin-bottom: 1.5rem; }
   main section .projectWrapper .mobileProject {
     display: flex;
-    background: url("../images/phone.svg") no-repeat 0 0;
-    background-size: cover;
-    height: 82vh;
+    justify-content: center;
+    background: url("../images/phone.svg") no-repeat center 0;
     width: 72vw;
     margin: 0 auto 1.5rem;
-    padding: 10vh 1rem 7vh; }
+    padding: 10vh 4rem 7vh; }
     main section .projectWrapper .mobileProject picture {
-      border: 2px solid #F0F0F0; }
+      border: 2px solid #F0F0F0;
+      overflow: hidden; }
     main section .projectWrapper .mobileProject img, main section .projectWrapper .mobileProject source {
-      width: 100%;
-      height: 100%; }
+      max-width: 100%; }
   main section .projectWrapper span {
     font-size: 1.2rem; }
     main section .projectWrapper span:last-of-type {
@@ -600,11 +598,12 @@ footer {
         .home main .intro.projectWrapper-imageFirst .grid-p, .home main .projectWrapper.projectWrapper-imageFirst .grid-p {
           grid-column-start: 2; }
         .home main .intro.projectWrapper-imageFirst .mobileProject, .home main .projectWrapper.projectWrapper-imageFirst .mobileProject {
-          background-size: auto;
-          width: auto;
-          max-height: 100%; }
+          width: auto; }
           .home main .intro.projectWrapper-imageFirst .mobileProject picture, .home main .projectWrapper.projectWrapper-imageFirst .mobileProject picture {
-            width: 81.5%; }
+            width: 90%;
+            height: auto; }
+            .home main .intro.projectWrapper-imageFirst .mobileProject picture img, .home main .intro.projectWrapper-imageFirst .mobileProject picture source, .home main .projectWrapper.projectWrapper-imageFirst .mobileProject picture img, .home main .projectWrapper.projectWrapper-imageFirst .mobileProject picture source {
+              width: 100%; }
     .home main .projectWrapper {
       padding-top: 4rem;
       padding-bottom: 4rem; }

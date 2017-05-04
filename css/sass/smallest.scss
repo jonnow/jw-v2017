@@ -178,19 +178,19 @@ main {
 
             .mobileProject {
                 display: flex;
-                background: url('../images/phone.svg') no-repeat 0 0;
-                background-size: cover;
-                height: 82vh;
+                justify-content: center;
+
+                background: url('../images/phone.svg') no-repeat center 0;
                 width: 72vw;
                 margin: 0 auto $margin_smallest;
-                padding: 10vh 1rem 7vh;
+                padding: 10vh 4rem 7vh;
                 picture {
                     border: 2px solid $primary_white;
+                    overflow: hidden;
                 }
 
                 img, source {
-                    width: 100%;
-                    height: 100%;
+                    max-width: 100%;
                 }
             }
 
