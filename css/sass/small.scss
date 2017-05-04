@@ -71,6 +71,18 @@ $font_smallest_footer: 1.7rem;
        .projectWrapper {
            padding-top: $padding_tablet;
            padding-bottom: $padding_tablet;
+           .grid-p {
+               span {
+                   display: block;
+                   margin-bottom: $margin_tablet/2;
+                   &:first-of-type {
+                        margin-top: $margin_tablet;
+                   }
+                   &:last-of-type {
+                       float: none;
+                   }
+               }
+           }
        }
     }
 }

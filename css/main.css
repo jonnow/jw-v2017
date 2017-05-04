@@ -607,6 +607,13 @@ footer {
             width: 81.5%; }
     .home main .projectWrapper {
       padding-top: 4rem;
-      padding-bottom: 4rem; } }
+      padding-bottom: 4rem; }
+      .home main .projectWrapper .grid-p span {
+        display: block;
+        margin-bottom: 2rem; }
+        .home main .projectWrapper .grid-p span:first-of-type {
+          margin-top: 4rem; }
+        .home main .projectWrapper .grid-p span:last-of-type {
+          float: none; } }
 
 /*# sourceMappingURL=main.css.map */
