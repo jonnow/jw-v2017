@@ -82,97 +82,8 @@ input, select {
   background: #ff6161;
   color: #373331; }
 
-<<<<<<< HEAD
-@font-face {
-  font-family: 'Woodford Bourne';
-  src: url(../fonts/woodfordbourne-regular.otf);
-  font-weight: normal; }
-@font-face {
-  font-family: 'Woodford Bourne';
-  src: url(../fonts/woodfordbourne-bold.otf);
-  font-weight: bold; }
-@font-face {
-  font-family: 'Woodford Bourne';
-  src: url(../fonts/woodfordbourne-regular.otf);
-  font-weight: italic; }
-html, body, div, span, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-abbr, address, cite, code,
-del, dfn, em, img, ins, kbd, q, samp,
-small, strong, sub, sup, var,
-b, i,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section, summary,
-time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  outline: 0;
-  font-size: 100%;
-  vertical-align: baseline;
-  background: transparent; }
-
-html {
-  font-size: 10px; }
-
-body {
-  line-height: 1;
-  font-family: "Woodford Bourne", "Futura", "Helvetica", "Arial", sans-serif; }
-
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-  display: block; }
-
-nav ul {
-  list-style: none; }
-
-blockquote, q {
-  quotes: none; }
-
-blockquote:before, blockquote:after,
-q:before, q:after {
-  content: '';
-  content: none; }
-
-a {
-  margin: 0;
-  padding: 0;
-  font-size: 100%;
-  vertical-align: baseline;
-  background: transparent; }
-
-/* change border colour to suit your needs */
-hr {
-  display: block;
-  height: 1px;
-  border: 0;
-  border-top: 1px solid #F0F0F0;
-  margin: 1em 0;
-  padding: 0; }
-
-input, select {
-  vertical-align: middle; }
-
-*, *:before, *:after {
-  box-sizing: border-box; }
-
-::-moz-selection {
-  background: #ff6060;
-  color: #373331; }
-
-::selection {
-  background: #ff6060;
-  color: #373331; }
-
-body {
-  letter-spacing: 0.03rem;
-=======
 body {
   letter-spacing: 0.12rem;
->>>>>>> master
   width: 100%; }
 
 .wrapper {
@@ -277,19 +188,6 @@ main section .projectWrapper {
     margin-bottom: 1.5rem; }
   main section .projectWrapper .mobileProject {
     display: flex;
-<<<<<<< HEAD
-    background: url("../images/phone.svg") no-repeat 0 0;
-    background-size: cover;
-    height: 80.5vh;
-    width: 66%;
-    margin: 0 auto 1.5rem;
-    padding: 5rem 1rem 3.5rem; }
-    main section .projectWrapper .mobileProject picture {
-      border: 2px solid #F0F0F0; }
-    main section .projectWrapper .mobileProject img, main section .projectWrapper .mobileProject source {
-      width: 100%;
-      height: 100%; }
-=======
     justify-content: center;
     background: url("../images/phone.svg") no-repeat center 0;
     width: 72vw;
@@ -300,8 +198,8 @@ main section .projectWrapper {
       border-radius: 5px;
       overflow: hidden; }
     main section .projectWrapper .mobileProject img, main section .projectWrapper .mobileProject source {
-      max-width: 100%; }
->>>>>>> master
+      width: 100%;
+      height: 100%; }
   main section .projectWrapper span {
     font-size: 1.2rem; }
     main section .projectWrapper span:last-of-type {
@@ -312,11 +210,6 @@ main section .projectWrapper {
     background-color: #F57F3F; }
 
 .scroll {
-<<<<<<< HEAD
-=======
-  position: relative;
-  overflow: hidden;
->>>>>>> master
   display: block;
   text-align: center;
   width: 50%;
@@ -332,76 +225,4 @@ footer {
   padding-top: 3.2rem;
   padding-bottom: 3.2rem; }
 
-<<<<<<< HEAD
-=======
-@media screen and (min-width: 768px) {
-  .menu--active .menu {
-    width: 40%; }
-    .menu--active .menu .menu-inner {
-      width: 40vw; }
-
-  .menu .menu-inner {
-    padding: 4rem; }
-
-  header {
-    padding: 4rem; }
-    header h1 {
-      font-size: 3.2rem; }
-
-  .home main {
-    background-color: #14B4B5;
-    color: #F0F0F0;
-    padding-top: 7rem; }
-    .home main .intro, .home main .projectWrapper {
-      display: grid;
-      grid-template-columns: 50% 45%;
-      grid-gap: 5%;
-      align-items: center;
-      padding-left: 6rem;
-      padding-right: 5rem;
-      min-height: 100vh; }
-      .home main .intro .grid-p, .home main .projectWrapper .grid-p {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        grid-column: 1;
-        grid-row: 1; }
-      .home main .intro img, .home main .projectWrapper img {
-        grid-column: 2;
-        grid-row: 1;
-        width: 90%;
-        margin-bottom: 0; }
-      .home main .intro.projectWrapper-imageFirst, .home main .projectWrapper.projectWrapper-imageFirst {
-        grid-template-columns: 45% 50%; }
-        .home main .intro.projectWrapper-imageFirst .grid-p, .home main .projectWrapper.projectWrapper-imageFirst .grid-p {
-          grid-column-start: 2; }
-        .home main .intro.projectWrapper-imageFirst .mobileProject, .home main .projectWrapper.projectWrapper-imageFirst .mobileProject {
-          width: auto; }
-          .home main .intro.projectWrapper-imageFirst .mobileProject picture, .home main .projectWrapper.projectWrapper-imageFirst .mobileProject picture {
-            width: 90%;
-            height: auto; }
-            .home main .intro.projectWrapper-imageFirst .mobileProject picture img, .home main .intro.projectWrapper-imageFirst .mobileProject picture source, .home main .projectWrapper.projectWrapper-imageFirst .mobileProject picture img, .home main .projectWrapper.projectWrapper-imageFirst .mobileProject picture source {
-              width: 100%; }
-    .home main .projectWrapper {
-      padding-top: 4rem;
-      padding-bottom: 4rem; }
-      .home main .projectWrapper .grid-p span {
-        display: block;
-        margin-bottom: 2rem; }
-        .home main .projectWrapper .grid-p span:first-of-type {
-          margin-top: 4rem; }
-        .home main .projectWrapper .grid-p span:last-of-type {
-          float: none; }
-
-  main section.intro h1, main section.intro h2, main section .projectWrapper h1, main section .projectWrapper h2 {
-    font-size: 3.2rem; }
-  main section.intro p, main section .projectWrapper p {
-    font-size: 2.2rem; }
-  main section.intro span, main section .projectWrapper span {
-    font-size: 1.9rem; }
-
-  footer {
-    font-size: 1.9rem; } }
-
->>>>>>> master
 /*# sourceMappingURL=main.css.map */
