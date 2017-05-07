@@ -1,12 +1,13 @@
+@import 'smallest.scss';
 
 $padding_tablet: 4rem;
 $margin_tablet: 4rem;
 
-$font_tablet_header: 3.2rem;
-$font_tablet_menuSpan: 2.2rem;
-$font_tablet_p: 2.2rem;
-$font_tablet_footNote: 1.9rem;
-$font_tablet_footer: 1.9rem;
+$font_smallest_header: 2.2rem;
+$font_smallest_menuSpan: 1.2rem;
+$font_smallest_p: 1.9rem;
+$font_smallest_footNote: 1.2rem;
+$font_smallest_footer: 1.7rem;
 
 
 @media screen and (min-width: 768px) {
@@ -16,17 +17,6 @@ $font_tablet_footer: 1.9rem;
             .menu-inner {
                 width: 40vw;
             }
-        }
-    }
-
-    .menu .menu-inner {
-        padding: $padding_tablet;
-    }
-
-    header {
-        padding: $padding_tablet;
-        h1 {
-            font-size: $font_tablet_header;
         }
     }
 
@@ -42,7 +32,7 @@ $font_tablet_footer: 1.9rem;
 
            padding-left: $padding_tablet + 2;
            padding-right: $padding_tablet + 1;
-           min-height: 100vh;
+           min-height: 50vh;
            .grid-p {
                display: flex;
                flex-direction: column;
@@ -93,24 +83,5 @@ $font_tablet_footer: 1.9rem;
                }
            }
        }
-    }
-    main {
-        section {
-            &.intro, .projectWrapper {
-                h1, h2 {
-                    font-size: $font_tablet_header;
-                }
-                p {
-                    font-size: $font_tablet_p;
-                }
-                span {
-                    font-size: $font_tablet_footNote;
-                }
-            }
-            
-        }
-    }
-    footer {
-        font-size: $font_tablet_footer;
     }
 }
