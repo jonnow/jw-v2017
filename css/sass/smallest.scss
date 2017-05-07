@@ -1,9 +1,8 @@
-@import 'basics.scss'; // REMOVE BEFORE COMPLETE
-
 $padding_smallest: 1.5rem;
 $padding_standard: 3.2rem;
 
 $margin_smallest: 1.5rem;
+$margin_proj_buffer: 5vh;
 
 $font_smallest_header: 2.2rem;
 $font_smallest_menuSpan: 1.2rem;
@@ -11,6 +10,7 @@ $font_smallest_p: 1.9rem;
 $font_smallest_footNote: 1.2rem;
 $font_smallest_footer: 1.7rem;
 $font_large_standard: 2.4rem;
+$font_smallest_letterSpacing: 0.12rem;
 
 @mixin wrap_padding {
     padding-left: $padding_standard;
@@ -24,7 +24,7 @@ $font_large_standard: 2.4rem;
 }
 
 body {
-    letter-spacing: 0.03rem;
+    letter-spacing: $font_smallest_letterSpacing;
     width: 100%;
 }
 
@@ -178,14 +178,17 @@ main {
 
             .mobileProject {
                 display: flex;
-                background: url('../images/phone.svg') no-repeat 0 0;
-                background-size: cover;
-                height: 80.5vh;
-                width: 66%;
-                margin: 0 auto $margin_smallest;
-                padding: 5rem 1rem 3.5rem;
+
+                justify-content: center;
+
+                background: url('../images/phone.svg') no-repeat center 0;
+                width: 72vw;
+                margin: $margin_proj_buffer auto;
+                padding: 10vh 4rem 7vh;
                 picture {
                     border: 2px solid $primary_white;
+                    border-radius: 5px;
+                    overflow: hidden;
                 }
 
                 img, source {
