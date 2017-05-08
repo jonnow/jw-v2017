@@ -1,4 +1,4 @@
-$padding_small: 4rem;
+$padding_small: 2.5rem;
 $padding_smallest: 4rem;
 $margin_small: 4rem;
 $margin_smallest: 4rem;
@@ -11,7 +11,7 @@ $font_smallest_p            : 1.9rem;
 $font_small_projectFootNote : 2rem;
 $font_small_footNote        : 1.3rem;
 $font_smallest_footNote     : 1.2rem;
-$font_small_footer          : 1.7rem;
+$font_small_footer          : 2.2;
 $font_smallest_footer       : 1.7rem;
 
 $font_small_p_lineHeight: 165%;
@@ -54,14 +54,15 @@ $font_small_footNote_letterSpacing: 1px;
                 grid-column-start: 2;
             }
 
-            .mobileProject  {
-                width: auto;
-                picture {
-                    width: 90%;
-                    height: auto;
-                    img, source {
-                        width: 100%;
-                    }
+        }
+
+        .mobileProject  {
+            width: auto;
+            picture {
+                width: 90%;
+                height: auto;
+                img, source {
+                    width: 100%;
                 }
             }
         }
@@ -92,8 +93,13 @@ $font_small_footNote_letterSpacing: 1px;
                         }
                     }
                 }
+                
                 .mobileProject {
                     padding: 7vh 0;
+                }
+                
+                &:not(.projectWrapper-imageFirst) {
+                    justify-content: right;
                 }
             }
         }
@@ -102,6 +108,8 @@ $font_small_footNote_letterSpacing: 1px;
 
 @media screen and (min-width: 1024px) {
     header {
+        height: 7rem;
+        padding: $padding_small;
         span.menu-control-open, 
         span.menu-control-close {
             display: none;
@@ -121,7 +129,7 @@ $font_small_footNote_letterSpacing: 1px;
 
             .version,
             .madeIn {
-                bottom: -93vh;
+                bottom: -90.85vh;
                 letter-spacing: $font_small_footNote_letterSpacing;
                 font-size: $font_small_footNote;
             }
@@ -131,6 +139,7 @@ $font_small_footNote_letterSpacing: 1px;
             flex-direction: row;
             justify-content: flex-end;
             a {
+                font-size: $font_small_header;
                 margin-left: $margin_smallest;
             }
         }
@@ -172,5 +181,9 @@ $font_small_footNote_letterSpacing: 1px;
             font-size: $font_small_p;
             line-height: $font_small_p_lineHeight;
         }
+    }
+
+    footer {
+        font-size: $font_small_footer;
     }
 }

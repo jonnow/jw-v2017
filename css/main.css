@@ -267,13 +267,13 @@ footer {
       grid-template-columns: 45% 50%; }
       .intro.projectWrapper-imageFirst .grid-p, .projectWrapper.projectWrapper-imageFirst .grid-p {
         grid-column-start: 2; }
-      .intro.projectWrapper-imageFirst .mobileProject, .projectWrapper.projectWrapper-imageFirst .mobileProject {
-        width: auto; }
-        .intro.projectWrapper-imageFirst .mobileProject picture, .projectWrapper.projectWrapper-imageFirst .mobileProject picture {
-          width: 90%;
-          height: auto; }
-          .intro.projectWrapper-imageFirst .mobileProject picture img, .intro.projectWrapper-imageFirst .mobileProject picture source, .projectWrapper.projectWrapper-imageFirst .mobileProject picture img, .projectWrapper.projectWrapper-imageFirst .mobileProject picture source {
-            width: 100%; }
+    .intro .mobileProject, .projectWrapper .mobileProject {
+      width: auto; }
+      .intro .mobileProject picture, .projectWrapper .mobileProject picture {
+        width: 90%;
+        height: auto; }
+        .intro .mobileProject picture img, .intro .mobileProject picture source, .projectWrapper .mobileProject picture img, .projectWrapper .mobileProject picture source {
+          width: 100%; }
 
   .home main {
     padding-top: 7rem; }
@@ -291,30 +291,36 @@ footer {
         .home main .projectWrapper .grid-p span:last-of-type {
           float: none; }
       .home main .projectWrapper .mobileProject {
-        padding: 7vh 0; } }
+        padding: 7vh 0; }
+      .home main .projectWrapper:not(.projectWrapper-imageFirst) {
+        justify-content: right; } }
 @media screen and (min-width: 1024px) {
-  header span.menu-control-open,
-  header span.menu-control-close {
-    display: none; }
-  header .menu {
-    position: static;
-    overflow: visible;
-    background-color: transparent;
-    width: auto;
-    height: auto; }
-    header .menu .menu-inner {
-      padding: 0;
-      width: 100%; }
-    header .menu .version,
-    header .menu .madeIn {
-      bottom: -93vh;
-      letter-spacing: 1px;
-      font-size: 1.3rem; }
-  header nav {
-    flex-direction: row;
-    justify-content: flex-end; }
-    header nav a {
-      margin-left: 4rem; }
+  header {
+    height: 7rem;
+    padding: 2.5rem; }
+    header span.menu-control-open,
+    header span.menu-control-close {
+      display: none; }
+    header .menu {
+      position: static;
+      overflow: visible;
+      background-color: transparent;
+      width: auto;
+      height: auto; }
+      header .menu .menu-inner {
+        padding: 0;
+        width: 100%; }
+      header .menu .version,
+      header .menu .madeIn {
+        bottom: -90.85vh;
+        letter-spacing: 1px;
+        font-size: 1.3rem; }
+    header nav {
+      flex-direction: row;
+      justify-content: flex-end; }
+      header nav a {
+        font-size: 2.65rem;
+        margin-left: 4rem; }
 
   section {
     justify-content: center; }
@@ -340,6 +346,9 @@ footer {
     font-size: 2.65rem; }
   .home p {
     font-size: 2.65rem;
-    line-height: 165%; } }
+    line-height: 165%; }
+
+  footer {
+    font-size: 2.2; } }
 
 /*# sourceMappingURL=main.css.map */
