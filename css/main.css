@@ -75,11 +75,11 @@ input, select {
   box-sizing: border-box; }
 
 ::-moz-selection {
-  background: #ff6060;
+  background: #ff6161;
   color: #373331; }
 
 ::selection {
-  background: #ff6060;
+  background: #ff6161;
   color: #373331; }
 
 @font-face {
@@ -159,11 +159,11 @@ input, select {
   box-sizing: border-box; }
 
 ::-moz-selection {
-  background: #ff6060;
+  background: #ff6161;
   color: #373331; }
 
 ::selection {
-  background: #ff6060;
+  background: #ff6161;
   color: #373331; }
 
 body {
@@ -400,11 +400,11 @@ input, select {
   box-sizing: border-box; }
 
 ::-moz-selection {
-  background: #ff6060;
+  background: #ff6161;
   color: #373331; }
 
 ::selection {
-  background: #ff6060;
+  background: #ff6161;
   color: #373331; }
 
 body {
@@ -570,11 +570,17 @@ footer {
     .menu--active .menu .menu-inner {
       width: 40vw; }
 
-  .home main {
+  main section .projectWrapper .mobileProject {
+    padding: 7vh 0; }
+
+  .home
+  main {
     background-color: #14B4B5;
     color: #F0F0F0;
     padding-top: 7rem; }
-    .home main .intro, .home main .projectWrapper {
+    .home
+    main .intro, .home
+    main .projectWrapper {
       display: grid;
       grid-template-columns: 50% 45%;
       grid-gap: 5%;
@@ -582,37 +588,79 @@ footer {
       padding-left: 6rem;
       padding-right: 5rem;
       min-height: 50vh; }
-      .home main .intro .grid-p, .home main .projectWrapper .grid-p {
+      .home
+      main .intro .grid-p, .home
+      main .projectWrapper .grid-p {
         display: flex;
         flex-direction: column;
         justify-content: center;
         grid-column: 1;
         grid-row: 1; }
-      .home main .intro img, .home main .projectWrapper img {
+      .home
+      main .intro img, .home
+      main .projectWrapper img {
         grid-column: 2;
         grid-row: 1;
         width: 90%;
         margin-bottom: 0; }
-      .home main .intro.projectWrapper-imageFirst, .home main .projectWrapper.projectWrapper-imageFirst {
+      .home
+      main .intro.projectWrapper-imageFirst, .home
+      main .projectWrapper.projectWrapper-imageFirst {
         grid-template-columns: 45% 50%; }
-        .home main .intro.projectWrapper-imageFirst .grid-p, .home main .projectWrapper.projectWrapper-imageFirst .grid-p {
+        .home
+        main .intro.projectWrapper-imageFirst .grid-p, .home
+        main .projectWrapper.projectWrapper-imageFirst .grid-p {
           grid-column-start: 2; }
-        .home main .intro.projectWrapper-imageFirst .mobileProject, .home main .projectWrapper.projectWrapper-imageFirst .mobileProject {
+        .home
+        main .intro.projectWrapper-imageFirst .mobileProject, .home
+        main .projectWrapper.projectWrapper-imageFirst .mobileProject {
           width: auto; }
-          .home main .intro.projectWrapper-imageFirst .mobileProject picture, .home main .projectWrapper.projectWrapper-imageFirst .mobileProject picture {
+          .home
+          main .intro.projectWrapper-imageFirst .mobileProject picture, .home
+          main .projectWrapper.projectWrapper-imageFirst .mobileProject picture {
             width: 90%;
             height: auto; }
-            .home main .intro.projectWrapper-imageFirst .mobileProject picture img, .home main .intro.projectWrapper-imageFirst .mobileProject picture source, .home main .projectWrapper.projectWrapper-imageFirst .mobileProject picture img, .home main .projectWrapper.projectWrapper-imageFirst .mobileProject picture source {
+            .home
+            main .intro.projectWrapper-imageFirst .mobileProject picture img, .home
+            main .intro.projectWrapper-imageFirst .mobileProject picture source, .home
+            main .projectWrapper.projectWrapper-imageFirst .mobileProject picture img, .home
+            main .projectWrapper.projectWrapper-imageFirst .mobileProject picture source {
               width: 100%; }
-    .home main .projectWrapper {
+    .home
+    main .projectWrapper {
       padding-top: 4rem;
       padding-bottom: 4rem; }
-      .home main .projectWrapper .grid-p span {
+      .home
+      main .projectWrapper .grid-p span {
         display: block;
         margin-bottom: 2rem; }
-        .home main .projectWrapper .grid-p span:first-of-type {
+        .home
+        main .projectWrapper .grid-p span:first-of-type {
           margin-top: 4rem; }
-        .home main .projectWrapper .grid-p span:last-of-type {
+        .home
+        main .projectWrapper .grid-p span:last-of-type {
           float: none; } }
+@media screen and (min-width: 1024px) {
+  header span.menu-control-open,
+  header span.menu-control-close {
+    display: none; }
+  header .menu {
+    position: static;
+    background-color: transparent;
+    width: auto;
+    height: auto; }
+    header .menu .menu-inner {
+      padding: 0; }
+    header .menu .version,
+    header .menu .madeIn {
+      bottom: 50vh; }
+  header nav {
+    flex-direction: row;
+    justify-content: flex-end; }
+    header nav a {
+      margin-left: 4rem; }
+
+  main section .projectWrapper .mobileProject {
+    padding: 10vh 4rem 7vh; } }
 
 /*# sourceMappingURL=main.css.map */
