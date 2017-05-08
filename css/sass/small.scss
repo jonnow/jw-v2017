@@ -11,11 +11,14 @@ $font_smallest_p            : 1.9rem;
 $font_small_projectFootNote : 2rem;
 $font_small_footNote        : 1.3rem;
 $font_smallest_footNote     : 1.2rem;
-$font_small_footer          : 2.2;
+$font_small_footer          : 2.2rem;
 $font_smallest_footer       : 1.7rem;
 
 $font_small_p_lineHeight: 165%;
 $font_small_footNote_letterSpacing: 1px;
+
+$grid_template_p_col: 55rem;
+$grid_template_img_col: 50%;
 
 @media screen and (min-width: 768px) {
     .menu--active {   
@@ -150,7 +153,7 @@ $font_small_footNote_letterSpacing: 1px;
     }
     
     .intro, .projectWrapper {
-        grid-template-columns: 56rem 50%;
+        grid-template-columns: $grid_template_p_col $grid_template_img_col;
         grid-template-rows: 1fr;
         grid-gap: 0;
     }
@@ -165,7 +168,7 @@ $font_small_footNote_letterSpacing: 1px;
         }
 
         &.projectWrapper-imageFirst {
-            grid-template-columns: 50% 56rem;
+            grid-template-columns: $grid_template_img_col $grid_template_p_col;
         }
 
         span {

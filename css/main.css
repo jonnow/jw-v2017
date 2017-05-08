@@ -326,7 +326,7 @@ footer {
     justify-content: center; }
 
   .intro, .projectWrapper {
-    grid-template-columns: 56rem 50%;
+    grid-template-columns: 55rem 50%;
     grid-template-rows: 1fr;
     grid-gap: 0; }
 
@@ -338,7 +338,7 @@ footer {
     .projectWrapper .mobileProject {
       padding: 10vh 4rem 7vh; }
     .projectWrapper.projectWrapper-imageFirst {
-      grid-template-columns: 50% 56rem; }
+      grid-template-columns: 50% 55rem; }
     .projectWrapper span {
       font-size: 2rem; }
 
@@ -349,6 +349,6 @@ footer {
     line-height: 165%; }
 
   footer {
-    font-size: 2.2; } }
+    font-size: 2.2rem; } }
 
 /*# sourceMappingURL=main.css.map */
