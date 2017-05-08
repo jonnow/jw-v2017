@@ -1,5 +1,3 @@
-@import 'basics.scss'; // REMOVE BEFORE COMPLETE
-
 $padding_smallest: 1.5rem;
 $padding_standard: 3.2rem;
 
@@ -40,7 +38,6 @@ body {
     }
 
     p {
-        @include mixin_p;
         font-size: $font_smallest_p;
         line-height: 150%;
         margin-bottom: $margin_smallest;
@@ -144,6 +141,8 @@ header {
         position: absolute;
         bottom: $margin_smallest;
         font-size: $font_smallest_footNote;
+        text-transform: uppercase;
+        font-weight: bold;
     }
 
     .version {
@@ -160,55 +159,51 @@ header {
     }
 }
 
-main {
-    section {
-        .projectWrapper {
-            min-height: 100vh;
-            padding: $padding_smallest;
-            
+.projectWrapper {
+    min-height: 100vh;
+    padding: $padding_smallest;
+    
 
-            h2 {
-                font-size: $font_smallest_header;
-                line-height: 130%;
-            }
+    h2 {
+        font-size: $font_smallest_header;
+        line-height: 130%;
+    }
 
-            h2, .mobileProject {
-                margin-bottom: $margin_smallest;
-            }
+    h2, .mobileProject {
+        margin-bottom: $margin_smallest;
+    }
 
-            .mobileProject {
-                display: flex;
-                justify-content: center;
+    .mobileProject {
+        display: flex;
+        justify-content: center;
 
-                background: url('../images/phone.svg') no-repeat center 0;
-                width: 72vw;
-                margin: 0 auto $margin_smallest;
-                padding: 10vh 4rem 7vh;
-                picture {
-                    border: 2px solid $primary_white;
-                    overflow: hidden;
-                }
-
-                img, source {
-                    max-width: 100%;
-                }
-            }
-
-            span {
-                font-size: $font_smallest_footNote;
-                &:last-of-type {
-                    float: right;
-                }
-            }
-            
-            &.blue {
-                background-color: $tertiary_dull_blue;
-            }
-
-            &.orange {
-                background-color: $primary_orange;
-            }
+        background: url('../images/phone.svg') no-repeat center 0;
+        width: 72vw;
+        margin: 0 auto $margin_smallest;
+        padding: 10vh 4rem 7vh;
+        picture {
+            border: 2px solid $primary_white;
+            overflow: hidden;
         }
+
+        img, source {
+            max-width: 100%;
+        }
+    }
+
+    span {
+        font-size: $font_smallest_footNote;
+        &:last-of-type {
+            float: right;
+        }
+    }
+    
+    &.blue {
+        background-color: $tertiary_dull_blue;
+    }
+
+    &.orange {
+        background-color: $primary_orange;
     }
 }
 

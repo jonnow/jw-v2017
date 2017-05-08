@@ -1,14 +1,21 @@
-@import 'smallest.scss';
+$padding_small: 4rem;
+$padding_smallest: 4rem;
+$margin_small: 4rem;
+$margin_smallest: 4rem;
 
-$padding_tablet: 4rem;
-$margin_tablet: 4rem;
+$font_small_header          : 2.65rem;
+$font_smallest_header       : 2.2rem;
+$font_smallest_menuSpan     : 1.2rem;
+$font_small_p               : 2.65rem;
+$font_smallest_p            : 1.9rem;
+$font_small_projectFootNote : 2rem;
+$font_small_footNote        : 1.3rem;
+$font_smallest_footNote     : 1.2rem;
+$font_small_footer          : 1.7rem;
+$font_smallest_footer       : 1.7rem;
 
-$font_smallest_header: 2.2rem;
-$font_smallest_menuSpan: 1.2rem;
-$font_smallest_p: 1.9rem;
-$font_smallest_footNote: 1.2rem;
-$font_smallest_footer: 1.7rem;
-
+$font_small_p_lineHeight: 165%;
+$font_small_footNote_letterSpacing: 1px;
 
 @media screen and (min-width: 768px) {
     .menu--active {   
@@ -20,79 +27,78 @@ $font_smallest_footer: 1.7rem;
         }
     }
 
-    main section .projectWrapper .mobileProject {
-        padding: 7vh 0;
+    .intro, .projectWrapper {
+        display: grid;
+        grid-template-columns: 50% 45%;
+        grid-gap: 5%;
+        align-items: center;
+        min-height: 50vh;
+        .grid-p {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            grid-column: 1;
+            grid-row: 1;
+        }
+        img {
+            grid-column: 2;
+            grid-row: 1;
+
+            width: 90%;
+            margin-bottom: 0;
+        }
+        &.projectWrapper-imageFirst {
+            grid-template-columns: 45% 50%;
+
+            .grid-p {
+                grid-column-start: 2;
+            }
+
+            .mobileProject  {
+                width: auto;
+                picture {
+                    width: 90%;
+                    height: auto;
+                    img, source {
+                        width: 100%;
+                    }
+                }
+            }
+        }
     }
 
-    .home 
+    .home {
         main {
-            background-color: $primary_teal;
-            color: $primary_white;
             padding-top: 7rem;
-
-       .intro, .projectWrapper {
-           display: grid;
-           grid-template-columns: 50% 45%;
-           grid-gap: 5%;
-           align-items: center;
-
-           padding-left: $padding_tablet + 2;
-           padding-right: $padding_tablet + 1;
-           min-height: 50vh;
-           .grid-p {
-               display: flex;
-               flex-direction: column;
-               justify-content: center;
-               grid-column: 1;
-               grid-row: 1;
-           }
-           img {
-               grid-column: 2;
-               grid-row: 1;
-
-               width: 90%;
-               margin-bottom: 0;
-           }
-
-           &.projectWrapper-imageFirst {
-               grid-template-columns: 45% 50%;
-               .grid-p {
-                   grid-column-start: 2;
-               }
-
-               .mobileProject  {
-                   width: auto;
-                    picture {
-                        width: 90%;
-                        height: auto;
-                        img, source {
-                            width: 100%;
+            .intro, .projectWrapper {
+                padding-left: $padding_smallest + 2;
+                padding-right: $padding_smallest + 1;
+                // Here for overrides
+                
+            }
+            .projectWrapper {
+                padding-top: $padding_smallest;
+                padding-bottom: $padding_smallest;
+                
+                .grid-p {
+                    span {
+                        display: block;
+                        margin-bottom: $margin_smallest/2;
+                        &:first-of-type {
+                            margin-top: $margin_smallest;
+                        }
+                        &:last-of-type {
+                            float: none;
                         }
                     }
-               }
-           }
-       }
-
-       .projectWrapper {
-           padding-top: $padding_tablet;
-           padding-bottom: $padding_tablet;
-           
-           .grid-p {
-               span {
-                   display: block;
-                   margin-bottom: $margin_tablet/2;
-                   &:first-of-type {
-                        margin-top: $margin_tablet;
-                   }
-                   &:last-of-type {
-                       float: none;
-                   }
-               }
-           }
-       }
+                }
+                .mobileProject {
+                    padding: 7vh 0;
+                }
+            }
+        }
     }
 }
-
 
 @media screen and (min-width: 1024px) {
     header {
@@ -103,17 +109,21 @@ $font_smallest_footer: 1.7rem;
 
         .menu {
             position: static;
+            overflow: visible;
             background-color: transparent;
             width: auto;
             height: auto;
             
             .menu-inner {
                 padding: 0;
+                width: 100%;
             }
 
             .version,
             .madeIn {
-                bottom: 50vh;
+                bottom: -93vh;
+                letter-spacing: $font_small_footNote_letterSpacing;
+                font-size: $font_small_footNote;
             }
         }
 
@@ -121,12 +131,46 @@ $font_smallest_footer: 1.7rem;
             flex-direction: row;
             justify-content: flex-end;
             a {
-                margin-left: $margin_tablet;
+                margin-left: $margin_smallest;
             }
         }
     }
+
+    section {
+        justify-content: center;
+    }
     
-    main section .projectWrapper .mobileProject {
-        padding: 10vh 4rem 7vh;
+    .intro, .projectWrapper {
+        grid-template-columns: 56rem 50%;
+        grid-template-rows: 1fr;
+        grid-gap: 0;
+    }
+    
+    .intro {
+        min-height: 93vh;
+    }
+    .projectWrapper {
+        min-height: 100vh;
+        .mobileProject {
+            padding: 10vh 4rem 7vh;
+        }
+
+        &.projectWrapper-imageFirst {
+            grid-template-columns: 50% 56rem;
+        }
+
+        span {
+            font-size: $font_small_projectFootNote;
+        }
+    }
+
+    .home {
+        h1, h2 {
+            font-size: $font_small_header;
+        }
+        p {
+            font-size: $font_small_p;
+            line-height: $font_small_p_lineHeight;
+        }
     }
 }
