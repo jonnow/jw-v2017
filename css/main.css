@@ -75,11 +75,11 @@ input, select {
   box-sizing: border-box; }
 
 ::-moz-selection {
-  background: #ff6060;
+  background: #ff6161;
   color: #373331; }
 
 ::selection {
-  background: #ff6060;
+  background: #ff6161;
   color: #373331; }
 
 body {
