@@ -247,13 +247,24 @@ footer {
 @media screen and (max-width: 767px) {
     .projectWrapper {
         position: relative;
+        display: grid;
         padding-top: 6.25rem;
-        &.long-heading {
+        padding-bottom: 2.5rem;
+        &.longHeading {
             padding-top: 10rem;
         }
-        .grid-p h2 {
-            position: absolute;
-            top: 1.75rem;
+
+        .mobileProject {
+            grid-row: 1;
+        }
+        .grid-p { 
+            h2 {
+                position: absolute;
+                top: 1.75rem;
+            }
+            p:last-of-type {
+                margin-bottom: 2.5rem;
+            }
         }
     }
 }

@@ -243,12 +243,18 @@ footer {
 @media screen and (max-width: 767px) {
   .projectWrapper {
     position: relative;
-    padding-top: 6.25rem; }
-    .projectWrapper.long-heading {
+    display: grid;
+    padding-top: 6.25rem;
+    padding-bottom: 2.5rem; }
+    .projectWrapper.longHeading {
       padding-top: 10rem; }
+    .projectWrapper .mobileProject {
+      grid-row: 1; }
     .projectWrapper .grid-p h2 {
       position: absolute;
-      top: 1.75rem; } }
+      top: 1.75rem; }
+    .projectWrapper .grid-p p:last-of-type {
+      margin-bottom: 2.5rem; } }
 @media screen and (min-width: 768px) {
   .menu--active .menu {
     width: 40%; }
