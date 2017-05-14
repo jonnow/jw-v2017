@@ -75,11 +75,11 @@ input, select {
   box-sizing: border-box; }
 
 ::-moz-selection {
-  background: #ff6161;
+  background: #ff6060;
   color: #373331; }
 
 ::selection {
-  background: #ff6161;
+  background: #ff6060;
   color: #373331; }
 
 body {
@@ -240,6 +240,15 @@ footer {
   padding-top: 3.2rem;
   padding-bottom: 3.2rem; }
 
+@media screen and (max-width: 767px) {
+  .projectWrapper {
+    position: relative;
+    padding-top: 6.25rem; }
+    .projectWrapper.long-heading {
+      padding-top: 10rem; }
+    .projectWrapper .grid-p h2 {
+      position: absolute;
+      top: 1.75rem; } }
 @media screen and (min-width: 768px) {
   .menu--active .menu {
     width: 40%; }
