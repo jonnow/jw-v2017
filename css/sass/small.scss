@@ -21,15 +21,6 @@ $grid_template_p_col: 55rem;
 $grid_template_img_col: 50%;
 
 @media screen and (min-width: 768px) {
-    .menu--active {   
-        .menu {
-            width: 40%;
-            .menu-inner {
-                width: 40vw;
-            }
-        }
-    }
-
     .intro, .projectWrapper {
         display: grid;
         grid-template-columns: 50% 45%;
@@ -81,8 +72,8 @@ $grid_template_img_col: 50%;
                 
             }
             .projectWrapper {
-                padding-top: $padding_smallest;
-                padding-bottom: $padding_smallest;
+                padding-top: 6rem;
+                padding-bottom: 6rem;
                 
                 .grid-p {
                     span {
@@ -109,6 +100,17 @@ $grid_template_img_col: 50%;
     }
 }
 
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .menu--active {   
+        .menu {
+            width: 40%;
+            .menu-inner {
+                width: 40vw;
+            }
+        }
+    }
+}
+
 @media screen and (min-width: 1024px) {
     header {
         height: 7rem;
@@ -128,6 +130,11 @@ $grid_template_img_col: 50%;
             .menu-inner {
                 padding: 0;
                 width: 100%;
+            }
+            
+            a {
+                transform: none;
+                transition: none;
             }
 
             .version,

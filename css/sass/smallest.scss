@@ -62,6 +62,7 @@ body {
 header {
     position: absolute;
     overflow: visible;
+    z-index: 100;
 
     background-color: transparent;
     
@@ -128,7 +129,12 @@ header {
     width: 0;
     overflow: hidden;
     
-    transition: all .3s ease;
+    transition: all .3s ease-in-out;
+
+    a {
+        transform: translate3d(-150px,0,0);
+        transition: transform .15s ease-in;
+    }
     
     .menu-inner {
         position: relative;
@@ -153,9 +159,24 @@ header {
 .menu--active {
     height: 100vh;
     overflow: hidden;
-    
-    .menu {
-        width: 80%;
+
+    nav {
+        a {
+            transform: translate3d(0,0,0);
+            transition: transform 500ms ease-out;
+            // animation-duration: .4s;
+            // animation-name: menuFlyIn;
+            // animation-fill-mode: forwards;
+            &:first-child {
+                transition-delay: .2s;
+            }
+            &:nth-child(2) {
+                transition-delay: .3s;
+            }
+            &:last-child {
+                transition-delay: .4s;
+            }
+        }
     }
 }
 
@@ -182,8 +203,11 @@ header {
         margin: 0 auto $margin_smallest;
         padding: 10vh 4rem 7vh;
         picture {
-            border: 2px solid $primary_white;
             overflow: hidden;
+            img {
+                border: 2px solid $primary_white;
+                border-radius: 2px;
+            }
         }
 
         img, source {
@@ -245,6 +269,11 @@ footer {
 }
 
 @media screen and (max-width: 767px) {
+    .menu--active {
+        .menu {
+            width: 80%;
+        }
+    }
     .projectWrapper {
         position: relative;
         display: grid;
@@ -256,6 +285,10 @@ footer {
 
         .mobileProject {
             grid-row: 1;
+            min-width: 295px;
+            padding-top: 7rem;
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
         }
         .grid-p { 
             h2 {
@@ -266,5 +299,12 @@ footer {
                 margin-bottom: 2.5rem;
             }
         }
+    }
+}
+
+// Animation
+@keyframes menuFlyIn {
+    to {
+        transform: translate3d(0,0,0);
     }
 }

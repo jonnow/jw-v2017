@@ -113,6 +113,7 @@ body {
 header {
   position: absolute;
   overflow: visible;
+  z-index: 100;
   background-color: transparent;
   width: 100%;
   height: 5rem;
@@ -158,7 +159,10 @@ header {
   height: 100vh;
   width: 0;
   overflow: hidden;
-  transition: all .3s ease; }
+  transition: all .3s ease-in-out; }
+  .menu a {
+    transform: translate3d(-150px, 0, 0);
+    transition: transform .15s ease-in; }
   .menu .menu-inner {
     position: relative;
     height: 100%;
@@ -176,8 +180,15 @@ header {
 .menu--active {
   height: 100vh;
   overflow: hidden; }
-  .menu--active .menu {
-    width: 80%; }
+  .menu--active nav a {
+    transform: translate3d(0, 0, 0);
+    transition: transform 500ms ease-out; }
+    .menu--active nav a:first-child {
+      transition-delay: .2s; }
+    .menu--active nav a:nth-child(2) {
+      transition-delay: .3s; }
+    .menu--active nav a:last-child {
+      transition-delay: .4s; }
 
 .projectWrapper {
   min-height: 100vh;
@@ -195,8 +206,10 @@ header {
     margin: 0 auto 1.5rem;
     padding: 10vh 4rem 7vh; }
     .projectWrapper .mobileProject picture {
-      border: 2px solid #F0F0F0;
       overflow: hidden; }
+      .projectWrapper .mobileProject picture img {
+        border: 2px solid #F0F0F0;
+        border-radius: 2px; }
     .projectWrapper .mobileProject img, .projectWrapper .mobileProject source {
       max-width: 100%; }
   .projectWrapper span {
@@ -241,6 +254,9 @@ footer {
   padding-bottom: 3.2rem; }
 
 @media screen and (max-width: 767px) {
+  .menu--active .menu {
+    width: 80%; }
+
   .projectWrapper {
     position: relative;
     display: grid;
@@ -249,18 +265,20 @@ footer {
     .projectWrapper.longHeading {
       padding-top: 10rem; }
     .projectWrapper .mobileProject {
-      grid-row: 1; }
+      grid-row: 1;
+      min-width: 295px;
+      padding-top: 7rem;
+      padding-left: 1.5rem;
+      padding-right: 1.5rem; }
     .projectWrapper .grid-p h2 {
       position: absolute;
       top: 1.75rem; }
     .projectWrapper .grid-p p:last-of-type {
       margin-bottom: 2.5rem; } }
+@keyframes menuFlyIn {
+  to {
+    transform: translate3d(0, 0, 0); } }
 @media screen and (min-width: 768px) {
-  .menu--active .menu {
-    width: 40%; }
-    .menu--active .menu .menu-inner {
-      width: 40vw; }
-
   .intro, .projectWrapper {
     display: grid;
     grid-template-columns: 50% 45%;
@@ -296,8 +314,8 @@ footer {
       padding-left: 6rem;
       padding-right: 5rem; }
     .home main .projectWrapper {
-      padding-top: 4rem;
-      padding-bottom: 4rem; }
+      padding-top: 6rem;
+      padding-bottom: 6rem; }
       .home main .projectWrapper .grid-p span {
         display: block;
         margin-bottom: 2rem; }
@@ -309,6 +327,11 @@ footer {
         padding: 7vh 0; }
       .home main .projectWrapper:not(.projectWrapper-imageFirst) {
         justify-content: right; } }
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .menu--active .menu {
+    width: 40%; }
+    .menu--active .menu .menu-inner {
+      width: 40vw; } }
 @media screen and (min-width: 1024px) {
   header {
     height: 7rem;
@@ -325,6 +348,9 @@ footer {
       header .menu .menu-inner {
         padding: 0;
         width: 100%; }
+      header .menu a {
+        transform: none;
+        transition: none; }
       header .menu .version,
       header .menu .madeIn {
         bottom: -90.85vh;
