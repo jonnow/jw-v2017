@@ -89,7 +89,7 @@ $grid_template_img_col: 50%;
                 }
                 
                 .mobileProject {
-                    padding: 7vh 0;
+                    padding: 8vh 0;
                 }
                 
                 &:not(.projectWrapper-imageFirst) {
@@ -160,7 +160,7 @@ $grid_template_img_col: 50%;
     }
     
     .intro, .projectWrapper {
-        grid-template-columns: $grid_template_p_col $grid_template_img_col;
+        grid-template-columns: 50% 50%;// 50/50 correct formatting for grid
         grid-template-rows: 1fr;
         grid-gap: 0;
     }
@@ -175,7 +175,7 @@ $grid_template_img_col: 50%;
         }
 
         &.projectWrapper-imageFirst {
-            grid-template-columns: $grid_template_img_col $grid_template_p_col;
+            grid-template-columns: $grid_template_img_col;// 50% each
         }
 
         span {
