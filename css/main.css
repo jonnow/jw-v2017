@@ -75,11 +75,11 @@ input, select {
   box-sizing: border-box; }
 
 ::-moz-selection {
-  background: #ff6161;
+  background: #ff6060;
   color: #373331; }
 
 ::selection {
-  background: #ff6161;
+  background: #ff6060;
   color: #373331; }
 
 body {
@@ -212,6 +212,35 @@ header {
         border-radius: 2px; }
     .projectWrapper .mobileProject img, .projectWrapper .mobileProject source {
       max-width: 100%; }
+  .projectWrapper .browserProject {
+    position: relative;
+    padding-top: 10px;
+    width: 70%;
+    border: 3px solid #F0F0F0;
+    border-radius: 3px 3px 1px 1px;
+    margin: 0 auto; }
+    .projectWrapper .browserProject .dots {
+      margin-bottom: 10px; }
+    .projectWrapper .browserProject .dot {
+      display: inline-block;
+      height: 12px;
+      width: 12px;
+      border-width: 3px;
+      border-style: solid;
+      border-radius: 50%;
+      margin-left: 5px; }
+      .projectWrapper .browserProject .dot:first-child {
+        border-color: #FF1C1C; }
+      .projectWrapper .browserProject .dot:nth-child(2) {
+        border-color: #FFB31C; }
+      .projectWrapper .browserProject .dot:last-child {
+        border-color: #14B4B5; }
+    .projectWrapper .browserProject picture {
+      overflow: hidden; }
+      .projectWrapper .browserProject picture img {
+        vertical-align: middle;
+        width: 100%;
+        border-top: 3px solid #F0F0F0; }
   .projectWrapper span {
     font-size: 1.2rem; }
     .projectWrapper span:last-of-type {
@@ -270,6 +299,8 @@ footer {
       padding: 14% 12% 10%;
       margin-left: auto;
       margin-right: auto; }
+    .projectWrapper .browserProject {
+      align-self: flex-start; }
     .projectWrapper .grid-p h2 {
       position: absolute;
       top: 1.75rem; }
