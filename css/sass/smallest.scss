@@ -24,6 +24,7 @@ $font_large_standard: 2.4rem;
 body {
     letter-spacing: 0.03rem;
     width: 100%;
+    background-color: red;
 }
 
 .wrapper {
@@ -218,7 +219,7 @@ header {
     .browserProject {
         position: relative;
         padding-top: 10px;
-        width: 70%;
+        width: 80%;
         border: 3px solid $primary_white;
         border-radius: 6px;
         margin: 0 auto;
