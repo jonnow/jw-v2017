@@ -34,7 +34,13 @@ $primary_font: 'Woodford Bourne', 'Futura', 'Helvetica', 'Arial', sans-serif;
     font-weight: italic;
 }
 
-//$secondary_font: 'Aleo', 'Adelle', 'Georgia', serif;
+$secondary_font: 'Aleo', 'Adelle', 'Georgia', serif;
+
+@font-face {
+    font-family: 'Aleo';
+    src: url(../fonts/aleo-regular-webfont.ttf);
+    font-weight: normal;
+}
 
 @mixin mixin_title {
     font-weight: bold;
@@ -46,18 +52,14 @@ $primary_font: 'Woodford Bourne', 'Futura', 'Helvetica', 'Arial', sans-serif;
 }
 
 // Resets
-html, body, div, span, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-abbr, address, cite, code,
-del, dfn, em, img, ins, kbd, q, samp,
-small, strong, sub, sup, var,
+html, body, div, span,
+h1, h2, h3, p, blockquote,
+code,
+em, img, strong,
 b, i,
 dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section, summary,
-time, mark, audio, video {
+article, aside, 
+footer, header, hgroup, menu, nav, section {
     margin:0;
     padding:0;
     border:0;
@@ -74,23 +76,12 @@ body {
     font-family: $primary_font;
 }
 
-article,aside,details,figcaption,figure,
-footer,header,hgroup,menu,nav,section { 
+article,aside,footer,header,menu,nav,section { 
     display:block;
 }
 
 nav ul {
     list-style:none;
-}
-
-blockquote, q {
-    quotes:none;
-}
-
-blockquote:before, blockquote:after,
-q:before, q:after {
-    content:'';
-    content:none;
 }
 
 a {

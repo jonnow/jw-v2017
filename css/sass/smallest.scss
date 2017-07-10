@@ -33,10 +33,6 @@ body {
     overflow: hidden;
 }
 
-h1 {
-    @include mixin_title;
-}
-
 p {
     font-size: $font_smallest_p;
     line-height: 150%;
@@ -57,11 +53,19 @@ main {
             color: $primary_white;
         }
         span.menu-control-open {
+            svg {
+                stroke: $primary_white;
+            }
             &:before, &:after {
                 border-top-color: wheat;
             }
         }
     }
+
+    h1 {
+        @include mixin_title;
+    }
+
 
     main {
        background-color: $primary_teal;
@@ -90,16 +94,78 @@ main {
         }
     }
     article {
+        width: 90%;
+        max-width: 30rem;
+        margin: 0 auto;
+
+        h1, p a {
+            color: $tertiary_dull_blue;
+        }
+
         h1 {
             color: $tertiary_dull_blue;
-            
+            font-family: $secondary_font;
+            font-size: 3.6rem;
+            font-weight: normal;
+            margin-top: 1rem;
+            margin-bottom: 1.25rem
+        }
+
+        img {
+            border-radius: 5px;
+            margin: 0 auto;
+        }
+
+        p {
+            color: $primary_black;
+            a {
+                text-decoration: none;
+                letter-spacing: 1px;
+                border-bottom: 2px solid $tertiary_dull_blue;
+            }
+        }
+
+        ul.colours {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 2.5rem;
+            li {
+                list-style: none;
+                height: 20px;
+                width: 20px;
+                border-radius: 50%;
+                &.primary-teal {background-color: $primary_teal;}
+                &.primary-orange {background-color: $primary_orange;}
+                &.primary-black {background-color: $primary_black;}
+                &.primary-white {
+                    background-color: $primary_white;
+                    border:1px solid $primary_black;
+                }
+                &.tertiary-dull-blue {background-color: $tertiary_dull_blue;}
+                &.tertiary-dull-yellow {background-color: $tertiary_dull_yellow;}
+                &.tertiary-dull-red {background-color: $tertiary_dull_red;}
+                &.tertiary-bright-blue {background-color: $tertiary_bright_blue;}
+                &.tertiary-bright-yellow {background-color: $tertiary_bright_yellow;}
+                &.tertiary-bright-red {background-color: $tertiary_bright_red;}
+            }
+        }
+
+        .caption {
+            font-size: 1.4rem;
+            line-height: 150%;
+            text-align: center;
+            font-style: italic;
+            margin-top: 1rem;
         }
     }
 
     header {
         span.menu-control-open {
+            svg {
+                stroke: $primary_orange;
+            }
             &:before, &:after {
-                border-top-color: goldenrod;
+                border-top-color: $primary_orange;
             }
         }
         .menu-inner {
@@ -166,7 +232,6 @@ header {
             left: 12px;
             line, circle {
                 fill: none;
-                stroke: $primary_white;
                 stroke-width: 3;
             }
         }
@@ -381,7 +446,8 @@ header {
     }
 }
 
-body > .wrapper > footer {
+body > .wrapper > footer,
+body > footer {
     background-color: $primary_black;
     color: $primary_white;
     text-align: center;

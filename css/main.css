@@ -10,18 +10,18 @@
   font-family: 'Woodford Bourne';
   src: url(../fonts/woodfordbourne-regular.otf);
   font-weight: italic; }
-html, body, div, span, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-abbr, address, cite, code,
-del, dfn, em, img, ins, kbd, q, samp,
-small, strong, sub, sup, var,
+@font-face {
+  font-family: 'Aleo';
+  src: url(../fonts/aleo-regular-webfont.ttf);
+  font-weight: normal; }
+html, body, div, span,
+h1, h2, h3, p, blockquote,
+code,
+em, img, strong,
 b, i,
 dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section, summary,
-time, mark, audio, video {
+article, aside,
+footer, header, hgroup, menu, nav, section {
   margin: 0;
   padding: 0;
   border: 0;
@@ -37,20 +37,11 @@ body {
   line-height: 1;
   font-family: "Woodford Bourne", "Futura", "Helvetica", "Arial", sans-serif; }
 
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
+article, aside, footer, header, menu, nav, section {
   display: block; }
 
 nav ul {
   list-style: none; }
-
-blockquote, q {
-  quotes: none; }
-
-blockquote:before, blockquote:after,
-q:before, q:after {
-  content: '';
-  content: none; }
 
 a {
   margin: 0;
@@ -91,10 +82,6 @@ body {
 .wrapper {
   overflow: hidden; }
 
-h1 {
-  font-weight: bold;
-  text-transform: uppercase; }
-
 p {
   font-size: 1.9rem;
   line-height: 150%;
@@ -108,8 +95,13 @@ main {
   .home header h1 a,
   .home header span.menu-control-open {
     color: #F0F0F0; }
+  .home header span.menu-control-open svg {
+    stroke: #F0F0F0; }
   .home header span.menu-control-open:before, .home header span.menu-control-open:after {
     border-top-color: wheat; }
+  .home h1 {
+    font-weight: bold;
+    text-transform: uppercase; }
   .home main {
     background-color: #14B4B5;
     color: #F0F0F0; }
@@ -125,10 +117,68 @@ main {
   background-color: #F0F0F0; }
   .about header h1 a {
     color: #373331; }
-  .about article h1 {
-    color: #4870CB; }
+  .about article {
+    width: 90%;
+    max-width: 30rem;
+    margin: 0 auto; }
+    .about article h1, .about article p a {
+      color: #4870CB; }
+    .about article h1 {
+      color: #4870CB;
+      font-family: "Aleo", "Adelle", "Georgia", serif;
+      font-size: 3.6rem;
+      font-weight: normal;
+      margin-top: 1rem;
+      margin-bottom: 1.25rem; }
+    .about article img {
+      border-radius: 5px;
+      margin: 0 auto; }
+    .about article p {
+      color: #373331; }
+      .about article p a {
+        text-decoration: none;
+        letter-spacing: 1px;
+        border-bottom: 2px solid #4870CB; }
+    .about article ul.colours {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 2.5rem; }
+      .about article ul.colours li {
+        list-style: none;
+        height: 20px;
+        width: 20px;
+        border-radius: 50%; }
+        .about article ul.colours li.primary-teal {
+          background-color: #14B4B5; }
+        .about article ul.colours li.primary-orange {
+          background-color: #F57F3F; }
+        .about article ul.colours li.primary-black {
+          background-color: #373331; }
+        .about article ul.colours li.primary-white {
+          background-color: #F0F0F0;
+          border: 1px solid #373331; }
+        .about article ul.colours li.tertiary-dull-blue {
+          background-color: #4870CB; }
+        .about article ul.colours li.tertiary-dull-yellow {
+          background-color: #FFC247; }
+        .about article ul.colours li.tertiary-dull-red {
+          background-color: #FF4747; }
+        .about article ul.colours li.tertiary-bright-blue {
+          background-color: #16C1F3; }
+        .about article ul.colours li.tertiary-bright-yellow {
+          background-color: #FFB31C; }
+        .about article ul.colours li.tertiary-bright-red {
+          background-color: #FF1C1C; }
+    .about article .caption {
+      font-size: 1.4rem;
+      line-height: 150%;
+      text-align: center;
+      font-style: italic;
+      margin-top: 1rem; }
+  .about header span.menu-control-open svg {
+    stroke: #F57F3F; }
   .about header span.menu-control-open:before, .about header span.menu-control-open:after {
-    border-top-color: goldenrod; }
+    border-top-color: #F57F3F; }
   .about header .menu-inner {
     color: #F0F0F0; }
 
@@ -175,7 +225,6 @@ header {
       left: 12px; }
       header span.menu-control-open svg line, header span.menu-control-open svg circle {
         fill: none;
-        stroke: #F0F0F0;
         stroke-width: 3; }
     header span.menu-control-open:before {
       padding-top: 1px; }
@@ -319,7 +368,8 @@ header {
     overflow: hidden;
     clip: rect(0, 0, 0, 0); }
 
-body > .wrapper > footer {
+body > .wrapper > footer,
+body > footer {
   background-color: #373331;
   color: #F0F0F0;
   text-align: center;
