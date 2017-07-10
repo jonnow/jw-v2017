@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+        <title>Jonno Witts</title>
+
+        <meta name="description" content="Full stack web developer and designer">
+        <meta property="og:locale" content="en_GB">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="Jonno Witts - Full Stack Developer and Designer">
+        <meta property="og:description" content="Jonno Witts - Full Stack Developer and Designer">
+        <meta property="og:url" content="http://www.jonnowitts.com">
+        <meta property="og:sitename" content="Jonno Witts">
+
+        <link rel="stylesheet" href="css/main.css" />
+    </head>
+    <body id="body" class="about">
+        <div class="wrapper">
+            <header>
+                <h1><a href="/">Jonno Witts</a></h1>
+                <span class="menu-control-open" id="menuControlOpen">
+                    <svg width="10" height="15">
+                        <circle r="3" cx="5" cy="5"></circle>
+                        <line x1="5" x2="5" y1="7" y2="13"></line>
+                    </svg>
+                    Menu
+                </span>
+                <div class="menu">
+                    <div class="menu-inner">
+                        <span class="menu-control-close" id="menuControlClose">Close</span>
+                        <nav>
+                            <a href="#">Work</a>
+                            <a href="#">Notes</a>
+                            <a href="#">Info</a>
+                        </nav>
+                        <span class="version">2017.0.1</span>
+                        <span class="madeIn">Made in England</span>
+                    </div>
+                </div>
+            </header>
+            <main>
+                <article>
+                    <h1>Welcome</h1>
+                    <p>Descended from a family filled with engineers it was only a matter of time before I made a life from computers. I work on the full technology stack for the University of York’s medical trials unit. My main diversions are video games and dreaming of owning an allotment.
+                    </p>
+                    <p>I am not currently looking for employment however if you’re working on  an extra-curricular activity I am looking for my next side-project.</p>
+                    <p>Feel free to say <a href="#" title="Go to Contact page">“hello”</a>.</p>
+                    <img src="images/profile.jpg" alt="The author">
+                    <span class="caption">
+                        The author pictured with a huge sack of rainforest-friendly coffee beans.
+                        <br />
+                        Ocean Park, Hong Kong circa 2013.
+                    </span>
+                    <footer>
+                        <p>This website was designed in Adobe Illustrator. It uses a grid system based around the length of my name and a fairly extensive colour palette:
+                            <ul>
+                                <li class="colour-xxxx"></li>
+                                <li class="colour-xxxx"></li>
+                                <li class="colour-xxxx"></li>
+                                <li class="colour-xxxx"></li>
+                                <li class="colour-xxxx"></li>
+                                <li class="colour-xxxx"></li>
+                                <li class="colour-xxxx"></li>
+                                <li class="colour-xxxx"></li>
+                                <li class="colour-xxxx"></li>
+                                <li class="colour-xxxx"></li>
+                            </ul>
+                        </p>
+                        <p>The primary typeface is Woodford Bourne in it’s various weights. <span class="font-aleo">Aleo</span> is used for some headings.</p>
+                        <p>This is version 2017.0.1 of the website and is powered by Wordpress, and developed with Angular (4), HTML, and CSS.</p>
+                    </footer>
+                </article>
+            </main>
+            <footer>&copy; 2017 Jonno Witts</footer>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script>
+            var body = document.body;
+            var openMenu = document.getElementById('menuControlOpen'); // or whatever triggers the toggle
+            var closeMenu = document.getElementById('menuControlClose'); // or whatever triggers the toggle
+
+            openMenu.addEventListener('click', function(e) {
+               body.classList.toggle('menu--active'); // or whatever your active class is
+            });
+
+             closeMenu.addEventListener('click', function(e) {
+                body.classList.toggle('menu--active'); // or whatever your active class is
+            });
+
+
+        </script>
+        <script src="script/script.js"></script>
+    </body>
+</html>

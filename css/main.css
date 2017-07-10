@@ -83,6 +83,7 @@ input, select {
   color: #373331; }
 
 body {
+  position: relative;
   letter-spacing: 0.03rem;
   width: 100%;
   background-color: red; }
@@ -90,19 +91,28 @@ body {
 .wrapper {
   overflow: hidden; }
 
+h1 {
+  font-weight: bold;
+  text-transform: uppercase; }
+
+p {
+  font-size: 1.9rem;
+  line-height: 150%;
+  margin-bottom: 1.5rem; }
+
+main {
+  padding-top: 5rem; }
+
 .home {
   position: relative; }
-  .home h1 {
-    font-weight: bold;
-    text-transform: uppercase; }
-  .home p {
-    font-size: 1.9rem;
-    line-height: 150%;
-    margin-bottom: 1.5rem; }
+  .home header h1 a,
+  .home header span.menu-control-open {
+    color: #F0F0F0; }
+  .home header span.menu-control-open:before, .home header span.menu-control-open:after {
+    border-top-color: wheat; }
   .home main {
     background-color: #14B4B5;
-    color: #F0F0F0;
-    padding-top: 5rem; }
+    color: #F0F0F0; }
     .home main .intro {
       padding-left: 1.5rem;
       padding-right: 1.5rem; }
@@ -110,6 +120,17 @@ body {
         display: block;
         width: 65%;
         margin: 1rem auto 1.5rem; }
+
+.about {
+  background-color: #F0F0F0; }
+  .about header h1 a {
+    color: #373331; }
+  .about article h1 {
+    color: #4870CB; }
+  .about header span.menu-control-open:before, .about header span.menu-control-open:after {
+    border-top-color: goldenrod; }
+  .about header .menu-inner {
+    color: #F0F0F0; }
 
 header {
   position: absolute;
@@ -129,13 +150,15 @@ header {
   header nav,
   header a {
     font-weight: bold;
-    text-transform: uppercase;
-    color: #F0F0F0; }
+    text-transform: uppercase; }
   header span.menu-control-open,
   header span.menu-control-close,
   header nav a {
     font-size: 2.2rem;
     margin-bottom: 1.5rem; }
+  header span.menu-control-close,
+  header nav a {
+    color: #F0F0F0; }
   header span.menu-control-open,
   header span.menu-control-close {
     display: block;
@@ -160,7 +183,8 @@ header {
       content: '';
       display: block;
       width: 100%;
-      border-top: 3px solid wheat; }
+      border-top-width: .3rem;
+      border-top-style: solid; }
   header span.menu-control-close {
     font-size: 1.2rem;
     text-align: right; }
@@ -295,7 +319,7 @@ header {
     overflow: hidden;
     clip: rect(0, 0, 0, 0); }
 
-footer {
+body > .wrapper > footer {
   background-color: #373331;
   color: #F0F0F0;
   text-align: center;
