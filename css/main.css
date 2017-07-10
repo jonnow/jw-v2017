@@ -76,8 +76,7 @@ input, select {
 body {
   position: relative;
   letter-spacing: 0.03rem;
-  width: 100%;
-  background-color: red; }
+  width: 100%; }
 
 .wrapper {
   overflow: hidden; }
