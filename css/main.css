@@ -537,6 +537,8 @@ body > footer {
       line-height: 175%; }
     .about article footer p, .about article .caption {
       font-size: 1.6rem; }
+    .about article footer {
+      margin-bottom: 3rem; }
     .about article ul.colours li {
       height: 5rem;
       width: 5rem; }
