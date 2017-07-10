@@ -108,8 +108,8 @@ body {
       padding-right: 1.5rem; }
       .home main .intro img {
         display: block;
-        width: 55%;
-        margin: 0 auto 1.5rem; }
+        width: 65%;
+        margin: 1rem auto 1.5rem; }
 
 header {
   position: absolute;
@@ -120,7 +120,7 @@ header {
   height: 5rem;
   padding: 1.5rem; }
   header h1 {
-    font-size: 2.2rem;
+    font-size: 3rem;
     float: left; }
   header a {
     text-decoration: none; }
@@ -142,9 +142,10 @@ header {
     cursor: pointer; }
   header span.menu-control-open {
     position: relative;
+    float: right;
     font-size: 1.2rem;
     line-height: 130%;
-    float: right; }
+    margin-top: 3px; }
     header span.menu-control-open svg {
       position: absolute;
       top: -12px;
@@ -332,6 +333,9 @@ footer {
   to {
     transform: translate3d(0, 0, 0); } }
 @media screen and (min-width: 768px) {
+  .home main .intro img {
+    margin-top: 0; }
+
   .intro, .projectWrapper {
     display: grid;
     grid-template-columns: 50% 45%;
@@ -384,7 +388,10 @@ footer {
   .menu--active .menu {
     width: 40%; }
     .menu--active .menu .menu-inner {
-      width: 40vw; } }
+      width: 40vw; }
+
+  .home main .intro img {
+    width: 75%; } }
 @media screen and (min-width: 1024px) {
   header {
     height: 7rem;
@@ -415,6 +422,9 @@ footer {
       header nav a {
         font-size: 2.65rem;
         margin-left: 4rem; }
+
+  .home main .intro img {
+    width: 55%; }
 
   section {
     justify-content: center; }

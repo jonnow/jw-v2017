@@ -3,6 +3,7 @@ $padding_standard: 3.2rem;
 
 $margin_smallest: 1.5rem;
 
+$font_smallest_logo: 3rem;
 $font_smallest_header: 2.2rem;
 $font_smallest_menuSpan: 1.2rem;
 $font_smallest_p: 1.9rem;
@@ -53,8 +54,8 @@ body {
            padding-right: $padding_smallest;
            img {
                display: block;
-               width: 55%;
-               margin: 0 auto 1.5rem;
+               width: 65%;
+               margin: 1rem auto 1.5rem;
            }
        }
     }
@@ -71,7 +72,7 @@ header {
     height: 5rem;
     padding: $padding_smallest;
     h1 {
-        font-size: $font_smallest_header;
+        font-size: $font_smallest_logo;
         float: left;
     }
 
@@ -103,9 +104,10 @@ header {
     
     span.menu-control-open {
         position: relative;
+        float: right;
         font-size: $font_smallest_menuSpan;
         line-height: 130%;
-        float: right;
+        margin-top: 3px;
         svg {
             position: absolute;
             top: -12px;

@@ -21,6 +21,9 @@ $grid_template_p_col: 55rem;
 $grid_template_img_col: 50%;
 
 @media screen and (min-width: 768px) {
+    .home main .intro  img {
+        margin-top: 0;
+    }
     .intro, .projectWrapper {
         display: grid;
         grid-template-columns: 50% 45%;
@@ -109,6 +112,10 @@ $grid_template_img_col: 50%;
             }
         }
     }
+
+    .home main .intro  img {
+        width: 75%;
+    }
 }
 
 @media screen and (min-width: 1024px) {
@@ -153,6 +160,10 @@ $grid_template_img_col: 50%;
                 margin-left: $margin_smallest;
             }
         }
+    }
+
+    .home main .intro img {
+        width: 55%;
     }
 
     section {
