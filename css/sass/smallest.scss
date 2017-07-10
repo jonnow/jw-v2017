@@ -49,7 +49,8 @@ main {
 
     header {
         h1 a,
-        span.menu-control-open {
+        span.menu-control-open,
+        nav a {
             color: $primary_white;
         }
         span.menu-control-open {
@@ -89,13 +90,14 @@ main {
 .about {
     background-color: $primary_white;
     header {
-        h1 a {
+        h1 a,
+        nav a {
             color: $primary_black;
         }
     }
     article {
         width: 90%;
-        max-width: 30rem;
+        max-width: 74rem;
         margin: 0 auto;
 
         h1, p a {
@@ -112,6 +114,7 @@ main {
         }
 
         img {
+            display: block;
             border-radius: 5px;
             margin: 0 auto;
         }
@@ -209,8 +212,7 @@ header {
         margin-bottom: $margin_smallest;
     }
 
-    span.menu-control-close,
-    nav a {
+    span.menu-control-close {
         color: $primary_white;
     }
 

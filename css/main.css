@@ -93,7 +93,8 @@ main {
 .home {
   position: relative; }
   .home header h1 a,
-  .home header span.menu-control-open {
+  .home header span.menu-control-open,
+  .home header nav a {
     color: #F0F0F0; }
   .home header span.menu-control-open svg {
     stroke: #F0F0F0; }
@@ -115,11 +116,12 @@ main {
 
 .about {
   background-color: #F0F0F0; }
-  .about header h1 a {
+  .about header h1 a,
+  .about header nav a {
     color: #373331; }
   .about article {
     width: 90%;
-    max-width: 30rem;
+    max-width: 74rem;
     margin: 0 auto; }
     .about article h1, .about article p a {
       color: #4870CB; }
@@ -131,6 +133,7 @@ main {
       margin-top: 1rem;
       margin-bottom: 1.25rem; }
     .about article img {
+      display: block;
       border-radius: 5px;
       margin: 0 auto; }
     .about article p {
@@ -206,8 +209,7 @@ header {
   header nav a {
     font-size: 2.2rem;
     margin-bottom: 1.5rem; }
-  header span.menu-control-close,
-  header nav a {
+  header span.menu-control-close {
     color: #F0F0F0; }
   header span.menu-control-open,
   header span.menu-control-close {
@@ -525,6 +527,19 @@ body > footer {
   .home p {
     font-size: 2.65rem;
     line-height: 165%; }
+
+  .about article {
+    margin-top: 5rem; }
+    .about article h1 {
+      font-size: 6rem; }
+    .about article p {
+      font-size: 2rem;
+      line-height: 175%; }
+    .about article footer p, .about article .caption {
+      font-size: 1.6rem; }
+    .about article ul.colours li {
+      height: 5rem;
+      width: 5rem; }
 
   footer {
     font-size: 2.2rem; } }

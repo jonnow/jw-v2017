@@ -204,6 +204,29 @@ $grid_template_img_col: 50%;
         }
     }
 
+    .about {
+        article {
+            margin-top: 5rem;
+            h1 {
+                font-size: 6rem;
+            }
+            
+            p {
+                font-size: 2rem;
+                line-height: 175%;
+            }
+
+            footer p, .caption {
+                font-size: 1.6rem;
+            }
+
+            ul.colours li {
+                height: 5rem;
+                width: 5rem;
+            }
+        }
+    }
+
     footer {
         font-size: $font_small_footer;
     }
