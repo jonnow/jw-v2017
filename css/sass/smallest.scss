@@ -102,9 +102,29 @@ header {
     }
     
     span.menu-control-open {
+        position: relative;
         font-size: $font_smallest_menuSpan;
-        line-height: 150%;
+        line-height: 130%;
         float: right;
+        svg {
+            position: absolute;
+            top: -12px;
+            left: 12px;
+            line, circle {
+                fill: none;
+                stroke: $primary_white;
+                stroke-width: 3;
+            }
+        }
+        &:before {
+            padding-top: 1px;
+        }
+        &:before, &:after {
+            content: '';
+            display: block;
+            width: 100%;
+            border-top: 3px solid wheat;
+        }
     }
 
    span.menu-control-close {
@@ -279,6 +299,12 @@ header {
     display: block;
     grid-column-start: 1;
     grid-column-end: col2-end;
+
+    stroke: $primary_white;
+    stroke-width: 4;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    fill: none;
 
     text-align: center;
     text-decoration: none;

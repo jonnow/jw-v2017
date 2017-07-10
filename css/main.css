@@ -141,9 +141,25 @@ header {
     display: block;
     cursor: pointer; }
   header span.menu-control-open {
+    position: relative;
     font-size: 1.2rem;
-    line-height: 150%;
+    line-height: 130%;
     float: right; }
+    header span.menu-control-open svg {
+      position: absolute;
+      top: -12px;
+      left: 12px; }
+      header span.menu-control-open svg line, header span.menu-control-open svg circle {
+        fill: none;
+        stroke: #F0F0F0;
+        stroke-width: 3; }
+    header span.menu-control-open:before {
+      padding-top: 1px; }
+    header span.menu-control-open:before, header span.menu-control-open:after {
+      content: '';
+      display: block;
+      width: 100%;
+      border-top: 3px solid wheat; }
   header span.menu-control-close {
     font-size: 1.2rem;
     text-align: right; }
@@ -257,6 +273,11 @@ header {
   display: block;
   grid-column-start: 1;
   grid-column-end: col2-end;
+  stroke: #F0F0F0;
+  stroke-width: 4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
   text-align: center;
   text-decoration: none;
   font-size: 4.4rem;
@@ -431,5 +452,3 @@ footer {
     font-size: 2.4rem; }
   .home main .intro img {
     width: 60%; } }
-
-/*# sourceMappingURL=main.css.map */
