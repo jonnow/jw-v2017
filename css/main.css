@@ -14,41 +14,38 @@
   font-family: 'Aleo';
   src: url(../fonts/aleo-regular-webfont.ttf);
   font-weight: normal; }
-html, body, div, span,
-h1, h2, h3, p, blockquote,
-code,
-em, img, strong,
-b, i,
-dl, dt, dd, ol, ul, li,
-article, aside,
-footer, header, hgroup, menu, nav, section {
+html, body,
+p,
+ol, ul, li, dl, dt, dd,
+blockquote, figure,
+hr,
+h1, h2, h3 {
   margin: 0;
-  padding: 0;
-  border: 0;
-  outline: 0;
+  padding: 0; }
+
+h1, h2, h3 {
   font-size: 100%;
-  vertical-align: baseline;
-  background: transparent; }
+  font-weight: normal; }
+
+ul {
+  list-style: none; }
 
 html {
+  box-sizing: border-box;
   font-size: 10px; }
 
 body {
   line-height: 1;
   font-family: "Woodford Bourne", "Futura", "Helvetica", "Arial", sans-serif; }
 
-article, aside, footer, header, menu, nav, section {
-  display: block; }
+*,
+*:before,
+*:after {
+  box-sizing: inherit; }
 
-nav ul {
-  list-style: none; }
-
-a {
-  margin: 0;
-  padding: 0;
-  font-size: 100%;
-  vertical-align: baseline;
-  background: transparent; }
+img {
+  height: auto;
+  max-width: 100%; }
 
 /* change border colour to suit your needs */
 hr {
@@ -58,12 +55,6 @@ hr {
   border-top: 1px solid #F0F0F0;
   margin: 1em 0;
   padding: 0; }
-
-input, select {
-  vertical-align: middle; }
-
-*, *:before, *:after {
-  box-sizing: border-box; }
 
 ::-moz-selection {
   background: #ff6161;
@@ -82,8 +73,8 @@ body {
   overflow: hidden; }
 
 p {
-  font-size: 1.9rem;
-  line-height: 150%;
+  font-size: 1.6rem;
+  line-height: 175%;
   margin-bottom: 1.5rem; }
 
 main {
@@ -92,8 +83,7 @@ main {
 .home {
   position: relative; }
   .home header h1 a,
-  .home header span.menu-control-open,
-  .home header nav a {
+  .home header span.menu-control-open {
     color: #F0F0F0; }
   .home header span.menu-control-open svg {
     stroke: #F0F0F0; }
@@ -115,8 +105,7 @@ main {
 
 .about {
   background-color: #F0F0F0; }
-  .about header h1 a,
-  .about header nav a {
+  .about header h1 a {
     color: #373331; }
   .about article {
     width: 90%;
@@ -197,50 +186,59 @@ header {
     float: left; }
   header a {
     text-decoration: none; }
-  header span.menu-control-open,
-  header span.menu-control-close,
-  header nav,
-  header a {
-    font-weight: bold;
-    text-transform: uppercase; }
-  header span.menu-control-open,
-  header span.menu-control-close,
-  header nav a {
-    font-size: 2.2rem;
-    margin-bottom: 1.5rem; }
-  header span.menu-control-close {
-    color: #F0F0F0; }
-  header span.menu-control-open,
-  header span.menu-control-close {
+
+span.menu-control-open,
+span.menu-control-close,
+nav,
+header a {
+  font-weight: bold;
+  text-transform: uppercase; }
+
+span.menu-control-open,
+span.menu-control-close,
+nav a {
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem; }
+
+span.menu-control-close {
+  color: #F0F0F0; }
+
+span.menu-control-open,
+span.menu-control-close {
+  display: block;
+  cursor: pointer; }
+
+span.menu-control-open {
+  position: relative;
+  float: right;
+  font-size: 1.2rem;
+  line-height: 130%;
+  margin-top: 3px; }
+  span.menu-control-open svg {
+    position: absolute;
+    top: -12px;
+    left: 12px; }
+    span.menu-control-open svg line, span.menu-control-open svg circle {
+      fill: none;
+      stroke-width: 3; }
+  span.menu-control-open:before {
+    padding-top: 1px; }
+  span.menu-control-open:before, span.menu-control-open:after {
+    content: '';
     display: block;
-    cursor: pointer; }
-  header span.menu-control-open {
-    position: relative;
-    float: right;
-    font-size: 1.2rem;
-    line-height: 130%;
-    margin-top: 3px; }
-    header span.menu-control-open svg {
-      position: absolute;
-      top: -12px;
-      left: 12px; }
-      header span.menu-control-open svg line, header span.menu-control-open svg circle {
-        fill: none;
-        stroke-width: 3; }
-    header span.menu-control-open:before {
-      padding-top: 1px; }
-    header span.menu-control-open:before, header span.menu-control-open:after {
-      content: '';
-      display: block;
-      width: 100%;
-      border-top-width: .3rem;
-      border-top-style: solid; }
-  header span.menu-control-close {
-    font-size: 1.2rem;
-    text-align: right; }
-  header nav {
-    display: flex;
-    flex-direction: column; }
+    width: 100%;
+    border-top-width: .3rem;
+    border-top-style: solid; }
+
+span.menu-control-close {
+  font-size: 1.2rem;
+  text-align: right; }
+
+nav {
+  display: flex;
+  flex-direction: column; }
+  nav a {
+    color: #F0F0F0; }
 
 .menu {
   position: absolute;
@@ -471,32 +469,38 @@ body > footer {
   header {
     height: 7rem;
     padding: 2.5rem; }
-    header span.menu-control-open,
-    header span.menu-control-close {
-      display: none; }
-    header .menu {
-      position: static;
-      overflow: visible;
-      background-color: transparent;
-      width: auto;
-      height: auto; }
-      header .menu .menu-inner {
-        padding: 0;
-        width: 100%; }
-      header .menu a {
-        transform: none;
-        transition: none; }
-      header .menu .version,
-      header .menu .madeIn {
-        bottom: -90.85vh;
-        letter-spacing: 1px;
-        font-size: 1.3rem; }
-    header nav {
-      flex-direction: row;
-      justify-content: flex-end; }
-      header nav a {
-        font-size: 2.65rem;
-        margin-left: 4rem; }
+
+  span.menu-control-open,
+  span.menu-control-close {
+    display: none; }
+
+  .menu {
+    position: static;
+    overflow: visible;
+    background-color: transparent;
+    width: auto;
+    height: auto; }
+    .menu .menu-inner {
+      padding: 0;
+      width: 100%; }
+    .menu a {
+      transform: none;
+      transition: none; }
+    .menu .version,
+    .menu .madeIn {
+      bottom: -90.85vh;
+      letter-spacing: 1px;
+      font-size: 1.3rem; }
+
+  nav {
+    flex-direction: row;
+    justify-content: flex-end; }
+    nav a {
+      font-size: 2.65rem;
+      margin-left: 4rem; }
+
+  .about nav a {
+    color: #373331; }
 
   .home main .intro img {
     width: 55%; }

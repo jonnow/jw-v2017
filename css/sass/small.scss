@@ -122,44 +122,49 @@ $grid_template_img_col: 50%;
     header {
         height: 7rem;
         padding: $padding_small;
-        span.menu-control-open, 
-        span.menu-control-close {
-            display: none;
+    }
+
+    span.menu-control-open, 
+    span.menu-control-close {
+        display: none;
+    }
+
+    .menu {
+        position: static;
+        overflow: visible;
+        background-color: transparent;
+        width: auto;
+        height: auto;
+        
+        .menu-inner {
+            padding: 0;
+            width: 100%;
+        }
+        
+        a {
+            transform: none;
+            transition: none;
         }
 
-        .menu {
-            position: static;
-            overflow: visible;
-            background-color: transparent;
-            width: auto;
-            height: auto;
-            
-            .menu-inner {
-                padding: 0;
-                width: 100%;
-            }
-            
-            a {
-                transform: none;
-                transition: none;
-            }
-
-            .version,
-            .madeIn {
-                bottom: -90.85vh;
-                letter-spacing: $font_small_footNote_letterSpacing;
-                font-size: $font_small_footNote;
-            }
+        .version,
+        .madeIn {
+            bottom: -90.85vh;
+            letter-spacing: $font_small_footNote_letterSpacing;
+            font-size: $font_small_footNote;
         }
+    }
 
-        nav {
-            flex-direction: row;
-            justify-content: flex-end;
-            a {
-                font-size: $font_small_header;
-                margin-left: $margin_smallest;
-            }
+    nav {
+        flex-direction: row;
+        justify-content: flex-end;
+        a {
+            font-size: $font_small_header;
+            margin-left: $margin_smallest;
         }
+    }
+
+    .about nav a {
+        color: $primary_black;
     }
 
     .home main .intro img {

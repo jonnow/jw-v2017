@@ -6,7 +6,7 @@ $margin_smallest: 1.5rem;
 $font_smallest_logo: 3rem;
 $font_smallest_header: 2.2rem;
 $font_smallest_menuSpan: 1.2rem;
-$font_smallest_p: 1.9rem;
+$font_smallest_p: 1.6rem;
 $font_smallest_footNote: 1.2rem;
 $font_smallest_footer: 1.7rem;
 $font_large_standard: 2.4rem;
@@ -34,7 +34,7 @@ body {
 
 p {
     font-size: $font_smallest_p;
-    line-height: 150%;
+    line-height: 175%;
     margin-bottom: $margin_smallest;
 }
 
@@ -48,8 +48,7 @@ main {
 
     header {
         h1 a,
-        span.menu-control-open,
-        nav a {
+        span.menu-control-open {
             color: $primary_white;
         }
         span.menu-control-open {
@@ -89,8 +88,7 @@ main {
 .about {
     background-color: $primary_white;
     header {
-        h1 a,
-        nav a {
+        h1 a {
             color: $primary_black;
         }
     }
@@ -193,69 +191,71 @@ header {
     }
 
     a {
-        text-decoration: none;
-        
+        text-decoration: none;   
     }
-    
-    span.menu-control-open, 
-    span.menu-control-close,
-    nav, 
-    a {
-        @include mixin_title;
-    }
+}
 
-    span.menu-control-open, 
-    span.menu-control-close,
-    nav a { 
-        font-size: $font_smallest_header;
-        margin-bottom: $margin_smallest;
-    }
+span.menu-control-open, 
+span.menu-control-close,
+nav, 
+header a {
+    @include mixin_title;
+}
 
-    span.menu-control-close {
-        color: $primary_white;
-    }
+span.menu-control-open, 
+span.menu-control-close,
+nav a { 
+    font-size: $font_smallest_header;
+    margin-bottom: $margin_smallest;
+}
 
-    span.menu-control-open,
-    span.menu-control-close {
+span.menu-control-close {
+    color: $primary_white;
+}
+
+span.menu-control-open,
+span.menu-control-close {
+    display: block;
+    cursor: pointer;
+}
+
+span.menu-control-open {
+    position: relative;
+    float: right;
+    font-size: $font_smallest_menuSpan;
+    line-height: 130%;
+    margin-top: 3px;
+    svg {
+        position: absolute;
+        top: -12px;
+        left: 12px;
+        line, circle {
+            fill: none;
+            stroke-width: 3;
+        }
+    }
+    &:before {
+        padding-top: 1px;
+    }
+    &:before, &:after {
+        content: '';
         display: block;
-        cursor: pointer;
+        width: 100%;
+        border-top-width: .3rem;
+        border-top-style: solid;
     }
-    
-    span.menu-control-open {
-        position: relative;
-        float: right;
-        font-size: $font_smallest_menuSpan;
-        line-height: 130%;
-        margin-top: 3px;
-        svg {
-            position: absolute;
-            top: -12px;
-            left: 12px;
-            line, circle {
-                fill: none;
-                stroke-width: 3;
-            }
-        }
-        &:before {
-            padding-top: 1px;
-        }
-        &:before, &:after {
-            content: '';
-            display: block;
-            width: 100%;
-            border-top-width: .3rem;
-            border-top-style: solid;
-        }
-    }
+}
 
-   span.menu-control-close {
-       font-size: $font_smallest_menuSpan;
-       text-align: right;
-   }
+span.menu-control-close {
+    font-size: $font_smallest_menuSpan;
+    text-align: right;
+}
 
-    nav {
-        display: flex;
-        flex-direction: column;
+nav {
+    display: flex;
+    flex-direction: column;
+    a {
+        color: $primary_white;
     }
 }
 

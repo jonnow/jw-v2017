@@ -52,44 +52,44 @@ $secondary_font: 'Aleo', 'Adelle', 'Georgia', serif;
 }
 
 // Resets
-html, body, div, span,
-h1, h2, h3, p, blockquote,
-code,
-em, img, strong,
-b, i,
-dl, dt, dd, ol, ul, li,
-article, aside, 
-footer, header, hgroup, menu, nav, section {
-    margin:0;
-    padding:0;
-    border:0;
-    outline:0;
-    font-size:100%;
-    vertical-align:baseline;
-    background:transparent;
+html,body,
+p,
+ol,ul,li,dl,dt,dd,
+blockquote,figure,
+hr,
+h1,h2,h3 {
+    margin: 0;
+    padding: 0
 }
+
+h1,h2,h3 {
+    font-size: 100%;
+    font-weight: normal
+}
+
+ul {
+    list-style: none
+}
+
 html {
+    box-sizing: border-box;
     font-size: 10px;
 }
+
 body {
     line-height:1;
     font-family: $primary_font;
 }
 
-article,aside,footer,header,menu,nav,section { 
-    display:block;
+*,
+*:before,
+*:after {
+    box-sizing: inherit
 }
 
-nav ul {
-    list-style:none;
-}
-
-a {
-    margin:0;
-    padding:0;
-    font-size:100%;
-    vertical-align:baseline;
-    background:transparent;
+img {
+    height: auto;
+    max-width: 100%
 }
 
 /* change border colour to suit your needs */
@@ -100,14 +100,6 @@ hr {
     border-top:1px solid $primary_white;
     margin:1em 0;
     padding:0;
-}
-
-input, select {
-    vertical-align:middle;
-}
-
-*, *:before, *:after {
-    box-sizing: border-box;
 }
 
 ::-moz-selection {
