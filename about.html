@@ -51,7 +51,29 @@
                         <br />
                         Ocean Park, Hong Kong circa 2013.
                     </p>
+                </article>
+                <article>
+                    <h2>Skills &amp; Interests</h2>
+                    <ul class="colour-list" id="colour_list">
+                        <li>HTML</li>
+                        <li>CSS/SASS/LESS</li>
+                        <li>JavaScript/jQuery</li>
+                        <li>Angular</li>
+                        <li>User research</li>
+                        <li>User experience design</li>
+                        <li>User acceptance testing</li>
+                        <li>Responsive design</li>
+                        <li>Adobe Creative Suite</li>
+                        <li>Adobe Illustrator</li>
+                        <li>Adobe PhotoShop</li>
+                        <li>Photography</li>
+                        <li>ASP.net</li>
+                        <li>VB.net</li>
+                        <li>C#</li>
+                        <li>SQL</li>
+                    </ul>
                     <footer>
+                        <h3>Colophon</h3>
                         <p>This website was designed in Adobe Illustrator. It uses a grid system based around the length of my name and a fairly extensive colour palette:
                             <ul class="colours">
                                 <li class="primary-teal"></li>
@@ -87,7 +109,29 @@
                 body.classList.toggle('menu--active'); // or whatever your active class is
             });
 
+            function rand_col() {
+                var color,
+                    listItems = document.getElementById('colour_list').children,
+                    prevCol = '';
 
+                for(var i = 0; i< listItems.length; i++) {
+                    do {
+                        color = GetCol();
+                    }
+                    while(prevCol == color)
+
+                    listItems[i].className = color;
+                    prevCol = color;
+                }
+            }
+
+            function GetCol() {
+                var dots = ['primary_teal', 'primary_orange', 'primary_black', 'tertiary_dull_blue', 'tertiary_bright_blue', 'tertiary_bright_yellow', 'tertiary_bright_red'];
+                var col = dots[Math.floor(Math.random() * dots.length)];
+                return col;
+            }
+
+            rand_col();
         </script>
         <script src="script/script.js"></script>
     </body>

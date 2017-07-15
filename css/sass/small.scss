@@ -20,6 +20,18 @@ $font_small_footNote_letterSpacing: 1px;
 $grid_template_p_col: 55rem;
 $grid_template_img_col: 50%;
 
+@media screen and (min-width: 435px) and (max-width: 650px) {
+     .about ul.colour-list {
+        columns: 2;
+    }
+}
+
+@media screen and (min-width: 650px) and (max-width: 768px) {
+     .about ul.colour-list {
+        columns: 3;
+    }
+}
+
 @media screen and (min-width: 768px) {
     .home main .intro  img {
         margin-top: 0;
@@ -101,6 +113,10 @@ $grid_template_img_col: 50%;
             }
         }
     }
+
+    .about ul.colour-list {
+        columns: 3;
+    }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
@@ -145,12 +161,20 @@ $grid_template_img_col: 50%;
             transform: none;
             transition: none;
         }
+    }
 
+    .home .menu {
         .version,
         .madeIn {
             bottom: -90.85vh;
             letter-spacing: $font_small_footNote_letterSpacing;
             font-size: $font_small_footNote;
+        }
+    }
+
+    body:not(.home) .menu {
+        .version, .madeIn {
+            display: none;
         }
     }
 
@@ -203,6 +227,9 @@ $grid_template_img_col: 50%;
         h1, h2 {
             font-size: $font_small_header;
         }
+        h3 {
+            font-size: $font_smallest_header;
+        }
         p {
             font-size: $font_small_p;
             line-height: $font_small_p_lineHeight;
@@ -215,10 +242,20 @@ $grid_template_img_col: 50%;
             h1 {
                 font-size: 6rem;
             }
+
+            h2 {
+                font-size: 4rem;
+            }
             
-            p {
+            p, ul.colour-list {
                 font-size: 2rem;
                 line-height: 175%;
+            }
+
+            ul.colour-list {
+                columns: 4;
+                width: 120%;
+                margin-left: -1.5rem;
             }
 
             footer p, .caption {

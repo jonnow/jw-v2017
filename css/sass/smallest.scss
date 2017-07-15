@@ -4,6 +4,7 @@ $padding_standard: 3.2rem;
 $margin_smallest: 1.5rem;
 
 $font_smallest_logo: 3rem;
+$font_small_header: 2.8rem;
 $font_smallest_header: 2.2rem;
 $font_smallest_menuSpan: 1.2rem;
 $font_smallest_p: 1.6rem;
@@ -32,7 +33,7 @@ body {
     overflow: hidden;
 }
 
-p {
+p, ul {
     font-size: $font_smallest_p;
     line-height: 175%;
     margin-bottom: $margin_smallest;
@@ -94,20 +95,30 @@ main {
     }
     article {
         width: 90%;
-        max-width: 74rem;
-        margin: 0 auto;
+        max-width: 78rem;
+        margin: 2rem auto 5rem;
 
-        h1, p a {
+        h1, h2, h3, p a {
             color: $tertiary_dull_blue;
         }
 
-        h1 {
-            color: $tertiary_dull_blue;
+        h1, h2, h3{
             font-family: $secondary_font;
-            font-size: 3.6rem;
             font-weight: normal;
+            margin-bottom: 1.25rem;
             margin-top: 1rem;
-            margin-bottom: 1.25rem
+        }
+
+        h1 {
+            font-size: 3.6rem;
+        }
+
+        h2 {
+            font-size: $font_small_header;
+        }
+
+        h3 {
+            font-size: $font_smallest_header;
         }
 
         img {
@@ -117,12 +128,15 @@ main {
         }
 
         p {
-            color: $primary_black;
             a {
                 text-decoration: none;
                 letter-spacing: 1px;
                 border-bottom: 2px solid $tertiary_dull_blue;
             }
+        }
+
+        p, ul.colour-list {
+            color: $primary_black;
         }
 
         ul.colours {
@@ -171,6 +185,34 @@ main {
         .menu-inner {
             color: $primary_white;
         }
+    }
+}
+
+.colour-list {
+    list-style-type: none;
+    margin-bottom: 5rem;
+    li {
+        padding-left: 0rem; 
+        text-indent: -.5px;
+
+        &::before {
+            content: "";
+            display: inline-block;
+            vertical-align: middle;
+            height: 4px;
+            width: 4px;
+            border-radius: 100%;
+            margin-right: 1rem;
+            margin-top: -4px;
+        }
+
+        &.primary_teal::before { background-color: $primary_teal;}
+        &.primary_orange::before { background-color: $primary_orange;}
+        &.primary_black::before { background-color: $primary_black;}
+        &.tertiary_dull_blue::before { background-color: $tertiary_dull_blue;}
+        &.tertiary_bright_blue::before { background-color: $tertiary_bright_blue;}
+        &.tertiary_bright_yellow::before { background-color: $tertiary_bright_yellow;}
+        &.tertiary_bright_red::before { background-color: $tertiary_bright_red;}
     }
 }
 //  END ABOUT PAGE
