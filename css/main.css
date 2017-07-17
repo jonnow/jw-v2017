@@ -70,12 +70,12 @@ hr {
 
 ::-moz-selection {
   background: #ff6161;
-  color: #373331;
+  color: #1c1a19;
 }
 
 ::selection {
   background: #ff6161;
-  color: #373331;
+  color: #1c1a19;
 }
 
 body {

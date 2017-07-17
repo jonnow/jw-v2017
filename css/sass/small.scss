@@ -3,6 +3,7 @@ $padding_smallest: 4rem;
 $margin_small: 4rem;
 $margin_smallest: 4rem;
 
+$font_standard_p            : 2rem;
 $font_small_header          : 2.65rem;
 $font_smallest_header       : 2.2rem;
 $font_smallest_menuSpan     : 1.2rem;
@@ -248,7 +249,7 @@ $grid_template_img_col: 50%;
             }
             
             p, ul.colour-list {
-                font-size: 2rem;
+                font-size: $font_standard_p;
                 line-height: 175%;
             }
 

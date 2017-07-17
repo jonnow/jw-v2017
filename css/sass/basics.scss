@@ -104,9 +104,9 @@ hr {
 
 ::-moz-selection {
     background: lighten($tertiary_dull_red, 5%);
-    color: $primary_black;
+    color: darken($primary_black, 10%);
 }
 ::selection {
     background: lighten($tertiary_dull_red, 5%);
-    color: $primary_black;
+    color: darken($primary_black, 10%);
 }
