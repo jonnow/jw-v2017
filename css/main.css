@@ -487,6 +487,9 @@ nav a {
   display: block;
   grid-column-start: 1;
   grid-column-end: col2-end;
+  -ms-grid-column: 1;
+  -ms-grid-column-align: end;
+  -ms-grid-row: 2;
   stroke: #F0F0F0;
   stroke-width: 4;
   stroke-linecap: round;
@@ -531,6 +534,7 @@ body > footer {
   .projectWrapper {
     position: relative;
     display: grid;
+    display: -ms-grid;
     padding-top: 6.25rem;
     padding-bottom: 2.5rem;
   }
@@ -538,6 +542,7 @@ body > footer {
     padding-top: 10rem;
   }
   .projectWrapper .mobileProject {
+    -ms-grid-row: 1;
     grid-row: 1;
     width: 75%;
     padding: 14% 12% 10%;
@@ -576,36 +581,51 @@ body > footer {
   }
 
   .intro, .projectWrapper {
+    display: -ms-grid;
     display: grid;
+    -ms-grid-columns: 50% 45%;
     grid-template-columns: 50% 45%;
     grid-gap: 5%;
     align-items: center;
     min-height: 50vh;
   }
   .intro .grid-p, .projectWrapper .grid-p {
+    display: -ms-flexbox;
     display: flex;
     flex-direction: column;
+    -ms-flex-direction: column;
+    align-content: center;
     justify-content: center;
+    -ms-grid-column: 1;
     grid-column: 1;
+    -ms-grid-row: 1;
     grid-row: 1;
   }
+  .intro .grid-p + div, .projectWrapper .grid-p + div {
+    -ms-grid-column: 2;
+  }
   .intro img, .projectWrapper img {
+    -ms-grid-column: 2;
     grid-column: 2;
+    -ms-grid-row: 1;
     grid-row: 1;
     width: 90%;
     margin-bottom: 0;
   }
   .intro.projectWrapper-imageFirst, .projectWrapper.projectWrapper-imageFirst {
+    -ms-grid-columns: 45% 50%;
+    grid-row-gap: 5%;
     grid-template-columns: 45% 50%;
   }
   .intro.projectWrapper-imageFirst .grid-p, .projectWrapper.projectWrapper-imageFirst .grid-p {
+    -ms-grid-column: 2;
     grid-column-start: 2;
   }
   .intro .mobileProject, .projectWrapper .mobileProject {
     width: auto;
   }
   .intro .mobileProject picture, .projectWrapper .mobileProject picture {
-    width: 90%;
+    max-width: 90%;
     height: auto;
   }
   .intro .mobileProject picture img, .intro .mobileProject picture source, .projectWrapper .mobileProject picture img, .projectWrapper .mobileProject picture source {
@@ -637,6 +657,7 @@ body > footer {
     padding: 8vh 0;
   }
   .home main .projectWrapper:not(.projectWrapper-imageFirst) {
+    align-content: right;
     justify-content: right;
   }
 
@@ -696,6 +717,7 @@ body > footer {
 
   nav {
     flex-direction: row;
+    align-content: flex-end;
     justify-content: flex-end;
   }
   nav a {
@@ -712,11 +734,14 @@ body > footer {
   }
 
   section {
+    align-content: center;
     justify-content: center;
   }
 
   .intro, .projectWrapper {
+    -ms-grid-column: 50% 50%;
     grid-template-columns: 50% 50%;
+    -ms-grid-rows: 1fr;
     grid-template-rows: 1fr;
     grid-gap: 0;
   }
@@ -732,6 +757,7 @@ body > footer {
     padding: 10vh 4rem 7vh;
   }
   .projectWrapper.projectWrapper-imageFirst {
+    -ms-grid-columns: 50%;
     grid-template-columns: 50%;
   }
   .projectWrapper span {

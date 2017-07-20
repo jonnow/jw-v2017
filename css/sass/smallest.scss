@@ -463,6 +463,10 @@ nav {
     grid-column-start: 1;
     grid-column-end: col2-end;
 
+    -ms-grid-column: 1;
+    -ms-grid-column-align: end;
+    -ms-grid-row: 2;
+
     stroke: $primary_white;
     stroke-width: 4;
     stroke-linecap: round;
@@ -509,6 +513,7 @@ body > footer {
     .projectWrapper {
         position: relative;
         display: grid;
+        display: -ms-grid;
         padding-top: 6.25rem;
         padding-bottom: 2.5rem;
         &.longHeading {
@@ -516,6 +521,7 @@ body > footer {
         }
 
         .mobileProject {
+            -ms-grid-row: 1;
             grid-row: 1;
             width: 75%;
             padding: 14% 12% 10%;
