@@ -85,6 +85,7 @@ $grid_template_img_col: 50%;
         .mobileProject  {
             width: auto;
             picture {
+                align-self: center;
                 max-width: 90%;
                 height: auto;
                 img, source {
@@ -247,7 +248,7 @@ $grid_template_img_col: 50%;
     }
 
     .home {
-        h1, h2 {
+        h2 {
             font-size: $font_small_header;
         }
         h3 {
@@ -277,7 +278,7 @@ $grid_template_img_col: 50%;
 
             ul.colour-list {
                 columns: 4;
-                width: 120%;
+                width: 125%;
                 margin-left: -1.5rem;
             }
 

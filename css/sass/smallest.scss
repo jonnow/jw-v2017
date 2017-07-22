@@ -228,6 +228,8 @@ header {
     height: 5rem;
     padding: $padding_smallest;
     h1 {
+        position: relative;
+        z-index: 1;
         font-size: $font_smallest_logo;
         float: left;
     }
@@ -376,6 +378,10 @@ nav {
 
     h2, .mobileProject {
         margin-bottom: $margin_smallest;
+    }
+
+    .mobileProject, .browserProject {
+        -ms-grid-row-align: center;
     }
 
     .mobileProject {
