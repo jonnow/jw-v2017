@@ -2,6 +2,7 @@ $padding_smallest: 1.5rem;
 $padding_standard: 3.2rem;
 
 $margin_smallest: 1.5rem;
+$margin_standard: 3.2rem;
 
 $font_smallest_logo: 3rem;
 $font_small_header: 2.8rem;
@@ -84,6 +85,34 @@ main {
 }
 //  END HOME PAGE
 
+.dropcaps {
+    margin-top: $margin_standard;
+    &::first-letter {
+        float: left;
+        font-size: 7.01rem;
+        font-weight: bold;
+        color: $primary_orange;
+        margin-top: 1.9rem;
+        margin-right: 1rem;
+    }
+}
+
+q {
+    display: block;
+    font-family: $secondary_font;
+    font-size: 3.6rem;
+    font-weight: bold;
+    line-height: 150%;
+    letter-spacing: 2px;
+    color: $primary_orange;
+    text-transform: uppercase;
+    padding-top: $padding_smallest;
+    padding-bottom: $padding_smallest;
+    border-top: 3px solid $primary_orange;
+    border-bottom: 3px solid $primary_orange;
+    margin-top: $margin_smallest;
+    margin-bottom: $margin_smallest;
+}
 
 //  ABOUT PAGE
 .about {
@@ -98,11 +127,11 @@ main {
         max-width: 78rem;
         margin: 2rem auto 5rem;
 
-        h1, h2, h3, p a {
+        h2, h3, p a {
             color: $tertiary_dull_blue;
         }
 
-        h1, h2, h3{
+        h2, h3{
             font-family: $secondary_font;
             font-weight: normal;
             margin-bottom: 1.25rem;
@@ -111,6 +140,17 @@ main {
 
         h1 {
             font-size: 3.6rem;
+        }
+
+        
+        h1 {
+            font-family: $primary_font;
+            font-size: 3.5rem;
+            font-weight: bold;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: $primary_teal;
+            margin-bottom: $margin_standard;
         }
 
         h2 {

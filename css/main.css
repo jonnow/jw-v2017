@@ -103,6 +103,32 @@ main {
         width: 65%;
         margin: 1rem auto 1.5rem; }
 
+.dropcaps {
+  margin-top: 3.2rem; }
+  .dropcaps::first-letter {
+    float: left;
+    font-size: 7.01rem;
+    font-weight: bold;
+    color: #F57F3F;
+    margin-top: 1.9rem;
+    margin-right: 1rem; }
+
+q {
+  display: block;
+  font-family: "Aleo", "Adelle", "Georgia", serif;
+  font-size: 3.6rem;
+  font-weight: bold;
+  line-height: 150%;
+  letter-spacing: 2px;
+  color: #F57F3F;
+  text-transform: uppercase;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-top: 3px solid #F57F3F;
+  border-bottom: 3px solid #F57F3F;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem; }
+
 .about {
   background-color: #F0F0F0; }
   .about header h1 a {
@@ -111,15 +137,23 @@ main {
     width: 90%;
     max-width: 78rem;
     margin: 2rem auto 5rem; }
-    .about article h1, .about article h2, .about article h3, .about article p a {
+    .about article h2, .about article h3, .about article p a {
       color: #4870CB; }
-    .about article h1, .about article h2, .about article h3 {
+    .about article h2, .about article h3 {
       font-family: "Aleo", "Adelle", "Georgia", serif;
       font-weight: normal;
       margin-bottom: 1.25rem;
       margin-top: 1rem; }
     .about article h1 {
       font-size: 3.6rem; }
+    .about article h1 {
+      font-family: "Woodford Bourne", "Futura", "Helvetica", "Arial", sans-serif;
+      font-size: 3.5rem;
+      font-weight: bold;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #14B4B5;
+      margin-bottom: 3.2rem; }
     .about article h2 {
       font-size: 2.8rem; }
     .about article h3 {
@@ -614,6 +648,9 @@ body > footer {
     margin-top: 5rem; }
     .about article h1 {
       font-size: 6rem; }
+      .about article h1.post-heading {
+        font-size: 5.5rem;
+        line-height: 125%; }
     .about article h2 {
       font-size: 4rem; }
     .about article p, .about article ul.colour-list {

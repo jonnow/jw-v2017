@@ -265,6 +265,10 @@ $grid_template_img_col: 50%;
             margin-top: 5rem;
             h1 {
                 font-size: 6rem;
+                &.post-heading {
+                    font-size: 5.5rem;
+                    line-height: 125%;
+                }
             }
 
             h2 {
