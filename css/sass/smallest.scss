@@ -98,11 +98,13 @@ main {
 }
 
 q {
+    position: relative;
     display: block;
     font-family: $secondary_font;
     font-size: 3.6rem;
     font-weight: bold;
     line-height: 150%;
+    text-align: center;
     letter-spacing: 2px;
     color: $primary_orange;
     text-transform: uppercase;
@@ -124,7 +126,7 @@ q {
     }
     article {
         width: 90%;
-        max-width: 78rem;
+        max-width: 76.5rem;
         margin: 2rem auto 5rem;
 
         h2, h3, p a {
@@ -149,6 +151,7 @@ q {
             font-weight: bold;
             letter-spacing: 2px;
             text-transform: uppercase;
+            text-align: center;
             color: $primary_teal;
             margin-bottom: $margin_standard;
         }
@@ -159,6 +162,14 @@ q {
 
         h3 {
             font-size: $font_smallest_header;
+        }
+
+        figure {
+            &.figure--breakout {
+                min-width: 100%;
+                margin-left: -4.7rem;
+                margin-right: -4.7rem;
+            }
         }
 
         img {
@@ -390,17 +401,11 @@ nav {
         a {
             transform: translate3d(0,0,0);
             transition: transform 500ms ease-out;
-            // animation-duration: .4s;
-            // animation-name: menuFlyIn;
-            // animation-fill-mode: forwards;
-            &:first-child {
-                transition-delay: .2s;
-            }
             &:nth-child(2) {
-                transition-delay: .3s;
+                transition-delay: .1s;
             }
             &:last-child {
-                transition-delay: .4s;
+                transition-delay: .2s;
             }
         }
     }
@@ -409,7 +414,6 @@ nav {
 .projectWrapper {
     min-height: 100vh;
     padding: $padding_smallest;
-    
 
     h2 {
         font-size: $font_smallest_header;
@@ -536,6 +540,9 @@ nav {
         margin: -1px;
         overflow: hidden;
         clip: rect(0,0,0,0);
+    }
+    svg {
+        animation: 6s bouncy infinite;
     }
 }
 

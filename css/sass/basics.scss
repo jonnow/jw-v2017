@@ -34,13 +34,36 @@ $primary_font: 'Woodford Bourne', 'Futura', 'Helvetica', 'Arial', sans-serif;
     font-weight: italic;
 }
 
-$secondary_font: 'Aleo', 'Adelle', 'Georgia', serif;
+$secondary_font: 'Zilla Slab', 'Adelle', 'Georgia', serif;
 
-@font-face {
-    font-family: 'Aleo';
-    src: url(../fonts/aleo-regular-webfont.ttf);
-    font-weight: normal;
+// @font-face {
+//     font-family: 'Aleo';
+//     src: url(../fonts/aleo-regular-webfont.ttf);
+//     font-weight: normal;
+// }
+
+@font-face{
+    font-family: 'Zilla Slab';
+    src: url('../fonts/zilla/woff/ZillaSlab-Regular.woff');
+    src: url('../fonts/zilla/woff2/ZillaSlab-Regular.woff2') format('woff2'),
+         url('../fonts/zilla/woff/ZillaSlab-Regular.woff') format('woff'),
+         url('../fonts/zilla/otf/ZillaSlab(-Regular).otf') format('opentype'),
+         url('../fonts/zilla/ttf/ZillaSlab-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
 }
+
+@font-face{
+    font-family: 'Zilla Slab';
+    src: url('../fonts/zilla/woff/ZillaSlab-SemiBold.woff');
+    src: url('../fonts/zilla/woff2/ZillaSlab-SemiBold.woff2') format('woff2'),
+         url('../fonts/zilla/woff/ZillaSlab-SemiBold.woff') format('woff'),
+         url('../fonts/zilla/otf/ZillaSlab(-SemiBold).otf') format('opentype'),
+         url('../fonts/zilla/ttf/ZillaSlab-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
 
 @mixin mixin_title {
     font-weight: bold;
@@ -90,6 +113,10 @@ body {
 img {
     height: auto;
     max-width: 100%
+}
+
+.font-secondary {
+    font-family: $secondary_font;
 }
 
 /* change border colour to suit your needs */

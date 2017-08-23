@@ -11,9 +11,17 @@
   src: url(../fonts/woodfordbourne-regular.otf);
   font-weight: italic; }
 @font-face {
-  font-family: 'Aleo';
-  src: url(../fonts/aleo-regular-webfont.ttf);
-  font-weight: normal; }
+  font-family: 'Zilla Slab';
+  src: url("../fonts/zilla/woff/ZillaSlab-Regular.woff");
+  src: url("../fonts/zilla/woff2/ZillaSlab-Regular.woff2") format("woff2"), url("../fonts/zilla/woff/ZillaSlab-Regular.woff") format("woff"), url("../fonts/zilla/otf/ZillaSlab(-Regular).otf") format("opentype"), url("../fonts/zilla/ttf/ZillaSlab-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal; }
+@font-face {
+  font-family: 'Zilla Slab';
+  src: url("../fonts/zilla/woff/ZillaSlab-SemiBold.woff");
+  src: url("../fonts/zilla/woff2/ZillaSlab-SemiBold.woff2") format("woff2"), url("../fonts/zilla/woff/ZillaSlab-SemiBold.woff") format("woff"), url("../fonts/zilla/otf/ZillaSlab(-SemiBold).otf") format("opentype"), url("../fonts/zilla/ttf/ZillaSlab-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal; }
 html, body,
 p,
 ol, ul, li, dl, dt, dd,
@@ -46,6 +54,9 @@ body {
 img {
   height: auto;
   max-width: 100%; }
+
+.font-secondary {
+  font-family: "Zilla Slab", "Adelle", "Georgia", serif; }
 
 /* change border colour to suit your needs */
 hr {
@@ -114,11 +125,13 @@ main {
     margin-right: 1rem; }
 
 q {
+  position: relative;
   display: block;
-  font-family: "Aleo", "Adelle", "Georgia", serif;
+  font-family: "Zilla Slab", "Adelle", "Georgia", serif;
   font-size: 3.6rem;
   font-weight: bold;
   line-height: 150%;
+  text-align: center;
   letter-spacing: 2px;
   color: #F57F3F;
   text-transform: uppercase;
@@ -135,12 +148,12 @@ q {
     color: #373331; }
   .about article {
     width: 90%;
-    max-width: 78rem;
+    max-width: 76.5rem;
     margin: 2rem auto 5rem; }
     .about article h2, .about article h3, .about article p a {
       color: #4870CB; }
     .about article h2, .about article h3 {
-      font-family: "Aleo", "Adelle", "Georgia", serif;
+      font-family: "Zilla Slab", "Adelle", "Georgia", serif;
       font-weight: normal;
       margin-bottom: 1.25rem;
       margin-top: 1rem; }
@@ -152,12 +165,17 @@ q {
       font-weight: bold;
       letter-spacing: 2px;
       text-transform: uppercase;
+      text-align: center;
       color: #14B4B5;
       margin-bottom: 3.2rem; }
     .about article h2 {
       font-size: 2.8rem; }
     .about article h3 {
       font-size: 2.2rem; }
+    .about article figure.figure--breakout {
+      min-width: 100%;
+      margin-left: -4.7rem;
+      margin-right: -4.7rem; }
     .about article img {
       display: block;
       border-radius: 5px;
@@ -343,12 +361,10 @@ nav {
   .menu--active nav a {
     transform: translate3d(0, 0, 0);
     transition: transform 500ms ease-out; }
-    .menu--active nav a:first-child {
-      transition-delay: .2s; }
     .menu--active nav a:nth-child(2) {
-      transition-delay: .3s; }
+      transition-delay: .1s; }
     .menu--active nav a:last-child {
-      transition-delay: .4s; }
+      transition-delay: .2s; }
 
 .projectWrapper {
   min-height: 100vh;
@@ -441,6 +457,8 @@ nav {
     margin: -1px;
     overflow: hidden;
     clip: rect(0, 0, 0, 0); }
+  .scroll svg {
+    animation: 6s bouncy infinite; }
 
 body > .wrapper > footer,
 body > footer {
@@ -591,7 +609,7 @@ body > footer {
 
   .home .menu .version,
   .home .menu .madeIn {
-    bottom: -90.85vh;
+    bottom: -85.85vh;
     letter-spacing: 1px;
     font-size: 1.3rem; }
 
@@ -603,7 +621,7 @@ body > footer {
     align-content: flex-end;
     justify-content: flex-end; }
     nav a {
-      font-size: 2.65rem;
+      font-size: 3rem;
       margin-left: 4rem; }
 
   .about nav a {
@@ -624,10 +642,10 @@ body > footer {
     grid-gap: 0; }
 
   .intro {
-    min-height: 93vh; }
+    min-height: 88vh; }
 
   .projectWrapper {
-    min-height: 100vh; }
+    min-height: 88vh; }
     .projectWrapper .mobileProject {
       padding: 10vh 4rem 7vh; }
     .projectWrapper.projectWrapper-imageFirst {
@@ -637,7 +655,9 @@ body > footer {
       font-size: 2rem; }
 
   .home h2 {
-    font-size: 2.65rem; }
+    font-size: 3rem;
+    font-family: "Zilla Slab", "Adelle", "Georgia", serif;
+    font-weight: 600; }
   .home h3 {
     font-size: 2.2rem; }
   .home p {
@@ -654,7 +674,7 @@ body > footer {
     .about article h2 {
       font-size: 4rem; }
     .about article p, .about article ul.colour-list {
-      font-size: 2rem;
+      font-size: 2.1rem;
       line-height: 175%; }
     .about article ul.colour-list {
       columns: 4;
@@ -678,3 +698,18 @@ body > footer {
     font-size: 2.4rem; }
   .home main .intro img {
     width: 60%; } }
+@keyframes bouncy {
+  40% {
+    transform: translate3d(0, 0, 0); }
+  46% {
+    transform: translate3d(0, -1.5rem, 0); }
+  48% {
+    transform: translate3d(0, 0, 0); }
+  50% {
+    transform: translate3d(0, -0.8rem, 0); }
+  52% {
+    transform: translate3d(0, 0, 0); }
+  53% {
+    transform: translate3d(0, -0.3rem, 0); }
+  54% {
+    transform: translate3d(0, 0, 0); } }

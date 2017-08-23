@@ -1,0 +1,29 @@
+@keyframes bouncy {
+    40% {
+        transform: translate3d(0,0,0);
+    }
+
+    46% {
+        transform: translate3d(0,-1.5rem,0);
+    }
+
+    48% {
+        transform: translate3d(0,0,0);
+    }
+
+    50% {
+        transform: translate3d(0,-.8rem,0);
+    }
+
+    52% {
+        transform: translate3d(0,0,0);
+    }
+
+    53% {
+        transform: translate3d(0,-.3rem,0);
+    }
+
+    54% {
+        transform: translate3d(0,0,0);
+    }
+}

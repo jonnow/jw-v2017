@@ -3,8 +3,8 @@ $padding_smallest: 4rem;
 $margin_small: 4rem;
 $margin_smallest: 4rem;
 
-$font_standard_p            : 2rem;
-$font_small_header          : 2.65rem;
+$font_standard_p            : 2.1rem;
+$font_small_header          : 3rem;
 $font_smallest_header       : 2.2rem;
 $font_smallest_menuSpan     : 1.2rem;
 $font_small_p               : 2.65rem;
@@ -185,7 +185,7 @@ $grid_template_img_col: 50%;
     .home .menu {
         .version,
         .madeIn {
-            bottom: -90.85vh;
+            bottom: -85.85vh;
             letter-spacing: $font_small_footNote_letterSpacing;
             font-size: $font_small_footNote;
         }
@@ -229,10 +229,10 @@ $grid_template_img_col: 50%;
     }
     
     .intro {
-        min-height: 93vh;
+        min-height: 88vh;
     }
     .projectWrapper {
-        min-height: 100vh;
+        min-height: 88vh;
         .mobileProject {
             padding: 10vh 4rem 7vh;
         }
@@ -250,6 +250,8 @@ $grid_template_img_col: 50%;
     .home {
         h2 {
             font-size: $font_small_header;
+            font-family: $secondary_font;
+            font-weight: 600;
         }
         h3 {
             font-size: $font_smallest_header;
