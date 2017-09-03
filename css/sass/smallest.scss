@@ -358,6 +358,7 @@ nav {
     position: absolute;
     right: 0;
     top: 0;
+    z-index: 1;
 
     background-color: $primary_black;
     color: $primary_white;  
@@ -542,7 +543,7 @@ nav {
         clip: rect(0,0,0,0);
     }
     svg {
-        animation: 6s bouncy infinite;
+        animation: 5.5s bouncy infinite;
     }
 }
 

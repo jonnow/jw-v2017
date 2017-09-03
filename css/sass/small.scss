@@ -210,7 +210,7 @@ $grid_template_img_col: 50%;
                 }
                 
                 .mobileProject {
-                    padding: 8vh 0;
+                    padding: 10vh 0 6vh;
                 }
                 
                 &:not(.projectWrapper-imageFirst) {
@@ -255,8 +255,10 @@ $grid_template_img_col: 50%;
 
             ul.colour-list {
                 columns: 3;
-                width: 125%;
-                margin-left: -1.5rem;
+                // width: 125%;
+                // margin-left: -1.5rem;
+                width: 100%;
+                margin-left: 0;
             }
 
             footer p, .caption {

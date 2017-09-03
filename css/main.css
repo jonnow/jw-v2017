@@ -332,6 +332,7 @@ nav {
   position: absolute;
   right: 0;
   top: 0;
+  z-index: 1;
   background-color: #373331;
   color: #F0F0F0;
   height: 100vh;
@@ -458,7 +459,7 @@ nav {
     overflow: hidden;
     clip: rect(0, 0, 0, 0); }
   .scroll svg {
-    animation: 6s bouncy infinite; }
+    animation: 5.5s bouncy infinite; }
 
 body > .wrapper > footer,
 body > footer {
@@ -633,7 +634,7 @@ body > footer {
         .home main .projectWrapper .grid-p span:last-of-type {
           float: none; }
       .home main .projectWrapper .mobileProject {
-        padding: 8vh 0; }
+        padding: 10vh 0 6vh; }
       .home main .projectWrapper:not(.projectWrapper-imageFirst) {
         align-content: right;
         justify-content: right; }
@@ -661,8 +662,8 @@ body > footer {
       line-height: 175%; }
     .about article ul.colour-list {
       columns: 3;
-      width: 125%;
-      margin-left: -1.5rem; }
+      width: 100%;
+      margin-left: 0; }
     .about article footer p, .about article .caption {
       font-size: 1.6rem; }
     .about article footer {
@@ -714,3 +715,5 @@ body > footer {
     transform: translate3d(0, -0.3rem, 0); }
   54% {
     transform: translate3d(0, 0, 0); } }
+
+/*# sourceMappingURL=main.css.map */
