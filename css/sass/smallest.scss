@@ -49,6 +49,9 @@ main {
     position: relative;
 
     header {
+        opacity: 0;
+        animation: onLoadFadeIn 3s forwards;
+        animation-delay: 1.7s;
         h1 a,
         span.menu-control-open {
             color: $primary_white;
@@ -67,6 +70,10 @@ main {
         @include mixin_title;
     }
 
+    h2 {
+        font-family: $secondary_font;
+    }
+
 
     main {
        background-color: $primary_teal;
@@ -75,10 +82,20 @@ main {
        .intro {
            padding-left: $padding_smallest;
            padding-right: $padding_smallest;
+
+           img, div.grid-p {
+                opacity: 0;
+           }
            img {
-               display: block;
-               width: 65%;
-               margin: 1rem auto 1.5rem;
+                display: block;
+                width: 65%;
+                margin: 1rem auto 1.5rem;
+                animation: onLoadFadeIn 3s forwards, onLoadMoveIn_img 3s forwards;
+           }
+
+           div.grid-p {
+                animation: onLoadFadeIn 3s forwards, onLoadMoveIn_txt 3s forwards;
+                animation-delay: 750ms;
            }
        }
     }    
@@ -530,6 +547,10 @@ nav {
     color: $primary_white;
     width: auto;
     margin: 0 auto $margin_smallest;
+    opacity: 0;
+    transform: translate3d(0,2rem,0);
+    transition: all .5s ease;
+    
     i {
         font-style: normal;
     }
@@ -542,9 +563,21 @@ nav {
         overflow: hidden;
         clip: rect(0,0,0,0);
     }
-    svg {
+    &.bouncy svg {
         animation: 5.5s bouncy infinite;
+        animation-delay: 2s;
     }
+
+    &.fadeIn {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+        &.loadIn {
+            opacity: 0;
+            animation: onLoadFadeIn 3s forwards;
+            animation-delay: 1.3s;
+        }
+    }
+
 }
 
 body > .wrapper > footer,
@@ -595,6 +628,11 @@ body > footer {
                 margin-bottom: 2.5rem;
             }
         }
+    }
+
+    .home main .projectWrapper:not(.projectWrapper-imageFirst) .grid-p {
+        grid-row: 2;
+        margin-top: $margin_smallest;
     }
 }
 

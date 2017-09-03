@@ -27,3 +27,43 @@
         transform: translate3d(0,0,0);
     }
 }
+
+@keyframes onLoadFadeIn {
+    15% {
+        opacity: 0;
+    }
+
+    45% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes onLoadMoveIn_img {
+    0% {
+        transform: translate3d(-2rem, 0, 0);
+    }
+    15% {
+        transform: translate3d(2rem, 0, 0);
+    }
+
+    45% {
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes onLoadMoveIn_txt {
+    0% {
+        transform: translate3d(2rem, 0, 0);
+    }
+    15% {
+        transform: translate3d(-2rem, 0, 0);
+    }
+
+    45% {
+        transform: translate3d(0, 0, 0);
+    }
+}
