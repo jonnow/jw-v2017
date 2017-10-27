@@ -230,8 +230,9 @@ q {
                 &.primary-black {background-color: $primary_black;}
                 &.primary-white {
                     background-color: $primary_white;
-                    border:1px solid $primary_black;
+                    border:1px solid $primary_grey;
                 }
+                &.primary-grey {background-color: $primary_grey;}
                 &.tertiary-dull-blue {background-color: $tertiary_dull_blue;}
                 &.tertiary-dull-yellow {background-color: $tertiary_dull_yellow;}
                 &.tertiary-dull-red {background-color: $tertiary_dull_red;}
