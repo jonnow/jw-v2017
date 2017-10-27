@@ -44,14 +44,22 @@
 
 @keyframes onLoadMoveIn_img {
     0% {
-        transform: translate3d(-2rem, 0, 0);
+        // transform: translate3d(-2rem, 0, 0);
+        transform: translate3d(-82.5%, 2rem, 0);
     }
     15% {
-        transform: translate3d(2rem, 0, 0);
+        // transform: translate3d(2rem, 0, 0);
+        transform: translate3d(-82.5%, 2rem, 0);
     }
 
     45% {
-        transform: translate3d(0, 0, 0);
+        transform: translate3d(-82.5%, 0, 0);
+    }
+    60% {
+        transform: translate3d(-82.5%, 0, 0);
+    }
+    100% {
+        transform: translate3d(2rem, 0,0);
     }
 }
 
