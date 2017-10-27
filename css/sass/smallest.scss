@@ -137,8 +137,8 @@ q {
 .about {
     background-color: $primary_white;
     header {
-        h1 a {
-            color: $tertiary_dull_blue;
+        h1 a, nav a {
+            color: $primary_grey;
         }
     }
     article {

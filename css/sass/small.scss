@@ -279,7 +279,7 @@ $grid_template_img_col: 50%;
     }
 }
 
-@media screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), 
+@media screen and (min-width: 768px) and (max-width: 1024px) and (-webkit-min-device-pixel-ratio: 2), 
 (min-resolution: 192dpi) {
     .home main .projectWrapper .mobileProject {
         padding-top: 9vh;

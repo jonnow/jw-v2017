@@ -156,8 +156,8 @@ q {
 
 .about {
   background-color: #F0F0F0; }
-  .about header h1 a {
-    color: #4870CB; }
+  .about header h1 a, .about header nav a {
+    color: #a7a7a7; }
   .about article {
     width: 90%;
     max-width: 76.5rem;
@@ -701,7 +701,7 @@ body > footer {
 
   footer {
     font-size: 2.2rem; } }
-@media screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+@media screen and (min-width: 768px) and (max-width: 1024px) and (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   .home main .projectWrapper .mobileProject {
     padding-top: 9vh; } }
 @media screen and (min-width: 768px) and (max-width: 1024px) {
