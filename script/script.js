@@ -16,6 +16,11 @@ $(function(){
         e.preventDefault();
         scrollTo($(this).attr('href'));
     });
+
+    // prevents the animation from playing on screen resize
+    setTimeout(function(){
+        $('body').hasClass('home') ? $('body').addClass('ac') : void 0; // Animation complete
+    }, 3250);
 });
 
 function scrollTo(href) {

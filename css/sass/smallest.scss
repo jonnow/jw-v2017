@@ -90,7 +90,6 @@ main {
                 display: block;
                 width: 65%;
                 margin: 1rem auto 1.5rem;
-                animation: onLoadFadeIn 3s forwards, onLoadMoveIn_img 3s forwards;
            }
 
            div.grid-p {
@@ -100,7 +99,17 @@ main {
        }
     }    
 }
+
+.home:not(.ac) main .intro img {
+    animation: onLoadFadeIn 3s forwards, onLoadMoveIn_img_small 3s forwards;
+}
+
+.home.ac main .intro img {
+    opacity: 1;
+}
 //  END HOME PAGE
+
+
 
 .dropcaps {
     margin-top: $margin_standard;
