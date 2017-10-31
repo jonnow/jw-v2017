@@ -1,0 +1,17 @@
+header h1 a {
+    color: white;
+}
+
+.post-heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10rem;
+    height: 100vh;
+    width: 100%;
+    margin-top: -70px;
+    &.pb {   
+        background-color: #83b936;
+        color: white;
+    }
+}

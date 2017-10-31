@@ -142,6 +142,61 @@ q {
     margin-bottom: $margin_smallest;
 }
 
+//  SHARED ABOUT AND CASE STUDIES
+.about article, .case-study .copy {
+    width: 90%;
+    max-width: 76.5rem;
+    margin: 2rem auto 5rem;
+
+    h2, h3, p a {
+        color: $tertiary_dull_blue;
+    }
+
+    h2, h3{
+        font-family: $secondary_font;
+        font-weight: normal;
+        margin-bottom: 1.25rem;
+        margin-top: 1rem;
+    }
+
+    h2 {
+        font-size: $font_small_header;
+    }
+
+    h3 {
+        font-size: $font_smallest_header;
+    }
+
+    figure {
+        &.figure--breakout {
+            min-width: 100%;
+            margin-left: -4.7rem;
+            margin-right: -4.7rem;
+        }
+    }
+
+    p {
+        a {
+            text-decoration: none;
+            letter-spacing: 1px;
+            border-bottom: 2px solid $tertiary_dull_blue;
+        }
+    }
+
+    p, ul.colour-list {
+        color: $primary_black;
+    }
+
+    .caption {
+        font-size: 1.4rem;
+        line-height: 150%;
+        text-align: center;
+        font-style: italic;
+        margin-top: 1rem;
+    }
+}
+// END ABOUT CASE STUDY SHARED
+
 //  ABOUT PAGE
 .about {
     background-color: $primary_white;
@@ -150,27 +205,9 @@ q {
             color: $primary_grey;
         }
     }
+   
+
     article {
-        width: 90%;
-        max-width: 76.5rem;
-        margin: 2rem auto 5rem;
-
-        h2, h3, p a {
-            color: $tertiary_dull_blue;
-        }
-
-        h2, h3{
-            font-family: $secondary_font;
-            font-weight: normal;
-            margin-bottom: 1.25rem;
-            margin-top: 1rem;
-        }
-
-        h1 {
-            font-size: 3.6rem;
-        }
-
-        
         h1 {
             font-family: $primary_font;
             font-size: 3.5rem;
@@ -182,38 +219,12 @@ q {
             margin-bottom: $margin_standard;
         }
 
-        h2 {
-            font-size: $font_small_header;
-        }
-
-        h3 {
-            font-size: $font_smallest_header;
-        }
-
-        figure {
-            &.figure--breakout {
-                min-width: 100%;
-                margin-left: -4.7rem;
-                margin-right: -4.7rem;
-            }
-        }
+        
 
         img {
             display: block;
             border-radius: 5px;
             margin: 0 auto;
-        }
-
-        p {
-            a {
-                text-decoration: none;
-                letter-spacing: 1px;
-                border-bottom: 2px solid $tertiary_dull_blue;
-            }
-        }
-
-        p, ul.colour-list {
-            color: $primary_black;
         }
 
         ul.colours {
@@ -240,14 +251,6 @@ q {
                 &.tertiary-bright-yellow {background-color: $tertiary_bright_yellow;}
                 &.tertiary-bright-red {background-color: $tertiary_bright_red;}
             }
-        }
-
-        .caption {
-            font-size: 1.4rem;
-            line-height: 150%;
-            text-align: center;
-            font-style: italic;
-            margin-top: 1rem;
         }
     }
 

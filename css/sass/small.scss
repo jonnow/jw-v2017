@@ -233,16 +233,10 @@ $grid_template_img_col: 50%;
         }
     }
 
-    .about {
+    // SHARED ABOUT AND CASE STUDY STYLES
+    .about, .case-study {
         article {
             margin-top: 5rem;
-            h1 {
-                font-size: 6rem;
-                &.post-heading {
-                    font-size: 5.5rem;
-                    line-height: 125%;
-                }
-            }
 
             h2 {
                 font-size: 4rem;
@@ -253,18 +247,31 @@ $grid_template_img_col: 50%;
                 line-height: 175%;
             }
 
-            ul.colour-list {
-                columns: 3;
-                width: 100%;
-                margin-left: 0;
-            }
-
             footer p, .caption {
                 font-size: 1.6rem;
             }
 
             footer {
                 margin-bottom: 3rem;
+            }
+        }
+    }
+    // END
+
+    .about {
+        article {
+            h1 {
+                font-size: 6rem;
+                &.post-heading {
+                    font-size: 5.5rem;
+                    line-height: 125%;
+                }
+            }
+
+            ul.colour-list {
+                columns: 3;
+                width: 100%;
+                margin-left: 0;
             }
 
             ul.colours li {
