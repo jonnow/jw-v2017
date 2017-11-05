@@ -198,11 +198,20 @@ q {
 // END ABOUT CASE STUDY SHARED
 
 //  ABOUT PAGE
+@media screen and (min-width: 640px) {
+    .about nav a {
+        color: $primary_grey;
+    }
+}
+
 .about {
     background-color: $primary_white;
     header {
-        h1 a, nav a {
+        h1 a {
             color: $primary_grey;
+        }
+        nav a {
+            color: $primary_white;
         }
     }
    

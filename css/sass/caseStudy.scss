@@ -15,3 +15,10 @@ header h1 a {
         color: white;
     }
 }
+
+img {
+    &.center {
+        margin: 0 auto;
+        display: block;
+    }
+}

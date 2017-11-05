@@ -13,4 +13,8 @@ header h1 a {
     background-color: #83b936;
     color: white; }
 
+img.center {
+  margin: 0 auto;
+  display: block; }
+
 /*# sourceMappingURL=caseStudy.css.map */
