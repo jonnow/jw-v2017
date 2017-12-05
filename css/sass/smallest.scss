@@ -6,7 +6,7 @@ $margin_standard: 3.2rem;
 
 $font_smallest_logo: 3rem;
 $font_small_header: 2.8rem;
-$font_smallest_header: 2.2rem;
+$font_smallest_header: 2.5rem;
 $font_smallest_menuSpan: 1.2rem;
 $font_smallest_p: 1.6rem;
 $font_smallest_footNote: 1.2rem;
@@ -201,6 +201,13 @@ q {
 @media screen and (min-width: 640px) {
     .about nav a {
         color: $primary_grey;
+    }
+
+    .projectWrapper {
+        min-height: 100vh;
+        .browserProject {
+            width: 80%;
+        }
     }
 }
 
@@ -452,7 +459,6 @@ nav {
 }
 
 .projectWrapper {
-    min-height: 100vh;
     padding: $padding_smallest;
 
     h2 {
@@ -492,7 +498,6 @@ nav {
     .browserProject {
         position: relative;
         padding-top: 10px;
-        width: 80%;
         border: 3px solid $primary_white;
         border-radius: 6px;
         margin: 0 auto;
@@ -645,6 +650,7 @@ body > footer {
             h2 {
                 position: absolute;
                 top: 1.75rem;
+                max-width: 90%;
             }
             p:last-of-type {
                 margin-bottom: 2.5rem;
