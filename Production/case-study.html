@@ -43,10 +43,37 @@
                 <article>
                     <h1 class="post-heading pb">Pierbridge</h1>
                     <div class="copy">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In interdum enim vel neque dignissim aliquet. Maecenas sit amet tortor turpis. Morbi sem ex, gravida ut purus vel, varius maximus nunc. Pellentesque vestibulum pharetra purus, vel pellentesque sem vehicula nec. Maecenas malesuada sapien et lorem volutpat facilisis. Nullam dapibus nisi vel est cursus finibus. Suspendisse pharetra malesuada volutpat. Phasellus eget eros accumsan lorem facilisis ultricies sit amet a sapien. Ut eu nisi ut tellus eleifend gravida id a mi. Nulla facilisi. Ut sed urna accumsan, fringilla leo eu, lobortis augue.</p>
-                        <q>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean tempor sodales dolor.</q>
-                        <p>Fusce rhoncus purus lacus, in faucibus libero efficitur nec. Cras molestie lacinia tristique. Aenean sed ullamcorper ex. Aenean lacinia justo quis ligula vestibulum ultricies. Maecenas aliquet facilisis ipsum, vel vehicula urna aliquam a. In nunc turpis, fringilla at sapien et, tempor condimentum ante. Nam rutrum, ipsum sed fringilla posuere, metus ligula sagittis arcu, at pulvinar purus felis at nibh. Etiam mollis eros quis arcu tempus euismod. Sed non pulvinar dolor, eu malesuada nisi. Pellentesque ullamcorper semper finibus. Proin at dapibus nisl. Cras sed felis quis dui convallis facilisis. In molestie vel sem sed vestibulum!</p>
-                        <img src="images/profile.jpg" alt="The author" class="center">
+                        <ul class="meta">
+                            <li>Creative Direction</li>
+                            <li>UX/UI</li>
+                            <li>WordPress</li>
+                            <li>Stakeholder Engagement</li>
+                        </ul>
+                        <h2>Background</h2>
+                        <p>The Centre for Reading and Language (CRL) has expertise children’s development of language, reading and number skills and uses this knowledge to investigate disorders of language and cognition including dyslexia, language impairment, speech sound disorder, dyscalculia, attention problems, autism spectrum disorders and learning disabilities such as Down syndrome and 22q. Working as a freelancer, I designed and developed the website for the centre.</p>
+
+                        <h2>Brief</h2>
+                        <p>Develop a website with the purpose of providing potential patients with information about the services the CRL provide and keep academic staff and stakeholders informed of the latest news and research.</p>
+
+                        <h2>Goals and Objectives</h2>
+                        <ul>
+                            <li>Accessible</li>
+                            <li>Usable on mobile devices</li>
+                            <li>Ease of use for editors to update news</li>
+                        </ul>
+                        <h2>Research</h2>
+                        <p>Through requirement gathering and stakeholder interviews I established that the website's target audiences. Academics that would want to know about the latest news and parents/guardians that would be looking for more information about the CRL before sending their children. I was also informed that many of the website's users would potentially be dyslexic users.</p>
+                        <p>I worked with Professor Snowling at CRL back in 2012 to create a web presence for the team that would be accessible for users, be responsive and be easy for them to update.</p>
+                        
+                        <h2>Design</h2>
+                        <p>I designed the site in Photoshop and through speaking with Professor Snowling I found a lot out about what she was hoping for from the website. The beige colour that the content sits on was chosen as it can be easier for users with dyslexia to read from. I used a pattern from Subtle Patterns for the header and footer and designed the website in Photoshop. I love to speak directly with clients.</p>
+
+                        <h2>Development</h2>
+                        Concrete5
+
+                        <h2>Outcomes</h2>
+                        
+                        
                     </div>
                 </article>
             </main>
@@ -64,30 +91,6 @@
              closeMenu.addEventListener('click', function(e) {
                 body.classList.toggle('menu--active'); // or whatever your active class is
             });
-
-            function rand_col() {
-                var color,
-                    listItems = document.getElementById('colour_list').children,
-                    prevCol = '';
-
-                for(var i = 0; i< listItems.length; i++) {
-                    do {
-                        color = GetCol();
-                    }
-                    while(prevCol == color)
-
-                    listItems[i].className = color;
-                    prevCol = color;
-                }
-            }
-
-            function GetCol() {
-                var dots = ['primary_teal', 'primary_orange', 'primary_black', 'tertiary_dull_blue', 'tertiary_bright_blue', 'tertiary_bright_yellow', 'tertiary_bright_red'];
-                var col = dots[Math.floor(Math.random() * dots.length)];
-                return col;
-            }
-
-            rand_col();
         </script>
         <script src="script/script.js"></script>
     </body>

@@ -197,24 +197,6 @@ q {
 }
 // END ABOUT CASE STUDY SHARED
 
-//  ABOUT PAGE
-@media screen and (min-width: 640px) {
-    .about nav a {
-        color: $primary_grey;
-    }
-
-    .projectWrapper {
-        min-height: 100vh;
-        .browserProject {
-            width: 80%;
-        }
-    }
-
-    q {
-        font-size: 3.6rem;
-    }
-}
-
 .about {
     background-color: $primary_white;
     header {
@@ -288,6 +270,27 @@ q {
         }
     }
 }
+
+
+//  ABOUT PAGE
+@media screen and (min-width: 640px) {
+    .about header nav a {
+        color: $primary_grey;
+    }
+
+    .projectWrapper {
+        min-height: 100vh;
+        .browserProject {
+            width: 80%;
+        }
+    }
+
+    q {
+        font-size: 3.6rem;
+    }
+}
+
+
 
 .colour-list {
     list-style-type: none;
