@@ -87,19 +87,19 @@ hr {
   .home header span.menu-control-open:before, .home header span.menu-control-open:after {
     border-top-color: wheat; }
 
-.about header h1 a {
+.about header h1 a, .content header h1 a {
   color: #a7a7a7; }
-.about header nav a {
+.about header nav a, .content header nav a {
   color: #F0F0F0; }
-.about header span.menu-control-open svg {
+.about header span.menu-control-open svg, .content header span.menu-control-open svg {
   stroke: #F57F3F; }
-.about header span.menu-control-open:before, .about header span.menu-control-open:after {
+.about header span.menu-control-open:before, .about header span.menu-control-open:after, .content header span.menu-control-open:before, .content header span.menu-control-open:after {
   border-top-color: #F57F3F; }
-.about header .menu-inner {
+.about header .menu-inner, .content header .menu-inner {
   color: #F0F0F0; }
 
 @media screen and (min-width: 640px) {
-  .about header nav a {
+  .about header nav a, .content header nav a {
     color: #a7a7a7; } }
 header {
   position: absolute;
@@ -213,6 +213,10 @@ nav {
   .menu--active .menu {
     width: 80%; } }
 @media screen and (min-width: 768px) {
+  header {
+    height: 7rem;
+    padding: 2.5rem; }
+
   span.menu-control-open,
   span.menu-control-close {
     display: none; }
@@ -247,7 +251,7 @@ nav {
       font-size: 3rem;
       margin-left: 4rem; }
 
-  .about nav a {
+  .about nav a, .content nav a {
     color: #4870CB; } }
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   .menu--active .menu {

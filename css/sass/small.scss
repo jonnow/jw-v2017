@@ -34,11 +34,6 @@ $grid_template_img_col: 50%;
 }
 
 @media screen and (min-width: 768px) {
-    header {
-        height: 7rem;
-        padding: $padding_small;
-    }
-
     .home main .intro img {
         width: 55%;
     }

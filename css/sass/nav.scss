@@ -36,7 +36,7 @@ $font_smallest_footer: 1.7rem;
     }
 }
 
-.about {
+.about, .content {
     header {
         h1 a {
             color: $primary_grey;
@@ -60,8 +60,10 @@ $font_smallest_footer: 1.7rem;
 }
 
 @media screen and (min-width: 640px) {
-    .about header nav a {
-        color: $primary_grey;
+    .about, .content { 
+        header nav a {
+            color: $primary_grey;
+        }
     }
 }
 
@@ -231,7 +233,13 @@ $font_small_footNote        : 1.3rem;
 $font_smallest_footNote     : 1.2rem;
 
 $font_small_footNote_letterSpacing: 1px;
+    
 @media screen and (min-width: 768px) {
+    header {
+        height: 7rem;
+        padding: $padding_small;
+    }
+
     
     span.menu-control-open, 
     span.menu-control-close {
@@ -281,10 +289,11 @@ $font_small_footNote_letterSpacing: 1px;
         }
     }
 
-    .about nav a {
-        color: $tertiary_dull_blue;
+    .about, .content {
+         nav a {
+            color: $tertiary_dull_blue;
+        }
     }
-
 }
 
 
