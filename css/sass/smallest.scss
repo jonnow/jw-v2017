@@ -128,7 +128,9 @@ q {
     width: 90%;
     max-width: 76.5rem;
     margin: 2rem auto 5rem;
+}
 
+.about article, .case-study article {
     h2, h3, p a {
         color: $tertiary_dull_blue;
     }
@@ -177,10 +179,8 @@ q {
     }
 }
 // END ABOUT CASE STUDY SHARED
-
-.about {
+.about, .case-study {
     background-color: $primary_white;
-
     article {
         h1 {
             font-family: $primary_font;
@@ -192,7 +192,11 @@ q {
             color: $primary_teal;
             margin-bottom: 2.6rem;
         }
+    }
+}
 
+.about {
+    article {
         img {
             display: block;
             border-radius: 5px;

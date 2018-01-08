@@ -201,7 +201,7 @@ $grid_template_img_col: 50%;
     }
     // END
 
-    .about {
+    .about, .case-study {
         article {
             h1 {
                 font-size: 6rem;
@@ -210,7 +210,11 @@ $grid_template_img_col: 50%;
                     line-height: 125%;
                 }
             }
+        }
+    }
 
+    .about {
+        article {
             ul.colour-list {
                 columns: 3;
                 width: 100%;

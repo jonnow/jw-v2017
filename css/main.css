@@ -152,37 +152,38 @@ q {
   width: 90%;
   max-width: 76.5rem;
   margin: 2rem auto 5rem; }
-  .about article h2, .about article h3, .about article p a, .case-study .copy h2, .case-study .copy h3, .case-study .copy p a {
-    color: #4870CB; }
-  .about article h2, .about article h3, .case-study .copy h2, .case-study .copy h3 {
-    font-family: "Zilla Slab", "Adelle", "Georgia", serif;
-    font-weight: normal;
-    margin-bottom: 1.25rem;
-    margin-top: 1rem; }
-  .about article h2, .case-study .copy h2 {
-    font-size: 2.8rem; }
-  .about article h3, .case-study .copy h3 {
-    font-size: 2.5rem; }
-  .about article figure.figure--breakout, .case-study .copy figure.figure--breakout {
-    min-width: 100%;
-    margin-left: -4.7rem;
-    margin-right: -4.7rem; }
-  .about article p a, .case-study .copy p a {
-    text-decoration: none;
-    letter-spacing: 1px;
-    border-bottom: 2px solid #4870CB; }
-  .about article p, .about article ul.colour-list, .case-study .copy p, .case-study .copy ul.colour-list {
-    color: #373331; }
-  .about article .caption, .case-study .copy .caption {
-    font-size: 1.4rem;
-    line-height: 150%;
-    text-align: center;
-    font-style: italic;
-    margin-top: 1rem; }
 
-.about {
+.about article h2, .about article h3, .about article p a, .case-study article h2, .case-study article h3, .case-study article p a {
+  color: #4870CB; }
+.about article h2, .about article h3, .case-study article h2, .case-study article h3 {
+  font-family: "Zilla Slab", "Adelle", "Georgia", serif;
+  font-weight: normal;
+  margin-bottom: 1.25rem;
+  margin-top: 1rem; }
+.about article h2, .case-study article h2 {
+  font-size: 2.8rem; }
+.about article h3, .case-study article h3 {
+  font-size: 2.5rem; }
+.about article figure.figure--breakout, .case-study article figure.figure--breakout {
+  min-width: 100%;
+  margin-left: -4.7rem;
+  margin-right: -4.7rem; }
+.about article p a, .case-study article p a {
+  text-decoration: none;
+  letter-spacing: 1px;
+  border-bottom: 2px solid #4870CB; }
+.about article p, .about article ul.colour-list, .case-study article p, .case-study article ul.colour-list {
+  color: #373331; }
+.about article .caption, .case-study article .caption {
+  font-size: 1.4rem;
+  line-height: 150%;
+  text-align: center;
+  font-style: italic;
+  margin-top: 1rem; }
+
+.about, .case-study {
   background-color: #F0F0F0; }
-  .about article h1 {
+  .about article h1, .case-study article h1 {
     font-family: "Woodford Bourne", "Futura", "Helvetica", "Arial", sans-serif;
     font-size: 3.5rem;
     font-weight: bold;
@@ -191,42 +192,43 @@ q {
     text-align: center;
     color: #14B4B5;
     margin-bottom: 2.6rem; }
-  .about article img {
-    display: block;
-    border-radius: 5px;
-    margin: 0 auto; }
-  .about article ul.colours {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 2.5rem; }
-    .about article ul.colours li {
-      list-style: none;
-      height: 20px;
-      width: 20px;
-      border-radius: 50%; }
-      .about article ul.colours li.primary-teal {
-        background-color: #14B4B5; }
-      .about article ul.colours li.primary-orange {
-        background-color: #F57F3F; }
-      .about article ul.colours li.primary-black {
-        background-color: #373331; }
-      .about article ul.colours li.primary-white {
-        background-color: #F0F0F0;
-        border: 1px solid #a7a7a7; }
-      .about article ul.colours li.primary-grey {
-        background-color: #a7a7a7; }
-      .about article ul.colours li.tertiary-dull-blue {
-        background-color: #4870CB; }
-      .about article ul.colours li.tertiary-dull-yellow {
-        background-color: #FFC247; }
-      .about article ul.colours li.tertiary-dull-red {
-        background-color: #FF4747; }
-      .about article ul.colours li.tertiary-bright-blue {
-        background-color: #16C1F3; }
-      .about article ul.colours li.tertiary-bright-yellow {
-        background-color: #FFB31C; }
-      .about article ul.colours li.tertiary-bright-red {
-        background-color: #FF1C1C; }
+
+.about article img {
+  display: block;
+  border-radius: 5px;
+  margin: 0 auto; }
+.about article ul.colours {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2.5rem; }
+  .about article ul.colours li {
+    list-style: none;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%; }
+    .about article ul.colours li.primary-teal {
+      background-color: #14B4B5; }
+    .about article ul.colours li.primary-orange {
+      background-color: #F57F3F; }
+    .about article ul.colours li.primary-black {
+      background-color: #373331; }
+    .about article ul.colours li.primary-white {
+      background-color: #F0F0F0;
+      border: 1px solid #a7a7a7; }
+    .about article ul.colours li.primary-grey {
+      background-color: #a7a7a7; }
+    .about article ul.colours li.tertiary-dull-blue {
+      background-color: #4870CB; }
+    .about article ul.colours li.tertiary-dull-yellow {
+      background-color: #FFC247; }
+    .about article ul.colours li.tertiary-dull-red {
+      background-color: #FF4747; }
+    .about article ul.colours li.tertiary-bright-blue {
+      background-color: #16C1F3; }
+    .about article ul.colours li.tertiary-bright-yellow {
+      background-color: #FFB31C; }
+    .about article ul.colours li.tertiary-bright-red {
+      background-color: #FF1C1C; }
 
 @media screen and (min-width: 640px) {
   .projectWrapper {
@@ -529,11 +531,12 @@ body > footer {
     .about article footer, .case-study article footer {
       margin-bottom: 3rem; }
 
-  .about article h1 {
+  .about article h1, .case-study article h1 {
     font-size: 6rem; }
-    .about article h1.post-heading {
+    .about article h1.post-heading, .case-study article h1.post-heading {
       font-size: 5.5rem;
       line-height: 125%; }
+
   .about article ul.colour-list {
     columns: 3;
     width: 100%;
