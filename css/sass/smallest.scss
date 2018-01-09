@@ -58,6 +58,7 @@ main {
 
     main {
        background-color: $primary_teal;
+       background: linear-gradient(45deg, rgba(20,181,181,1) 0%, rgba(0,167,209,1) 100%); 
        color: $primary_white;
        
        .intro {
@@ -129,6 +130,10 @@ q {
     max-width: 76.5rem;
     margin: 2rem auto 5rem;
 }
+
+    .case-study h1.post-heading {
+        margin-top: 2rem; // Normalises the heading to look like the other pages
+    }
 
 .about article, .case-study article {
     h2, h3, p a {
@@ -364,10 +369,12 @@ q {
     
     &.blue {
         background-color: $tertiary_dull_blue;
+        background: linear-gradient(135deg, rgba(106,137,204,1) 0%, rgba(52,73,179,1) 100%); 
     }
 
     &.orange {
         background-color: $primary_orange;
+        background: linear-gradient(45deg, rgba(248,80,50,1) 0%, rgba(245,127,63,1) 100%); 
     }
 }
 
