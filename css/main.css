@@ -200,7 +200,7 @@ q {
 .about article img {
   display: block;
   border-radius: 5px;
-  margin: 0 auto; }
+  margin: 1.5rem auto 0; }
 .about article ul.colours {
   display: flex;
   justify-content: space-between;

@@ -301,6 +301,11 @@ h1.post-heading {
     filter: drop-shadow(0px 3px 3px #e0e0e0);
     margin-bottom: 4rem; }
 
+@media screen and (min-width: 500px) and (max-width: 1189px) {
+  .billboard img.billboard-mobile {
+    grid-row: 2 / span 1;
+    grid-column: 4 / span 2;
+    margin-top: 7rem; } }
 @media screen and (min-width: 500px) {
   .case-study article h2 {
     margin-top: 4rem; }
@@ -328,8 +333,9 @@ h1.post-heading {
     grid-row: 1 / span 9;
     max-width: 100%; }
   .billboard img.billboard-mobile {
-    grid-column: 7 / span 2;
-    grid-row: 3 / span 14; }
+    grid-column: 4 / span 2;
+    grid-row: 3 / span 14;
+    justify-self: center; }
 
   .image-group {
     max-width: 85%;

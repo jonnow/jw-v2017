@@ -58,6 +58,14 @@ h1.post-heading  {
     }
 }
 
+@media screen and (min-width: 500px) and (max-width:1189px) {
+    .billboard img.billboard-mobile {
+        grid-row: 2 / span 1;
+        grid-column: 4 / span 2;
+        margin-top: 7rem;
+    }
+}
+
 @media screen and (min-width: 500px) {
     .case-study article h2 {
         margin-top: $margin_small;
@@ -98,8 +106,9 @@ h1.post-heading  {
             max-width: 100%;
         }
         &.billboard-mobile {
-            grid-column: 7 / span 2;
+            grid-column: 4 / span 2;
             grid-row: 3 / span 14;
+            justify-self: center;
         }
     }
 
