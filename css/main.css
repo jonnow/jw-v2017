@@ -229,7 +229,49 @@ q {
       background-color: #FFB31C; }
     .about article ul.colours li.tertiary-bright-red {
       background-color: #FF1C1C; }
-
+    .about article ul.colours li.show-colour {
+      position: relative; }
+      .about article ul.colours li.show-colour:before, .about article ul.colours li.show-colour:after {
+        position: absolute;
+        opacity: 0;
+        z-index: 50;
+        animation: showTooltip forwards .3s; }
+      .about article ul.colours li.show-colour:before {
+        content: attr(data-content);
+        top: -20px;
+        left: 50%;
+        border: 1px solid #a7a7a7;
+        margin-left: -50px;
+        margin-top: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 30px;
+        width: 100px;
+        border-radius: 5px;
+        background-color: #F0F0F0;
+        color: #373331;
+        font-size: 1.25rem; }
+      .about article ul.colours li.show-colour:after {
+        content: '';
+        display: block;
+        top: 10px;
+        left: 50%;
+        margin-left: -5px;
+        border: 5px solid transparent;
+        border-top-color: #F0F0F0; }
+      .about article ul.colours li.show-colour.hide-colour:before, .about article ul.colours li.show-colour.hide-colour:after {
+        animation: hideTooltip forwards .3s; }
+@keyframes showTooltip {
+  100% {
+    opacity: 1;
+    margin-top: 0; } }
+@keyframes hideTooltip {
+  0% {
+    opacity: 1;
+    margin-top: 0; }
+  100% {
+    opacity: 0; } }
 @media screen and (min-width: 640px) {
   .projectWrapper {
     min-height: 100vh; }
