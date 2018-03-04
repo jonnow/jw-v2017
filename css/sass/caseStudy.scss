@@ -5,21 +5,23 @@ $margin_smallest: 4rem;
 
 .billboard {
     display: grid;
-    // grid-template-columns: 2fr 3fr 4fr 4fr 4fr 4fr 4fr 3fr 2fr;
     grid-template-columns: 2fr 4fr 4fr 4fr 2fr;
     max-width: 1080px;
     margin: $margin_small auto;
     img {
-        filter: drop-shadow(0px 3px 4px #010101);
+        filter: drop-shadow(0px 10px 15px #4e4e4e);
         &.billboard-desktop {
-            grid-column: 1 / span 9;
-            grid-row: 1 / span 9;
+            grid-column: 1 / span 5;
+            grid-row: 1 / span 2;
             justify-self: center;
+            max-width: 80%;
         }
         &.billboard-mobile {
-            grid-column: 7 / span 2;
-            grid-row: 3 / span 14;
+            grid-column: 4 / span 2;
+            grid-row: 2 / span 2;
+            max-width: 50%;
         }
+        
     }
 }
 
@@ -42,22 +44,41 @@ h1.post-heading  {
     }
 }
 
+.case-study article h2 {
+    margin-top: 2rem;
+}
+
 .image-group {
     max-width: 90%;
-    margin: $margin_smallest auto;
+    margin: $margin_smallest auto 0;
     img {
         width: 100%;
+        filter: drop-shadow(0px 3px 3px #e0e0e0);
+        margin-bottom: $margin_smallest;
+    }
+}
+
+@media screen and (min-width: 500px) and (max-width:1189px) {
+    .billboard img.billboard-mobile {
+        grid-row: 2 / span 1;
+        grid-column: 4 / span 2;
+        margin-top: 7rem;
     }
 }
 
 @media screen and (min-width: 500px) {
+    .case-study article h2 {
+        margin-top: $margin_small;
+    }
     .image-group {
         max-width: 95%;
         display: grid;
         grid-template-columns: repeat(6, minmax(auto, 30%));
         grid-template-rows: auto auto;
-        grid-gap: 1rem;
+        grid-gap: $margin_small;
+        margin-bottom: $margin_small/2;
         img {
+            margin-bottom: 0;
             grid-row: 1;
             grid-column: span 2;
 
@@ -78,6 +99,19 @@ h1.post-heading  {
 }
 
 @media screen and (min-width: 1190px) {
+    .billboard img {
+        &.billboard-desktop {
+            grid-column: 1 / span 9;
+            grid-row: 1 / span 9;
+            max-width: 100%;
+        }
+        &.billboard-mobile {
+            grid-column: 4 / span 2;
+            grid-row: 3 / span 14;
+            justify-self: center;
+        }
+    }
+
     .image-group {
         max-width: 85%;
         grid-gap: 2rem;
