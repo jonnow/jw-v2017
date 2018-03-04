@@ -100,6 +100,7 @@ main {
     font-family: "Zilla Slab", "Adelle", "Georgia", serif; }
   .home main {
     background-color: #14B4B5;
+    background: linear-gradient(45deg, #14b5b5 0%, #00a7d1 100%);
     color: #F0F0F0; }
     .home main .intro {
       padding-left: 1.5rem;
@@ -153,6 +154,9 @@ q {
   max-width: 76.5rem;
   margin: 2rem auto 5rem; }
 
+.case-study h1.post-heading {
+  margin-top: 2rem; }
+
 .about article h2, .about article h3, .about article p a, .case-study article h2, .case-study article h3, .case-study article p a {
   color: #4870CB; }
 .about article h2, .about article h3, .case-study article h2, .case-study article h3 {
@@ -196,7 +200,7 @@ q {
 .about article img {
   display: block;
   border-radius: 5px;
-  margin: 0 auto; }
+  margin: 1.5rem auto 0; }
 .about article ul.colours {
   display: flex;
   justify-content: space-between;
@@ -366,9 +370,11 @@ q {
     .projectWrapper span:last-of-type {
       float: right; }
   .projectWrapper.blue {
-    background-color: #4870CB; }
+    background-color: #4870CB;
+    background: linear-gradient(135deg, #6a89cc 0%, #3449b3 100%); }
   .projectWrapper.orange {
-    background-color: #F57F3F; }
+    background-color: #F57F3F;
+    background: linear-gradient(45deg, #f85032 0%, #f57f3f 100%); }
 
 .scroll {
   position: relative;
