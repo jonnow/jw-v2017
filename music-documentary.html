@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+        <title>Jonno Witts</title>
+
+        <meta name="description" content="User Experience Designer and UI Developer">
+        <meta property="og:locale" content="en_GB">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="Jonno Witts - User Experience Designer and UI Developer">
+        <meta property="og:description" content="Jonno Witts - User Experience Designer and UI Developer">
+        <meta property="og:url" content="http://www.jonnowitts.com">
+        <meta property="og:sitename" content="Jonno Witts">
+
+        <link rel="stylesheet" href="css/main.css" />
+        <link rel="stylesheet" href="css/caseStudy.css" />
+    </head>
+    <body id="body" class="case-study content">
+            <header>
+                <h1><a href="index.html">Jonno Witts</a></h1>
+                <span class="menu-control-open" id="menuControlOpen">
+                    <svg width="10" height="15">
+                        <circle r="3" cx="5" cy="5"></circle>
+                        <line x1="5" x2="5" y1="7" y2="13"></line>
+                    </svg>
+                    Menu
+                </span>
+                <div class="menu">
+                    <div class="menu-inner">
+                        <span class="menu-control-close" id="menuControlClose">Close</span>
+                        <nav>
+                            <a href="/beta/case-study.html" class="active">Work</a>
+                            <a href="/beta/post.html">Notes</a>
+                            <a href="/beta/about.html">Info</a>
+                        </nav>
+                        <span class="version">2017.0.1</span>
+                        <span class="madeIn">Made in England</span>
+                    </div>
+                </div>
+            </header>
+            <main>
+                <article>
+                    <h1 class="post-heading pb">So, Which Band is your Boyfriend In? Documentary Website</h1>
+                    <ul class="meta">
+                        <li>Design</li>
+                        <li>UX/UI</li>
+                        <li>WordPress</li>
+                        <li>Stakeholder Engagement</li>
+                    </ul>
+                    <div class="billboard">
+                        <img src="images/case-studies/musicdoc/Desktop@1x.png" alt="Description of the image" class="billboard-desktop">
+                        <img src="images/case-studies/musicdoc/Mobile.png" alt="Description of the image" class="billboard-mobile">
+                    </div>
+                    <div class="copy">
+                        <h2>Background</h2>
+                        <p>Suzy Harrison was making a documentary A documentary about gender in DIY & underground UK music scenes. I worked with Suzy to create a website that would complement and beyond the crowdfunding page.</p>
+                        <h2>Brief</h2>
+                        <p>Suzy wanted a website that would help promote the film to people and give a professional look when applying for film festivals. It would be a central place to have updates on the project, photos and other interesting content all in one place (including the trailer).</p>
+
+                        
+                        <h2>Design Thinking</h2>
+                        <h3>Discover</h3>
+                        <p>The first stage was to meet with Suzy and work together to complete a user requirements specification. This is a document I have refined over time and I use it to ensure that I ask the right questions at the beginning of a project. I asked Suzy that she bring some examples of websites, documentaries, posters or books that she liked and what she liked about them. During the discovery meeting we discussed the target demographics for the documentary and the website. The website had to be easily updatable for the latest news and progress of the project and have the ability to upload pictures for a gallery.</p>
+                        <h3>Define</h3>
+                        <p>From our discovery meeting it became clear that the important things to Suzy were that looked professional, contained the trailer, and be easy for her to update. In order to make the website easy to use a content management system would be required. We discussed the idea of using WordPress, which Suzy was happy with.</p>
+                        <p>Suzy was hosting the trailer with Vimeo and we decided to simply embed this into the website. This meant that she was able to keep the analytics from Vimeo and it would be easily shareable for visitors to the website.</p>
+                        <h3>Ideate</h3>
+                        <p>With a completed requirements specification I was able to design the information architecture for the website. Although only a simple website it is still important to consider how the website will be structured and how certain aspects are going to work, for example: will the news items be a long list, lazy loaded, or paginated? How will the gallery be sorted, will it work on tags?</p>
+                        <p>With these questions initially answered I was able to begin sketching wireframe ideas for the home and content pages. The information architecture remained fluid at this point to allow for exploration during the design period.</p>
+                        <p>Using the provided examples of media Suzy liked and some photos from the project I generated a mood board of the direction of the website's design. Suzy and I met again to discuss the ideas I had come up with so far, from here I began to design the high fidelity user interface.</p>
+                        <h2>Development</h2>
+                        <p>With the ideas for the design fleshed out in Illustrator I began building out a UI kit with HTML and CSS. To keep the development process and subsequently the website, streamlined, I carried out a mini audit of the required building blocks of the website from the mock-ups. This helps me to follow  DRY (Don't Repeat Yourself) coding principles.</p>
+                        <ul>
+                            <li>Front-end build out – anything special? Full screen background video, gallery plug-in, responsive</li>
+                            <li>Vimeo to host video</li>
+                            <li>WordPress custom theme</li>
+                            <li>Testing – Multi-device testing – iPad, iPhone X, 8, 6, 5s, PC, Laptop</li>
+                        </ul>
+                        <h2>Outcomes</h2>
+                        <ul>
+                            <li>Launched in-time for the premiere</li>
+                            <li>Updates from IndieGoGo now on website</li>
+                            <li>Suzy happy with the professional look of the website and ease of updating.</li>
+                        </ul>
+                    </div>
+                    <div class="image-group">
+                        <img src="images/case-studies/musicdoc/shot1.png" />
+                        <img src="images/case-studies/musicdoc/shot2.png" />
+                        <img src="images/case-studies/musicdoc/shot3.png" />
+                        <img src="images/case-studies/musicdoc/shot4.png" />
+                        <img src="images/case-studies/musicdoc/shot5.png" />
+                    </div>
+                </article>
+            </main>
+            <footer>&copy; 2017 Jonno Witts</footer>        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script>
+            var body = document.body;
+            var openMenu = document.getElementById('menuControlOpen'); // or whatever triggers the toggle
+            var closeMenu = document.getElementById('menuControlClose'); // or whatever triggers the toggle
+
+            openMenu.addEventListener('click', function(e) {
+               body.classList.toggle('menu--active'); // or whatever your active class is
+            });
+
+             closeMenu.addEventListener('click', function(e) {
+                body.classList.toggle('menu--active'); // or whatever your active class is
+            });
+        </script>
+        <script src="script/script.js"></script>
+    </body>
+</html>
