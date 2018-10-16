@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+        <title>Jonno Witts</title>
+
+        <meta name="description" content="Full stack web developer and designer">
+        <meta property="og:locale" content="en_GB">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="Jonno Witts - Full Stack Developer and Designer">
+        <meta property="og:description" content="Jonno Witts - Full Stack Developer and Designer">
+        <meta property="og:url" content="www.jonnowitts.com">
+        <meta property="og:sitename" content="Jonno Witts">
+
+        <link rel="stylesheet" href="css/main.css" />
+    </head>
+    <body id="body" class="about">
+            <header>
+                <h1><a href="jonnowitts.com">Jonno Witts</a></h1>
+                <span class="menu-control-open" id="menuControlOpen">
+                    <svg width="10" height="15">
+                        <circle r="3" cx="5" cy="5"></circle>
+                        <line x1="5" x2="5" y1="7" y2="13"></line>
+                    </svg>
+                    Menu
+                </span>
+                <div class="menu">
+                    <div class="menu-inner">
+                        <span class="menu-control-close" id="menuControlClose">Close</span>
+                        <nav>
+                            <!-- <a href="/case-study.html">Work</a> - Coming soon! -->
+                            <!-- <a href="/post.html">Notes</a> - Coming soon! -->
+                            <a href="https://jonnowitts.com">Home</a>
+                            <a href="/about.html">Info</a>
+                        </nav>
+                        <span class="version">Version 1.0</span>
+                        <span class="madeIn">Made in England</span>
+                    </div>
+                </div>
+            </header>
+            <main>
+                <article>
+                    <h1>Welcome</h1>
+                    <p>Descended from a family filled with engineers it was only a matter of time before I made a life from computers. I work on the full technology stack for the University of York’s clinical trials unit. My main diversions are discovering future UIs and running the York CodePen Show and Tell group</a>.</p>
+                    <p>I am not currently looking for employment however if you’re working on an extra-curricular activity I am looking for my next side-project.</p>
+                    <p>Feel free to say <a href="twitter.com/jonnowitts" title="Send me a Tweet @jonnowitts">“hello”</a>.</p>                  
+                </article>
+                <article>
+                    <h2>Skills &amp; Interests</h2>
+                    <ul class="colour-list" id="colour_list">
+                        <li>HTML</li>
+                        <li>CSS/SASS/LESS</li>
+                        <li>JavaScript/jQuery</li>
+                        <li>VB ASP.NET</li>
+                        <li>User research</li>
+                        <li>User experience design</li>
+                        <li>User acceptance testing</li>
+                        <li>Responsive design</li>
+                        <li>Adobe Creative Suite</li>
+                        <li>Adobe Illustrator</li>
+                        <li>Adobe PhotoShop</li>
+                        <li>Photography</li>
+                    </ul>
+                    <footer>
+                        <h3>Colophon</h3>
+                        <p>This website was designed in Adobe Illustrator. It uses a grid system based around the length of my name and a fairly extensive colour palette:
+                            <ul class="colours">
+                                <li class="primary-teal" data-content="#14B4B5"></li>
+                                <li class="primary-orange" data-content="#F57F3F"></li>
+                                <li class="primary-black" data-content="#373331"></li>
+                                <li class="primary-white" data-content="#F0F0F0"></li>
+                                <li class="tertiary-dull-blue" data-content="#4870CB"></li>
+                                <li class="tertiary-dull-yellow" data-content="#FFC247"></li>
+                                <li class="tertiary-dull-red" data-content="#FF4747"></li>
+                                <li class="tertiary-bright-blue" data-content="#16C1F3"></li>
+                                <li class="tertiary-bright-yellow" data-content="#FFB31C"></li>
+                                <li class="tertiary-bright-red" data-content="#FF1C1C"></li>
+                            </ul>
+                        </p>
+                        <p>The primary typeface is Woodford Bourne in it’s various weights. <span class="font-secondary">Zilla Slab</span> is used for some headings.</p>
+                        <!--<p>This is version 2017.0.1 of the website and is powered by Wordpress, and developed with Angular (4), HTML, and CSS.</p>-->
+                        <p>This is version 2017.0.1 of the website. It has been developed with HTML, CSS and JavaScript</p>
+                    </footer>
+                </article>
+            </main>
+            <footer>&copy; 2018 Jonno Witts</footer>        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script>
+            var body = document.body;
+            var openMenu = document.getElementById('menuControlOpen'); // or whatever triggers the toggle
+            var closeMenu = document.getElementById('menuControlClose'); // or whatever triggers the toggle
+
+            openMenu.addEventListener('click', function(e) {
+               body.classList.toggle('menu--active'); // or whatever your active class is
+            });
+
+             closeMenu.addEventListener('click', function(e) {
+                body.classList.toggle('menu--active'); // or whatever your active class is
+            });
+
+            function rand_col() {
+                var color,
+                    listItems = document.getElementById('colour_list').children,
+                    prevCol = '';
+
+                for(var i = 0; i< listItems.length; i++) {
+                    do {
+                        color = GetCol();
+                    }
+                    while(prevCol == color)
+
+                    listItems[i].className = color;
+                    prevCol = color;
+                }
+            }
+
+            function GetCol() {
+                var dots = ['primary_teal', 'primary_orange', 'primary_black', 'tertiary_dull_blue', 'tertiary_bright_blue', 'tertiary_bright_yellow', 'tertiary_bright_red'];
+                var col = dots[Math.floor(Math.random() * dots.length)];
+                return col;
+            }
+
+            rand_col();
+
+            $(function(){                
+                $('.colours li').hover(function(e){
+                    $(this).addClass('show-colour');
+                }, function(){
+                    var $this = $(this);
+                    $this.addClass('hide-colour');
+                    setTimeout(function(){
+                        $this.removeClass('show-colour hide-colour');
+                    }, 300);
+                });
+            });
+        </script>
+        <script src="script/script.js"></script>
+    </body>
+</html>

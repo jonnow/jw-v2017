@@ -1,0 +1,271 @@
+$padding_small: 2.5rem;
+$padding_smallest: 4rem;
+$margin_small: 4rem;
+$margin_smallest: 4rem;
+
+$font_standard_p            : 2.1rem;
+$font_small_header          : 3rem;
+$font_smallest_header       : 2.2rem;
+$font_smallest_menuSpan     : 1.2rem;
+$font_small_p               : 2.65rem;
+$font_smallest_p            : 1.9rem;
+$font_small_projectFootNote : 2rem;
+$font_small_footNote        : 1.3rem;
+$font_smallest_footNote     : 1.2rem;
+$font_small_footer          : 2.2rem;
+$font_smallest_footer       : 1.7rem;
+
+$font_small_p_lineHeight: 165%;
+$font_small_footNote_letterSpacing: 1px;
+
+$grid_template_p_col: 55rem;
+$grid_template_img_col: 50%;
+
+@media screen and (min-width: 435px) and (max-width: 650px) {
+     .about ul.colour-list {
+        columns: 2;
+    }
+}
+
+@media screen and (min-width: 650px) and (max-width: 768px) {
+     .about ul.colour-list {
+        columns: 3;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .home main .intro img {
+        width: 55%;
+    }
+
+    section {
+        align-content: center;
+        justify-content: center;
+    }
+
+    .home main .intro img {
+        margin-top: 0;
+    }
+
+    .intro, .projectWrapper {
+        display: -ms-grid;
+        display: grid;
+        -ms-grid-columns: 50% 50%;
+        grid-template-columns: 50% 50%;
+        -ms-grid-rows: 1fr;
+        grid-template-rows: 1fr;
+        grid-gap: 0;
+        align-items: center;
+        min-height: 50vh;
+        .grid-p {
+            display: -ms-flexbox;
+            display: flex;
+            flex-direction: column;
+            -ms-flex-direction: column;
+            align-content: center;
+            justify-content: center;
+            -ms-grid-column: 1;
+            grid-column: 1;
+            -ms-grid-row: 1;
+            grid-row: 1;
+            + div {
+                -ms-grid-column: 2;
+            }
+        }
+        img {
+            -ms-grid-column: 2;
+            grid-column: 2;
+            -ms-grid-row: 1;            
+            grid-row: 1;
+
+            width: 90%;
+            margin-bottom: 0;
+        }
+        &.projectWrapper-imageFirst {
+            -ms-grid-columns: 45% 50%;
+            grid-row-gap: 5%;
+            
+            grid-template-columns: 45% 50%;
+
+            .grid-p {
+                -ms-grid-column: 2;
+                grid-column-start: 2;
+            }
+
+        }
+
+        .mobileProject  {
+            width: auto;
+            picture {
+                align-self: center;
+                max-width: 90%;
+                height: auto;
+                img, source {
+                    width: 100%;
+                }
+            }
+        }
+    }    
+    
+    .intro {
+        min-height: 88vh;
+    }
+    .projectWrapper {
+        min-height: 88vh;
+        .mobileProject {
+            padding: 10vh 4rem 7vh;
+        }
+
+        &.projectWrapper-imageFirst {
+            -ms-grid-columns: $grid_template_img_col;// 50% each
+            grid-template-columns: $grid_template_img_col;// 50% each
+        }
+
+        span {
+            font-size: $font_small_projectFootNote;
+        }
+    }
+        
+    .home {
+        main {
+            padding-top: 7rem;
+            .intro, .projectWrapper {
+                padding-left: $padding_smallest + 2;
+                padding-right: $padding_smallest + 1;
+                // Here for overrides
+                
+            }
+            .projectWrapper {
+                padding-top: 6rem;
+                padding-bottom: 6rem;
+                
+                .grid-p {
+                    span {
+                        display: block;
+                        margin-bottom: $margin_smallest/2;
+                        &:first-of-type {
+                            margin-top: $margin_smallest;
+                        }
+                        &:last-of-type {
+                            float: none;
+                        }
+                    }
+                }
+                
+                .mobileProject {
+                    padding: 7vh 0 6vh;
+                }
+                
+                &:not(.projectWrapper-imageFirst) {
+                    align-content: right;
+                    justify-content: right;
+                }
+            }
+        }
+        h2 {
+            font-size: $font_small_header;
+            font-family: $secondary_font;
+            font-weight: 600;
+        }
+        h3 {
+            font-size: $font_smallest_header;
+        }
+        p {
+            font-size: $font_small_p;
+            line-height: $font_small_p_lineHeight;
+        }
+    }
+
+    // SHARED ABOUT AND CASE STUDY STYLES
+    .about, .case-study {
+        article {
+            margin-top: 5rem;
+
+            h2 {
+                font-size: 4rem;
+            }
+            
+            p, ul.colour-list {
+                font-size: $font_standard_p;
+                line-height: 175%;
+            }
+
+            footer p, .caption {
+                font-size: 1.6rem;
+            }
+
+            footer {
+                margin-bottom: 3rem;
+            }
+        }
+    }
+    // END
+
+    .about, .case-study {
+        article {
+            h1 {
+                font-size: 6rem;
+                &.post-heading {
+                    font-size: 5.5rem;
+                    line-height: 125%;
+                }
+            }
+        }
+    }
+
+    .about {
+        article {
+            ul.colour-list {
+                columns: 3;
+                width: 100%;
+                margin-left: 0;
+            }
+
+            ul.colours li {
+                height: 5rem;
+                width: 5rem;
+            }
+        }
+    }
+
+    footer {
+        font-size: $font_small_footer;
+    }
+}
+
+// only do the side scroll image in on large screens
+@media screen and (min-width: 768px) {
+    .home:not(.ac) main .intro img {
+        animation: onLoadFadeIn 3s forwards, onLoadMoveIn_img_large 3s forwards;
+    }
+    
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) and (-webkit-min-device-pixel-ratio: 2), 
+(min-resolution: 192dpi) {
+    .home main .projectWrapper .mobileProject {
+        padding-top: 9vh;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .home main .intro  img {
+        width: 75%;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .intro, .projectWrapper {
+        -ms-grid-column: 50% 50%;
+        grid-template-columns: 50% 50%;// 50/50 correct formatting for grid
+        -ms-grid-rows: 1fr;
+        grid-template-rows: 1fr;
+        grid-gap: 0;
+    }
+
+    .about ul.colour-list {
+        columns: 4;
+    }
+
+    
+}
