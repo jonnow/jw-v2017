@@ -577,9 +577,17 @@ body > footer {
                 position: absolute;
                 top: 1.75rem;
                 max-width: 90%;
+                left: 1.5rem;
             }
             p:last-of-type {
                 margin-bottom: 2.5rem;
+            }
+            div.block {
+                text-align: center;
+                p {
+                    margin-top: 1.75rem;
+                    margin-bottom: 0;
+                }
             }
         }
     }
