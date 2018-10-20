@@ -65,10 +65,10 @@ main {
            padding-left: $padding_smallest;
            padding-right: $padding_smallest;
 
-           img, div.grid-p {
+           .mac, div.grid-p {
                 opacity: 0;
            }
-           img {
+           .mac {
                 display: block;
                 width: 65%;
                 margin: 1rem auto 1.5rem;
@@ -111,12 +111,25 @@ main {
     }    
 }
 
-.home:not(.ac) main .intro img {
-    animation: onLoadFadeIn 3s forwards, onLoadMoveIn_img_small 3s forwards;
+.home:not(.ac) main .intro .mac {
+    animation: onLoadFadeIn 3s forwards, onLoadMoveIn_mac_small 3s forwards;
 }
 
-.home.ac main .intro img {
+.home.ac main .intro .mac {
     opacity: 1;
+}
+svg.mac {
+    path, ellipse {
+        fill:none;
+        stroke: #f2f2f2;
+    }
+}
+svg.mac .hello {
+    stroke:#f2f2f2;
+    stroke-width:2px;
+    stroke-dasharray: 325px;
+    stroke-dashoffset: 325px;
+    animation: writeHello 1.3s linear .4s forwards;
 }
 //  END HOME PAGE
 

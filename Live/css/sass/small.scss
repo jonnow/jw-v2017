@@ -34,7 +34,7 @@ $grid_template_img_col: 50%;
 }
 
 @media screen and (min-width: 768px) {
-    .home main .intro img {
+    .home main .intro .mac {
         width: 55%;
     }
 
@@ -43,7 +43,7 @@ $grid_template_img_col: 50%;
         justify-content: center;
     }
 
-    .home main .intro img {
+    .home main .intro .mac {
         margin-top: 0;
     }
 
@@ -235,8 +235,8 @@ $grid_template_img_col: 50%;
 
 // only do the side scroll image in on large screens
 @media screen and (min-width: 768px) {
-    .home:not(.ac) main .intro img {
-        animation: onLoadFadeIn 3s forwards, onLoadMoveIn_img_large 3s forwards;
+    .home:not(.ac) main .intro .mac {
+        animation: onLoadFadeIn 3s forwards, onLoadMoveIn_mac_large 3s forwards;
     }
     
 }
@@ -249,7 +249,7 @@ $grid_template_img_col: 50%;
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
-    .home main .intro  img {
+    .home main .intro  .mac {
         width: 75%;
     }
 }
