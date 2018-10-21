@@ -177,7 +177,7 @@ q {
         margin-top: 2rem; // Normalises the heading to look like the other pages
     }
 
-.about article, .case-study article {
+.content article {
     h2, h3, p a {
         color: $tertiary_dull_blue;
     }
@@ -226,7 +226,7 @@ q {
     }
 }
 // END ABOUT CASE STUDY SHARED
-.about, .case-study {
+.content {
     background-color: $primary_white;
     article {
         h1 {
@@ -235,9 +235,8 @@ q {
             font-weight: bold;
             letter-spacing: 2px;
             text-transform: uppercase;
-            text-align: center;
-            color: $primary_teal;
-            margin-bottom: 2.6rem;
+            color: $tertiary_dull_blue;
+            margin-bottom: .65rem;
         }
     }
 }
