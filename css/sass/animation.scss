@@ -42,7 +42,7 @@
     }
 }
 
-@keyframes onLoadMoveIn_img_small {
+@keyframes onLoadMoveIn_mac_small {
     0% {
         // transform: translate3d(-2rem, 0, 0);
         transform: translate3d(0, 2rem, 0);
@@ -64,7 +64,7 @@
 }
 
 
-@keyframes onLoadMoveIn_img_large {
+@keyframes onLoadMoveIn_mac_large {
     0% {
         // transform: translate3d(-2rem, 0, 0);
         transform: translate3d(-82.5%, 2rem, 0);
@@ -101,5 +101,14 @@
 
     45% {
         transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes writeHello {
+    0% {
+        stroke-dashoffset: 325;
+    }
+    100% {
+        stroke-dashoffset: 0;
     }
 }
