@@ -1,0 +1,78 @@
+@font-face {
+  font-family: 'Woodford Bourne';
+  src: url(../fonts/woodfordbourne-regular.otf);
+  font-weight: normal; }
+@font-face {
+  font-family: 'Woodford Bourne';
+  src: url(../fonts/woodfordbourne-bold.otf);
+  font-weight: bold; }
+@font-face {
+  font-family: 'Woodford Bourne';
+  src: url(../fonts/woodfordbourne-regular.otf);
+  font-weight: italic; }
+@font-face {
+  font-family: 'Zilla Slab';
+  src: url("../fonts/zilla/woff/ZillaSlab-Regular.woff");
+  src: url("../fonts/zilla/woff2/ZillaSlab-Regular.woff2") format("woff2"), url("../fonts/zilla/woff/ZillaSlab-Regular.woff") format("woff"), url("../fonts/zilla/otf/ZillaSlab(-Regular).otf") format("opentype"), url("../fonts/zilla/ttf/ZillaSlab-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal; }
+@font-face {
+  font-family: 'Zilla Slab';
+  src: url("../fonts/zilla/woff/ZillaSlab-SemiBold.woff");
+  src: url("../fonts/zilla/woff2/ZillaSlab-SemiBold.woff2") format("woff2"), url("../fonts/zilla/woff/ZillaSlab-SemiBold.woff") format("woff"), url("../fonts/zilla/otf/ZillaSlab(-SemiBold).otf") format("opentype"), url("../fonts/zilla/ttf/ZillaSlab-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal; }
+html, body,
+p,
+ol, ul, li, dl, dt, dd,
+blockquote, figure,
+hr,
+h1, h2, h3 {
+  margin: 0;
+  padding: 0; }
+
+h1, h2, h3 {
+  font-size: 100%;
+  font-weight: normal; }
+
+ul {
+  list-style: none; }
+
+html {
+  box-sizing: border-box;
+  font-size: 10px; }
+
+body {
+  line-height: 1;
+  font-family: "Woodford Bourne", "Futura", "Helvetica", "Arial", sans-serif; }
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit; }
+
+img {
+  height: auto;
+  max-width: 100%; }
+
+.font-secondary {
+  font-family: "Zilla Slab", "Adelle", "Georgia", serif; }
+
+/* change border colour to suit your needs */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #F0F0F0;
+  margin: 1em 0;
+  padding: 0; }
+
+::-moz-selection {
+  background: #ff6161;
+  color: #1c1a19; }
+
+::selection {
+  background: #ff6161;
+  color: #1c1a19; }
+
+/*# sourceMappingURL=basics.css.map */

@@ -258,29 +258,65 @@ nav {
     width: 40%; }
     .menu--active .menu .menu-inner {
       width: 40vw; } }
+img.standard {
+  margin: 2rem auto;
+  display: block; }
+
+.ids, .billboard img {
+  filter: drop-shadow(0px 10px 15px #4e4e4e); }
+
+.site-link-wrapper {
+  display: block;
+  width: 100%;
+  text-align: center; }
+  .site-link-wrapper a.site-link {
+    font-family: "Woodford Bourne","Futura","Helvetica","Arial",sans-serif;
+    font-size: 2rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #14B4B5;
+    margin-top: 2.6rem;
+    margin-bottom: 2.6rem;
+    display: inline-block; }
+
 .billboard {
   display: grid;
   grid-template-columns: 2fr 4fr 4fr 4fr 2fr;
   max-width: 1080px;
   margin: 4rem auto; }
-  .billboard img {
-    filter: drop-shadow(0px 10px 15px #4e4e4e); }
-    .billboard img.billboard-desktop {
-      grid-column: 1 / span 5;
-      grid-row: 1 / span 2;
-      justify-self: center;
-      max-width: 80%; }
-    .billboard img.billboard-mobile {
-      grid-column: 4 / span 2;
-      grid-row: 2 / span 2;
-      max-width: 50%; }
+  .billboard img.billboard-desktop {
+    grid-column: 1 / span 5;
+    grid-row: 1 / span 2;
+    justify-self: center;
+    max-width: 80%; }
+  .billboard img.billboard-mobile {
+    grid-column: 4 / span 2;
+    grid-row: 2 / span 2;
+    max-width: 50%; }
 
-h1.post-heading {
-  margin-bottom: 0; }
+h1.post-heading, ul.meta {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0;
+  max-width: 80%;
+  font-size: 3.2rem; }
+
+@media screen and (min-width: 840px) {
+  .content article h1.post-heading, .content article ul.meta {
+    max-width: 70%;
+    font-size: 5.5rem; } }
+@media screen and (min-width: 1024px) {
+  .content article h1.post-heading, .content article ul.meta {
+    max-width: 48%;
+    font-size: 5.5rem; } }
+h1 span {
+  display: block;
+  font-size: 65%;
+  color: #14B4B5; }
 
 .meta {
-  display: block;
-  text-align: center; }
+  display: block; }
   .meta li {
     color: #373331;
     display: inline-block; }

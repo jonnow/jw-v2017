@@ -54,7 +54,48 @@ h1.post-heading, ul.meta  {
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 0;
-    max-width: 48%;
+    max-width: 80%;
+    
+}
+
+h1.post-heading {
+    font-size: 3.2rem;
+}
+
+@media screen and (max-width: 900px) {
+    .content article {
+        h1.post-heading {
+            max-width: 90%;
+            font-size: 2rem;
+            line-height: 135%;
+            span {
+                line-height: 145%;
+                margin-top: .5rem;
+            }
+        }
+        ul {
+            font-size: 1.4rem;
+            max-width: 90%;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .content article {
+        h1.post-heading {
+            font-size: 3.5rem;
+            
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .content article {
+        h1.post-heading {
+            max-width: 80%;
+            font-size: 4.5rem;
+        }
+    }
 }
 
 h1 span {
