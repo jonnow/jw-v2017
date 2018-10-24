@@ -65,10 +65,10 @@ main {
            padding-left: $padding_smallest;
            padding-right: $padding_smallest;
 
-           .mac, div.grid-p {
+           img, div.grid-p {
                 opacity: 0;
            }
-           .mac {
+           img {
                 display: block;
                 width: 65%;
                 margin: 1rem auto 1.5rem;
@@ -79,57 +79,15 @@ main {
                 animation-delay: 1750ms;
            }
        }
-
-       .block {
-           display: block;
-       }
-       a.btn {
-           color: $primary-white;
-           text-decoration: none;
-           font-size: 2rem;
-
-           display: inline-block;
-           padding: .75rem 2rem;
-           border: 2px solid $primary-white;
-           border-radius: .5rem;
-           margin: 2rem auto 0;
-           transition: all .25s ease;
-       }
-       a.btn.blue {
-           &.blue:hover {
-                color: $tertiary_dull_blue;
-           }
-
-           &.orange:hover {
-                color: $primary_orange;
-           }
-           
-           &:hover, &:active {
-               background-color: $primary-white;    
-           }
-       }
     }    
 }
 
-.home:not(.ac) main .intro .mac {
-    animation: onLoadFadeIn 3s forwards, onLoadMoveIn_mac_small 3s forwards;
+.home:not(.ac) main .intro img {
+    animation: onLoadFadeIn 3s forwards, onLoadMoveIn_img_small 3s forwards;
 }
 
-.home.ac main .intro .mac {
+.home.ac main .intro img {
     opacity: 1;
-}
-svg.mac {
-    path, ellipse {
-        fill:none;
-        stroke: #f2f2f2;
-    }
-}
-svg.mac .hello {
-    stroke:#f2f2f2;
-    stroke-width:2px;
-    stroke-dasharray: 325px;
-    stroke-dashoffset: 325px;
-    animation: writeHello 1.3s linear .4s forwards;
 }
 //  END HOME PAGE
 
@@ -167,7 +125,7 @@ q {
 }
 
 //  SHARED ABOUT AND CASE STUDIES
-.about article, .case-study .copy, .case-study h1.post-heading, .case-study .meta {
+.about article, .case-study .copy {
     width: 90%;
     max-width: 76.5rem;
     margin: 2rem auto 5rem;
@@ -177,7 +135,7 @@ q {
         margin-top: 2rem; // Normalises the heading to look like the other pages
     }
 
-.content article {
+.about article, .case-study article {
     h2, h3, p a {
         color: $tertiary_dull_blue;
     }
@@ -226,7 +184,7 @@ q {
     }
 }
 // END ABOUT CASE STUDY SHARED
-.content {
+.about, .case-study {
     background-color: $primary_white;
     article {
         h1 {
@@ -235,8 +193,9 @@ q {
             font-weight: bold;
             letter-spacing: 2px;
             text-transform: uppercase;
-            color: $tertiary_dull_blue;
-            margin-bottom: .65rem;
+            text-align: center;
+            color: $primary_teal;
+            margin-bottom: 2.6rem;
         }
     }
 }
@@ -576,17 +535,9 @@ body > footer {
                 position: absolute;
                 top: 1.75rem;
                 max-width: 90%;
-                left: 1.5rem;
             }
             p:last-of-type {
                 margin-bottom: 2.5rem;
-            }
-            div.block {
-                text-align: center;
-                p {
-                    margin-top: 1.75rem;
-                    margin-bottom: 0;
-                }
             }
         }
     }

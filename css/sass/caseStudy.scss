@@ -2,31 +2,6 @@
 $margin_small: 4rem;
 $margin_smallest: 4rem;
 
-img.standard {
-    margin: 2rem auto;
-    display: block;
-}
-
-.ids {
-    filter: drop-shadow(0px 10px 15px #4e4e4e); // Individual Drop Shadow - Adds drop shadows to any and all individual aspects of an image
-}
-
-.site-link-wrapper {
-    display: block;
-    width: 100%;
-    text-align: center;
-    a.site-link {
-        font-family: "Woodford Bourne","Futura","Helvetica","Arial",sans-serif;
-        font-size: 2rem;
-        font-weight: bold;
-        letter-spacing: 2px;
-        text-transform: uppercase;
-        color: #14B4B5;
-        margin-top: 2.6rem;
-        margin-bottom: 2.6rem;
-        display:inline-block;
-    }
-}
 
 .billboard {
     display: grid;
@@ -34,7 +9,7 @@ img.standard {
     max-width: 1080px;
     margin: $margin_small auto;
     img {
-        @extend .ids;
+        filter: drop-shadow(0px 10px 15px #4e4e4e);
         &.billboard-desktop {
             grid-column: 1 / span 5;
             grid-row: 1 / span 2;
@@ -50,86 +25,13 @@ img.standard {
     }
 }
 
-// Start
-.content article {
-    h1.post-heading, ul.meta{
-        margin-left:auto;
-        margin-right:auto;
-        margin-bottom:0;
-        max-width:90%
-    }
-
-    h1.post-heading {
-        font-size: 3rem;
-        line-height: 115%;
-        span {
-            line-height: 145%;
-            margin-top: .25rem;
-        }
-    }
-
-    ul.meta {
-        font-size: 1.4rem;
-        li:after {
-            margin-left: .45rem;
-            margin-right: .45rem;
-        }
-    }
-}
-
-@media screen and (min-width: 580px) {
-    .content article ul.meta {
-        font-size: 1.7rem;
-    }
-}
-
-@media screen and (min-width: 768px) {
-    .content article h1.post-heading {
-        font-size: 3.5rem;
-    }
-}
-
-@media screen and (min-width: 840px) {
-    .content article {
-        h1.post-heading {
-            font-size: 4.5rem;
-            line-height:135%;
-            span{
-                line-height:145%;
-                margin-top:.5rem
-            }    
-        }
-        
-        ul {
-            font-size:1.4rem;
-        }
-    }
-}
-
-@media screen and (min-width: 1024px){
-    .content article {
-        h1.post-heading{
-            font-size:5.5rem
-        }
-        h1.post-heading, ul.meta {
-            max-width:100rem;
-        }
-    }
-}
-
-
-// End
-
-
-
-h1 span {
-    display: block;
-    font-size: 65%;
-    color: $primary_teal;
+h1.post-heading  {
+    margin-bottom: 0;
 }
 
 .meta {
     display: block;
+    text-align: center;
     li {
         color: $primary_black;
         display: inline-block;
