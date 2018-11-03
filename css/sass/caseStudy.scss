@@ -116,11 +116,7 @@ img.standard {
         }
     }
 }
-
-
 // End
-
-
 
 h1 span {
     display: block;
@@ -154,6 +150,10 @@ h1 span {
         filter: drop-shadow(0px 3px 3px #e0e0e0);
         margin-bottom: $margin_smallest;
     }
+}
+
+img.single-col-large {
+    margin-bottom: $margin_smallest;
 }
 
 @media screen and (min-width: 500px) and (max-width:1189px) {

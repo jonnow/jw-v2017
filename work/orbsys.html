@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-67002710-2"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-67002710-2');
+        </script>
+
+        
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+        <title>Jonno Witts</title>
+
+        <meta name="description" content="User Experience Designer and UI Developer">
+        
+        <link rel="stylesheet" href="../css/main.css" />
+        <link rel="stylesheet" href="../css/caseStudy.css" />
+    </head>
+    <body id="body" class="case-study content">
+            <header>
+                <h1><a href="https://jonnowitts.com">Jonno Witts</a></h1>
+                <span class="menu-control-open" id="menuControlOpen">
+                    <svg width="10" height="15">
+                        <circle r="3" cx="5" cy="5"></circle>
+                        <line x1="5" x2="5" y1="7" y2="13"></line>
+                    </svg>
+                    Menu
+                </span>
+                <div class="menu">
+                    <div class="menu-inner">
+                        <span class="menu-control-close" id="menuControlClose">Close</span>
+                        <nav>
+                            <!-- <a href="/case-study.html">Work</a> - Coming soon! -->
+                            <!-- <a href="/post.html">Notes</a> - Coming soon! -->
+                            <a href="https://jonnowitts.com">Home</a>
+                            <a href="../about.html">Info</a>
+                        </nav>
+                        <span class="version">Version 1.02</span>
+                        <span class="madeIn">Made in York, England</span>
+                    </div>
+                </div>
+            </header>
+            <main>
+                <article>
+                    <h1 class="post-heading pb">Small Business Website<span>Orbsys</span></h1>
+                    <ul class="meta">
+                        <li>Design</li>
+                        <li>Stakeholder Engagement</li>
+                    </ul>
+                    <div class="billboard">
+                        <img src="../images/case-studies/orbsys/desktop.png" alt="The homepage for the documentary website displayed on a browser window" class="billboard-desktop">
+                        <img src="../images/case-studies/orbsys/mobile.png" alt="The homepage for the documentary website displayed on a mobile device" class="billboard-mobile">
+                    </div>
+                    <div class="copy">
+                        <h2>Background</h2>
+                        <p>OrbSys is a York based computer repair service, it's key selling points are a flat fee for repairs and travel to customers in the local area. I met Oliver, the sole proprietor of OrbSys and a DotYork meet-up, where he told me he was starting a computer repair company in his spare-time and needed a website.</p>
+                        <h2>Brief</h2>
+                        <p>Oliver wanted a website to help grow his new business. He had identified a gap in the market and wanted to provide a cheap and reliable service customers that weren't tech savvy. I also gave Oliver some ideas about how to market the company through the website with a blog, Facebook and local advertising.</p>                        
+                        <h2>Research</h2>
+                        <h3>Discover</h3>
+                        <p>During our set-up meeting Oliver and I completed a user requirements specification.  We discussed single-page websites and agreed that this would be the way to go. Oliver showed me the marketing materials he already had (business cards etc). This added some design contraints as the website would need to fit the materials he already had. The website would need to be responsive due to customers potentially not having a laptop/desktop available to them.</p>
+                        <p>I began to structure the single-page website, based of the user requirements spec we had completed. Always with the audience, simplicity, the devices likely to be used in mind. I created a mood board using the business card as the basis for the design. I then used the mood board to apply a design to the wireframes using Adobe Illustrator.</p>
+                        <h2>Design and Development</h2>
+                        <p>As the website was fairly simple it allowed me time to experiment with newer technologies, such as the then new CSS grid property. The development also honed my development process outside of the day-to-day office process.</p>
+                        <h2>Testing</h2>
+                        <p>I tested on a multitude of devices and asked a variety of people with different backgrounds to complete some tasks - contact the company, find reviews and find the phone number. Based on the feedback gained from this user testing I made adjustments to the layout to make these key jobs easier.</p>
+                        <h2>Outcomes</h2>
+                        <p>Oliver was really pleased with the design and I was thrilled with the outcome. The website did not require any maintenance from Oliver once launched so it allowed him to concentrate on other areas of the business.</p>
+                        <img class="single-col-large" src="../images/case-studies/orbsys/orbsys-full@0.5x.png" alt="A full screen view of the Orbsys website homepage including proposed navigation menu." srcset="../images/case-studies/orbsys/orbsys-full.png 680w, ../images/case-studies/orbsys/orbsys-full@1.5x.png 1500w, ../images/case-studies/orbsys/orbsys-full@3x.png 3x" />
+                        <img class="single-col-large" src="../images/case-studies/orbsys/blog-post.png" alt="A full screen view of an example Orbsys blog post." />
+                    </div>
+                   
+                </article>
+            </main>
+            <footer>&copy; 2018 Jonno Witts</footer>        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script>
+            var body = document.body;
+            var openMenu = document.getElementById('menuControlOpen');
+            var closeMenu = document.getElementById('menuControlClose');
+
+            openMenu.addEventListener('click', function(e) {
+               body.classList.toggle('menu--active');
+            });
+
+             closeMenu.addEventListener('click', function(e) {
+                body.classList.toggle('menu--active');
+            });
+        </script>
+        <script src="../script/script.js"></script>
+    </body>
+</html>
