@@ -102,25 +102,21 @@ img.standard {
         
         ul {
             font-size:1.4rem;
-            max-width:90%
-        }
-
-        h1.post-heading, ul.meta {
-            max-width:76.5rem;
         }
     }
 }
 
 @media screen and (min-width: 1024px){
-    .content article h1.post-heading{
-        font-size:5.5rem
+    .content article {
+        h1.post-heading{
+            font-size:5.5rem
+        }
+        h1.post-heading, ul.meta {
+            max-width:100rem;
+        }
     }
 }
-
-
 // End
-
-
 
 h1 span {
     display: block;
@@ -154,6 +150,10 @@ h1 span {
         filter: drop-shadow(0px 3px 3px #e0e0e0);
         margin-bottom: $margin_smallest;
     }
+}
+
+img.single-col-large {
+    margin-bottom: $margin_smallest;
 }
 
 @media screen and (min-width: 500px) and (max-width:1189px) {
