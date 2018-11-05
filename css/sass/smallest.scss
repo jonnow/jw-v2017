@@ -8,7 +8,7 @@ $font_smallest_logo: 3rem;
 $font_small_header: 2.8rem;
 $font_smallest_header: 2.5rem;
 $font_smallest_menuSpan: 1.2rem;
-$font_smallest_p: 1.8rem;
+$font_smallest_p: 1.75rem;
 $font_smallest_footNote: 1.2rem;
 $font_smallest_footer: 1.7rem;
 $font_large_standard: 2.4rem;
@@ -260,7 +260,7 @@ q {
         img {
             display: block;
             border-radius: 5px;
-            margin: $margin_smallest auto 0;
+            margin: 0 auto $margin_smallest;
         }
 
         ul.colours {
