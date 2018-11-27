@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <title>Alien Isolation Tracker - SVG</title>
+    
+    
+    
+    
+        <link rel="stylesheet" href="css/style.css">
+
+    
+    
+    
+  </head>
+
+  <body>
+<p class="a">A value<span></span></p>
+<p class="b">B value<span></span></p>
+
+    <div class="container">
+  <div class="base">
+    <div class="svgClip">
+      <svg viewBox="0 0 600 600">
+        <rect x="0" y="0" />
+        <defs>
+          <filter id="shadow" x="-110%" y="-110%" height="325%" width="325%">
+            <feOffset result="offOut" in="SourceGraphic" dx="0" dy="0" />
+            <feGaussianBlur result="blurOut" in="offOut" stdDeviation="2" />
+            <feBlend in="SourceGraphic" in2="blurOut" mode="normal" />          
+          </filter>
+          <filter id="ping-blur" x="-140%" y="-100%" height="300%" width="380%">
+            <feOffset result="offOut" in="SourceGraphic" dx="0" dy="0" />
+            <feGaussianBlur result="blurOut" in="offOut" stdDeviation="12" />
+            <feBlend in="SourceGraphic" in2="blurOut" mode="normal" />          
+          </filter>
+          <radialGradient id="ping-bg" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+            <stop offset="50%" style="stop-color:#00ff80;
+            stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#88ffc4;stop-opacity:0.9" />
+          </radialGradient>
+        </defs>
+        
+        <!--    Dotted lines    -->
+        <circle cx="300" cy="300" r="75" filter="url(#shadow)" class="stroked five-metre" />
+        <circle cx="300" cy="300" r="150" filter="url(#shadow)" class="stroked ten-metre" />
+        <circle cx="300" cy="300" r="225" filter="url(#shadow)" class="stroked fifteen-metre"/>
+        
+        <!--    Vertical lines    -->
+        <line x1="10" y1="215" x2="300" y2="300" class="directional-line side" filter="url(#shadow)" />
+        <line x1="85" y1="85" x2="300" y2="300" class="directional-line forward" filter="url(#shadow)" />
+        <line x1="215" y1="10" x2="300" y2="300" class="directional-line side" filter="url(#shadow)" />
+        
+        <!--    Top lines    -->
+        <circle cx="300" cy="300" r="290" filter="url(#shadow)" />
+        <circle cx="300" cy="300" r="280" filter="url(#shadow)" />
+        
+        <!--    Ping    -->
+        <circle id="ping" class="ping" cx="200" cy="100" r="10" filter="url(#ping-blur)"/>
+      </svg>
+    </div>
+    
+    <!--   Edge lines   -->
+    <svg class="containing-lines" viewBox="0 0 600 600">
+      <line x1="385" y1="93" x2="385" y2="385" class="container-line" />
+      <line x1="93" y1="385" x2="387" y2="385" class="container-line" />
+    </svg>
+    
+    
+    <svg class="directional-indicators" viewBox="0 0 600 600">
+      <!--    Objective edge line    -->
+      <rect id="objective" class="objective" x="0" y="0" rx="20" ry="20" filter="url(#shadow)" />
+      
+      <!--    Inner square to round corners    -->
+      <rect class="objective-cover" x="20" y="20" />
+      
+      <!--    Off-tracker directional indicators   -->
+      <path d="M230 450 Q 200 410 230 370" filter="url(#shadow)" id="left"/>
+      <path d="M245 463 Q 300 490 355 463" filter="url(#shadow)" id="behind"/>
+      <path d="M370 450 Q 400 410 370 370" filter="url(#shadow)" id="right"/>
+    </svg>
+  </div>
+</div>
+    <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+
+        <script src="js/index.js"></script>
+
+    
+    
+    
+  </body>
+</html>
