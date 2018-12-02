@@ -1,0 +1,3 @@
+A Pen created at CodePen.io. You can find this one at http://codepen.io/jonnowitts/pen/NAjdxg.
+
+ Alien Isolation - What a game, what a film.  I've been thinking of doing this for a while and (on the last day of my holiday) I've made a start. A start being the layout, I figured SVG would be the best way to go with this. I've got more plans for it - I'd love to hook it up to a database and get it working across two devices allowing you to reenact your favourite scenes from the game/film :D
