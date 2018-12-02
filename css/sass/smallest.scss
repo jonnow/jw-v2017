@@ -103,6 +103,10 @@ main {
            &.orange:hover {
                 color: $primary_orange;
            }
+
+           &.black:Hover {
+               color: $primary_black;
+           }
            
            &:hover, &:active {
                background-color: $primary-white;    
@@ -491,6 +495,11 @@ q {
     &.orange {
         background-color: $primary_orange;
         background: linear-gradient(45deg, rgba(248,80,50,1) 0%, rgba(245,127,63,1) 100%); 
+    }
+
+    &.black {
+        background-color: $primary_black;
+        background: linear-gradient(30deg, rgba(55, 51, 49, 1) 0%, rgba(75,75,75,1) 100%);
     }
 }
 
