@@ -105,6 +105,18 @@ $grid_template_img_col: 50%;
                 }
             }
         }
+
+        .trackerProject  {
+            width: auto;
+            picture {
+                align-self: center;
+                max-width: 90%;
+                height: auto;
+                img, source {
+                    width: 100%;
+                }
+            }
+        }
     }    
     
     .intro {
@@ -113,6 +125,10 @@ $grid_template_img_col: 50%;
     .projectWrapper {
         min-height: 88vh;
         .mobileProject {
+            padding: 10vh 4rem 7vh;
+        }
+
+        .trackerProject {
             padding: 10vh 4rem 7vh;
         }
 
@@ -153,6 +169,10 @@ $grid_template_img_col: 50%;
                 }
                 
                 .mobileProject {
+                    padding: 7vh 0 6vh;
+                }
+
+                .trackerProject {
                     padding: 7vh 0 6vh;
                 }
                 
@@ -251,11 +271,6 @@ $grid_template_img_col: 50%;
     .home main .projectWrapper {
         .mobileProject {
             padding-top: 9vh;
-        }
-        .trackerProject {
-            padding-top: 50vh;
-            margin-top: 3rem;
-            background-position-x: 25%;
         }
     } 
 }

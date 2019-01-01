@@ -17,3 +17,10 @@
         }
     }
 }
+
+@media screen and (min-width: 1280px) {
+    .projectWrapper .trackerProject + .grid-p {
+        max-width: 80rem;
+        margin-left: 10rem;
+    }
+}

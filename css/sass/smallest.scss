@@ -441,6 +441,21 @@ q {
         }
     }
 
+    .trackerProject {
+        display: flex;
+        justify-content: center;
+
+        width: 72vw;
+        margin: $margin_smallest auto;
+        picture {
+            overflow: hidden;
+        }
+
+        img, source {
+            max-width: 100%;
+        }
+    }
+
     .browserProject {
         position: relative;
         padding-top: 10px;
@@ -476,20 +491,6 @@ q {
                 vertical-align: middle;
                 width: 100%;
                 border-top: 3px solid $primary_white;
-            }
-        }
-    }
-
-    .trackerProject {
-        background: url('../images/tracker.svg') no-repeat center 0;
-        width: 72vw;
-        margin: 0 auto $margin_smallest;
-        padding: 10vh 4rem 7vh;
-        picture {
-            overflow: hidden;
-            img {
-                border: 2px solid $primary-white;
-                border-radius: 5px;
             }
         }
     }
