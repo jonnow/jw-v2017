@@ -629,10 +629,12 @@ body > footer {
         }
     }
 
-    .home main .projectWrapper:not(.projectWrapper-imageFirst) .grid-p {
+    .home main .projectWrapper.projectWrapper-imageFirst .grid-p {
         grid-row: 2;
         margin-top: $margin_smallest;
     }
+
+    
 }
 
 // Animation
