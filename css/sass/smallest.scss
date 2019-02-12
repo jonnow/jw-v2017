@@ -92,7 +92,6 @@ main {
            padding: .75rem 2rem;
            border: 2px solid $primary-white;
            border-radius: .5rem;
-           margin: 2rem auto 0;
            transition: all .25s ease;
        }
        a.btn {
@@ -497,8 +496,18 @@ q {
 
     span {
         font-size: $font_smallest_footNote;
-        &:last-of-type {
-            float: right;
+    }
+
+    .grid-p > div > span:last-of-type {
+        float: right;
+    }
+
+    .grid-p .block {
+        span {
+            display: block;
+        }
+        .btn, span {
+            margin: 2rem auto 0;
         }
     }
     

@@ -11,15 +11,14 @@ $(function(){
     if($('body').hasClass('home')) {
         scrollToLast = $('#scrollToLast');
         scrollToFeatured = $('#scrollToFeatured');
-        triggerAt = scrollToLast.offset().top;
-        triggerHeight = triggerAt - viewPortSize;
-    
-        scrollToFeatured.on('click', function(e){
-            e.preventDefault();
-            scrollTo($(this).attr('href'));
-        });
+        scrollToSecond = $('#scrollToSecond');
+        lastAt = scrollToLast.offset().top;
+        lastHeight = lastAt - viewPortSize;
 
-        scrollToLast.on('click', function(e){
+        secondAt = scrollToSecond.offset().top;
+        secondHeight = secondAt - viewPortSize;
+    
+        $('.scroll').on('click', function(e){
             e.preventDefault();
             scrollTo($(this).attr('href'));
         });
@@ -28,6 +27,9 @@ $(function(){
         setTimeout(function(){
             $('body').hasClass('home') ? $('body').addClass('ac') : void 0; // Animation complete
         }, 3250);
+
+        console.log('lastHeight: ' + lastHeight);
+        console.log('secondHeight: ' + secondHeight);
 
     }
 });
@@ -39,14 +41,21 @@ function scrollTo(href) {
 }
 
 $(window).scroll(function () {
-    if ($(window).scrollTop() >= triggerHeight) {
+    // This If works from the bottom up
+    if ($(window).scrollTop() >= lastHeight) {
        scrollToFeatured.removeClass(bounceClasses);
        scrollToLast.addClass(bounceClasses);
-       lastBounce = true;
     }
+    else if  ($(window).scrollTop() >= secondHeight) {
+        scrollToFeatured.removeClass(bounceClasses);
+        scrollToSecond.addClass(bounceClasses);
+        lastBounce = true;
+        console.log('second: ' + $(window).scrollTop());
+     }
     else if(lastBounce) {
         scrollToFeatured.addClass(bounceClasses);
         scrollToLast.removeClass(bounceClasses);
+        scrollToSecond.removeClass(bounceClasses);
         lastBounce = false;
     }
 });
