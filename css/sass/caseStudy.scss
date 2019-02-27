@@ -23,7 +23,6 @@ img.standard {
         text-transform: uppercase;
         color: #14B4B5;
         margin-top: 2.6rem;
-        margin-bottom: 2.6rem;
         display:inline-block;
     }
 }
@@ -142,15 +141,16 @@ h1 span {
     margin-top: 2rem;
 }
 
-.image-group {
-    max-width: 90%;
-    margin: $margin_smallest auto 0;
-    img {
-        width: 100%;
-        filter: drop-shadow(0px 3px 3px #e0e0e0);
-        margin-bottom: $margin_smallest;
-    }
-}
+// .image-group {
+//     // max-width: 90%;
+//     // margin: $margin_smallest auto 0;
+//     img {
+//         display: block;
+//         width: 100%;
+//         filter: drop-shadow(0px 3px 3px #e0e0e0);
+//         margin-bottom: $margin_smallest;
+//     }
+// }
 
 img.single-col-large {
     margin-bottom: $margin_smallest;
@@ -168,32 +168,32 @@ img.single-col-large {
     .case-study article h2 {
         margin-top: $margin_small;
     }
-    .image-group {
-        max-width: 95%;
-        display: grid;
-        grid-template-columns: repeat(6, minmax(auto, 30%));
-        grid-template-rows: auto auto;
-        grid-gap: $margin_small;
-        margin-bottom: $margin_small/2;
-        img {
-            margin-bottom: 0;
-            grid-row: 1;
-            grid-column: span 2;
+    // .image-group {
+    //     //max-width: 95%;
+    //     // display: grid;
+    //     // grid-template-columns: repeat(6, minmax(auto, 30%));
+    //     // grid-template-rows: auto auto;
+    //     // grid-gap: $margin_small;
+    //     // margin-bottom: $margin_small/2;
+    //     // img {
+    //     //     margin-bottom: 0;
+    //     //     grid-row: 1;
+    //     //     grid-column: span 2;
 
-            // Only ever have 3 or 5 items
-            &:nth-child(4), &:nth-child(5) {
-                grid-row: 2;
-            }
+    //     //     // Only ever have 3 or 5 items
+    //     //     &:nth-child(4), &:nth-child(5) {
+    //     //         grid-row: 2;
+    //     //     }
 
-            &:nth-child(4) {
-                grid-column: 2 / span 2;
-            }
+    //     //     &:nth-child(4) {
+    //     //         grid-column: 2 / span 2;
+    //     //     }
 
-            &:nth-child(5) {
-                grid-column: 4 /span 2;
-            }
-        }
-    }
+    //     //     &:nth-child(5) {
+    //     //         grid-column: 4 /span 2;
+    //     //     }
+    //     // }
+    // }
 }
 
 @media screen and (min-width: 1190px) {
@@ -210,9 +210,9 @@ img.single-col-large {
         }
     }
 
-    .image-group {
-        max-width: 85%;
-        grid-gap: 2rem;
+    // .image-group {
+    //     max-width: 85%;
+    //     grid-gap: 2rem;
         
-    }
+    // }
 }
