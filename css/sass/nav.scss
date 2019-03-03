@@ -213,7 +213,18 @@ nav {
 @media screen and (max-width: 767px) {
     .menu {
         transition: all .3s ease-in-out;
+        // .dribbble {
+        //     background: url('../images/dribbble-logo.png') 0 0 no-repeat;
+        //     background-size: 24px 24px;
+        //     padding-left: 3.5rem;
+        // }
+        // .codepen {
+        //     background: url('../images/codepen-logo.png') 0 0 no-repeat;
+        //     background-size: 24px 24px;
+        //     padding-left: 3.5rem;
+        // }
     }
+
     .menu--active {
         .menu {
             width: 80%;
