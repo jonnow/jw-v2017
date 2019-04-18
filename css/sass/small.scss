@@ -102,6 +102,19 @@ $grid_template_img_col: 50%;
                 height: auto;
                 img, source {
                     width: 100%;
+                    max-width: 27.2rem;
+                }
+            }
+        }
+
+        .trackerProject  {
+            width: auto;
+            picture {
+                align-self: center;
+                max-width: 90%;
+                height: auto;
+                img, source {
+                    width: 100%;
                 }
             }
         }
@@ -113,6 +126,10 @@ $grid_template_img_col: 50%;
     .projectWrapper {
         min-height: 88vh;
         .mobileProject {
+            padding: 10vh 4rem 7vh;
+        }
+
+        .trackerProject {
             padding: 10vh 4rem 7vh;
         }
 
@@ -153,6 +170,10 @@ $grid_template_img_col: 50%;
                 }
                 
                 .mobileProject {
+                    padding: 7vh 0 6vh;
+                }
+
+                .trackerProject {
                     padding: 7vh 0 6vh;
                 }
                 
@@ -246,19 +267,14 @@ $grid_template_img_col: 50%;
     
 }
 
-@media screen and (min-width: 768px) and (max-width: 1024px) and (-webkit-min-device-pixel-ratio: 2), 
-(min-resolution: 192dpi) {
-    .home main .projectWrapper {
-        .mobileProject {
-            padding-top: 9vh;
-        }
-        .trackerProject {
-            padding-top: 50vh;
-            margin-top: 3rem;
-            background-position-x: 25%;
-        }
-    } 
-}
+// @media screen and (min-width: 768px) and (max-width: 1024px) and (-webkit-min-device-pixel-ratio: 2), 
+// (min-resolution: 192dpi) {
+//     .home main .projectWrapper {
+//         .mobileProject {
+//             padding-top: 7vh;
+//         }
+//     } 
+// }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
     .home main .intro  .mac {

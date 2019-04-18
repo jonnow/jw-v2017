@@ -92,7 +92,6 @@ main {
            padding: .75rem 2rem;
            border: 2px solid $primary-white;
            border-radius: .5rem;
-           margin: 2rem auto 0;
            transition: all .25s ease;
        }
        a.btn {
@@ -441,6 +440,21 @@ q {
         }
     }
 
+    .trackerProject {
+        display: flex;
+        justify-content: center;
+
+        width: 72vw;
+        margin: $margin_smallest auto;
+        picture {
+            overflow: hidden;
+        }
+
+        img, source {
+            max-width: 100%;
+        }
+    }
+
     .browserProject {
         position: relative;
         padding-top: 10px;
@@ -480,24 +494,20 @@ q {
         }
     }
 
-    .trackerProject {
-        background: url('../images/tracker.svg') no-repeat center 0;
-        width: 72vw;
-        margin: 0 auto $margin_smallest;
-        padding: 10vh 4rem 7vh;
-        picture {
-            overflow: hidden;
-            img {
-                border: 2px solid $primary-white;
-                border-radius: 5px;
-            }
-        }
-    }
-
     span {
         font-size: $font_smallest_footNote;
-        &:last-of-type {
-            float: right;
+    }
+
+    .grid-p > div > span:last-of-type {
+        float: right;
+    }
+
+    .grid-p .block {
+        span {
+            display: block;
+        }
+        .btn, span {
+            margin: 2rem auto 0;
         }
     }
     
@@ -628,10 +638,12 @@ body > footer {
         }
     }
 
-    .home main .projectWrapper:not(.projectWrapper-imageFirst) .grid-p {
+    .home main .projectWrapper.projectWrapper-imageFirst .grid-p {
         grid-row: 2;
         margin-top: $margin_smallest;
     }
+
+    
 }
 
 // Animation
