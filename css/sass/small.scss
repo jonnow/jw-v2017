@@ -206,12 +206,12 @@ $grid_template_img_col: 50%;
                 font-size: 4rem;
             }
             
-            p, ul.colour-list {
+            p, ul.colour-list, p > ul, .copy li {
                 font-size: $font_standard_p;
                 line-height: 175%;
             }
 
-            p {
+            p, .copy ul {
                 margin-bottom: 2.5rem;
             }
 

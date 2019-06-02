@@ -20,10 +20,12 @@ img.standard {
         font-size: 2rem;
         font-weight: bold;
         letter-spacing: 2px;
+        line-height: 165%;
         text-transform: uppercase;
         color: #14B4B5;
         margin-top: 2.6rem;
         display:inline-block;
+    
     }
 }
 
@@ -67,11 +69,20 @@ img.standard {
         }
     }
 
-    ul.meta {
-        font-size: 1.4rem;
-        li:after {
-            margin-left: .45rem;
-            margin-right: .45rem;
+    ul  {
+        &:not(.meta) {
+            padding-left: 2.5rem;
+            list-style-type: disc;
+            li {
+                padding-left: .65rem;
+            }
+        }
+        &.meta {
+            font-size: 1.4rem;
+            li:after {
+                margin-left: .45rem;
+                margin-right: .45rem;
+            }
         }
     }
 }
@@ -86,6 +97,14 @@ img.standard {
     .content article h1.post-heading {
         font-size: 3.5rem;
     }
+
+    .site-link-wrapper {
+        a.site-link {
+        ~ a {
+                    margin-left: 4rem;
+                }
+            }
+        }
 }
 
 @media screen and (min-width: 840px) {
@@ -97,10 +116,6 @@ img.standard {
                 line-height:145%;
                 margin-top:.5rem
             }    
-        }
-        
-        ul {
-            font-size:1.4rem;
         }
     }
 }
