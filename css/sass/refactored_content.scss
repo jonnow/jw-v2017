@@ -41,7 +41,7 @@ $margin_body_small: 1rem; // 16px
 
 // Padding
 $pad_body_small: 0.5rem;
-$pad_footer: 2.2rem;
+$padding_footer: 2.2rem;
 
 
 // Fonts
@@ -106,7 +106,7 @@ body {
 
 
 // Page footer styling
-main > footer {
+body > footer {
 	@include fontBodyStandard;
 	font-weight: bold;
 	display: block;
@@ -114,10 +114,14 @@ main > footer {
 	color: $color_primary_white;
 	text-transform: uppercase;
 	text-align: center;
-	padding: $pad_footer;
+	padding: $padding_footer;
 	p {
 		margin: 0;
 	}
+}
+
+main {
+	padding-bottom: $padding_footer;
 }
 
 article {
@@ -221,7 +225,10 @@ article {
 		line-height: 1.25;
 	}
 	img {
-		max-width: 100%; // All images should fit on the page.
+        display: block;
+        max-width: 100%; // All images should fit on the page.
+        margin-left: auto;
+		margin-right: auto;
 		&.profile {
 			border-radius: $border_radius_standard;
 		}
