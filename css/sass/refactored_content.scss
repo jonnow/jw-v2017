@@ -1,0 +1,375 @@
+// SCSS Variables
+/*
+ * Regular variables start with a '$' and link with underscores.
+ * Mixin variables start '$_' to indicate they are scoped to the block.
+*/
+
+// Media query sizes
+$breakpoints:(
+	sm: 576px, // Landscape mobiles
+	md: 768px, // Tablets
+	lg: 992px, // Desktops
+	xl: 1200px // Large desktops
+);
+
+@mixin breakpointAbove($_breakpoint) {
+  // If the breakpoint exists in the map.
+  @if map-has-key($breakpoints, $_breakpoint) {
+    // Get the breakpoint value.
+    $breakpoint-value: map-get($breakpoints, $_breakpoint);
+    // Write the media query.
+    @media (min-width: $breakpoint-value) {
+      @content;
+    }
+  // If the breakpoint doesn't exist in the map.
+  } @else {
+    // Log a warning.
+    @warn 'Invalid breakpoint: #{$breakpoint}.';
+  }
+}
+// Border radius
+$border_radius_standard: 5px;
+$border_radius_circle: 50%;
+
+// Widths
+$width_banner_large: 67.5rem; // 1080px
+
+// Margins
+$margin_body_large: 2.2rem;
+$margin_body_standard: 1.625rem;
+$margin_body_small: 1rem; // 16px
+
+// Padding
+$pad_body_small: 0.5rem;
+$pad_footer: 2.2rem;
+
+
+// Fonts
+// Typefaces
+$font_serif: 'freight-text-pro', sans-serif;
+$font_sans_serif: 'Woodford Bourne', 'Lato', 'Futura', 'Helvetica', sans-serif;
+
+// Font sizes
+$font_body_heading: 3.375rem;
+$font_body_heading_sm: 2.5rem;
+
+$font_body_heading_span: 2rem;
+$font_body_heading_span_sm: 1.5rem;
+
+$font_body_sub_heading: 2.5rem;
+$font_body_sub_heading_sm: 2rem;
+
+$font_body_sub_sub_heading: 1.625rem;
+
+$font_body_standard: 1.2rem;
+$font_body_small: 0.8rem;
+
+$font_body_footer_heading: 1.5rem;
+$font_body_footer_heading_sm: $font_body_sub_sub_heading;
+$font_body_footer_standard: 1rem;
+
+
+// Colours
+$color_primary_teal: #14B4B5;
+$color_primary_orange: #f57f3f;
+$color_primary_black: #373331;
+$color_primary_white: #f0f0f0;
+
+$color_secondary_dull_blue: #4870cb;
+$color_secondary_dull_yellow: #ffc247;
+$color_secondary_dull_red: #ff4747;
+$color_secondary_bright_blue: #16c1f3;
+$color_secondary_bright_yellow: #ffb31c;
+$color_secondary_bright_red: #ff1c1c;
+
+// Colour assignment
+$content_heading: $color_secondary_dull_blue;
+$content_sub_heading: $color_primary_teal;
+$content_text: $color_primary_black;
+
+
+// Mixins
+@mixin fontBodyStandard {
+	font-family: $font_sans_serif;
+	font-size: $font_body_standard; // 19.2px
+	letter-spacing: .3px;
+}
+
+html {
+	font-weight: 400;
+	line-height: 1.5;
+}
+
+body {
+	margin: 0;
+}
+
+
+// Page footer styling
+main > footer {
+	@include fontBodyStandard;
+	font-weight: bold;
+	display: block;
+	background-color: $color_primary_black;
+	color: $color_primary_white;
+	text-transform: uppercase;
+	text-align: center;
+	padding: $pad_footer;
+	p {
+		margin: 0;
+	}
+}
+
+article {
+	header, .content-container-standard {
+		padding: $pad_body_small;	
+	}
+	@include breakpointAbove(md) {
+		header, .content-container-standard {
+			width: 90%;
+			margin: 0 auto;
+		}
+		header {
+			max-width: $width_banner_large;
+		}
+		.content-container-standard {
+			max-width: map-get($breakpoints, md);
+		}
+	}
+	
+	header {
+		h1, ul.meta, .article-links a {
+			font-family: $font_sans_serif;
+		}
+		h1 {
+			margin: $margin_body_small 0;
+			text-transform: uppercase;
+			color: $content_heading;
+			line-height: 1.15;
+			font-size: $font_body_heading_sm;
+			@include breakpointAbove(sm) {
+				font-size: $font_body_heading;
+			}
+			span {
+				display: block;
+				margin-top: $margin_body_small;
+				color: $content_sub_heading;
+				font-size: $font_body_heading_span_sm;
+				line-height: 1;
+				@include breakpointAbove(sm) {
+					margin-top: $margin_body_small;
+					font-size: $font_body_heading_span; // 36px
+					line-height: 1.15;
+				}
+			}
+		}
+		ul.meta {
+			list-style: none;
+			padding-left: 0;
+			color: $content_text;
+			font-size: $font_body_small;
+			li {
+				display: inline-block;
+				&:after {
+					content: '|';
+					margin-left: .5rem;
+					margin-right: .25rem;
+				}
+				&:last-child:after{
+					content: none;
+				}
+			}
+		}
+		.article-links {
+			display: flex;
+			flex-direction: column;
+			text-align: center;
+			text-transform: uppercase;
+			a {
+				font-weight: bold;
+				@include fontBodyStandard;
+			}
+		}
+		.article-billboard {
+			display: grid;
+			grid-template-columns: 1fr 4fr 4fr 4fr 2fr;
+			max-width: 67.5rem; // 1080px;
+			margin-bottom: $margin_body_large;
+			img.billboard-desktop {
+				grid-column: 1 / span 9;
+				grid-row: 1 / span 9;
+				justify-self: center; // fallback incase image is not big enough.
+			}
+		}
+	}
+	
+	h2, h3 {
+		font-family: $font_serif;
+		margin-top: $font_body_sub_heading_sm;
+	}
+	h2 {
+		font-size: $font_body_sub_heading; // 40px
+		margin-bottom: 1rem;
+		line-height: 1.15;
+		&:first-child {
+			margin-top: 1rem;
+		}
+	}
+	h3 {
+		font-size: $font_body_sub_sub_heading; // 26px
+		margin-bottom: $margin_body_small;
+		line-height: 1.25;
+	}
+	img {
+		max-width: 100%; // All images should fit on the page.
+		&.profile {
+			border-radius: $border_radius_standard;
+		}
+	}
+	a {
+		color: $color_primary_teal;
+	}
+	
+	.article-content {
+		color: $content_text;
+		p,ul,ol,a {
+			@include fontBodyStandard;
+		}
+		p {
+			margin-top: .5rem;
+		}
+	}
+	
+	ul.colour-list {
+		list-style-type: none;
+		padding: 0.15rem;
+
+		@include breakpointAbove(sm) {
+			columns: 2;
+		}
+
+
+		@include breakpointAbove(md) {
+			columns: 3;
+		}
+
+		li {
+			margin-left: 1.25rem;
+			text-indent: -.5px;
+			&:before {
+				content: '';
+				display: inline-block;
+				border-radius: $border_radius_circle;
+				height: 9px;
+				width: 9px;
+				margin-right: .625rem;
+				margin-top: -3px;
+				vertical-align: middle;
+				background-color: red; // Need to add all the other colours
+				@include breakpointAbove(sm) {
+					background-color: green;
+				}
+			}
+		}
+	}
+	
+	footer { // article footer - e.g. the colophon
+		&.colophon {
+			h2 {
+				font-size: $font_body_footer_heading_sm;
+			}
+			p {
+				font-size: $font_body_small;
+			}
+			@include breakpointAbove(md) {
+				h2 {
+					font-size: $font_body_footer_heading;
+				}
+			}
+			ul.grid {
+				list-style-type: none;
+				
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				grid-column-gap: 1rem;
+				grid-row-gap: 1rem;
+				
+				padding: 0;
+				width: 100%;
+				margin: 1rem auto;
+				@include breakpointAbove(sm) {
+				width: 80%;
+					&.grid-4 {
+						grid-template-columns: 1fr 1fr 1fr 1fr;
+					}
+					&.grid-3 {
+						grid-template-columns: 1fr 1fr 1fr;
+					}
+				}
+				
+				/* Colour blobs (old)
+				&.colour-blobs li {
+					display: inline-block;
+					background-color: grey;
+					border-radius: $border_radius_circle;
+					height: 2.75rem;
+					width: 2.75rem;
+					@include breakpointAbove(md) {
+						height: 5rem;
+						width: 5rem;
+					}
+					&:before {
+						content: '#373737';
+						font-size: 0.8rem;
+						width: 2.5rem;
+						padding: .2rem .4rem;
+						background-color: white;
+						border: 1px solid;
+						border-radius: $border_radius_standard;
+					}
+				}
+				*/
+				&.colour-swatches {
+					font-size: $font_body_small;
+					text-align: right;
+					text-transform: uppercase;
+					font-weight: 800;
+					letter-spacing: 1px;
+					&:first-of-type {
+						margin-bottom: $margin_body_large;
+					}
+					li {
+						position: relative;
+						padding: 1.5rem .5rem .5rem;
+						color: $color_primary_white;
+						box-shadow: 0 0 6px 0px #cecece;
+						transition: all .15s ease-in-out;
+						z-index: 1;
+						cursor: pointer;
+						&:hover {
+							box-shadow: 0 0 10px 0 rgba(0,0,0,.4);
+							transform: scale(1.25);
+							z-index: 2;
+						}
+						&.inverse {
+							color: $color_primary_black;
+						}
+						border-radius: $border_radius_standard;
+						
+						&.primary-teal { background-color:$color_primary_teal;	}
+						&.primary-orange { background-color:$color_primary_orange;	}
+						&.primary-black { background-color:$color_primary_black;	}
+						&.primary-white { background-color:$color_primary_white;	}
+						&.secondary-dull-blue { background-color:$color_secondary_dull_blue;	}
+						&.secondary-dull-yellow { background-color:$color_secondary_dull_yellow;	}
+						&.secondary-dull-red { background-color:$color_secondary_dull_red;	}
+						&.secondary-bright-blue { background-color:$color_secondary_bright_blue;	}
+						&.secondary-bright-yellow { background-color:$color_secondary_bright_yellow;	}
+						&.secondary-bright-red { background-color:$color_secondary_bright_red;	}
+						
+					}
+				}
+			}
+		}
+	}
+}
