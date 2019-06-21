@@ -1,0 +1,58 @@
+// content pages
+body > header {
+    @include breakpointAbove(md) {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        padding-left: $padding_nav_large;
+        padding-right: $padding_nav_large;
+    }
+	a {
+		text-decoration: none;
+	}
+	h1 {
+		font-size: $font_header_logo;
+		a {
+			color: $color_secondary_grey;
+		}
+	}
+
+	nav {
+		display: flex;
+		flex-direction: column;
+		@include breakpointAbove(md) {
+			flex-direction: row;
+			align-content: flex-end;
+			justify-content: flex-end;
+		}
+		a {
+            font-weight: bold;
+			color: $color_primary_white;
+			@include breakpointAbove(md) {
+                color: $color_secondary_grey;
+                font-size: $font_header_nav_large;
+                margin-right: 1rem;
+			}
+		}
+	}
+		
+	span.menu-control-open {
+			svg {
+					stroke: $color_primary_orange;
+			}
+			&:before, &:after {
+					border-top-color: $color_primary_orange;
+			}
+	}
+	.menu-inner {
+			color: $color_primary_white;
+	}
+
+	// Turn off non-mobile nav/menu elements
+	@include breakpointAbove(md) {
+		.menu-control-open, .menu-control-close, .version, .madeIn {
+			display: none;
+		}
+	}
+}
