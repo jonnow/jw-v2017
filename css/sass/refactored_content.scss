@@ -61,8 +61,9 @@ $font_body_sub_heading_sm: 2rem;
 
 $font_body_sub_sub_heading: 1.625rem;
 
-$font_body_standard: 1.2rem;
-$font_body_small: 0.8rem;
+$font_body_standard: 1.2rem; // ~19px
+$font_body_standard_sub: 0.8rem; // ~13px
+$font_body_small: 1rem; // 16px;
 
 $font_body_footer_heading: 1.5rem;
 $font_body_footer_heading_sm: $font_body_sub_sub_heading;
@@ -91,8 +92,11 @@ $content_text: $color_primary_black;
 // Mixins
 @mixin fontBodyStandard {
 	font-family: $font_sans_serif;
-	font-size: $font_body_standard; // 19.2px
-	letter-spacing: .3px;
+	font-size: $font_body_small; // 16px
+    letter-spacing: .3px;
+    @include breakpointAbove(sm) {
+		font-size: $font_body_standard; // 19.2px
+	}
 }
 
 html {
@@ -171,7 +175,7 @@ article {
 			list-style: none;
 			padding-left: 0;
 			color: $content_text;
-			font-size: $font_body_small;
+			font-size: $font_body_standard_sub;
 			li {
 				display: inline-block;
 				&:after {
@@ -286,7 +290,7 @@ article {
 				font-size: $font_body_footer_heading_sm;
 			}
 			p {
-				font-size: $font_body_small;
+				font-size: $font_body_standard_sub;
 			}
 			@include breakpointAbove(md) {
 				h2 {
@@ -337,7 +341,7 @@ article {
 				}
 				*/
 				&.colour-swatches {
-					font-size: $font_body_small;
+					font-size: $font_body_standard_sub;
 					text-align: right;
 					text-transform: uppercase;
 					font-weight: 800;
