@@ -88,7 +88,6 @@ $content_heading: $color_secondary_dull_blue;
 $content_sub_heading: $color_primary_teal;
 $content_text: $color_primary_black;
 
-
 // Mixins
 @mixin fontBodyStandard {
 	font-family: $font_sans_serif;
@@ -97,6 +96,10 @@ $content_text: $color_primary_black;
     @include breakpointAbove(sm) {
 		font-size: $font_body_standard; // 19.2px
 	}
+}
+
+@mixin dropShadow {
+	filter: drop-shadow(0px 10px 15px #4e4e4e); // Individual Drop Shadow - Adds drop shadows to any and all individual aspects of an image
 }
 
 html {
@@ -175,7 +178,7 @@ article {
 			list-style: none;
 			padding-left: 0;
 			color: $content_text;
-			font-size: $font_body_standard_sub;
+			font-size: $font_body_standard;
 			li {
 				display: inline-block;
 				&:after {
@@ -207,6 +210,8 @@ article {
 				grid-column: 1 / span 9;
 				grid-row: 1 / span 9;
 				justify-self: center; // fallback incase image is not big enough.
+				border-radius: 7px;
+				@include dropShadow();
 			}
 		}
 	}
@@ -232,7 +237,7 @@ article {
         display: block;
         max-width: 100%; // All images should fit on the page.
         margin-left: auto;
-		margin-right: auto;
+				margin-right: auto;
 		&.profile {
 			border-radius: $border_radius_standard;
 		}
@@ -248,6 +253,14 @@ article {
 		}
 		p {
 			margin-top: .5rem;
+		}
+		img {
+			margin-top: $margin_body_standard;
+			margin-bottom: $margin_body_standard;
+			&.standard {
+				box-shadow: 0 0 20px 5px #4e4e4e61;
+
+			}
 		}
 	}
 	
