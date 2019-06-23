@@ -214,7 +214,10 @@ article {
 		}
 		.article-billboard {
 			display: grid;
-			grid-template-columns: 1fr 4fr 4fr 4fr 2fr;
+			grid-template-columns: 2fr 4fr 4fr 4fr 2fr;
+			@include breakpointAbove(sm) {
+				grid-template-columns: 1fr 4fr 4fr 4fr 2fr;	
+			}
 			max-width: 67.5rem; // 1080px;
 			margin-bottom: $margin_body_large;
 			img.billboard-desktop {
@@ -222,7 +225,20 @@ article {
 				grid-row: 1 / span 9;
 				justify-self: center; // fallback incase image is not big enough.
 				border-radius: 7px;
+				max-width: 100%;
 				@include dropShadow();
+			}
+			img.billboard-mobile {
+				grid-column: 4 / span 2;
+				grid-row: 9 / span 2;
+				margin-top: -7rem;
+				max-width: 50%;
+				@include dropShadow();
+				@include breakpointAbove(sm) {
+						grid-row: 2 / span 1;
+						grid-column: 4 / span 2;
+						margin-top: 7rem;
+				}
 			}
 		}
 	}
