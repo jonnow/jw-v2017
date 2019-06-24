@@ -10,7 +10,8 @@ $breakpoints:(
 	md: 768px, // Tablets
 	lg: 992px, // Desktops
 	xl: 1200px // Large desktops
-);```
+);
+```
 
 To use a media query in the code:
 ``` .profile-pic {
@@ -21,7 +22,8 @@ To use a media query in the code:
     @import breakpointAbove(lg) {
         width: 25%;
     }
-}```
+}
+```
 
 The current roadmap is:
 * v1 Flat HTML structure, basic pages, no blog
