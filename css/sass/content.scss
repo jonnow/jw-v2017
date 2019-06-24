@@ -114,6 +114,7 @@ html {
 
 body {
 	margin: 0;
+	background-color: #faffff;
 }
 
 @import 'refactored_nav.scss';
@@ -153,6 +154,7 @@ article {
 		header, .content-container-standard {
 			width: 90%;
 			margin: 0 auto;
+			padding: 0;
 		}
 		header {
 			max-width: $width_banner_large;
@@ -161,84 +163,92 @@ article {
 			max-width: map-get($breakpoints, md);
 		}
 	}
-	
-	header {
-		h1 {
-			margin: $margin_body_small 0;
-			text-transform: uppercase;
-			color: $content_heading;
-			line-height: 1.15;
-			font-size: $font_body_heading_sm;
+
+	h1 {
+		margin: $margin_body_small 0;
+		text-transform: uppercase;
+		color: $content_heading;
+		line-height: 1.15;
+		font-size: $font_body_heading_sm;
+		@include breakpointAbove(sm) {
+			font-size: $font_body_heading;
+		}
+		span {
+			display: block;
+			margin-top: $margin_body_small;
+			color: $content_sub_heading;
+			font-size: $font_body_heading_span_sm;
+			line-height: 1;
 			@include breakpointAbove(sm) {
-				font-size: $font_body_heading;
-			}
-			span {
-				display: block;
 				margin-top: $margin_body_small;
-				color: $content_sub_heading;
-				font-size: $font_body_heading_span_sm;
-				line-height: 1;
-				@include breakpointAbove(sm) {
-					margin-top: $margin_body_small;
-					font-size: $font_body_heading_span; // 36px
-					line-height: 1.15;
-				}
+				font-size: $font_body_heading_span; // 36px
+				line-height: 1.15;
 			}
 		}
-		ul.meta {
-			list-style: none;
-			padding-left: 0;
-			color: $content_text;
-			font-size: $font_body_standard;
-			li {
-				display: inline-block;
-				&:after {
-					content: '|';
-					margin-left: .5rem;
-					margin-right: .25rem;
-				}
-				&:last-child:after{
-					content: none;
-				}
+	}
+	ul.meta {
+		list-style: none;
+		padding-left: 0;
+		color: $content_text;
+		font-size: $font_body_standard;
+		li {
+			display: inline-block;
+			&:after {
+				content: '|';
+				margin-left: .5rem;
+				margin-right: .25rem;
+			}
+			&:last-child:after{
+				content: none;
 			}
 		}
-		.article-links {
-			display: flex;
-			flex-direction: column;
-			text-align: center;
-			text-transform: uppercase;
-			a {
-				font-weight: bold;
-				@include fontBodyStandard;
+	}
+	
+	.article-links {
+		display: flex;
+		flex-direction: column;
+		@include breakpointAbove(md) {
+			flex-direction: row;
+			justify-content: center;
+		}
+		text-align: center;
+		text-transform: uppercase;
+		a {
+			font-weight: bold;
+			@include fontBodyStandard;
+
+			@include breakpointAbove(md) {
+				margin-left: 1rem;
+				margin-right: 1rem;
 			}
 		}
-		.article-billboard {
-			display: grid;
-			grid-template-columns: 2fr 4fr 4fr 4fr 2fr;
+	}
+	.article-billboard {
+		display: grid;
+		grid-template-columns: 2fr 4fr 4fr 4fr 2fr;
+		@include breakpointAbove(sm) {
+			grid-template-columns: 1fr 4fr 4fr 4fr 2fr;	
+		}
+		max-width: 67.5rem; // 1080px;
+		margin-bottom: $margin_body_large;
+		img.billboard-desktop {
+			grid-column: 1 / span 9;
+			grid-row: 1 / span 9;
+			justify-self: center; // fallback incase image is not big enough.
+			border-radius: 7px;
+			max-width: 100%;
+			@include dropShadow();
+		}
+		img.billboard-mobile {
+			grid-column: 4 / span 2;
+			grid-row: 9 / span 2;
+			margin-top: -7rem;
+			max-width: 50%;
+			@include dropShadow();
 			@include breakpointAbove(sm) {
-				grid-template-columns: 1fr 4fr 4fr 4fr 2fr;	
-			}
-			max-width: 67.5rem; // 1080px;
-			margin-bottom: $margin_body_large;
-			img.billboard-desktop {
-				grid-column: 1 / span 9;
-				grid-row: 1 / span 9;
-				justify-self: center; // fallback incase image is not big enough.
-				border-radius: 7px;
-				max-width: 100%;
-				@include dropShadow();
-			}
-			img.billboard-mobile {
-				grid-column: 4 / span 2;
-				grid-row: 9 / span 2;
-				margin-top: -7rem;
-				max-width: 50%;
-				@include dropShadow();
-				@include breakpointAbove(sm) {
-						grid-row: 2 / span 1;
-						grid-column: 4 / span 2;
-						margin-top: 7rem;
-				}
+					grid-row: 2 / span 1;
+					grid-column: 4 / span 2;
+					margin-top: 7rem;
 			}
 		}
 	}
@@ -291,38 +301,40 @@ article {
 		}
 	}
 	
-	ul.colour-list {
-		list-style-type: none;
-		padding: 0.15rem;
+	// ul.colour-list {
+	// 	list-style-type: none;
+	// 	padding: 0.15rem;
 
-		@include breakpointAbove(sm) {
-			columns: 2;
-		}
+	// 	@include breakpointAbove(sm) {
+	// 		columns: 2;
+	// 	}
 
 
-		@include breakpointAbove(md) {
-			columns: 3;
-		}
+	// 	@include breakpointAbove(md) {
+	// 		columns: 3;
+	// 	}
 
-		li {
-			margin-left: 1.25rem;
-			text-indent: -.5px;
-			&:before {
-				content: '';
-				display: inline-block;
-				border-radius: $border_radius_circle;
-				height: 9px;
-				width: 9px;
-				margin-right: .625rem;
-				margin-top: -3px;
-				vertical-align: middle;
-				background-color: red; // Need to add all the other colours
-				@include breakpointAbove(sm) {
-					background-color: green;
-				}
-			}
-		}
-	}
+	// 	li {
+	// 		margin-left: 1.25rem;
+	// 		text-indent: -.5px;
+	// 		&:before {
+	// 			content: '';
+	// 			display: inline-block;
+	// 			border-radius: $border_radius_circle;
+	// 			height: 9px;
+	// 			width: 9px;
+	// 			margin-right: .625rem;
+	// 			margin-top: -3px;
+	// 			vertical-align: middle;
+	// 			background-color: red; // Need to add all the other colours
+	// 			@include breakpointAbove(sm) {
+	// 				background-color: green;
+	// 			}
+	// 		}
+	// 	}
+	// }
+
+	@import 'about.scss';
 	
 	footer { // article footer - e.g. the colophon
 		&.colophon {
