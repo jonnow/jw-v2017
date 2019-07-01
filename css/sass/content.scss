@@ -60,7 +60,7 @@ $pad_body_small: 0.5rem;
 $padding_footer: 2.2rem;
 $padding_nav_large: 2.5rem;
 $padding_nav_small: .75rem;
-
+$padding_body: 2.5rem;
 
 // Fonts
 // Typefaces
@@ -68,9 +68,10 @@ $font_serif: 'freight-text-pro', sans-serif;
 $font_sans_serif: 'Woodford Bourne', 'Lato', 'Futura', 'Helvetica', sans-serif;
 
 // Font sizes
-$font_header_logo: 2rem;
-$font_header_nav_large: 1.5rem;
-$font_header_nav_small: .75rem;
+$font_header_logo: 2rem; // 32px
+$font_header_logo_small: 1.875rem; // 30px
+$font_header_nav_large: 1.5rem; // 24px
+$font_header_nav_small: .75rem; // 12px
 
 $font_body_heading: 3.375rem;
 $font_body_heading_sm: 2.5rem;
@@ -125,6 +126,12 @@ $content_text: $color_primary_black;
 	filter: drop-shadow(0px 10px 15px #4e4e4e); // Individual Drop Shadow - Adds drop shadows to any and all individual aspects of an image
 }
 
+@mixin upperCase {	
+	text-transform: uppercase;
+	font-family: $font_sans_serif;
+	font-weight: bold;
+}
+
 html {
 	font-weight: 400;
 	line-height: 1.5;
@@ -152,9 +159,9 @@ body > footer {
 	}
 }
 
-main {
+body main {
 	padding-bottom: $padding_footer;
-}
+
 
 h1, .article-links, header nav {
 	text-transform: uppercase;
@@ -351,9 +358,11 @@ article {
 	// 		}
 	// 	}
 	// }
+}
 
-	@import 'about.scss';
-	
+
+@import 'about.scss';
+
 	footer { // article footer - e.g. the colophon
 		&.colophon {
 			h2 {

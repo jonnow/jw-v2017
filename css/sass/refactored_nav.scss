@@ -1,12 +1,9 @@
-@mixin upperCase() {	
-	text-transform: uppercase;
-	font-family: $font_sans_serif;
-	font-weight: bold;
-}
-	
 // content pages
 body {
-	padding-top: 5rem;
+	padding-top: $padding_body;
+	@include breakpointAbove(md) {
+		padding-top: 5rem;
+	}
 	> header {
 		@include upperCase();
 		box-sizing: border-box;
@@ -35,7 +32,7 @@ body {
 		}
 
 		h1 {
-			font-size: $font_header_logo;
+			font-size: $font_header_logo_small;
 			line-height: 100%;
 			position: relative;
 			z-index: 1;
@@ -47,27 +44,18 @@ body {
 		}
 
 		.menu {
+			
+			@include breakpointBelow(md) {
 			position: absolute;
 			right: 0;
 			top: 0;
 			z-index: 1;
-			@include breakpointAbove(md) {
-				position: static;
-				overflow: visible;
-				background-color: transparent;
-				height: auto;
-				width: auto;
-			}
-
-			
 			height: 100vh;
 			width: 0;
 			overflow: hidden;
 			
-			@include breakpointBelow(md) {
-				transition: all .3s ease-in-out;
+				transition: all .45s ease-in-out;
 			}
-			
 			
 			.menu-inner {
 				box-sizing: border-box;
@@ -78,10 +66,16 @@ body {
 				width: 80vw;
 				padding: $pad_body_small;
 				overflow: hidden;
-				
 				background-color: $color_primary_black;
 				color: $color_primary_white;  
+
 				@include breakpointAbove(md) {
+					position: static;
+					overflow: visible;
+					background: none;
+					color: $color_secondary_dull_blue;
+					height: auto;
+					width: auto;
 					padding: 0;
 					width: 100%;
 				}
@@ -90,10 +84,10 @@ body {
 			.version, .madeIn {
 				position: absolute;
 				bottom: $pad_body_small;
-				font-size: $font_body_small;
+				font-size: $font_header_nav_small;
 				text-transform: uppercase;
 				font-weight: bold;
-				letter-spacing: 1px;
+				letter-spacing: .3px;
 			}
 
 			.version {
@@ -111,14 +105,24 @@ body {
 				justify-content: flex-end;
 			}
 			a {
-				transform: translate3d(-150px,0,0);
-				transition: transform .15s ease-in;
+				@include breakpointBelow(md) {
+
+					transform: translate3d(-150px,0,0);
+					transition: transform .475s ease-in;
+					font-size: $font_header_nav_large;
+					color: $color_primary_white;
+					margin-bottom: $margin_body_small;
+				}
 				font-weight: bold;
-				color: $color_primary_white;
 				@include breakpointAbove(md) {
 					color: $color_secondary_grey;
 					font-size: $font_header_nav_large;
-					margin-left: 1rem;
+					font-size: $font_header_logo_small;
+					line-height: 150%;
+					margin-left: $margin_body_small;
+					
+					// Turn off
+					margin-bottom: 0;
 					transform: none;
 					transition: none;
 				}
@@ -126,23 +130,35 @@ body {
 		}
 	}
 }
-body.menu--active > header {
-	height: 100vh;
-	overflow: hidden;
-	.menu {
-		@include breakpointBelow(md) {
-			width: 100%;
+
+body.home {
+	padding-top: 0;
+	> header {
+		h1 a, nav a {
+			@include breakpointBelow(md) {
+				color: $color_primary_white;
+			}
 		}
 	}
-	nav {
-		a {
-			transform: translate3d(0,0,0);
-			transition: transform 500ms ease-out;
-			&:nth-child(2) {
-				transition-delay: .1s;
-			}
-			&:last-child {
-				transition-delay: .2s;
+}
+
+@include breakpointBelow(md) {
+	body.menu--active > header {
+		height: 100vh;
+		overflow: hidden;
+		.menu {
+			width: 100%;
+		}
+		nav {
+			a {
+				transform: translate3d(0,0,0);
+				transition: transform .5s ease-out;
+				&:nth-child(2) {
+					transition-delay: .1s;
+				}
+				&:last-child {
+					transition-delay: .2s;
+				}
 			}
 		}
 	}
@@ -164,7 +180,7 @@ body.menu--active > header {
     svg {
 		position: absolute;
         top: -12px;
-        left: 12px;
+        left: 14px;
 		stroke: $color_primary_orange;						
         line, circle {
             fill: none;
@@ -185,12 +201,9 @@ body.menu--active > header {
 }
 
 .menu-control-close {
-    text-align: right;
+	text-align: right;
+	margin-bottom: $margin_body_small;
 }
-
-// .menu-inner {
-// 		color: $color_primary_white;
-// }
 
 // Turn off non-mobile nav/menu elements
 @include breakpointAbove(md) {
