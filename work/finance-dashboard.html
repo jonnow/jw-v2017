@@ -47,7 +47,7 @@
             </svg>
             Menu
         </span>
-        <div class="menu">
+        <div class="menu" id="pageMenu">
             <div class="menu-inner">
                 <span class="menu-control-close" id="menuControlClose">Close</span>
                 <nav>
@@ -151,9 +151,10 @@
     <footer><p class="copyright">&copy; 2019 Jonno Witts</p></footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script>
-        var body = document.body;
-        var openMenu = document.getElementById('menuControlOpen');
-        var closeMenu = document.getElementById('menuControlClose');
+        var body = document.body,
+            pageMenu = document.getElementById('pageMenu'),
+            openMenu = document.getElementById('menuControlOpen'),
+            closeMenu = document.getElementById('menuControlClose');
 
         openMenu.addEventListener('click', function (e) {
             body.classList.toggle('menu--active');
@@ -162,6 +163,12 @@
         closeMenu.addEventListener('click', function (e) {
             body.classList.toggle('menu--active');
         });
+
+        pageMenu.addEventListener('click', function(e) {
+            if(!e.target.classList.contains('menu-inner')) {
+                body.classList.remove('menu--active');
+            }
+        })
     </script>
     <script src="../script/script.js"></script>
 </body>

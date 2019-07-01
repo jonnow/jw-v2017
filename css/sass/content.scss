@@ -12,6 +12,22 @@ $breakpoints:(
 	xl: 1200px // Large desktops
 );
 
+@mixin breakpointBelow($_breakpoint) {
+  // If the breakpoint exists in the map.
+  @if map-has-key($breakpoints, $_breakpoint) {
+    // Get the breakpoint value.
+    $breakpoint-value: map-get($breakpoints, $_breakpoint);
+    // Write the media query.
+    @media (max-width: $breakpoint-value) {
+      @content;
+    }
+  // If the breakpoint doesn't exist in the map.
+  } @else {
+    // Log a warning.
+    @warn 'Invalid breakpoint: #{$breakpoint}.';
+  }
+}
+
 @mixin breakpointAbove($_breakpoint) {
   // If the breakpoint exists in the map.
   @if map-has-key($breakpoints, $_breakpoint) {
@@ -43,6 +59,7 @@ $margin_body_small: 1rem; // 16px
 $pad_body_small: 0.5rem;
 $padding_footer: 2.2rem;
 $padding_nav_large: 2.5rem;
+$padding_nav_small: .75rem;
 
 
 // Fonts
@@ -53,6 +70,7 @@ $font_sans_serif: 'Woodford Bourne', 'Lato', 'Futura', 'Helvetica', sans-serif;
 // Font sizes
 $font_header_logo: 2rem;
 $font_header_nav_large: 1.5rem;
+$font_header_nav_small: .75rem;
 
 $font_body_heading: 3.375rem;
 $font_body_heading_sm: 2.5rem;
