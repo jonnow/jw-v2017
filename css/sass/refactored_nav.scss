@@ -1,3 +1,6 @@
+$padding_nav_large: 1.56rem;
+$padding_nav_small: .75rem;
+
 // content pages
 body {
 	
@@ -20,10 +23,6 @@ body {
 		padding: $padding_nav_small;
 		
 		@include breakpointAbove(md) {
-			display: flex;
-			align-items: center;
-			justify-content: space-between;
-
 			padding-left: $padding_nav_large;
 			padding-right: $padding_nav_large;
 		}
@@ -33,11 +32,12 @@ body {
 		}
 
 		h1 {
-			font-size: $font_header_logo_small;
-			line-height: 100%;
 			position: relative;
 			z-index: 1;
 			float: left;
+			font-size: $font_header_logo_small;
+			line-height: 100%;
+			letter-spacing: 0.3px;
 			margin: 0;
 			a {
 				color: $color_secondary_grey;
@@ -129,6 +129,15 @@ body {
 			}
 		}
 	}
+	
+	> header {
+		@include breakpointAbove(md) {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
+	}
+	
 	&.home {
 		padding-top: 0;
 		> header {
@@ -222,7 +231,31 @@ body {
 
 // Turn off non-mobile nav/menu elements
 @include breakpointAbove(md) {
-	.menu-control-open, .menu-control-close, .version, .madeIn {
+	.menu-control-open, .menu-control-close, body:not(.home) .version, body:not(.home) .madeIn {
 		display: none;
+	}
+
+	body.home > header {
+		.menu {
+			position: static;
+			.menu-inner{
+				position: relative;
+				width: 100%;
+			}
+		}
+		.version, .madeIn {
+			bottom: -85.85vh;
+			letter-spacing: 1px;
+			font-size: 1.3rem;
+			color: $color_primary_white;
+		}
+
+		.version {
+
+		}
+
+		.madeIn {
+
+		}
 	}
 }
