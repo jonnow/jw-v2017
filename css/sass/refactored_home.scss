@@ -17,6 +17,9 @@ $font_large_standard: 2.4rem;
 $font_home_standard: 1.15rem;
 $font_home_standard_btn: 1.2rem;
 
+$grid_template_p_col: 3.43rem;
+$grid_template_img_col: 50%;
+
 @mixin mixinTitle {
     font-weight: bold;
     font-family: $font_sans_serif;
@@ -50,10 +53,27 @@ $font_home_standard_btn: 1.2rem;
         background-color: $color_primary_teal;
         background: linear-gradient(45deg, rgba(20,181,181,1) 0%, rgba(0,167,209,1) 100%); 
         color: $color_primary_white;       
+
+        @include breakpointAbove(sm) {
+            .intro, .projectWrapper {
+                display: grid;
+                display: -ms-grid;
+                -ms-grid-columns: 50% 50%;
+                grid-template-columns: 50% 50%;
+                -ms-grid-rows: 1fr;
+                grid-template-rows: 1fr;
+                grid-gap: 0;
+                align-items: center;
+                min-height: 50vh;
+            }
+        }
        
        .intro {
            padding-left: $padding_home_small;
            padding-right: $padding_home_small;
+           @include breakpointAbove(sm) {
+               min-height: 88vh;
+           }
 
            .mac, div.text {
                 opacity: 0;
@@ -67,6 +87,24 @@ $font_home_standard_btn: 1.2rem;
            div.text {
                 animation: onLoadFadeIn 3s forwards, onLoadMoveIn_txt 3s forwards;
                 animation-delay: 1750ms;
+           }
+       }
+
+       .projectWrapper {
+           @include breakpointAbove(sm) {
+               min-height: 88vh;
+               .mobileProject, .trackerProject {
+                   padding: 10vh 2.5rem 7vh;
+               }
+
+               &.projectWrapper-imageFirst {
+                    -ms-grid-columns: $grid_template_img_col;// 50% each
+                    grid-template-columns: $grid_template_img_col;// 50% each
+                }
+        
+                span {
+                    font-size: $font_smallest_footNote;
+                }
            }
        }
 
@@ -378,12 +416,6 @@ body > footer {
         grid-template-rows: 1fr;
         grid-gap: 0;
     }
-
-    .about ul.colour-list {
-        columns: 4;
-    }
-
-    
 }
 
 @media screen and (min-width: 1024px) and (max-width: 1200px) {
