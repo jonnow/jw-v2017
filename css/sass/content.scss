@@ -18,7 +18,7 @@ $breakpoints:(
     // Get the breakpoint value.
     $breakpoint-value: map-get($breakpoints, $_breakpoint);
     // Write the media query.
-    @media (max-width: $breakpoint-value) {
+    @media (max-width: $breakpoint-value + 1) {
       @content;
     }
   // If the breakpoint doesn't exist in the map.
@@ -34,7 +34,7 @@ $breakpoints:(
     // Get the breakpoint value.
     $breakpoint-value: map-get($breakpoints, $_breakpoint);
     // Write the media query.
-    @media (min-width: $breakpoint-value) {
+    @media (min-width: $breakpoint-value+1) {
       @content;
     }
   // If the breakpoint doesn't exist in the map.
@@ -61,6 +61,9 @@ $padding_footer: 2.2rem;
 $padding_nav_large: 2.5rem;
 $padding_nav_small: .75rem;
 $padding_body: 2.5rem;
+$padding_home_small: 1rem;
+$padding_home_btn_small: 0.5rem;
+$padding_home_btn_small_side: 1.5rem;
 
 // Fonts
 // Typefaces
@@ -143,6 +146,7 @@ body {
 }
 
 @import 'refactored_nav.scss';
+@import 'refactored_home.scss';
 
 // Page footer styling
 body > footer {
@@ -159,7 +163,7 @@ body > footer {
 	}
 }
 
-body main {
+body.content main {
 	padding-bottom: $padding_footer;
 
 

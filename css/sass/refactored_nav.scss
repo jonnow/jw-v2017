@@ -1,5 +1,6 @@
 // content pages
 body {
+	
 	padding-top: $padding_body;
 	@include breakpointAbove(md) {
 		padding-top: 5rem;
@@ -46,14 +47,13 @@ body {
 		.menu {
 			
 			@include breakpointBelow(md) {
-			position: absolute;
-			right: 0;
-			top: 0;
-			z-index: 1;
-			height: 100vh;
-			width: 0;
-			overflow: hidden;
-			
+				position: absolute;
+				right: 0;
+				top: 0;
+				z-index: 1;
+				height: 100vh;
+				width: 0;
+				overflow: hidden;
 				transition: all .45s ease-in-out;
 			}
 			
@@ -129,13 +129,10 @@ body {
 			}
 		}
 	}
-}
-
-body.home {
-	padding-top: 0;
-	> header {
-		h1 a, nav a {
-			@include breakpointBelow(md) {
+	&.home {
+		padding-top: 0;
+		> header {
+			h1 a, nav a, .menu-control-open {
 				color: $color_primary_white;
 			}
 		}
@@ -194,10 +191,28 @@ body.home {
 		content: '';
         display: block;
         width: 100%;
-        border-top-width: .3rem;
+        border-top-width: .1875rem;
         border-top-style: solid;
-		border-top-color: $color_primary_orange;
     }
+}
+
+.home .menu-control-open {
+	&:before, &:after {
+		border-top-color: wheat;
+	}
+	svg {
+		stroke: wheat;	
+	}
+
+}
+
+.content .menu-control-open {
+	&:before, &:after {
+		border-top-color: $color_primary_orange;
+	}
+	svg {
+		stroke: $color_primary_orange;	
+	}
 }
 
 .menu-control-close {

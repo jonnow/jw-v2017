@@ -1,17 +1,21 @@
-$padding_smallest: 1.5rem;
+
+
 $padding_standard: 3.2rem;
 
 $margin_smallest: 1.5rem;
 $margin_standard: 3.2rem;
 
-$font_smallest_logo: 3rem;
-$font_small_header: 2.8rem;
-$font_smallest_header: 2.5rem;
+$font_smallest_logo: 1.875rem;
+$font_small_header: 2rem;
+$font_smallest_header: 1.5rem;
 $font_smallest_menuSpan: 1.2rem;
 $font_smallest_p: 1.75rem;
 $font_smallest_footNote: 1.2rem;
 $font_smallest_footer: 1.7rem;
 $font_large_standard: 2.4rem;
+
+$font_home_standard: 1.15rem;
+$font_home_standard_btn: 1.2rem;
 
 @mixin mixinTitle {
     font-weight: bold;
@@ -28,17 +32,30 @@ $font_large_standard: 2.4rem;
         font-family: $font_serif;
     }
 
+    .text {
+        font-family: $font_sans_serif;
+        p {
+            font-size: $font_home_standard;
+            line-height: 165%;
+            margin-top: 0;
+            margin-bottom: 1.15rem;
+        }
+        span, ul {
+            font-size: $font_body_standard_sub;
+        }
+    }
 
     main {
-       background-color: $color_primary_teal;
-       background: linear-gradient(45deg, rgba(20,181,181,1) 0%, rgba(0,167,209,1) 100%); 
-       color: $color_primary_white;
+        padding-top: $padding_body;
+        background-color: $color_primary_teal;
+        background: linear-gradient(45deg, rgba(20,181,181,1) 0%, rgba(0,167,209,1) 100%); 
+        color: $color_primary_white;       
        
        .intro {
-           padding-left: $padding_smallest;
-           padding-right: $padding_smallest;
+           padding-left: $padding_home_small;
+           padding-right: $padding_home_small;
 
-           .mac, div.grid-p {
+           .mac, div.text {
                 opacity: 0;
            }
            .mac {
@@ -47,7 +64,7 @@ $font_large_standard: 2.4rem;
                 margin: 1rem auto 1.5rem;
            }
 
-           div.grid-p {
+           div.text {
                 animation: onLoadFadeIn 3s forwards, onLoadMoveIn_txt 3s forwards;
                 animation-delay: 1750ms;
            }
@@ -59,10 +76,10 @@ $font_large_standard: 2.4rem;
        a.btn {
            color: $color_primary_white;
            text-decoration: none;
-           font-size: 2rem;
+           font-size: $font_home_standard_btn;
 
            display: inline-block;
-           padding: .75rem 2rem;
+           padding: $padding_home_btn_small $padding_home_btn_small_side;
            border: 2px solid $color_primary_white;
            border-radius: .5rem;
            transition: all .25s ease;
@@ -125,7 +142,7 @@ svg.mac .hello {
 
 
 .projectWrapper {
-    padding: $padding_smallest;
+    padding: $padding_home_small;
 
     h2 {
         font-size: $font_smallest_header;
@@ -144,17 +161,9 @@ svg.mac .hello {
         display: flex;
         justify-content: center;
 
-        background: url('../images/phone.svg') no-repeat center 0;
         width: 72vw;
         margin: 0 auto $margin_smallest;
         padding: 10vh 4rem 7vh;
-        picture {
-            overflow: hidden;
-            img {
-                border: 2px solid $color_primary_white;
-                border-radius: 2px;
-            }
-        }
 
         img, source {
             max-width: 100%;
@@ -178,39 +187,12 @@ svg.mac .hello {
 
     .browserProject {
         position: relative;
-        padding-top: 10px;
-        border: 3px solid $color_primary_white;
-        border-radius: 6px;
         margin: 0 auto;
-        .dots {
-            margin-bottom: 10px;
-        }
-        .dot {
-            display: inline-block;
-            height: 12px;
-            width: 12px;
-            border-width: 3px;
-            border-style: solid;
-            border-radius: 50%;
-            margin-left: 5px;
-            &:first-child {
-                border-color: $color_secondary_bright_red;
-            }
-
-            &:nth-child(2) {
-                border-color: $color_secondary_bright_yellow;
-            }
-
-            &:last-child {
-                border-color: $color_primary_teal;
-            }
-        }
         picture {
             overflow: hidden;
             img {
                 vertical-align: middle;
                 width: 100%;
-                border-top: 3px solid $color_primary_white;
             }
         }
     }
@@ -219,11 +201,9 @@ svg.mac .hello {
         font-size: $font_smallest_footNote;
     }
 
-    .grid-p > div > span:last-of-type {
-        float: right;
-    }
+    
 
-    .grid-p .block {
+    .text .block {
         span {
             display: block;
         }
@@ -271,7 +251,7 @@ svg.mac .hello {
     font-size: $font_smallest_header * 2;
     color: $color_primary_white;
     width: auto;
-    margin: 0 auto $margin_smallest;
+    margin: 0 auto;
     opacity: 0;
     transform: translate3d(0,2rem,0);
     transition: all .5s ease;
@@ -321,10 +301,9 @@ body > footer {
         position: relative;
         display: grid;
         display: -ms-grid;
-        padding-top: 6.25rem;
-        padding-bottom: 2.5rem;
+        padding-top: 3.25rem;
         &.longHeading {
-            padding-top: 10rem;
+            padding-top: 6.25rem;
         }
 
         .mobileProject {
@@ -339,27 +318,21 @@ body > footer {
         .browserProject {
             align-self: flex-start;
         }
-        .grid-p { 
+        .text { 
             h2 {
                 position: absolute;
-                top: 1.75rem;
                 max-width: 90%;
-                left: 1.5rem;
-            }
-            p:last-of-type {
-                margin-bottom: 2.5rem;
+                margin-top: 0;
+                top: 1rem;
+                left: 1rem;
             }
             div.block {
                 text-align: center;
-                p {
-                    margin-top: 1.75rem;
-                    margin-bottom: 0;
-                }
             }
         }
     }
 
-    .home main .projectWrapper.projectWrapper-imageFirst .grid-p {
+    .home main .projectWrapper.projectWrapper-imageFirst .text {
         grid-row: 2;
         margin-top: $margin_smallest;
     }
@@ -434,7 +407,7 @@ body > footer {
 }
 
 @media screen and (min-width: 1280px) {
-    .projectWrapper .trackerProject + .grid-p {
+    .projectWrapper .trackerProject + .text {
         max-width: 80rem;
         margin-left: 10rem;
     }
