@@ -69,6 +69,28 @@ $font_serif: 'freight-text-pro', sans-serif;
 $font_sans_serif: 'Woodford Bourne', 'Lato', 'Futura', 'Helvetica', sans-serif;
 
 // Font sizes
+// Organising
+$font_pageHeader_logo: 1.875rem;
+$font_pageHeader_menu_meta: 0.75rem; // Open/close, madeIn, and version number
+$font_pageHeader_nav: 1.875rem;
+$font_pageHeader_nav_sm: 1.5rem;
+
+$font_pageTitle: 3.375rem;
+$font_pageTitle_sub: 2.5rem;
+$font_pageTitle_meta: 1.2rem;
+
+$font_heading_h1: $font_pageTitle;
+$font_heading_h1_sub: $font_pageTitle_sub;
+$font_heading_h2: $font_pageTitle_sub;
+$font_heading_h3: 1.625rem;
+
+$font_body_p: 1.2rem;
+$font_body_cta: $font_body_p;
+
+$font_pageFooter: $font_body_p;
+
+
+// In use font sizes
 $font_header_logo: 2rem; // 32px
 $font_header_logo_small: 1.875rem; // 30px
 $font_header_nav_large: 1.5rem; // 24px
