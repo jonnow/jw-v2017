@@ -566,7 +566,7 @@ body > footer {
 body > footer {
   font-family: "Woodford Bourne", "Lato", "Futura", "Helvetica", sans-serif;
   font-size: 1rem;
-  letter-spacing: .3px;
+  letter-spacing: 0.3px;
   font-weight: bold;
   display: block;
   background-color: #373331;
@@ -647,7 +647,7 @@ body.content main {
       font-weight: bold;
       font-family: "Woodford Bourne", "Lato", "Futura", "Helvetica", sans-serif;
       font-size: 1rem;
-      letter-spacing: .3px; }
+      letter-spacing: 0.3px; }
       @media (min-width: 577px) {
         body.content main article .article-links a {
           font-size: 1.2rem; } }
@@ -708,7 +708,7 @@ body.content main {
     body.content main article .article-content p, body.content main article .article-content ul, body.content main article .article-content ol, body.content main article .article-content a {
       font-family: "Woodford Bourne", "Lato", "Futura", "Helvetica", sans-serif;
       font-size: 1rem;
-      letter-spacing: .3px; }
+      letter-spacing: 0.3px; }
       @media (min-width: 577px) {
         body.content main article .article-content p, body.content main article .article-content ul, body.content main article .article-content ol, body.content main article .article-content a {
           font-size: 1.2rem; } }

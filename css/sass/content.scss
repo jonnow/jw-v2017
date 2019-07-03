@@ -64,6 +64,7 @@ $padding_home_btn_small: 0.5rem; // 8px
 $padding_home_btn_small_side: 1.5rem; // 24px
 
 // Fonts
+$letterSpacing: .3px;
 // Typefaces
 $font_serif: 'freight-text-pro', sans-serif;
 $font_sans_serif: 'Woodford Bourne', 'Lato', 'Futura', 'Helvetica', sans-serif;
@@ -139,7 +140,7 @@ $content_text: $color_primary_black;
 @mixin fontBodyStandard {
 	font-family: $font_sans_serif;
 	font-size: $font_body_small; // 16px
-    letter-spacing: .3px;
+    letter-spacing: $letterSpacing;
     @include breakpointAbove(sm) {
 		font-size: $font_body_standard; // 19.2px
 	}
