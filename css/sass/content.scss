@@ -51,17 +51,17 @@ $border_radius_circle: 50%;
 $width_banner_large: 67.5rem; // 1080px
 
 // Margins
-$margin_body_large: 2.2rem;
-$margin_body_standard: 1.625rem;
+$margin_body_large: 2.2rem; // 35.2px
+$margin_body_standard: 1.625rem; // 26px
 $margin_body_small: 1rem; // 16px
 
 // Padding
-$pad_body_small: 0.5rem;
-$padding_footer: 2.2rem;
-$padding_body: 2.5rem;
-$padding_home_small: 1rem;
-$padding_home_btn_small: 0.5rem;
-$padding_home_btn_small_side: 1.5rem;
+$pad_body_small: 0.5rem; // 8px
+$padding_footer: 2.2rem; // 35.2px
+$padding_body: 2.5rem; // 40px
+$padding_home_small: 1rem; // 16px
+$padding_home_btn_small: 0.5rem; // 8px
+$padding_home_btn_small_side: 1.5rem; // 24px
 
 // Fonts
 // Typefaces
@@ -70,21 +70,21 @@ $font_sans_serif: 'Woodford Bourne', 'Lato', 'Futura', 'Helvetica', sans-serif;
 
 // Font sizes
 // Organising
-$font_pageHeader_logo: 1.875rem;
+$font_pageHeader_logo: 1.875rem; // 30px
 $font_pageHeader_menu_meta: 0.75rem; // Open/close, madeIn, and version number
-$font_pageHeader_nav: 1.875rem;
-$font_pageHeader_nav_sm: 1.5rem;
+$font_pageHeader_nav: 1.875rem; // 30px
+$font_pageHeader_nav_sm: 1.5rem; // 24px
 
-$font_pageTitle: 3.375rem;
-$font_pageTitle_sub: 2.5rem;
-$font_pageTitle_meta: 1.2rem;
+$font_pageTitle: 3.375rem; // 54px
+$font_pageTitle_sub: 2.5rem; // 40px
+$font_pageTitle_meta: 1.2rem; // 19.2px
 
 $font_heading_h1: $font_pageTitle;
 $font_heading_h1_sub: $font_pageTitle_sub;
 $font_heading_h2: $font_pageTitle_sub;
-$font_heading_h3: 1.625rem;
+$font_heading_h3: 1.625rem; // 26px
 
-$font_body_p: 1.2rem;
+$font_body_p: 1.2rem; // 19.2px
 $font_body_cta: $font_body_p;
 
 $font_pageFooter: $font_body_p;
