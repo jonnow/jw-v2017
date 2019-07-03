@@ -846,10 +846,10 @@ body.content main {
   body.content main footer.colophon h2 {
     font-size: 1.625rem; }
   body.content main footer.colophon p {
-    font-size: 0.8rem; }
+    font-size: 0.75rem; }
   @media (min-width: 769px) {
     body.content main footer.colophon h2 {
-      font-size: 1.5rem; } }
+      font-size: 1.2rem; } }
   body.content main footer.colophon ul.grid {
     list-style-type: none;
     display: grid;
@@ -889,7 +889,7 @@ body.content main {
         body.content main footer.colophon ul.grid.grid-3 {
           grid-template-columns: 1fr 1fr 1fr; } }
     body.content main footer.colophon ul.grid.colour-swatches {
-      font-size: 0.8rem;
+      font-size: 0.75rem;
       text-align: right;
       text-transform: uppercase;
       font-weight: 800;
