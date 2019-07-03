@@ -144,7 +144,7 @@ $content_text: $color_primary_black;
 	font-size: $font_body_p; // 16px
     letter-spacing: $letterSpacing;
     @include breakpointAbove(sm) {
-		font-size: $font_body_p_md; // 19.2px
+		font-size: $font_body_p_md; // 21px
 		line-height: 175%;
 	}
 }
@@ -338,9 +338,8 @@ article {
 	
 	.article-content {
 		color: $content_text;
-		p,ul,ol,a {
-			@include fontBodyStandard;
-		}
+		@include fontBodyStandard;
+		
 		p {
 			margin-top: .5rem;
 		}

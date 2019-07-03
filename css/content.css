@@ -948,14 +948,12 @@ body.content main article a {
 }
 body.content main article .article-content {
   color: #373331;
-}
-body.content main article .article-content p, body.content main article .article-content ul, body.content main article .article-content ol, body.content main article .article-content a {
   font-family: "Woodford Bourne", "Lato", "Futura", "Helvetica", sans-serif;
   font-size: 1rem;
   letter-spacing: 0.3px;
 }
 @media (min-width: 576px) {
-  body.content main article .article-content p, body.content main article .article-content ul, body.content main article .article-content ol, body.content main article .article-content a {
+  body.content main article .article-content {
     font-size: 1.3125rem;
     line-height: 175%;
   }
