@@ -13,7 +13,8 @@ $font_smallest_p: 1.75rem;
 $font_smallest_footNote: 1.2rem;
 $font_large_standard: 2.4rem;
 
-$font_home_standard: 1.15rem;
+$font_home_standard_sm: 1.15rem;
+$font_home_standard_md: 1.35rem;
 $font_home_standard_btn: 1.2rem;
 
 $grid_template_p_col: 3.43rem;
@@ -39,11 +40,15 @@ $font_home_text_p_standard: 1.65rem;
     .text {
         font-family: $font_sans_serif;
         p {
-            font-size: $font_home_standard;
+            font-size: $font_home_standard_sm;
+            
             line-height: 165%;
             margin-top: 0;
             margin-bottom: 1.15rem;
             @include breakpointAbove(md) {
+                font-size: $font_home_standard_md;
+            }
+            @include breakpointAbove(lg) {
                 font-size: $font_home_text_p_standard;
             }
         }
@@ -78,6 +83,10 @@ $font_home_text_p_standard: 1.65rem;
         &.black:Hover {
             color: $color_primary_black;
         }
+
+        &.btn-intro:hover {
+            color: $color_primary_teal;
+        }
         
         &:hover, &:active {
             background-color: $color_primary_white;    
@@ -109,10 +118,6 @@ $font_home_text_p_standard: 1.65rem;
             
             }
 
-            .cta {
-                text-align: center;
-            }
-
            .mac {
                 display: block;
                 width: 65%;
@@ -126,11 +131,14 @@ $font_home_text_p_standard: 1.65rem;
        }
 
        @include breakpointBelow(sm) {
-           .projectWrapper {
+            .projectWrapper {
                
-           }
+            }
+            
+            .cta {
+                text-align: center;
+            }   
        }
-     
 
        @include breakpointAbove(sm) {
             .intro, .projectWrapper {
@@ -222,11 +230,6 @@ $font_home_text_p_standard: 1.65rem;
                 padding-right: 3.125rem; // 50px
             }
             .projectWrapper {
-                &:nth-child(even) {
-                    .text {
-                        margin-left: 6.25rem; // 100px
-                    }
-                }
                 h2 {
                     font-size: $font_home_projectTitle;
                 }
@@ -235,6 +238,17 @@ $font_home_text_p_standard: 1.65rem;
                 }
             }
         }
+
+        @include breakpointAbove(lg) {
+            .projectWrapper{
+                &:nth-child(even) {
+                    .text {
+                        margin-left: 6.25rem; // 100px
+                    }
+                }
+            }
+        }
+        
         
    
         
@@ -431,7 +445,7 @@ svg.mac .hello {
 }
 
 .projectWrapper {
-    @include breakpointBelow(md) {
+    @include breakpointBelow(sm) {
         position: relative;
         //display: grid;
         //display: -ms-grid;

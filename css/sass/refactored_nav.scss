@@ -68,7 +68,7 @@ body {
 				background-color: $color_primary_black;
 				color: $color_primary_white;
 				overflow: hidden;
-				@include breakpointAbove(lg) {
+				@include breakpointAbove(md) {
 					padding: 0;
 					height: auto;
 					width: 100%;
