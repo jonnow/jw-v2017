@@ -11,7 +11,6 @@ $font_smallest_header: 1.5rem;
 $font_smallest_menuSpan: 1.2rem;
 $font_smallest_p: 1.75rem;
 $font_smallest_footNote: 1.2rem;
-$font_smallest_footer: 1.7rem;
 $font_large_standard: 2.4rem;
 
 $font_home_standard: 1.15rem;
@@ -176,7 +175,7 @@ $font_home_text_p_standard: 1.65rem;
                     width: auto;
                     picture {
                         align-self: center;
-                        max-width: 90%;
+                        max-width: 80%;
                         height: auto;
                         img, source {
                             width: 100%;
@@ -223,6 +222,20 @@ $font_home_text_p_standard: 1.65rem;
                 .browserProject {
                     width: 80%;
                 }
+            }
+        }
+        
+        // @include breakpointAbove(xl) {
+        //     .projectWrapper .mobileProject, .trackerProject {
+        //         picture {
+        //             max-width: 90%;
+        //         }
+        //     }
+        // }
+
+        h2 {
+            @include breakpointAbove(xl) {
+                font-size: $font_home_projectTitle_lg;
             }
         }
     }    
@@ -409,19 +422,8 @@ svg.mac .hello {
 
 }
 
-body > .wrapper > footer,
-body > footer {
-    background-color: $color_primary_black;
-    color: $color_primary_white;
-    text-align: center;
-    @include mixinTitle;
-    font-size: $font_smallest_footer;
-    padding-top: $padding_standard;
-    padding-bottom: $padding_standard;
-}
-
 .projectWrapper {
-@include breakpointBelow(md) {
+    @include breakpointBelow(md) {
         position: relative;
         display: grid;
         display: -ms-grid;
@@ -456,10 +458,10 @@ body > footer {
         }
     }
 
-    .home main .projectWrapper.projectWrapper-imageFirst .text {
-        grid-row: 2;
-        margin-top: $margin_smallest;
-    }
+    // .home main .projectWrapper.projectWrapper-imageFirst .text {
+    //     grid-row: 2;
+    //     margin-top: $margin_smallest;
+    // }
 }
 
 // Animation
@@ -477,57 +479,48 @@ body > footer {
     
 }
 
-// @media screen and (min-width: 768px) and (max-width: 1024px) and (-webkit-min-device-pixel-ratio: 2), 
-// (min-resolution: 192dpi) {
-//     .home main .projectWrapper {
-//         .mobileProject {
-//             padding-top: 7vh;
-//         }
-//     } 
-// }
-
 @media screen and (min-width: 768px) and (max-width: 1024px) {
     .home main .intro  .mac {
         width: 75%;
     }
 }
 
-@media screen and (min-width: 1024px) {
-    .intro, .projectWrapper {
-        -ms-grid-column: 50% 50%;
-        grid-template-columns: 50% 50%;// 50/50 correct formatting for grid
-        -ms-grid-rows: 1fr;
-        grid-template-rows: 1fr;
-        grid-gap: 0;
-    }
-}
+// @media screen and (min-width: 1024px) {
+//     .intro, .projectWrapper {
+//         -ms-grid-column: 50% 50%;
+//         grid-template-columns: 50% 50%;// 50/50 correct formatting for grid
+//         -ms-grid-rows: 1fr;
+//         grid-template-rows: 1fr;
+//         grid-gap: 0;
+//     }
+// }
 
-@media screen and (min-width: 1024px) and (max-width: 1200px) {
-    .home {
-        main .intro img {
-            width: 70%;
-        }
-    }
-}
+// @media screen and (min-width: 1024px) and (max-width: 1200px) {
+//     .home {
+//         main .intro img {
+//             width: 70%;
+//         }
+//     }
+// }
 
-@media screen and (min-width: 1200px) and (max-width: 1370px) {
-    .home {
-        p {
-            font-size: 2.4rem;
-        }
+// @media screen and (min-width: 1200px) and (max-width: 1370px) {
+//     .home main {
+//         p {
+//             font-size: 2.4rem;
+//         }
 
-        main .intro img {
-            width: 60%;
-        }
-    }
-}
+//         .intro img {
+//             width: 60%;
+//         }
+//     }
+// }
 
-@media screen and (min-width: 1280px) {
-    .projectWrapper .trackerProject + .text {
-        max-width: 80rem;
-        margin-left: 10rem;
-    }
-}
+// @media screen and (min-width: 1280px) {
+//     .projectWrapper .trackerProject + .text {
+//         max-width: 80rem;
+//         margin-left: 10rem;
+//     }
+// }
 
 @keyframes bouncy {
     40% {
