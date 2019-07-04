@@ -102,7 +102,7 @@ body {
 			}
 			a {
 				font-weight: bold;
-				
+				line-height: 100%;
 				@include breakpointBelow(md) {
 
 					transform: translate3d(-150px,0,0);
@@ -115,7 +115,7 @@ body {
 					color: $color_secondary_grey;
 					font-size: $font_header_nav_large;
 					font-size: $font_header_logo_small;
-					line-height: 150%;
+					//line-height: 150%;
 					margin-left: $margin_body_small;
 					
 					// Turn off
@@ -241,7 +241,7 @@ body {
 		.version, .madeIn {
 			bottom: -85.85vh;
 			letter-spacing: 1px;
-			font-size: 1.3rem;
+			font-size: $font_body_smallText;
 			color: $color_primary_white;
 		}
 	}

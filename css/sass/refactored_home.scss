@@ -161,9 +161,7 @@ $font_home_text_p_standard: 1.65rem;
             .projectWrapper {
                 min-height: 88vh;
                 &:nth-child(odd) {
-                    -ms-grid-columns: 45% 50%;
-                    grid-row-gap: 5%;
-                    
+                    -ms-grid-columns: 45% 50%;                    
                     grid-template-columns: 45% 50%;
         
                     .text {
@@ -422,8 +420,8 @@ body > footer {
     padding-bottom: $padding_standard;
 }
 
-@media screen and (max-width: 767px) {
-    .projectWrapper {
+.projectWrapper {
+@include breakpointBelow(md) {
         position: relative;
         display: grid;
         display: -ms-grid;
@@ -462,8 +460,6 @@ body > footer {
         grid-row: 2;
         margin-top: $margin_smallest;
     }
-
-    
 }
 
 // Animation
