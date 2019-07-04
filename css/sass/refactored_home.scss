@@ -225,20 +225,17 @@ $font_home_text_p_standard: 1.65rem;
             }
         }
         
-        // @include breakpointAbove(xl) {
-        //     .projectWrapper .mobileProject, .trackerProject {
-        //         picture {
-        //             max-width: 90%;
-        //         }
-        //     }
-        // }
-
-        h2 {
-            @include breakpointAbove(xl) {
+   
+        
+        @include breakpointAbove(xl) {
+            h2 {
                 font-size: $font_home_projectTitle_lg;
             }
+            .projectWrapper .mobileProject picture {
+                max-width: 90%;
+            }
         }
-    }    
+    } 
 
     // SVG styling
     .cls-1,.cls-3,.hello{
@@ -425,8 +422,8 @@ svg.mac .hello {
 .projectWrapper {
     @include breakpointBelow(md) {
         position: relative;
-        display: grid;
-        display: -ms-grid;
+        //display: grid;
+        //display: -ms-grid;
         padding-top: 3.25rem;
         &.longHeading {
             padding-top: 6.25rem;
@@ -485,42 +482,42 @@ svg.mac .hello {
     }
 }
 
-// @media screen and (min-width: 1024px) {
-//     .intro, .projectWrapper {
-//         -ms-grid-column: 50% 50%;
-//         grid-template-columns: 50% 50%;// 50/50 correct formatting for grid
-//         -ms-grid-rows: 1fr;
-//         grid-template-rows: 1fr;
-//         grid-gap: 0;
-//     }
-// }
+@media screen and (min-width: 1024px) {
+    .intro, .projectWrapper {
+        -ms-grid-column: 50% 50%;
+        grid-template-columns: 50% 50%;// 50/50 correct formatting for grid
+        -ms-grid-rows: 1fr;
+        grid-template-rows: 1fr;
+        grid-gap: 0;
+    }
+}
 
-// @media screen and (min-width: 1024px) and (max-width: 1200px) {
-//     .home {
-//         main .intro img {
-//             width: 70%;
-//         }
-//     }
-// }
+@media screen and (min-width: 1024px) and (max-width: 1200px) {
+    .home {
+        main .intro img {
+            width: 70%;
+        }
+    }
+}
 
-// @media screen and (min-width: 1200px) and (max-width: 1370px) {
-//     .home main {
-//         p {
-//             font-size: 2.4rem;
-//         }
+@media screen and (min-width: 1200px) and (max-width: 1370px) {
+    .home main {
+        p {
+            font-size: 2.4rem;
+        }
 
-//         .intro img {
-//             width: 60%;
-//         }
-//     }
-// }
+        .intro img {
+            width: 60%;
+        }
+    }
+}
 
-// @media screen and (min-width: 1280px) {
-//     .projectWrapper .trackerProject + .text {
-//         max-width: 80rem;
-//         margin-left: 10rem;
-//     }
-// }
+@media screen and (min-width: 1280px) {
+    .projectWrapper .trackerProject + .text {
+        max-width: 80rem;
+        margin-left: 10rem;
+    }
+}
 
 @keyframes bouncy {
     40% {

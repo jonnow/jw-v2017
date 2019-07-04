@@ -18,8 +18,7 @@ body {
 		
 		@include breakpointAbove(md) {
 			height: 4.375rem; // 70px
-			padding-left: $padding_nav_large;
-			padding-right: $padding_nav_large;
+			padding: $padding_nav_large;
 		}
 		
 		h1 {
@@ -130,6 +129,10 @@ body {
 	&.home {
 		padding-top: 0;
 		> header {
+			opacity: 0;
+			animation: onLoadFadeIn 3s forwards;
+        	animation-delay: 1.7s;
+			
 			h1 a, nav a, .menu-control-open {
 				color: $color_primary_white;
 			}
@@ -239,7 +242,7 @@ body {
 		// 	}
 		// }
 		.version, .madeIn {
-			bottom: -85.85vh;
+			bottom: -84.4vh;
 			letter-spacing: 1px;
 			font-size: $font_body_smallText;
 			color: $color_primary_white;

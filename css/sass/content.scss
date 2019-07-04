@@ -9,7 +9,8 @@ $breakpoints:(
 	sm: 576px, // Landscape mobiles
 	md: 768px, // Tablets
 	lg: 992px, // Desktops
-	xl: 1200px // Large desktops
+	xl: 1200px, // Large desktops
+	xxl: 1600px // Studpidly large
 );
 
 @mixin breakpointBelow($_breakpoint) {
