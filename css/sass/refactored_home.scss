@@ -102,10 +102,15 @@ $font_home_text_p_standard: 1.65rem;
             .text {
                 animation: onLoadFadeIn 3s forwards, onLoadMoveIn_txt 3s forwards;
                 animation-delay: 1750ms;
-                .cta a {
+                
+                a {
                     color: $color_primary_white;
-                    text-align: center;
                 }
+            
+            }
+
+            .cta {
+                text-align: center;
             }
 
            .mac {
