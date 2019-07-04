@@ -157,7 +157,10 @@ $font_home_text_p_standard: 1.65rem;
                     width: 90%;
                     margin-bottom: 0;
                 }
-                &.projectWrapper-imageFirst {
+            } 
+            .projectWrapper {
+                min-height: 88vh;
+                &:nth-child(odd) {
                     -ms-grid-columns: 45% 50%;
                     grid-row-gap: 5%;
                     
@@ -170,36 +173,27 @@ $font_home_text_p_standard: 1.65rem;
         
                 }
         
-                .mobileProject  {
-                    width: auto;
-                    picture {
-                        align-self: center;
-                        max-width: 90%;
-                        height: auto;
-                        img, source {
-                            width: 100%;
-                            max-width: 27.2rem;
-                        }
-                    }
-                }
-        
-                .trackerProject  {
-                    width: auto;
-                    picture {
-                        align-self: center;
-                        max-width: 90%;
-                        height: auto;
-                        img, source {
-                            width: 100%;
-                        }
-                    }
-                }
-            } 
-            .projectWrapper {
-                min-height: 88vh;
                 .mobileProject, .trackerProject {
                     padding: 10vh 2.5rem 7vh;
+                    width: auto;
+                    picture {
+                        align-self: center;
+                        max-width: 90%;
+                        height: auto;
+                        img, source {
+                            width: 100%;
+                        }
+                    }
                 }
+
+                .mobileProject  {
+                    picture {
+                        img, source {
+                            max-width: 20rem;
+                        }
+                    }
+                }
+                
                 &.projectWrapper-imageFirst {
                     -ms-grid-columns: $grid_template_img_col;// 50% each
                     grid-template-columns: $grid_template_img_col;// 50% each
@@ -218,6 +212,19 @@ $font_home_text_p_standard: 1.65rem;
                 min-height: 88vh;
                 padding-left: 3.75rem; // 60px
                 padding-right: 3.125rem; // 50px
+            }
+            .projectWrapper {
+                &:nth-child(even) {
+                    .text {
+                        margin-left: 6.25rem; // 100px
+                    }
+                }
+                h2 {
+                    font-size: $font_home_projectTitle;
+                }
+                .browserProject {
+                    width: 80%;
+                }
             }
         }
     }    
