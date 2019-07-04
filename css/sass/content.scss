@@ -344,13 +344,13 @@ body.content {
 			h2, h3 {
 				font-family: $font_serif;
 				margin-top: $font_body_sub_heading_sm;
+				color: $color_secondary_dull_blue;
 			}
 			h2 {
 				font-size: $font_body_sub_heading; // 40px
 				font-size: $font_heading_h2;
 				margin-bottom: 1rem;
 				line-height: 1.15;
-				color: $color_secondary_dull_blue;
 				&:first-child {
 					margin-top: 1rem;
 				}
