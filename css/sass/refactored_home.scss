@@ -102,8 +102,9 @@ $font_home_text_p_standard: 1.65rem;
             .text {
                 animation: onLoadFadeIn 3s forwards, onLoadMoveIn_txt 3s forwards;
                 animation-delay: 1750ms;
-                a {
+                .cta a {
                     color: $color_primary_white;
+                    text-align: center;
                 }
             }
 
@@ -119,6 +120,11 @@ $font_home_text_p_standard: 1.65rem;
            }
        }
 
+       @include breakpointBelow(sm) {
+           .projectWrapper {
+               
+           }
+       }
      
 
        @include breakpointAbove(sm) {
@@ -321,7 +327,7 @@ svg.mac .hello {
 
     .browserProject {
         position: relative;
-        margin: 0 auto;
+        margin: 0 auto $margin_smallest;
         picture {
             overflow: hidden;
             img {
@@ -424,7 +430,7 @@ svg.mac .hello {
         position: relative;
         //display: grid;
         //display: -ms-grid;
-        padding-top: 3.25rem;
+        padding-top: 4.25rem;
         &.longHeading {
             padding-top: 6.25rem;
         }

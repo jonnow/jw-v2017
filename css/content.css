@@ -309,8 +309,9 @@ body.home > header h1 a, body.home > header nav a, body.home > header .menu-cont
   animation: onLoadFadeIn 3s forwards, onLoadMoveIn_txt 3s forwards;
   animation-delay: 1750ms;
 }
-.home main .intro .text a {
+.home main .intro .text .cta a {
   color: #f0f0f0;
+  text-align: center;
 }
 .home main .intro .mac {
   display: block;
@@ -485,7 +486,7 @@ svg.mac .hello {
 }
 .projectWrapper .browserProject {
   position: relative;
-  margin: 0 auto;
+  margin: 0 auto 1.5rem;
 }
 .projectWrapper .browserProject picture {
   overflow: hidden;
@@ -568,7 +569,7 @@ svg.mac .hello {
 @media (max-width: 767px) {
   .projectWrapper {
     position: relative;
-    padding-top: 3.25rem;
+    padding-top: 4.25rem;
   }
   .projectWrapper.longHeading {
     padding-top: 6.25rem;
