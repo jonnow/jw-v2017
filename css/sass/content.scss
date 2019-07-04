@@ -179,7 +179,7 @@ $content_text: $color_primary_black;
 }
 
 @mixin dropShadow {
-	filter: drop-shadow(0px 10px 15px #4e4e4e); // Individual Drop Shadow - Adds drop shadows to any and all individual aspects of an image
+	filter: drop-shadow(0px 5px 8px #4e4e4e); // Individual Drop Shadow - Adds drop shadows to any and all individual aspects of an image
 }
 
 @mixin upperCase {	
@@ -387,6 +387,9 @@ body.content {
 					margin-bottom: $margin_body_standard;
 					&.standard {
 						box-shadow: 0 0 20px 5px #4e4e4e61;
+					}
+					&.ids {
+						@include dropShadow;
 					}
 				}
 			}
