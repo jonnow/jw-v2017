@@ -1,13 +1,7 @@
 $padding_nav_large: 1.56rem;
-$padding_nav_small: .75rem;
+$padding_nav_small: 0.9375rem; // ~15px
 
-// content pages
 body {
-	
-	padding-top: $padding_body;
-	@include breakpointAbove(md) {
-		padding-top: 5rem;
-	}
 	> header {
 		@include upperCase();
 		box-sizing: border-box;
@@ -23,61 +17,64 @@ body {
 		padding: $padding_nav_small;
 		
 		@include breakpointAbove(md) {
+			height: 4.375rem; // 70px
 			padding-left: $padding_nav_large;
 			padding-right: $padding_nav_large;
 		}
 		
-		a {
-			text-decoration: none;
-		}
-
 		h1 {
-			position: relative;
-			z-index: 1;
 			float: left;
 			font-size: $font_header_logo_small;
-			line-height: 100%;
 			letter-spacing: 0.3px;
+			line-height: 100%;
 			margin: 0;
 			a {
 				color: $color_secondary_grey;
 			}
 		}
-
+		
+		a {
+			text-decoration: none;
+		}
+		
 		.menu {
-			
-			@include breakpointBelow(md) {
-				position: absolute;
-				right: 0;
-				top: 0;
-				z-index: 1;
-				height: 100vh;
-				width: 0;
-				overflow: hidden;
-				transition: all .45s ease-in-out;
+			position: absolute;
+			right: 0;
+			top: 0;
+			z-index: 1;
+			height: 100vh;
+			width: 0;
+			overflow: hidden;
+			transition: all .45s ease-in-out;
+			@include breakpointAbove(md) {
+				position: static;
+				overflow: visible;
+				background-color: transparent;
+				width: auto;
+				height: auto; 
+				
+				.madeIn {
+					left: 0;
+				}
 			}
 			
 			.menu-inner {
 				box-sizing: border-box;
-				
 				position: relative;
-				float: right;
 				height: 100%;
 				width: 80vw;
-				padding: $pad_body_small;
-				overflow: hidden;
+				padding: 1.5rem; 
+                padding: $pad_body_small;
+                
 				background-color: $color_primary_black;
-				color: $color_primary_white;  
-
-				@include breakpointAbove(md) {
-					position: static;
-					overflow: visible;
-					background: none;
-					color: $color_secondary_dull_blue;
-					height: auto;
-					width: auto;
+				color: $color_primary_white;
+				overflow: hidden;
+				@include breakpointAbove(lg) {
 					padding: 0;
+					height: auto;
 					width: 100%;
+					background: none;
+					overflow: visible;
 				}
 			}
 
@@ -101,10 +98,11 @@ body {
 			flex-direction: column;
 			@include breakpointAbove(md) {
 				flex-direction: row;
-				align-content: flex-end;
 				justify-content: flex-end;
 			}
 			a {
+				font-weight: bold;
+				
 				@include breakpointBelow(md) {
 
 					transform: translate3d(-150px,0,0);
@@ -113,7 +111,6 @@ body {
 					color: $color_primary_white;
 					margin-bottom: $margin_body_small;
 				}
-				font-weight: bold;
 				@include breakpointAbove(md) {
 					color: $color_secondary_grey;
 					font-size: $font_header_nav_large;
@@ -127,14 +124,6 @@ body {
 					transition: none;
 				}
 			}
-		}
-	}
-	
-	> header {
-		@include breakpointAbove(md) {
-			display: flex;
-			align-items: center;
-			justify-content: space-between;
 		}
 	}
 	
@@ -153,7 +142,7 @@ body {
 		height: 100vh;
 		overflow: hidden;
 		.menu {
-			width: 100%;
+			width: 80%;
 		}
 		nav {
 			a {
@@ -174,14 +163,16 @@ body {
 	display: block;
 	font-size: $font_header_nav_small;
 	cursor: pointer;
+	@include breakpointAbove(md) {
+		display: none;
+	}
 }
 
 .menu-control-open {
 	position: relative;
     float: right;
     line-height: 130%;
-	margin-top: 3px;
-	font-size: $font_header_nav_small;
+	margin-top: 3px;	
 	letter-spacing: 1px;
     svg {
 		position: absolute;
@@ -205,6 +196,11 @@ body {
     }
 }
 
+.menu-control-close {
+	text-align: right;
+	margin-bottom: $margin_body_small;
+}
+
 .home .menu-control-open {
 	&:before, &:after {
 		border-top-color: wheat;
@@ -212,50 +208,43 @@ body {
 	svg {
 		stroke: wheat;	
 	}
-
 }
 
-.content .menu-control-open {
-	&:before, &:after {
-		border-top-color: $color_primary_orange;
+.content {
+	padding-top: $padding_body;
+	@include breakpointAbove(md) {
+		padding-top: 5rem;
+		.version, .madeIn {
+			display: none;
+		}
 	}
-	svg {
-		stroke: $color_primary_orange;	
+	.menu-control-open {
+		&:before, &:after {
+			border-top-color: $color_primary_orange;
+		}
+		svg {
+			stroke: $color_primary_orange;	
+		}
 	}
-}
-
-.menu-control-close {
-	text-align: right;
-	margin-bottom: $margin_body_small;
 }
 
 // Turn off non-mobile nav/menu elements
 @include breakpointAbove(md) {
-	.menu-control-open, .menu-control-close, body:not(.home) .version, body:not(.home) .madeIn {
-		display: none;
-	}
-
 	body.home > header {
-		.menu {
-			position: static;
-			.menu-inner{
-				position: relative;
-				width: 100%;
-			}
-		}
+		// .menu {
+		// 	position: static;
+		// 	.menu-inner{
+		// 		position: relative;
+		// 		width: 100%;
+		// 	}
+		// }
 		.version, .madeIn {
 			bottom: -85.85vh;
 			letter-spacing: 1px;
 			font-size: 1.3rem;
 			color: $color_primary_white;
 		}
-
-		.version {
-
-		}
-
-		.madeIn {
-
-		}
 	}
 }
+
+
