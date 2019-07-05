@@ -139,11 +139,7 @@ $font_home_text_p_standard: 1.65rem;
            }
        }
 
-       @include breakpointBelow(sm) {
-            .projectWrapper {
-               
-            }
-            
+       @include breakpointBelow(sm) {           
             .cta {
                 text-align: center;
             }   
@@ -457,7 +453,10 @@ svg.mac .hello {
             animation-delay: 1.3s;
         }
     }
+}
 
+.yellow .scroll {
+    stroke: $color_primary_black;
 }
 
 .projectWrapper {
