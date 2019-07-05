@@ -84,12 +84,17 @@ $font_home_text_p_standard: 1.65rem;
             color: $color_primary_black;
         }
 
-        &.btn-intro:hover {
-            color: $color_primary_teal;
-        }
         
         &:hover, &:active {
             background-color: $color_primary_white;    
+        }
+        &.btn-intro {
+            background-color: $color_primary_white;
+            color: $color_primary_teal;
+            &:hover {
+                background-color: $color_primary_teal;
+                color: $color_primary_white;
+            }
         }
     }
     .yellow a.btn {
@@ -119,11 +124,6 @@ $font_home_text_p_standard: 1.65rem;
             .text {
                 animation: onLoadFadeIn 3s forwards, onLoadMoveIn_txt 3s forwards;
                 animation-delay: 1750ms;
-                
-                a {
-                    color: $color_primary_white;
-                }
-            
             }
 
            .mac {
