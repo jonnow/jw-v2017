@@ -75,15 +75,14 @@
                     <div class="article-content">
                         <div class="content-container-standard">
                             <h2>Background</h2>
-                            <p>An homage to Alien: Isolation - A front-end code version of the motion tracker built with SVG, CSS and making use of JavaScript’s device motion.
-                            </p>
+                            <p>An homage to Alien: Isolation - A front-end code version of the motion tracker built with SVG, CSS and making use of JavaScript’s device motion.</p>
                             <h2>Background</h2>
                             <p>Alien is one of my favourite films and when it Alien: Isolation was revealed, it went straight on my radar. Creative Assembly did such an amazing job recreating the look and feel of Ridley Scott's 1979 classic. The lo-fi, retro-futuristic aesthetic was achieved, in part, by taking the UI, transferring it to VHS tapes and recording the playback through a CRT tv. Other nice touches are the inclusion of the Xbox’s Kinect Sensor that allows you to peak out and the lets the Xenomorph hear you...unfortunately I didn’t realise this until after a few encounters.</p>
                             <p>After playing the game and poring over the development blog it hit me that designing futuristic interfaces for games and films was an actual job. I started looking for more examples and discovered so much amazing work under the moniker of Fantasy User Interfaces. A few links to interesting resources:</p>
                             <ul>
-                                <li><a href="#">Link 1</a></li>
-                                <li><a href="#">Link 2</a></li>
-                                <li><a href="#">Link 3</a></li>
+                                <li><a href="#http://www.blindltd.com/MI-Fallout">BLIND - Mission Impossible: Fallout</a></li>
+                                <li><a href="#https://territorystudio.com/project/blade-runner-2049/"></a>Territory Studio - Blade Runner 2049</a></li>
+                                <li><a href="#https://gmunk.com/OBLIVION-GFX">GMUNK - Oblivion</a></li>
                             </ul>
                             <h2>Research</h2>
                             <h3>Discover</h3>
@@ -91,13 +90,13 @@
                             <!-- images here -->
                             <h2>Development</h2>
                             <p>I began the process by breaking down the tracker into separate work areas: the ping; radar overlay; grainy effect; and motion. Using screens as reference, I drew the radar overlay for the tracker in Adobe Illustrator and converted this SVG to the web.</p>
-                            <p>To give a more CRT feel to everything I’ve added a blur on the edges of everything, created as an SVG filter. The dashed lines on the radar are achieved with the dash-array and dash-offset CSS properties.</p>
+                            <p>To give a more CRT feel to everything I’ve added a blur on the edges of everything, created as an SVG filter. The dashed lines on the radar are achieved with the <strong>dash-array</strong> and <strong>dash-offset</strong> CSS properties.</p>
                             <p>The directional indicators (to the left, right and bottom) light up by checking for the current location of the ping on the circumference. If it is within their space they begin to “light up”. As the ping moves away they fade off again.</p>
                             <p>The original plan was to just have the ping move with the mouse movement. I decided to take this a step further and tap into the device compass available on some (mobile) devices. This part took the most amount of the work. I had to call on maths that I hadn’t used since doing game development at university to work out the movement around a circle. I managed to take some of this code (written in C#) and convert and repurpose it into JavaScript.</p>
                             [Maths screenshot]
                             [Gif of it working on a phone]
                             <p>To achieve the film grain effect I used Photoshop to generated a few layers with random noise on each. Making this into an animated gif adds to the retro feel of the tracker.</p>
-                            [Grain/noise gif]                   
+                            <img class="standard" src="../assets/static.gif" alt="An animated gif of a video grain effect" />
                             <h2>Outcomes and achievements</h2>
                             <p>This was a really fun interface to build, with a variety of techniques involved that I don’t often get to use - device motion, some advanced maths (for me at least!) to get the ping moving around a circle and having the direction indicators fade in and out. It certainly improved my understanding of working with SVGs on the web - styling, masking and interaction.</p>
                             <p>I presented and gave a short introduction to FUIs during a local CodePen meetup in York. As mentioned, I also dusted off my maths skills while trying to make the ping move around a circle.</p>
@@ -110,9 +109,6 @@
                                 <li>Have a “pulse” fire out from the centre to update the ping (and have the ping fade away like a real radar).</li>
                                 <li>A loading screen in-keeping with the retro aesthetic.</li>
                             </ul>
-                        
-
-
                             <img class="standard" src="../images/case-studies/orbsys/orbsys-full@0.5x.png" alt="The full Orbsys website homepage including proposed navigation menu." srcset="../images/case-studies/orbsys/orbsys-full.png 680w, ../images/case-studies/orbsys/orbsys-full@1.5x.png 1500w, ../images/case-studies/orbsys/orbsys-full@3x.png 3x" />
                             <img class="standard" src="../images/case-studies/orbsys/blog-post.png" alt="An example Orbsys blog post." />
                         </div>
