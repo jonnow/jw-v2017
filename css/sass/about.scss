@@ -39,6 +39,10 @@ img.profile {
     }
 }
 
+.font-secondary {
+    font-family: $font_serif;
+}
+
 .about {
     ul.colour-list {
         @include breakpointAbove(sm) {
