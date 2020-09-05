@@ -195,7 +195,8 @@ html {
 
 body {
 	margin: 0;
-	background-color: #faffff;
+	//background-color: #faffff; // Old background colour
+	background-color: #f9fdf0;
 	color: $content_text; // This is a good fallback to improve accessibility.
 	letter-spacing: 0.5px;
 }
