@@ -1,0 +1,278 @@
+$padding_nav_large: $size_20;
+$padding_nav_small: $size_16; // ~15px
+
+$font_header_logo_small: $font_body_h1;
+$font_header_nav_small: $size_12;
+$font_header_nav_large: $font_body_p;
+
+body {
+	> header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+		box-sizing: border-box;
+        @include upperCase();
+        font-weight: bold;
+		overflow: visible;
+		padding: $padding_nav_small;
+        
+        width: 100%;
+		
+        @include breakpointAbove(md) {
+            height: 4.375rem; // 70px
+            padding: $padding_nav_large;
+            font-size: $font_header_logo_small;
+        }
+
+        h1, nav {
+            font-size: $size_18;
+            letter-spacing: .75px;
+        }
+
+        h1 a {
+            color: $color2020_primary_blue_light;
+            display: block;
+        }
+
+        a {
+            position: relative;
+            text-decoration: none;
+        }
+
+        h1 a, nav a:not(.current) {
+            &:hover, &:active {
+                &:after {
+                    @include customUnderline($color2020_primary_blue_light);
+                }
+            }
+        }
+
+        nav a {
+            color: $color2020_primary_blue_light;
+            @include breakpointAbove(sm) {
+                &.current:after {
+                  @include customUnderline($color2020_primary_blue_light);
+                }
+            }
+        }
+        
+        // Stuff inside the menu div (slide out)
+		.menu {
+			position: absolute;
+			right: 0; // hides the box shadow
+			top: 0;
+            z-index: 1;
+            
+            height: 100vh;
+            overflow: hidden;
+            padding-left: 7px;
+			transition: all .45s ease-in-out;
+			width: 0;
+			@include breakpointAbove(md) {
+				background-color: transparent;
+				height: auto; 
+				overflow: visible;
+				position: static;
+				width: auto;
+			}
+        }
+            
+            .menu-inner, nav a {
+                color: $color2020_primary_white;
+            }
+
+			.menu-inner {
+                background-color: $color2020_primary_blue_light;
+                box-sizing: border-box;
+				height: 100%;
+				overflow: hidden;
+                padding: $pad_body_small;
+				position: relative;
+				width: 80vw;
+                
+				@include breakpointAbove(md) {
+					background: none;
+					height: auto;
+					overflow: visible;
+					padding: 0;
+					width: 100%;
+				}
+			}
+
+			.version, .madeIn {
+				bottom: $size_16;
+				font-size: $font_header_nav_small;
+				letter-spacing: .3px;
+				position: absolute;
+				text-transform: uppercase;
+			}
+
+            .madeIn {
+                left: $size_16;
+            }
+			.version {
+				right: $size_16;
+			}
+        // end of stuff inside the menu div
+		
+		nav {
+			display: flex;
+			flex-direction: column;
+			@include breakpointAbove(md) {
+				flex-direction: row;
+				justify-content: flex-end;
+			}
+			a {
+				font-weight: bold;
+                
+				@include breakpointBelow(md) {
+                    text-align: center;
+                    display: block;
+					font-size: $font_header_nav_large;
+                    margin-bottom: $padding_nav_large;
+					transform: translate3d(-200px,0,0);
+					transition: transform .475s ease-in;
+				}
+				@include breakpointAbove(md) {
+                    &.current, &:hover {
+                        color: $color2020_primary_blue_light;
+                    }
+					
+					// Turn off
+                    margin-bottom: 0;
+                    margin-left: 2.5rem; // 40px
+					transform: none;
+					transition: none;
+				}
+			}
+		}
+	}
+	
+	&.home {
+		padding-top: 0;
+		> header {
+			opacity: 0;
+			animation: onLoadFadeIn 3s forwards;
+        	animation-delay: 1.7s;
+			
+			h1 a, nav a, .menu-control-open {
+				color: $color2020_primary_white;
+			}
+		}
+	}
+
+    @include breakpointBelow(md) {
+        .menu-inner-shadow  {
+            height: 100%;
+            width: 100%;
+            box-shadow: 0 0 7px 0 #555555;
+        }
+
+        &.menu--active {
+            // The following prevents the scrolling if the menu is open
+            height: 100%;
+            overflow-y: hidden;
+
+            > header {
+                .menu {
+                    width: 80%;
+                }
+                nav {
+                    a {
+                        transform: translate3d(0,0,0);
+                        transition: transform .5s ease-out;
+                        &:nth-child(2) {
+                            transition-delay: .1s;
+                        }
+                        &:last-child {
+                            transition-delay: .2s;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// ! Below this line only include rules for the menu-control-open/close
+.menu-control-open, .menu-control-close {
+	display: block;
+	font-size: $font_header_nav_small;
+	cursor: pointer;
+	@include breakpointAbove(md) {
+		display: none;
+	}
+}
+
+.menu-control-open {
+	position: relative;
+    line-height: 100%;
+	margin-top: 2px;	
+	letter-spacing: 1px;
+    svg {
+		position: absolute;
+        top: -12px;
+        left: 14px;
+		stroke: $color2020_primary_blue_light;						
+        line, circle {
+            fill: none;
+            stroke-width: 3;
+		}
+    }
+    &:before {
+		padding-top: 1px;
+    }
+    &:before, &:after {
+		content: '';
+        display: block;
+        width: 100%;
+        border-top-width: .1875rem;
+        border-top-style: solid;
+    }
+}
+
+.menu-control-close {
+	text-align: right;
+	margin-bottom: $margin_body_small;
+}
+
+.home .menu-control-open {
+	&:before, &:after {
+		border-top-color: wheat;
+	}
+	svg {
+		stroke: wheat;	
+	}
+}
+
+body.content {
+	@include breakpointAbove(md) {
+		//padding-top: 5rem;
+		.version, .madeIn {
+			display: none;
+		}
+	}
+	.menu-control-open {
+		&:before, &:after {
+			border-top-color: $color2020_primary_blue_light;
+		}
+		svg {
+			stroke: $color2020_primary_blue_light;	
+		}
+	}
+}
+
+// Turn off non-mobile nav/menu elements
+@include breakpointAbove(md) {
+	body.home > header {
+		.version, .madeIn {
+			bottom: -84.4vh;
+			letter-spacing: 1px;
+			font-size: $font_body_smallText;
+			color: $color2020_primary_white;
+		}
+    }
+}
+
+

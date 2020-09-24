@@ -112,8 +112,6 @@ body {
 				}
 				@include breakpointAbove(md) {
 					color: $color_secondary_grey;
-					font-size: $font_header_nav_large;
-					font-size: $font_header_logo_small;
 					//line-height: 150%;
 					margin-left: $margin_body_small;
 					

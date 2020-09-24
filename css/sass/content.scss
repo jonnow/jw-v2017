@@ -1,3 +1,5 @@
+@import 'reset.scss';
+
 @font-face {
     font-family: 'Woodford Bourne';
     src: url(../fonts/woodfordbourne-regular.otf);
@@ -108,10 +110,7 @@ $font_sans_serif: 'Woodford Bourne', 'Lato', 'Futura', 'Helvetica', sans-serif;
 	$font_body_p: $size_16;
 	$font_body_smallText: $size_14;
 
-	// $font_header_logo_small: $size_12;
-	// $font_header_nav_small: $size_12;
-	// $font_header_nav_large: $size_12;
-	// $font_serif: $font_sans_serif;
+	$font_serif: $font_sans_serif;
 	// $padding_body:16px;
 	// $font_body_standard_sub: $font_sans_serif;
 	// $padding_home_btn_small: 1rem;
@@ -134,10 +133,11 @@ $font_sans_serif: 'Woodford Bourne', 'Lato', 'Futura', 'Helvetica', sans-serif;
 	$color2020_primary_off_white: #f4f4f4;
 	$color2020_primary_grey: #e4e4e4;
 
+	$color2020_solid_black: #464646;
 
 	// // Legacy colours
-	//  $color_primary_teal: #14B4B5;
-	//  $color_primary_orange: #f57f3f;
+	  $color_primary_teal: #14B4B5;
+	  $color_primary_orange: #f57f3f;
 	//  $color_primary_black: #373331;
 	//  $color_primary_white: #f0f0f0;
 
@@ -147,7 +147,7 @@ $font_sans_serif: 'Woodford Bourne', 'Lato', 'Futura', 'Helvetica', sans-serif;
 	//  $color_secondary_bright_blue: #16c1f3;
 	//  $color_secondary_bright_yellow: #ffb31c;
 	//  $color_secondary_bright_red: #ff1c1c;
-	//  $color_secondary_grey: #a7a7a7;
+	$color_secondary_grey: #a7a7a7;
 
 	// // Colour assignment
 	$content_heading: $color2020_primary_green_bright;
@@ -162,12 +162,22 @@ $font_sans_serif: 'Woodford Bourne', 'Lato', 'Futura', 'Helvetica', sans-serif;
 	letter-spacing: $letterSpacing;
 }
 
-@mixin dropShadow_individual {
-	filter: drop-shadow(0px 0px 4px $color2020_primary_black); // Individual Drop Shadow - Adds drop shadows to any and all individual aspects of an image
+@mixin dropShadow_individual($_color) {
+	filter: drop-shadow(0px 0px 4px $_color); // Individual Drop Shadow - Adds drop shadows to any and all individual aspects of an image
 }
 
 @mixin dropShow_normal {
 	box-shadow: 0 0 5px 0 #dfdfdf;
+}
+
+@mixin customUnderline($_color) {
+	content:'';
+	background-color: $_color;
+	bottom: 0;
+	height: 3px;
+	left: 0;
+	position: absolute;
+	width: 100%;
 }
 
 @mixin upperCase {	
@@ -176,13 +186,8 @@ $font_sans_serif: 'Woodford Bourne', 'Lato', 'Futura', 'Helvetica', sans-serif;
 }
 
 @mixin bulletPoints($_color) {
-	list-style-type: none;
-	&:before {
-		content: '';
-		background-color: $_color;
-		border-radius: $border_radius_circle;
-		height: 4px;
-		width: 4px;
+	&::marker {
+		color: $_color;
 	}
 }
 
@@ -198,7 +203,7 @@ body {
 	margin: 0;
 }
 
-//@import 'nav_v1.2.scss';
+@import 'nav_v2.scss';
 //@import 'home_v1.2.scss';
 
 body.content {
@@ -210,8 +215,6 @@ body.content {
 		}
 
 		article {
-			-moz-osx-font-smoothing: grayscale;
-			-webkit-font-smoothing: antialiased;
 			box-sizing: border-box;
 			padding: $pad_body_small;
 			max-width: 1400px;
@@ -223,14 +226,14 @@ body.content {
 					// padding: 0;
 			}
 
-			.intro {
+			.intro {	
 				@include breakpointAbove(sm) {
 					display: grid;
-					grid-template-columns: repeat(12, 1fr);
+					grid-template-columns: repeat(2, 1fr);
 					column-gap: 20px;
 					margin-left: auto;
 					margin-right: auto;
-					grid-template-areas: "a b b b b b c c c c c d";
+					grid-template-areas: "b c";
 					align-items: start;
 					.copy {
 						grid-area: c;
@@ -242,6 +245,11 @@ body.content {
 				}
 
 				@include breakpointAbove(md) {
+					grid-template-columns: repeat(12, 1fr);
+					grid-template-areas: "a b b b b b c c c c c d";
+				}
+
+				@include breakpointAbove(lg) {
 					grid-template-areas: "a a b b b b c c c c d d";
 				}
 
@@ -285,7 +293,9 @@ body.content {
 				color: $color2020_primary_green_bright;
 				font-size: $font_body_h1;
 				margin-bottom: 0;
-				margin-top: $margin_title_small;
+				@include breakpointAbove(lg) {
+					margin-top: $margin_title_small;
+				}
 				line-height: 175%;
 			}
 
@@ -320,7 +330,7 @@ body.content {
 					}
 
 					&.mobile, &.ids {
-						@include dropShadow_individual();
+						@include dropShadow_individual(#cecece);
 					}
 				}
 			}
@@ -375,8 +385,12 @@ body.content {
 			}
 			
 			img {
+				@include dropShadow_individual(#cecece);
 				display: block;
 				max-width: 100%; // All images should fit on the page.
+				@include breakpointAbove(sm) {
+					max-width: 50%;
+				}
 				margin-left: auto;
 				margin-right: auto;
 				&.profile {
