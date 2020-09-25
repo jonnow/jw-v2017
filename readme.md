@@ -1,3 +1,7 @@
+# Version 2020
+# The story so far...
+Having gone freelance in summer 2019 I decided an update was due. That summer I carried out an audit and refactor of the CSS which improved the maintainability of the styling. This was all started by coming back to the CSS a long while later I realised that the approach to the CSS structure I had taken really did not work for me, things were broken up across files (a Sass file for each screen size),this led to having to trawl through files in order to make an small change. It seemed like a good approach in theory, I can safely say it is not productive in practise! The new approach (detailed below) resolved this and made me want to work on the website again. However, following a very busy period at work that lasted up to the end of summer 2020 I managed to design for a case studies landing page in Adobe Illustrator but had not been able to code this.
+
 # jonnowitts.com Version 2018
 The time has come again for a fresh new design and code build-out of jonnowitts.com. This time I'll be using Git along the way to document the progress as I go. I think this is probably version 3 or 4, although not all versions of my site have made it to the web so in reality this is probably version 6.
 
@@ -29,3 +33,4 @@ The current roadmap is:
 * v1 Flat HTML structure, basic pages, no blog
 * v2 Vue built over the top, code modularised.
 * v3 TBD CMS (likely to be Wordpress but this may, and hopefully will, change to something .net based).
+
