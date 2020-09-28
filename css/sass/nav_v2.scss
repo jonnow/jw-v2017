@@ -31,7 +31,7 @@ body {
         }
 
         h1 a {
-            color: $color2020_primary_blue_light;
+            color: $color2020_primary_blue_bright;
             display: block;
         }
 
@@ -43,16 +43,16 @@ body {
         h1 a, nav a:not(.current) {
             &:hover, &:active {
                 &:after {
-                    @include customUnderline($color2020_primary_blue_light);
+                    @include customUnderline($color2020_primary_blue_bright);
                 }
             }
         }
 
         nav a {
-            color: $color2020_primary_blue_light;
+            color: $color2020_primary_blue_bright;
             @include breakpointAbove(sm) {
                 &.current:after {
-                  @include customUnderline($color2020_primary_blue_light);
+                  @include customUnderline($color2020_primary_blue_bright);
                 }
             }
         }
@@ -83,7 +83,7 @@ body {
             }
 
 			.menu-inner {
-                background-color: $color2020_primary_blue_light;
+                background-color: $color2020_primary_blue_bright;
                 box-sizing: border-box;
 				height: 100%;
 				overflow: hidden;
@@ -135,8 +135,9 @@ body {
 					transition: transform .475s ease-in;
 				}
 				@include breakpointAbove(md) {
+					color: $color2020_primary_black;
                     &.current, &:hover {
-                        color: $color2020_primary_blue_light;
+                        color: $color2020_primary_blue_bright;
                     }
 					
 					// Turn off
@@ -214,7 +215,7 @@ body {
 		position: absolute;
         top: -12px;
         left: 14px;
-		stroke: $color2020_primary_blue_light;						
+		stroke: $color2020_primary_blue_bright;						
         line, circle {
             fill: none;
             stroke-width: 3;
@@ -255,10 +256,10 @@ body.content {
 	}
 	.menu-control-open {
 		&:before, &:after {
-			border-top-color: $color2020_primary_blue_light;
+			border-top-color: $color2020_primary_blue_bright;
 		}
 		svg {
-			stroke: $color2020_primary_blue_light;	
+			stroke: $color2020_primary_blue_bright;	
 		}
 	}
 }

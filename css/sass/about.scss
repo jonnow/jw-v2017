@@ -4,38 +4,44 @@
 */
 
 // Profile picture
+.about {
+    h1 {
+        margin-bottom: $margin_title_small;
+    }
+
+    h2 {
+        font-size: 1rem;
+        text-align: left;
+        width: 100px;
+        overflow: visible;
+    }
+}
+
 img.profile {
-    display: block;
-    border-radius: 5px;
-    margin: 0 auto $margin_body_small;
+    margin-bottom: $margin_contentEnd_small;
 }
 // Colourful list
 .colour-list {
-    list-style-type: none;
-    padding-left: 0;
-    margin-bottom: 5rem;
+    width: 80%;
+    margin: 0 auto 5rem;
+    padding-left: 1rem;
     li {
-        padding-left: 0rem; 
         text-indent: -.5px;
 
-        &::before {
-            content: "";
-            display: inline-block;
-            vertical-align: middle;
-            height: 4px;
-            width: 4px;
-            border-radius: 100%;
-            margin-right: 1rem;
-            margin-top: -4px;
-        }
 
-        &.primary_teal::before { background-color: $color_primary_teal;}
-        &.primary_orange::before { background-color: $color_primary_orange;}
-        &.primary_black::before { background-color: $color_primary_black;}
-        &.secondary_dull_blue::before { background-color: $color_secondary_dull_blue;}
-        &.secondary_bright_blue::before { background-color: $color_secondary_bright_blue;}
-        &.secondary_bright_yellow::before { background-color: $color_secondary_bright_yellow;}
-        &.secondary_bright_red::before { background-color: $color_secondary_bright_red;}
+        &.green_dark::marker {color: $color2020_primary_green_dark;}
+        &.yellow::marker {color: $color2020_primary_yellow;}
+        &.blue_bright::marker {color: $color2020_primary_blue_bright;}
+        &.blue_dark::marker {color: $color2020_primary_blue_dark;}
+        &.black::marker {color: $color2020_primary_black;}
+        &.orange::marker {color: $color_primary_orange;}
+        &.green_bright::marker {color: $color2020_primary_green_bright;}
+
+        // &.primary_teal::before { background-color: $color_primary_teal;}
+        // &.secondary_dull_blue::before { background-color: $color_secondary_dull_blue;}
+        // &.secondary_bright_blue::before { background-color: $color_secondary_bright_blue;}
+        // &.secondary_bright_yellow::before { background-color: $color_secondary_bright_yellow;}
+        // &.secondary_bright_red::before { background-color: $color_secondary_bright_red;}
     }
 }
 
@@ -55,100 +61,36 @@ img.profile {
 
      // Colours used (see colophon)
      ul.colours {
-        display: flex;
-        justify-content: space-between;
+        grid-column: b;
         margin-bottom: 2.5rem;
         padding-left: 0;
         li {
             list-style: none;
-            border-radius: 50%;
-
-            height: 1rem;
-            width: 1rem;
-            @include breakpointAbove(sm) {
-                height: 2rem;
-                width: 2rem;
-            }
-            @include breakpointAbove(lg) {
-                height: 3rem;
-                width: 3rem;
-            }
-            
-            &.primary-teal {background-color: $color_primary_teal;}
-            &.primary-orange {background-color: $color_primary_orange;}
-            &.primary-black {background-color: $color_primary_black;}
-            &.primary-white {
-                background-color: $color_primary_white;
-                border:1px solid $color_secondary_grey;
-            }
-            &.primary-grey {background-color: $color_secondary_grey;}
-            &.secondary-dull-blue {background-color: $color_secondary_dull_blue;}
-            &.secondary-dull-yellow {background-color: $color_secondary_dull_yellow;}
-            &.secondary-dull-red {background-color: $color_secondary_dull_red;}
-            &.secondary-bright-blue {background-color: $color_secondary_bright_blue;}
-            &.secondary-bright-yellow {background-color: $color_secondary_bright_yellow;}
-            &.secondary-bright-red {background-color: $color_secondary_bright_red;}
-            
-            &.show-colour {
-                position: relative;
-                &:before, &:after {
-                    position: absolute;
-                    opacity: 0;
-                    z-index: 50;
-                    animation: showTooltip forwards .3s;
+            margin-bottom: 1rem;
+            &:before {
+                vertical-align: middle;
+                content: '';
+                display: inline-block;
+                height: 1rem;
+                margin-right: 1rem;
+                margin-top: -8px;
+                width: 1rem;
+                @include breakpointAbove(sm) {
+                    height: 2rem;
+                    width: 2rem;
                 }
-                
-                &:before {
-                    content: attr(data-content);
-                    top:-20px;
-                    left: 50%;
-                    border: 1px solid #a7a7a7;
-                    margin-left: -50px;
-                    margin-top: 10px;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    height: 30px;
-                    width: 100px;
-                    border-radius: 5px;
-                    background-color: $color_primary_white;    
-                    color: #373331;  
-                    font-size: 1.25rem;
-                }
-                
-                &:after {
-                    content: '';
-                    display: block;
-                    top: 10px;
-                    left: 50%;
-                    margin-left: -5px;
-                    border: 5px solid transparent;
-                    border-top-color: $color_primary_white;
-                }
-                
-                &.hide-colour {
-                    &:before, &:after {
-                        animation: hideTooltip forwards .3s;
-                    }
+                @include breakpointAbove(lg) {
+                    height: 3rem;
+                    width: 3rem;
                 }
             }
-            
-            @keyframes showTooltip {
-                100% {
-                opacity: 1;
-                margin-top: 0;
-                }
-            }
-            
-            @keyframes hideTooltip {
-                0% {
-                opacity: 1;
-                margin-top: 0;
-                }
-                100% {
-                opacity: 0;
-                }
-            }
+            &.primary_green_dark:before { background-color: $color2020_primary_green_dark; }
+            &.primary_green_light:before { background-color: $color2020_primary_green_bright; }
+            &.primary_yellow:before { background-color: $color2020_primary_yellow; }
+            &.primary_blue_dark:before { background-color: $color2020_primary_blue_dark; }
+            &.primary_blue_light:before { background-color: $color2020_primary_blue_bright; }
+            &.primary_black:before { background-color: $color2020_primary_black; }
+            &.secondary_orange:before { background-color: $color_primary_orange; }
         }
     }
 }

@@ -126,7 +126,7 @@ $font_sans_serif: 'Woodford Bourne', 'Lato', 'Futura', 'Helvetica', sans-serif;
 	$color2020_primary_green_bright: #12b2b2;
 	$color2020_primary_yellow: #feb11b;
 	$color2020_secondary_yellow_fade: #f9fdf0;
-	$color2020_primary_blue_light: #02a8ce;
+	$color2020_primary_blue_bright: #02a8ce;
 	$color2020_primary_blue_dark: #486eca;
 	$color2020_primary_black: #707070;
 	$color2020_primary_white: #ffffff;
@@ -206,6 +206,42 @@ body {
 @import 'nav_v2.scss';
 //@import 'home_v1.2.scss';
 
+.grid-12col {
+	@include breakpointAbove(md) {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		column-gap: 20px;
+		margin-left: auto;
+		margin-right: auto;
+		grid-template-columns: "b c";
+		align-items: start;
+		.copy {
+			// Put the text (copy) on the right hand column
+			grid-area: c;
+		}
+
+		.meta {
+			// Specific for the content pages
+			grid-area: b;
+		}
+
+		.profile {
+			// Specific for the profile page
+			grid-column-start: 2;
+			grid-column-end: 6;
+		}
+	}
+
+	@include breakpointAbove(md) {
+		grid-template-columns: repeat(12, 1fr);
+		grid-template-areas: "a b b b b b c c c c c d";
+	}
+
+	@include breakpointAbove(lg) {
+		grid-template-areas: "a a b b b b c c c c d d";
+	}
+}
+
 body.content {
 	main {
 		padding-bottom: $padding_footer_vert;
@@ -226,33 +262,7 @@ body.content {
 					// padding: 0;
 			}
 
-			.intro {	
-				@include breakpointAbove(sm) {
-					display: grid;
-					grid-template-columns: repeat(2, 1fr);
-					column-gap: 20px;
-					margin-left: auto;
-					margin-right: auto;
-					grid-template-areas: "b c";
-					align-items: start;
-					.copy {
-						grid-area: c;
-					}
-
-					.meta {
-						grid-area: b;
-					}
-				}
-
-				@include breakpointAbove(md) {
-					grid-template-columns: repeat(12, 1fr);
-					grid-template-areas: "a b b b b b c c c c c d";
-				}
-
-				@include breakpointAbove(lg) {
-					grid-template-areas: "a a b b b b c c c c d d";
-				}
-
+			.grid-12col {
 				.copy p{
 					margin-top: 0;
 				}
@@ -280,9 +290,6 @@ body.content {
 						}
 					}
 				}
-				@include breakpointAbove(md) {
-
-				}
 			}
 
 			h1, h2 {
@@ -302,6 +309,7 @@ body.content {
 			h2 {
 				color: $color2020_primary_green_dark;
 				font-size: $font_body_h2;
+				font-weight: 400;
 				margin-bottom: $margin_title_small;
 				margin-top: 0;
 			}
@@ -336,7 +344,7 @@ body.content {
 			}
 
 			a.primary {
-				background-color: $color2020_primary_blue_light;
+				background-color: $color2020_primary_blue_bright;
 				border-radius: $border_radius_standard;
 				color: $color2020_primary_off_white;
 				display: block;
@@ -387,14 +395,17 @@ body.content {
 			img {
 				@include dropShadow_individual(#cecece);
 				display: block;
-				max-width: 100%; // All images should fit on the page.
-				@include breakpointAbove(sm) {
-					max-width: 50%;
-				}
 				margin-left: auto;
 				margin-right: auto;
 				&.profile {
 					border-radius: $border_radius_standard;
+				}
+			}
+
+			img:not(.profile) {
+				max-width: 100%; // All images should fit on the page.
+				@include breakpointAbove(sm) {
+					max-width: 50%;
 				}
 			}
 
@@ -419,7 +430,7 @@ body.content {
 			// }
 		}
 
-	//	@import 'about.scss';
+		@import 'about.scss';
 
 		// footer { // article footer - e.g. the colophon
 		// 	&.colophon {
