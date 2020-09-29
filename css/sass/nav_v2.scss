@@ -18,7 +18,7 @@ body {
 		padding: $padding_nav_small;
         
         width: 100%;
-		
+		z-index: 1;
         @include breakpointAbove(md) {
             height: 4.375rem; // 70px
             padding: $padding_nav_large;
@@ -152,11 +152,7 @@ body {
 	
 	&.home {
 		padding-top: 0;
-		> header {
-			//opacity: 0;
-			animation: onLoadFadeIn 3s forwards;
-        	animation-delay: 1.7s;
-			
+		> header {	
 			h1 a, nav a, .menu-control-open {
 			 	color: $color2020_primary_white;
 			}

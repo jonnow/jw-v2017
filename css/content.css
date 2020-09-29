@@ -83,6 +83,7 @@ body > header {
   overflow: visible;
   padding: 1rem;
   width: 100%;
+  z-index: 1;
 }
 @media (min-width: 768px) {
   body > header {
@@ -218,10 +219,6 @@ body > header nav a {
 body.home {
   padding-top: 0;
 }
-body.home > header {
-  animation: onLoadFadeIn 3s forwards;
-  animation-delay: 1.7s;
-}
 body.home > header h1 a, body.home > header nav a, body.home > header .menu-control-open {
   color: #ffffff;
 }
@@ -335,13 +332,18 @@ body.home > header {
   top: 0;
   overflow: visible;
 }
+body.home > header .menu-inner {
+  background-color: #707070;
+}
 @media (min-width: 768px) {
   body.home > header {
     height: 4.375rem;
-    opacity: 0;
+  }
+  body.home > header .menu-inner {
+    background: none;
   }
 }
-body.home p {
+body.home main p {
   font-size: 1.375rem;
 }
 body.home a.btn {
@@ -580,41 +582,6 @@ body.home .brightBg .scroll {
     transform: translate3d(0, 0, 0);
   }
 }
-@media screen and (min-width: 768px) {
-  .home:not(.ac) main .intro .mac {
-    animation: onLoadFadeIn 3s forwards, onLoadMoveIn_mac_large 3s forwards;
-  }
-}
-@media screen and (min-width: 768px) and (max-width: 1024px) {
-  .home main .intro .mac {
-    width: 75%;
-  }
-}
-@media screen and (min-width: 1024px) {
-  .intro, .projectWrapper {
-    -ms-grid-column: 50% 50%;
-    grid-template-columns: 50% 50%;
-    -ms-grid-rows: 1fr;
-    grid-template-rows: 1fr;
-    grid-gap: 0;
-  }
-}
-@media screen and (min-width: 1024px) and (max-width: 1200px) {
-  .home main .intro img {
-    width: 70%;
-  }
-}
-@media screen and (min-width: 1200px) and (max-width: 1370px) {
-  .home main .intro img {
-    width: 60%;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .projectWrapper .trackerProject + .text {
-    max-width: 80rem;
-    margin-left: 10rem;
-  }
-}
 @keyframes bouncy {
   40% {
     transform: translate3d(0, 0, 0);
@@ -668,16 +635,16 @@ body.home .brightBg .scroll {
 }
 @keyframes onLoadMoveIn_mac_large {
   0% {
-    transform: translate3d(-50%, 2rem, 0);
+    transform: translate3d(-75%, 2rem, 0);
   }
   15% {
-    transform: translate3d(-50%, 2rem, 0);
+    transform: translate3d(-75%, 2rem, 0);
   }
   45% {
-    transform: translate3d(-50%, 0, 0);
+    transform: translate3d(-75%, 0, 0);
   }
   60% {
-    transform: translate3d(-50%, 0, 0);
+    transform: translate3d(-75%, 0, 0);
   }
   100% {
     transform: translate3d(0, 0, 0);
