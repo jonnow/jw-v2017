@@ -109,10 +109,10 @@ body {
 			}
 
             .madeIn {
-                left: $size_16;
+                left: $padding_nav_large;
             }
 			.version {
-				right: $size_16;
+				right: $padding_nav_large;
 			}
         // end of stuff inside the menu div
 		
@@ -153,12 +153,12 @@ body {
 	&.home {
 		padding-top: 0;
 		> header {
-			opacity: 0;
+			//opacity: 0;
 			animation: onLoadFadeIn 3s forwards;
         	animation-delay: 1.7s;
 			
 			h1 a, nav a, .menu-control-open {
-				color: $color2020_primary_white;
+			 	color: $color2020_primary_white;
 			}
 		}
 	}
@@ -267,8 +267,16 @@ body.content {
 // Turn off non-mobile nav/menu elements
 @include breakpointAbove(md) {
 	body.home > header {
+		h1 {
+			float: left;
+		}
+		.menu {
+			.menu-inner{
+				position: static;
+			}
+		}
 		.version, .madeIn {
-			bottom: -84.4vh;
+			bottom: -90vh;
 			letter-spacing: 1px;
 			font-size: $font_body_smallText;
 			color: $color2020_primary_white;

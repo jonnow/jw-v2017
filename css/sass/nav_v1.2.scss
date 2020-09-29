@@ -232,13 +232,13 @@ body {
 // Turn off non-mobile nav/menu elements
 @include breakpointAbove(md) {
 	body.home > header {
-		// .menu {
-		// 	position: static;
-		// 	.menu-inner{
-		// 		position: relative;
-		// 		width: 100%;
-		// 	}
-		// }
+		.menu {
+			position: static;
+			.menu-inner{
+				position: relative;
+				width: 100%;
+			}
+		}
 		.version, .madeIn {
 			bottom: -84.4vh;
 			letter-spacing: 1px;
