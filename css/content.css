@@ -672,37 +672,130 @@ body.home .brightBg .scroll {
 What happened to V1? There wasn't one, this is V2 to fit inline with the rest of the site v2.
 
 - Jonno 14:00 30/09/20 */
-*, *:before, *:after {
-  box-sizing: border-box;
-}
-
 .work-item {
   background-color: #e4e4e4;
-  border-radius: 15px;
-  display: flex;
-  flex-direction: row-reverse;
-  list-style: none;
-  overflow: hidden;
-}
-.work-item a {
-  align-items: stretch;
   color: #464646;
   display: flex;
-  flex-direction: row-reverse;
+  overflow: hidden;
   text-decoration: none;
+  transition: all 0.15s ease-in-out;
+}
+.work-item, .work-item .img-container {
+  border-radius: 15px;
+}
+.work-item .img-container, .work-item img, .work-item:focus, .work-item:hover, .work-item:active {
+  box-shadow: 0 0 5px 2px #9d9d9d;
+}
+.work-item.yellow .btn {
+  border-color: #feb11b;
+}
+.work-item.yellow:focus .btn, .work-item.yellow:hover .btn, .work-item.yellow:active .btn {
+  background-color: #feb11b;
+  color: #464646;
+}
+.work-item.yellow .img-container {
+  background-color: #feb11b;
+}
+.work-item.blue .btn {
+  border-color: #486eca;
+}
+.work-item.blue:focus .btn, .work-item.blue:hover .btn, .work-item.blue:active .btn {
+  background-color: #486eca;
+  color: #f4f4f4;
+}
+.work-item.blue .img-container {
+  background-color: #486eca;
+}
+.work-item.black .btn {
+  border-color: #707070;
+}
+.work-item.black:focus .btn, .work-item.black:hover .btn, .work-item.black:active .btn {
+  background-color: #707070;
+  color: #f4f4f4;
+}
+.work-item.black .img-container {
+  background-color: #464646;
+}
+.work-item.orange .btn {
+  border-color: #F26818;
+}
+.work-item.orange:focus .btn, .work-item.orange:hover .btn, .work-item.orange:active .btn {
+  background-color: #F26818;
+  color: #f4f4f4;
+}
+.work-item.orange .img-container {
+  background-color: #F26818;
+}
+.work-item.work-item--featured {
+  flex-direction: column;
+}
+.work-item.work-item--featured .btn {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 15rem;
+}
+@media (min-width: 768px) {
+  .work-item.work-item--featured {
+    align-items: stretch;
+    flex-direction: row-reverse;
+    grid-column: b/c;
+  }
+  .work-item.work-item--featured .img-container, .work-item.work-item--featured .copy-container {
+    width: 50%;
+  }
+}
+.work-item.work-item--featured .meta {
+  font-size: 0.875rem;
+  grid-template-columns: auto 1fr;
+}
+.work-item.work-item--featured .meta ul {
+  justify-self: end;
+  list-style: none;
+}
+.work-item.work-item--featured .meta ul li {
+  display: inline;
+}
+.work-item.work-item--featured .meta ul li:not(:last-child):after {
+  content: ", ";
 }
 .work-item .img-container, .work-item .copy-container {
-  width: 50%;
   padding: 1rem;
 }
 .work-item .img-container {
-  background-color: cadetblue;
   display: flex;
   align-items: center;
 }
 .work-item img {
   margin: 0 auto;
   box-shadow: 0 0 5px 0 #464646;
+}
+
+ul.work-items {
+  column-gap: 1rem;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 2.625rem;
+  padding-left: 0;
+  row-gap: 2.625rem;
+}
+ul.work-items li {
+  list-style: none;
+}
+ul.work-items .work-item {
+  flex-direction: column;
+  height: 21rem;
+  overflow: hidden;
+}
+ul.work-items .work-item .img-container {
+  border-radius: 15px;
+  height: 50%;
+}
+ul.work-items .work-item span.link {
+  color: #4f899f;
+  float: right;
+}
+ul.work-items .work-item:hover span.link {
+  text-decoration: underline;
 }
 
 @media (min-width: 768px) {
@@ -725,11 +818,6 @@ What happened to V1? There wasn't one, this is V2 to fit inline with the rest of
   .grid-12col .profile {
     grid-column-start: 2;
     grid-column-end: 6;
-  }
-}
-@media (min-width: 992px) {
-  .grid-12col {
-    max-width: none;
   }
 }
 
@@ -794,6 +882,11 @@ body.content main img, body.work main img {
   margin-right: auto;
 }
 
+.content .meta, .work .meta {
+  display: grid;
+  column-gap: 10px;
+}
+
 body.content main {
   /* These styles are mainly used on the about page.
      Where not specified, they can be global, but are unique to the about page (for now)
@@ -804,9 +897,7 @@ body.content main article .grid-12col .copy p {
   margin-top: 0;
 }
 body.content main article .grid-12col .meta {
-  display: grid;
   grid-template-columns: 1fr 1fr;
-  column-gap: 10px;
   color: #4f899f;
   font-size: 0.875rem;
   margin-bottom: 2.625rem;
@@ -864,9 +955,6 @@ body.content main article img:not(.profile) {
   body.content main article img:not(.profile) {
     max-width: 50%;
   }
-}
-body.content main article a:not(.btn) {
-  color: #4f899f;
 }
 body.content main .about h1 {
   margin-bottom: 2.375rem;
@@ -979,9 +1067,12 @@ body.content main .about ul.colours li.secondary_orange:before {
   background-color: #f57f3f;
 }
 
-a.btn {
+main a:not(.btn), main a:not(.work-item > *) {
+  color: #4f899f;
+}
+
+.btn {
   border-radius: 5px;
-  display: block;
   font-weight: bold;
   letter-spacing: 0.75px;
   text-align: center;
@@ -989,13 +1080,29 @@ a.btn {
   text-transform: uppercase;
   transition: all 0.15s ease-in-out;
 }
-a.btn.btn-primary {
+.btn.btn-primary {
   background-color: #02a8ce;
   color: #f4f4f4;
 }
-a.btn.btn-primary:hover, a.btn.btn-primary:active {
+.btn.btn-primary:hover, .btn.btn-primary:active {
   background-color: #12b2b2;
   box-shadow: 0 0 6px 0 #858585;
+}
+
+a.btn {
+  display: block;
+}
+
+.work .btn {
+  border: 3px solid;
+  border-color: #486eca;
+  display: inline-block;
+  margin-bottom: 1rem;
+  padding: 0.4rem 1.5rem;
+}
+.work .btn:focus, .work .btn:hover, .work .btn:active {
+  background-color: #486eca;
+  color: #f4f4f4;
 }
 
 .home .btn {

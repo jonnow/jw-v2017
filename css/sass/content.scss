@@ -44,10 +44,6 @@ body {
 			//grid-area: b;
 		}
 	}
-
-	@include breakpointAbove(lg) {
-		max-width: none;
-	}
 }
 
 .about .grid-12col {
@@ -117,6 +113,13 @@ body.content, body.work {
 // End shared work and content
 
 // Content (and about (via external Sass file)) styles
+.content,.work {
+	.meta {
+		display: grid;
+		column-gap: 10px;
+	}
+}
+
 body.content {
 	main {
 		article {
@@ -125,10 +128,7 @@ body.content {
 					margin-top: 0;
 				}
 				.meta {
-					display: grid;
 					grid-template-columns: 1fr 1fr;
-					column-gap: 10px;
-
 					color: $content_text_alt;
 					font-size: $font_body_smallText;
 					margin-bottom: 2.625rem;
@@ -197,21 +197,20 @@ body.content {
 					max-width: 50%;
 				}
 			}
-
-			a:not(.btn) {
-				color: $color2020_primary_green_dark;
-			}
 		}
-
 		@import 'about.scss';
+	}
+}
 
+main { 
+	a:not(.btn), a:not(.work-item > *) {
+		color: $color_textLink;
 	}
 }
 
 // // Button world
-a.btn {
+.btn {
 	border-radius: $border_radius_standard;
-	display: block;
 	font-weight: bold;
 	letter-spacing: .75px;
 	
@@ -230,6 +229,24 @@ a.btn {
 	}
 }
 
+a.btn {
+	display: block;
+}
+
+.work {
+	.btn {
+		border: 3px solid;
+		border-color: $color2020_primary_blue_dark; // default value (full rules can be found on the work page)
+		display:inline-block;
+		margin-bottom: 1rem;
+		padding: .4rem $pad_body_small;
+		&:focus, &:hover, &:active { // default value
+			background-color: $color2020_primary_blue_dark;
+			color: $color2020_primary_off_white;
+		}
+	}
+}
+	
 .home {
 	.btn {
 		border: 2px solid;

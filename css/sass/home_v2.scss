@@ -259,54 +259,6 @@ body.home {
     }
 }
 
-// only do the side scroll image in on large screens
-// @media screen and (min-width: 768px) {
-//     .home:not(.ac) main .intro .mac {
-//         animation: onLoadFadeIn 3s forwards, onLoadMoveIn_mac_large 3s forwards;
-//     }
-    
-// }
-
-// @media screen and (min-width: 768px) and (max-width: 1024px) {
-//     .home main .intro  .mac {
-//         width: 75%;
-//     }
-// }
-
-// @media screen and (min-width: 1024px) {
-//     .intro, .projectWrapper {
-//         -ms-grid-column: 50% 50%;
-//         grid-template-columns: 50% 50%;// 50/50 correct formatting for grid
-//         -ms-grid-rows: 1fr;
-//         grid-template-rows: 1fr;
-//         grid-gap: 0;
-//     }
-// }
-
-// @media screen and (min-width: 1024px) and (max-width: 1200px) {
-//     .home {
-//         main .intro img {
-//             width: 70%;
-//         }
-//     }
-// }
-
-// @media screen and (min-width: 1200px) and (max-width: 1370px) {
-//     .home main {
-
-//         .intro img {
-//             width: 60%;
-//         }
-//     }
-// }
-
-// @media screen and (min-width: 1280px) {
-//     .projectWrapper .trackerProject + .text {
-//         max-width: 80rem;
-//         margin-left: 10rem;
-//     }
-// }
-
 
 @keyframes bouncy {
     40% {
