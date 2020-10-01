@@ -35,48 +35,38 @@
         
     </head>
     <body id="body" class="case-study content">
-            <header>
-                <h1><a href="https://jonnowitts.com">Jonno Witts</a></h1>
-                <span class="menu-control-open" id="menuControlOpen">
-                    <svg width="10" height="15">
-                        <circle r="3" cx="5" cy="5"></circle>
-                        <line x1="5" x2="5" y1="7" y2="13"></line>
-                    </svg>
-                    Menu
-                </span>
-                <div class="menu">
+        <header>
+            <h1><a href="https://jonnowitts.com">Jonno Witts</a></h1>
+            <span class="menu-control-open" id="menuControlOpen">
+                <svg width="10" height="15">
+                    <circle r="3" cx="5" cy="5"></circle>
+                    <line x1="5" x2="5" y1="7" y2="13"></line>
+                </svg>
+                Menu
+            </span>
+            <div class="menu">
+                <div class="menu-inner-shadow">
                     <div class="menu-inner">
                         <span class="menu-control-close" id="menuControlClose">Close</span>
                         <nav>
-                            <!-- <a href="/case-study.html">Work</a> - Coming soon! -->
-                            <!-- <a href="/post.html">Notes</a> - Coming soon! -->
-                            <a href="https://jonnowitts.com">Home</a>
+                            <a href="../index.html">Home</a>
+                            <a href="../work.html" class="current">Work</a>
                             <a href="../about.html">About</a>
                         </nav>
-                        <span class="version">Version 1.2</span>
+                        <span class="version">Version 2.0</span>
                         <span class="madeIn">Made in York, England</span>
                     </div>
                 </div>
-            </header>
-            <main>
-                <article>
-                    <header>
-                        <h1 class="post-heading pb">Personal project<span>Alien Motion Tracker</span></h1>
-                        <ul class="meta">
-                            <li>UI</li>
-                            <li>Development</li>
-                            <li>Fun</li>
-                        </ul>
-                        <div class="article-billboard">
-                            <!-- <img src="../images/case-studies/orbsys/desktop.png" alt="The homepage for the documentary website displayed on a browser window" class="billboard-desktop">
-                            <img src="../images/case-studies/orbsys/mobile.png" alt="The homepage for the documentary website displayed on a mobile device" class="billboard-mobile"> -->
-                        </div>
-                    </header>
-                    <div class="article-content">
-                        <div class="content-container-standard">
-                            <h2>Background</h2>
+            </div>
+        </header>
+        <main>
+            <article>
+                <header>
+                    <h1>Personal project</h1>
+                    <h2>Alien Motion Tracker</h2>
+                    <div class="intro grid-12col">
+                        <div class="copy">
                             <p>An homage to Alien: Isolation - A front-end code version of the motion tracker built with SVG, CSS and making use of JavaScript’s device motion.</p>
-                            <h2>Background</h2>
                             <p>Alien is one of my favourite films and when it Alien: Isolation was revealed, it went straight on my radar. Creative Assembly did such an amazing job recreating the look and feel of Ridley Scott's 1979 classic. The lo-fi, retro-futuristic aesthetic was achieved, in part, by taking the UI, transferring it to VHS tapes and recording the playback through a CRT tv. Other nice touches are the inclusion of the Xbox’s Kinect Sensor that allows you to peak out and the lets the Xenomorph hear you...unfortunately I didn’t realise this until after a few encounters.</p>
                             <p>After playing the game and poring over the development blog it hit me that designing futuristic interfaces for games and films was an actual job. I started looking for more examples and discovered so much amazing work under the moniker of Fantasy User Interfaces. A few links to interesting resources:</p>
                             <ul>
@@ -84,20 +74,12 @@
                                 <li><a href="#https://territorystudio.com/project/blade-runner-2049/"></a>Territory Studio - Blade Runner 2049</a></li>
                                 <li><a href="#https://gmunk.com/OBLIVION-GFX">GMUNK - Oblivion</a></li>
                             </ul>
-                            <h2>Research</h2>
-                            <h3>Discover</h3>
                             <p>The motion tracker in the game seemed ideal to be rebuilt as a web interface. I started gathering in-game screenshots, reading through the companion art book and going back to other films in the Alien franchise.</p>
-                            <!-- images here -->
-                            <h2>Development</h2>
                             <p>I began the process by breaking down the tracker into separate work areas: the ping; radar overlay; grainy effect; and motion. Using screens as reference, I drew the radar overlay for the tracker in Adobe Illustrator and converted this SVG to the web.</p>
                             <p>To give a more CRT feel to everything I’ve added a blur on the edges of everything, created as an SVG filter. The dashed lines on the radar are achieved with the <strong>dash-array</strong> and <strong>dash-offset</strong> CSS properties.</p>
                             <p>The directional indicators (to the left, right and bottom) light up by checking for the current location of the ping on the circumference. If it is within their space they begin to “light up”. As the ping moves away they fade off again.</p>
                             <p>The original plan was to just have the ping move with the mouse movement. I decided to take this a step further and tap into the device compass available on some (mobile) devices. This part took the most amount of the work. I had to call on maths that I hadn’t used since doing game development at university to work out the movement around a circle. I managed to take some of this code (written in C#) and convert and repurpose it into JavaScript.</p>
-                            [Maths screenshot]
-                            [Gif of it working on a phone]
                             <p>To achieve the film grain effect I used Photoshop to generated a few layers with random noise on each. Making this into an animated gif adds to the retro feel of the tracker.</p>
-                            <img class="standard" src="../assets/static.gif" alt="An animated gif of a video grain effect" />
-                            <h2>Outcomes and achievements</h2>
                             <p>This was a really fun interface to build, with a variety of techniques involved that I don’t often get to use - device motion, some advanced maths (for me at least!) to get the ping moving around a circle and having the direction indicators fade in and out. It certainly improved my understanding of working with SVGs on the web - styling, masking and interaction.</p>
                             <p>I presented and gave a short introduction to FUIs during a local CodePen meetup in York. As mentioned, I also dusted off my maths skills while trying to make the ping move around a circle.</p>
                             <h2>Where next?</h2>
@@ -109,13 +91,30 @@
                                 <li>Have a “pulse” fire out from the centre to update the ping (and have the ping fade away like a real radar).</li>
                                 <li>A loading screen in-keeping with the retro aesthetic.</li>
                             </ul>
-                            <img class="standard" src="../images/case-studies/orbsys/orbsys-full@0.5x.png" alt="The full Orbsys website homepage including proposed navigation menu." srcset="../images/case-studies/orbsys/orbsys-full.png 680w, ../images/case-studies/orbsys/orbsys-full@1.5x.png 1500w, ../images/case-studies/orbsys/orbsys-full@3x.png 3x" />
-                            <img class="standard" src="../images/case-studies/orbsys/blog-post.png" alt="An example Orbsys blog post." />
                         </div>
-                   </div>
-                </article>
-            </main>
-            <footer>&copy; 2020 Jonno Witts</footer>        
+                        <div class="meta">
+                            <span>Filed under:</span>
+                            <ul>
+                                <li>UI</li>
+                                <li>Development</li>
+                                <li>Fun</li>
+                            </ul>
+                        </div>                        
+                    </header>
+                    <div class="article-content">
+                        <figure>
+                            <figcaption>[Maths screenshot]</figcaption>
+                        <figure>
+                            <figcaption>[Gif of it working on a phone]</figcaption>
+                        <figure>
+                            <figcaption>Grain effect</figcaption>
+                            <img class="standard" src="../assets/static.gif" alt="An animated gif of a video grain effect" />
+                        </figure>
+                    </div>
+                </div>
+            </article>
+        </main>
+        <footer>&copy; 2020 Jonno Witts</footer>        
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script>
             var body = document.body;

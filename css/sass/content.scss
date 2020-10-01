@@ -38,10 +38,9 @@ body {
 		}
 
 		.profile {
-			// Specific for the profile page
+			// Specific for the about page
 			grid-column-start: 2;
 			grid-column-end: 6;
-			//grid-area: b;
 		}
 	}
 }
@@ -59,6 +58,7 @@ body {
 	
 	@include breakpointAbove(lg) {
 		grid-template-areas: "a a b b b b c c c c d d";
+		max-width: 1350px;
 	}
 }
 
@@ -132,8 +132,8 @@ body.content {
 					color: $content_text_alt;
 					font-size: $font_body_smallText;
 					margin-bottom: 2.625rem;
-					@include breakpointAbove(sm) {
-						width: 50%;
+					@include breakpointAbove(md) {
+						width: 70%;
 					}
 
 					span {

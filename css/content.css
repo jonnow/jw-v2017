@@ -222,6 +222,23 @@ body.home {
 body.home > header h1 a, body.home > header nav a, body.home > header .menu-control-open {
   color: #ffffff;
 }
+@media (min-width: 768px) {
+  body.home > header h1 a, body.home > header nav a {
+    color: #ffffff;
+  }
+  body.home > header h1 a.current, body.home > header h1 a:hover, body.home > header nav a.current, body.home > header nav a:hover {
+    color: #ffffff;
+  }
+  body.home > header h1 a.current:after, body.home > header h1 a:hover:after, body.home > header nav a.current:after, body.home > header nav a:hover:after {
+    content: "";
+    background-color: #ffffff;
+    bottom: 0;
+    height: 3px;
+    left: 0;
+    position: absolute;
+    width: 100%;
+  }
+}
 @media (max-width: 767px) {
   body .menu-inner-shadow {
     height: 100%;
@@ -836,6 +853,7 @@ ul.work-items .work-item:hover span.link {
 @media (min-width: 992px) {
   .about .grid-12col {
     grid-template-areas: "a a b b b b c c c c d d";
+    max-width: 1350px;
   }
 }
 
@@ -902,9 +920,9 @@ body.content main article .grid-12col .meta {
   font-size: 0.875rem;
   margin-bottom: 2.625rem;
 }
-@media (min-width: 576px) {
+@media (min-width: 768px) {
   body.content main article .grid-12col .meta {
-    width: 50%;
+    width: 70%;
   }
 }
 body.content main article .grid-12col .meta span {

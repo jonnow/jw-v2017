@@ -156,6 +156,17 @@ body {
 			h1 a, nav a, .menu-control-open {
 			 	color: $color2020_primary_white;
 			}
+			h1 a, nav a {
+				@include breakpointAbove(md) {
+					color: $color2020_primary_white;
+					&.current, &:hover {
+						color: $color2020_primary_white;
+						&:after {
+							@include customUnderline($color2020_primary_white);
+						}
+					}
+				}
+			}
 		}
 	}
 
@@ -184,7 +195,7 @@ body {
                         }
                         &:last-child {
                             transition-delay: .2s;
-                        }
+						}
                     }
                 }
             }
