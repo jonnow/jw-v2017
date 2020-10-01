@@ -262,6 +262,11 @@ body.content {
 
 // Turn off non-mobile nav/menu elements
 @include breakpointAbove(md) {
+	body:not(.home) {
+		.version,.madeIn {
+			display: none;
+		}
+	}
 	body.home > header {
 		h1 {
 			float: left;

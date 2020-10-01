@@ -23,15 +23,6 @@ body.home {
     main p {
         font-size: $size_22;
     }
-	a.btn {
-        margin-top: 3rem;
-        padding: .6rem $pad_body_small;
-        width: 15rem;
-        @include breakpointAbove(lg) {
-            margin-top: 1.75rem auto 0;
-            width: 10rem;
-        }
-	}
 
     .intro, .projectWrapper {
         display: flex;

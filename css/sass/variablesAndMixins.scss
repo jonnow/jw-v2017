@@ -1,0 +1,199 @@
+
+@font-face {
+    font-family: 'Woodford Bourne';
+    src: url(../fonts/woodfordbourne-regular.otf);
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Woodford Bourne';
+    src: url(../fonts/woodfordbourne-bold.otf);
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'Woodford Bourne';
+    src: url(../fonts/woodfordbourne-italic.otf);
+    font-style: italic;
+}
+
+// SCSS Variables
+/*
+ * Regular variables start with a '$' and link with underscores.
+ * Mixin variables start '$_' to indicate they are scoped to the block.
+*/
+// // Generic (but widely used) sizes
+$size_30: 1.875rem; // 30px
+$size_22: 1.375rem; // 22px
+$size_20: 1.25rem; // 20px
+$size_18: 1.125rem; // 18px
+$size_16: 1rem; // 16px
+$size_14: 0.875rem; // 14px
+$size_12: 0.75rem; // 12px
+
+$padding_footer_vert: $size_30; // vertical
+$padding_footer_hori: $size_16; // horizontal
+
+// // Media query sizes
+$breakpoints:(
+	sm: 576px, // Landscape mobiles
+	md: 768px, // Tablets
+	lg: 992px, // Desktops
+	xl: 1200px, // Large desktops
+	xxl: 1600px // Studpidly large
+);
+
+@mixin breakpointBelow($_breakpoint) {
+  // If the breakpoint exists in the map.
+  @if map-has-key($breakpoints, $_breakpoint) {
+    // Get the breakpoint value.
+    $breakpoint-value: map-get($breakpoints, $_breakpoint);
+    // Write the media query.
+    @media (max-width: $breakpoint-value - 1) {
+      @content;
+    }
+  // If the breakpoint doesn't exist in the map.
+  } @else {
+    // Log a warning.
+    @warn 'Invalid breakpoint: #{$breakpoint}.';
+  }
+}
+
+@mixin breakpointAbove($_breakpoint) {
+  // If the breakpoint exists in the map.
+  @if map-has-key($breakpoints, $_breakpoint) {
+    // Get the breakpoint value.
+    $breakpoint-value: map-get($breakpoints, $_breakpoint);
+    // Write the media query.
+    @media (min-width: $breakpoint-value) {
+      @content;
+    }
+  // If the breakpoint doesn't exist in the map.
+  } @else {
+    // Log a warning.
+    @warn 'Invalid breakpoint: #{$breakpoint}.';
+  }
+}
+
+// Border radius
+$border_radius_standard: 5px;
+$border_radius_large: 15px;
+$border_radius_circle: 50%;
+
+// Widths
+//$width_banner_large: 67.5rem; // 1080px
+$button_width_small_cta: 15rem;
+$button_width_standard_cta: 20rem;
+
+// // // // //
+// Margins  //
+// // // // //
+ $margin_body_small: 1rem; // 16px
+ $margin_title_small: 2.375rem; // 38px
+ $margin_contentEnd_small: 2.625rem; // 42px
+ $margin_contentEnd_medium: 5.625rem; // 90px
+ $margin_p_bottom_small: 1.625rem; // 26px
+ $margin_p_bottom_medium: 2.625rem; // 42px
+
+// // // // //
+// Padding  //
+// // // // //
+ $pad_body_small: 1.5rem; // 24px
+ $padding_footer: $padding_footer_vert $padding_footer_hori; // 30px 16px (may need to be 20px)
+
+// // // //
+// Fonts //
+// // // //
+$letterSpacing: .3px;
+
+	// Typefaces
+$font_sans_serif: 'Woodford Bourne', 'Lato', 'Futura', 'Helvetica', sans-serif;
+
+	// Sizes
+	$font_body_h1: $size_22;
+	$font_body_h2: $size_18;
+	$font_body_p: $size_16;
+	$font_body_smallText: $size_14;
+
+	$font_serif: $font_sans_serif;
+	// $padding_body:16px;
+	// $font_body_standard_sub: $font_sans_serif;
+	// $padding_home_btn_small: 1rem;
+	// $padding_home_btn_small_side: 1rem;
+	// $padding_home_small: 1rem;
+	// $font_home_projectTitle: $font_sans_serif;
+
+// // // // // // //
+// //  Colours // //
+// // // // // // //
+	// 2020 Colours
+	$color2020_primary_green_dark: #4f899f;
+	$color2020_primary_green_bright: #12b2b2;
+	$color2020_primary_yellow: #feb11b;
+	$color2020_secondary_yellow_fade: #f9fdf0;
+	$color2020_secondary_orange: #F26818;
+	$color2020_primary_blue_bright: #02a8ce;
+	$color2020_primary_blue_dark: #486eca;
+	$color2020_primary_black: #707070;
+	$color2020_primary_white: #ffffff;
+	$color2020_primary_off_white: #f4f4f4;
+	$color2020_primary_grey: #e4e4e4;
+
+	$color2020_solid_black: #464646;
+
+
+	// // Legacy colours
+	  $color_primary_teal: #14B4B5;
+	  $color_primary_orange: #f57f3f;
+	//  $color_primary_black: #373331;
+	//  $color_primary_white: #f0f0f0;
+
+	//  $color_secondary_dull_blue: #4870cb;
+	$color_secondary_dull_yellow: #ffc247;
+	//  $color_secondary_dull_red: #ff4747;
+	//  $color_secondary_bright_blue: #16c1f3;
+	//  $color_secondary_bright_yellow: #ffb31c;
+	//  $color_secondary_bright_red: #ff1c1c;
+	$color_secondary_grey: #a7a7a7;
+
+	// // Colour assignment
+	$content_heading: $color2020_primary_green_bright;
+	$content_sub_heading: $color2020_primary_green_dark;
+	$content_text: $color2020_primary_black;
+	$content_text_alt: $color2020_primary_green_dark;
+
+// Mixins
+@mixin fontBodyStandard {
+	font-family: $font_sans_serif;
+	font-size: $font_body_p; // 14px
+	letter-spacing: $letterSpacing;
+}
+
+@mixin dropShadow_individual($_color) {
+	filter: drop-shadow(0px 0px 4px $_color); // Individual Drop Shadow - Adds drop shadows to any and all individual aspects of an image
+}
+
+@mixin dropShadow_normal {
+	box-shadow: 0 0 5px 0 #dfdfdf;
+}
+
+@mixin customUnderline($_color) {
+	content:'';
+	background-color: $_color;
+	bottom: 0;
+	height: 3px;
+	left: 0;
+	position: absolute;
+	width: 100%;
+}
+
+@mixin upperCase {	
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+@mixin bulletPoints($_color) {
+	&::marker {
+		color: $_color;
+	}
+}

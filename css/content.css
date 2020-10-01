@@ -310,6 +310,10 @@ body.content .menu-control-open svg {
 }
 
 @media (min-width: 768px) {
+  body:not(.home) .version, body:not(.home) .madeIn {
+    display: none;
+  }
+
   body.home > header h1 {
     float: left;
   }
@@ -345,17 +349,6 @@ body.home > header .menu-inner {
 }
 body.home main p {
   font-size: 1.375rem;
-}
-body.home a.btn {
-  margin-top: 3rem;
-  padding: 0.6rem 1.5rem;
-  width: 15rem;
-}
-@media (min-width: 992px) {
-  body.home a.btn {
-    margin-top: 1.75rem auto 0;
-    width: 10rem;
-  }
 }
 body.home .intro, body.home .projectWrapper {
   display: flex;
@@ -674,15 +667,54 @@ body.home .brightBg .scroll {
     stroke-dashoffset: 0;
   }
 }
+/* This file contains all the styling for the case studies home page, not the case studies themselves. That can be found in the content.scss file.
+
+What happened to V1? There wasn't one, this is V2 to fit inline with the rest of the site v2.
+
+- Jonno 14:00 30/09/20 */
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+.work-item {
+  background-color: #e4e4e4;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: row-reverse;
+  list-style: none;
+  overflow: hidden;
+}
+.work-item a {
+  align-items: stretch;
+  color: #464646;
+  display: flex;
+  flex-direction: row-reverse;
+  text-decoration: none;
+}
+.work-item .img-container, .work-item .copy-container {
+  width: 50%;
+  padding: 1rem;
+}
+.work-item .img-container {
+  background-color: cadetblue;
+  display: flex;
+  align-items: center;
+}
+.work-item img {
+  margin: 0 auto;
+  box-shadow: 0 0 5px 0 #464646;
+}
+
 @media (min-width: 768px) {
   .grid-12col {
+    align-items: start;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
     column-gap: 20px;
+    grid-template-areas: "b c";
+    grid-template-columns: repeat(2, 1fr);
     margin-left: auto;
     margin-right: auto;
-    grid-template-columns: "b c";
-    align-items: start;
+    max-width: 900px;
   }
   .grid-12col .copy {
     grid-area: c;
@@ -695,34 +727,78 @@ body.home .brightBg .scroll {
     grid-column-end: 6;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .grid-12col {
+    max-width: none;
+  }
+}
+
+@media (max-width: 575px) {
+  .about .grid-12col {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
+@media (min-width: 768px) {
+  .about .grid-12col {
     grid-template-columns: repeat(12, 1fr);
     grid-template-areas: "a b b b b b c c c c c d";
   }
 }
 @media (min-width: 992px) {
-  .grid-12col {
+  .about .grid-12col {
     grid-template-areas: "a a b b b b c c c c d d";
   }
 }
 
-body.content main {
+body.content main, body.work main {
   padding-bottom: 1.875rem;
-  /* These styles are mainly used on the about page.
-     Where not specified, they can be global, but are unique to the about page (for now)
-     E.g. img.profile
-  */
 }
-body.content main h1, body.content main .article-links, body.content main header nav {
+body.content main h1, body.content main .article-links, body.content main header nav, body.work main h1, body.work main .article-links, body.work main header nav {
   text-transform: uppercase;
 }
-body.content main article {
+body.content main article, body.content main section, body.work main article, body.work main section {
   box-sizing: border-box;
   padding: 1.5rem;
   max-width: 1400px;
   margin-left: auto;
   margin-right: auto;
+}
+body.content main h1, body.content main h2, body.work main h1, body.work main h2 {
+  text-align: center;
+}
+body.content main h1, body.work main h1 {
+  color: #12b2b2;
+  font-size: 1.375rem;
+  margin-bottom: 0;
+  line-height: 175%;
+}
+@media (min-width: 992px) {
+  body.content main h1, body.work main h1 {
+    margin-top: 2.375rem;
+  }
+}
+body.content main p, body.work main p {
+  font-size: 1rem;
+  margin-bottom: 1.625rem;
+}
+@media (min-width: 768px) {
+  body.content main p, body.work main p {
+    margin-bottom: 2.625rem;
+  }
+}
+body.content main img, body.work main img {
+  filter: drop-shadow(0px 0px 4px #cecece);
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body.content main {
+  /* These styles are mainly used on the about page.
+     Where not specified, they can be global, but are unique to the about page (for now)
+     E.g. img.profile
+  */
 }
 body.content main article .grid-12col .copy p {
   margin-top: 0;
@@ -749,20 +825,6 @@ body.content main article .grid-12col .meta ul {
 body.content main article .grid-12col .meta ul li::marker {
   color: #feb11b;
 }
-body.content main article h1, body.content main article h2 {
-  text-align: center;
-}
-body.content main article h1 {
-  color: #12b2b2;
-  font-size: 1.375rem;
-  margin-bottom: 0;
-  line-height: 175%;
-}
-@media (min-width: 992px) {
-  body.content main article h1 {
-    margin-top: 2.375rem;
-  }
-}
 body.content main article h2 {
   color: #4f899f;
   font-size: 1.125rem;
@@ -771,7 +833,7 @@ body.content main article h2 {
   margin-top: 0;
 }
 body.content main article header, body.content main article figure {
-  margin-bottom: 5.625rem;
+  margin-bottom: 2.625rem;
 }
 body.content main article figure {
   margin-left: 0;
@@ -791,16 +853,6 @@ body.content main article figure img.browser {
 }
 body.content main article figure img.mobile, body.content main article figure img.ids {
   filter: drop-shadow(0px 0px 4px #cecece);
-}
-body.content main article p {
-  font-size: 1rem;
-  margin-bottom: 2.625rem;
-}
-body.content main article img {
-  filter: drop-shadow(0px 0px 4px #cecece);
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
 }
 body.content main article img.profile {
   border-radius: 5px;
@@ -826,7 +878,12 @@ body.content main .about h2 {
   overflow: visible;
 }
 body.content main img.profile {
-  margin-bottom: 5.625rem;
+  margin-bottom: 2.625rem;
+}
+@media (min-width: 768px) {
+  body.content main img.profile {
+    margin-bottom: 5.625rem;
+  }
 }
 body.content main .colour-list {
   width: 80%;
@@ -945,6 +1002,15 @@ a.btn.btn-primary:hover, a.btn.btn-primary:active {
   border: 2px solid;
   border-color: #ffffff;
   color: #ffffff;
+  margin-top: 3rem;
+  padding: 0.6rem 1.5rem;
+  width: 15rem;
+}
+@media (min-width: 992px) {
+  .home .btn {
+    margin-top: 1.75rem auto 0;
+    width: 20rem;
+  }
 }
 .home .btn:focus, .home .btn:hover, .home .btn:active {
   background-color: #ffffff;
@@ -962,7 +1028,7 @@ a.btn.btn-primary:hover, a.btn.btn-primary:active {
 .content a.btn {
   margin: 0 auto 2.65rem;
   padding: 0.8rem 1.5rem;
-  width: 15rem;
+  width: 20rem;
 }
 .content a.btn.btn-secondary {
   border: 2px solid #12b2b2;

@@ -19,6 +19,9 @@
 
 img.profile {
     margin-bottom: $margin_contentEnd_small;
+    @include breakpointAbove(md) {
+        margin-bottom: $margin_contentEnd_medium;
+    }
 }
 // Colourful list
 .colour-list {
@@ -50,6 +53,7 @@ img.profile {
 }
 
 .about {
+
     ul.colour-list {
         @include breakpointAbove(sm) {
             columns: 2;
