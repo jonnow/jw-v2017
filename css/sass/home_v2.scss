@@ -80,11 +80,11 @@ body.home {
             margin: 5rem auto 1.5rem;
             overflow: hidden;
             width: 65%;
-            animation: onLoadFadeIn 3s forwards, onLoadMoveIn_mac_small 3s forwards;
+            //animation: onLoadFadeIn 3s forwards, onLoadMoveIn_mac_small 3s forwards;
             @include breakpointAbove(md) {
                 margin-top: 1rem;
                 width: 55%;
-                animation: onLoadFadeIn 3s forwards, onLoadMoveIn_mac_large 3s forwards;
+            //    animation: onLoadFadeIn 3s forwards, onLoadMoveIn_mac_large 3s forwards;
             }
             .hello {
                 stroke-dasharray: 325px;
@@ -94,14 +94,35 @@ body.home {
         }
 
         .text {
-            animation: onLoadFadeIn 3s 1750ms forwards;
             font-size: 1.3rem;
             .cta {
                 font-size: 1rem;
             }
             @include breakpointAbove(md) {
-                animation: onLoadFadeIn 3s 1750ms forwards, onLoadMoveIn_txt 3s 1750ms forwards;
                 grid-column: left;
+            }
+        }
+    }
+
+    &.ac .intro {
+        .mac, .text {
+            opacity: 1;
+        }
+    }
+
+    &:not(.ac) {
+        .intro {
+            .mac {
+                animation: onLoadFadeIn 3s forwards, onLoadMoveIn_mac_small 3s forwards;
+                @include breakpointAbove(md) {
+                    animation: onLoadFadeIn 3s forwards, onLoadMoveIn_mac_large 3s forwards;
+                }
+            }
+            .text {
+                animation: onLoadFadeIn 3s 1750ms forwards;
+                @include breakpointAbove(md) {
+                    animation: onLoadFadeIn 3s 1750ms forwards, onLoadMoveIn_txt 3s 1750ms forwards;        
+                }
             }
         }
     }

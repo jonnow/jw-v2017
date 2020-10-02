@@ -75,6 +75,13 @@ $breakpoints:(
   }
 }
 
+@mixin p_standardMargin() {
+	margin-bottom: $margin_p_bottom_small;
+	@include breakpointAbove(md) {
+		margin-bottom: $margin_p_bottom_medium;
+	}
+}
+
 // Border radius
 $border_radius_standard: 5px;
 $border_radius_large: 15px;
@@ -162,6 +169,7 @@ $font_sans_serif: 'Woodford Bourne', 'Lato', 'Futura', 'Helvetica', sans-serif;
 	$content_text: $color2020_primary_black;
 	$content_text_alt: $color2020_primary_green_dark;
 	$color_textLink: $color2020_primary_green_dark;
+	$color_textLink_hover: darken($color_textLink, 10%);
 
 // Mixins
 @mixin fontBodyStandard {

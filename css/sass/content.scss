@@ -95,10 +95,6 @@ body.content, body.work {
 
 		p {
 			font-size: $font_body_p;
-			margin-bottom: $margin_p_bottom_small;
-			@include breakpointAbove(md) {
-				margin-bottom: $margin_p_bottom_medium;
-			}
 		}
 
 		img {
@@ -184,6 +180,10 @@ body.content {
 					}
 				}
 			}
+
+			p {
+				@include p_standardMargin();
+			}
 			
 			img {
 				&.profile {
@@ -203,8 +203,11 @@ body.content {
 }
 
 main { 
-	a:not(.btn), a:not(.work-item > *) {
+	a:not(.btn), span.link {
 		color: $color_textLink;
+		&:hover, &:active {
+			color: $color_textLink_hover;
+		}
 	}
 }
 

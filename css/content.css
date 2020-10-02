@@ -417,13 +417,11 @@ body.home .intro .mac {
   margin: 5rem auto 1.5rem;
   overflow: hidden;
   width: 65%;
-  animation: onLoadFadeIn 3s forwards, onLoadMoveIn_mac_small 3s forwards;
 }
 @media (min-width: 768px) {
   body.home .intro .mac {
     margin-top: 1rem;
     width: 55%;
-    animation: onLoadFadeIn 3s forwards, onLoadMoveIn_mac_large 3s forwards;
   }
 }
 body.home .intro .mac .hello {
@@ -432,7 +430,6 @@ body.home .intro .mac .hello {
   animation: writeHello 1.3s linear 0.4s forwards, onLoadFadeIn 3s forwards;
 }
 body.home .intro .text {
-  animation: onLoadFadeIn 3s 1750ms forwards;
   font-size: 1.3rem;
 }
 body.home .intro .text .cta {
@@ -440,8 +437,26 @@ body.home .intro .text .cta {
 }
 @media (min-width: 768px) {
   body.home .intro .text {
-    animation: onLoadFadeIn 3s 1750ms forwards, onLoadMoveIn_txt 3s 1750ms forwards;
     grid-column: left;
+  }
+}
+body.home.ac .intro .mac, body.home.ac .intro .text {
+  opacity: 1;
+}
+body.home:not(.ac) .intro .mac {
+  animation: onLoadFadeIn 3s forwards, onLoadMoveIn_mac_small 3s forwards;
+}
+@media (min-width: 768px) {
+  body.home:not(.ac) .intro .mac {
+    animation: onLoadFadeIn 3s forwards, onLoadMoveIn_mac_large 3s forwards;
+  }
+}
+body.home:not(.ac) .intro .text {
+  animation: onLoadFadeIn 3s 1750ms forwards;
+}
+@media (min-width: 768px) {
+  body.home:not(.ac) .intro .text {
+    animation: onLoadFadeIn 3s 1750ms forwards, onLoadMoveIn_txt 3s 1750ms forwards;
   }
 }
 body.home .projectWrapper {
@@ -689,6 +704,14 @@ body.home .brightBg .scroll {
 What happened to V1? There wasn't one, this is V2 to fit inline with the rest of the site v2.
 
 - Jonno 14:00 30/09/20 */
+.work {
+  display: flex;
+  flex-direction: column;
+}
+.work footer {
+  margin-top: auto;
+}
+
 .work-item {
   background-color: #e4e4e4;
   color: #464646;
@@ -750,7 +773,19 @@ What happened to V1? There wasn't one, this is V2 to fit inline with the rest of
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 15rem;
+}
+@media (min-width: 768px) {
+  .work-item.work-item--featured .btn {
+    width: 15rem;
+  }
+}
+.work-item.work-item--featured p {
+  margin-bottom: 1.625rem;
+}
+@media (min-width: 768px) {
+  .work-item.work-item--featured p {
+    margin-bottom: 2.625rem;
+  }
 }
 @media (min-width: 768px) {
   .work-item.work-item--featured {
@@ -789,8 +824,8 @@ What happened to V1? There wasn't one, this is V2 to fit inline with the rest of
 }
 
 ul.work-items {
+  display: grid;
   column-gap: 1rem;
-  grid-template-columns: repeat(3, 1fr);
   margin-top: 2.625rem;
   padding-left: 0;
   row-gap: 2.625rem;
@@ -800,19 +835,40 @@ ul.work-items li {
 }
 ul.work-items .work-item {
   flex-direction: column;
-  height: 21rem;
   overflow: hidden;
 }
 ul.work-items .work-item .img-container {
   border-radius: 15px;
-  height: 50%;
+  height: 60%;
+}
+ul.work-items .work-item .copy-container {
+  height: 40%;
+  display: flex;
+  flex-direction: column;
+}
+ul.work-items .work-item p {
+  margin-bottom: 0;
 }
 ul.work-items .work-item span.link {
   color: #4f899f;
-  float: right;
+  margin-top: 1rem;
+  text-align: center;
 }
 ul.work-items .work-item:hover span.link {
   text-decoration: underline;
+  color: #3e6c7d;
+}
+@media (min-width: 768px) {
+  ul.work-items {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  ul.work-items .work-item {
+    height: 21rem;
+  }
+  ul.work-items .work-item span.link {
+    margin-top: auto;
+    align-self: end;
+  }
 }
 
 @media (min-width: 768px) {
@@ -886,12 +942,6 @@ body.content main h1, body.work main h1 {
 }
 body.content main p, body.work main p {
   font-size: 1rem;
-  margin-bottom: 1.625rem;
-}
-@media (min-width: 768px) {
-  body.content main p, body.work main p {
-    margin-bottom: 2.625rem;
-  }
 }
 body.content main img, body.work main img {
   filter: drop-shadow(0px 0px 4px #cecece);
@@ -962,6 +1012,14 @@ body.content main article figure img.browser {
 }
 body.content main article figure img.mobile, body.content main article figure img.ids {
   filter: drop-shadow(0px 0px 4px #cecece);
+}
+body.content main article p {
+  margin-bottom: 1.625rem;
+}
+@media (min-width: 768px) {
+  body.content main article p {
+    margin-bottom: 2.625rem;
+  }
 }
 body.content main article img.profile {
   border-radius: 5px;
@@ -1085,8 +1143,11 @@ body.content main .about ul.colours li.secondary_orange:before {
   background-color: #f57f3f;
 }
 
-main a:not(.btn), main a:not(.work-item > *) {
+main a:not(.btn), main span.link {
   color: #4f899f;
+}
+main a:not(.btn):hover, main a:not(.btn):active, main span.link:hover, main span.link:active {
+  color: #3e6c7d;
 }
 
 .btn {
