@@ -109,7 +109,7 @@ body.content, body.work {
 // End shared work and content
 
 // Content (and about (via external Sass file)) styles
-.content,.work {
+.content, .work {
 	.meta {
 		display: grid;
 		column-gap: 10px;
@@ -120,7 +120,7 @@ body.content {
 	main {
 		article {
 			.grid-12col {
-				.copy p{
+				.copy p {
 					margin-top: 0;
 				}
 				.meta {
@@ -181,8 +181,24 @@ body.content {
 				}
 			}
 
-			p {
+			p, .copy ul, dl {
 				@include p_standardMargin();
+			}
+
+			p + dl {
+				margin-top: -($margin_p_bottom_small/1.25);
+				@include breakpointAbove(md) {
+					margin-top: -($margin_p_bottom_medium/1.25);
+				}
+			}
+
+			dl {
+				dt {
+					font-weight: bold;
+				}
+				dd {
+					margin-bottom: $pad_body_small;
+				}
 			}
 			
 			img {

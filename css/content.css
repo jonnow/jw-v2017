@@ -1013,13 +1013,27 @@ body.content main article figure img.browser {
 body.content main article figure img.mobile, body.content main article figure img.ids {
   filter: drop-shadow(0px 0px 4px #cecece);
 }
-body.content main article p {
+body.content main article p, body.content main article .copy ul, body.content main article dl {
   margin-bottom: 1.625rem;
 }
 @media (min-width: 768px) {
-  body.content main article p {
+  body.content main article p, body.content main article .copy ul, body.content main article dl {
     margin-bottom: 2.625rem;
   }
+}
+body.content main article p + dl {
+  margin-top: -1.3rem;
+}
+@media (min-width: 768px) {
+  body.content main article p + dl {
+    margin-top: -2.1rem;
+  }
+}
+body.content main article dl dt {
+  font-weight: bold;
+}
+body.content main article dl dd {
+  margin-bottom: 1.5rem;
 }
 body.content main article img.profile {
   border-radius: 5px;
