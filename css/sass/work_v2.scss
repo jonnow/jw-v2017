@@ -157,11 +157,10 @@ What happened to V1? There wasn't one, this is V2 to fit inline with the rest of
     }
     
     img {       
+        box-shadow: none;
         margin: 0 auto;
-        box-shadow: 0 0 5px 0 $color2020_solid_black;  
-        &.no-shadow {
-            box-shadow: none;
-        }
+        max-width: 95%;
+        max-height: 256px;
     }
 }
 
@@ -181,7 +180,7 @@ ul.work-items {
 
         .img-container {
             border-radius: $border_radius_large;
-            height: 60%;
+            height: 187px;
         }
         .copy-container {
             height: 40%;

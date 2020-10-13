@@ -833,11 +833,10 @@ What happened to V1? There wasn't one, this is V2 to fit inline with the rest of
   align-items: center;
 }
 .work-item img {
-  margin: 0 auto;
-  box-shadow: 0 0 5px 0 #464646;
-}
-.work-item img.no-shadow {
   box-shadow: none;
+  margin: 0 auto;
+  max-width: 95%;
+  max-height: 256px;
 }
 
 ul.work-items {
@@ -856,7 +855,7 @@ ul.work-items .work-item {
 }
 ul.work-items .work-item .img-container {
   border-radius: 15px;
-  height: 60%;
+  height: 187px;
 }
 ul.work-items .work-item .copy-container {
   height: 40%;
@@ -966,9 +965,6 @@ body.content main img, body.work main img {
   margin-left: auto;
   margin-right: auto;
 }
-body.content main img:not(.no-shadow), body.work main img:not(.no-shadow) {
-  filter: drop-shadow(0px 0px 4px #9b9b9b);
-}
 
 .content .meta, .work .meta {
   display: grid;
@@ -1023,6 +1019,9 @@ body.content main article figure figcaption {
   color: #4f899f;
   margin-bottom: 1.5rem;
   width: 25px;
+}
+body.content main article figure img:not(.no-shadow) {
+  filter: drop-shadow(0px 0px 4px #9b9b9b);
 }
 body.content main article figure img.browser {
   border: 7px solid #ffffff;
