@@ -169,7 +169,11 @@ body.content {
 
 				img {
 					&:not(.no-shadow) {
-						@include dropShadow_individual(#9b9b9b);
+						@include dropShadow_individual(#cecece);
+					}
+
+					&.add-border {
+						border: 5px solid #e4e4e4;
 					}
 
 					&.browser {
