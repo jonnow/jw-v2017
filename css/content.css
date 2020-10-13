@@ -489,10 +489,16 @@ body.home .projectWrapper.black .btn:hover {
   color: #464646;
 }
 body.home .projectWrapper.orange {
-  background-color: #F26818;
+  background-color: #D77339;
 }
 body.home .projectWrapper.orange .btn:hover {
-  color: #F26818;
+  color: #D77339;
+}
+body.home .projectWrapper.green {
+  background-color: #12b2b2;
+}
+body.home .projectWrapper.green .btn:hover {
+  color: #12b2b2;
 }
 body.home .projectWrapper .text {
   box-sizing: border-box;

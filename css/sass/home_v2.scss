@@ -155,9 +155,19 @@ body.home {
         }
 
         &.orange {
-            background-color: $color2020_secondary_orange;
+            // This is way, way, way too bright.
+            //background-color: $color2020_secondary_orange;
+            $color_special_orange: #D77339;
+            background-color:$color_special_orange;
             .btn:hover {
-                color: $color2020_secondary_orange;
+                color: $color_special_orange;
+            }
+        }
+
+        &.green {
+            background-color: $color2020_primary_green_bright;
+            .btn:hover {
+                color: $color2020_primary_green_bright;
             }
         }
 
