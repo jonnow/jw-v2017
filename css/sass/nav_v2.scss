@@ -31,7 +31,7 @@ body {
         }
 
         h1 a {
-            color: $color2020_primary_blue_bright;
+            color: $header_link_text;
             display: block;
         }
 
@@ -43,16 +43,16 @@ body {
         h1 a, nav a:not(.current) {
             &:hover, &:active {
                 &:after {
-                    @include customUnderline($color2020_primary_blue_bright);
+                    @include customUnderline($header_link_text);
                 }
             }
         }
 
         nav a {
-            color: $color2020_primary_blue_bright;
+            color: $header_link_text;
             @include breakpointAbove(sm) {
                 &.current:after {
-                  @include customUnderline($color2020_primary_blue_bright);
+                  @include customUnderline($header_link_text);
                 }
             }
         }
@@ -83,7 +83,7 @@ body {
             }
 
 			.menu-inner {
-                background-color: $color2020_primary_blue_bright;
+                background-color: $header_link_text;
                 box-sizing: border-box;
 				height: 100%;
 				overflow: hidden;
@@ -137,7 +137,7 @@ body {
 				@include breakpointAbove(md) {
 					color: $color2020_primary_black;
                     &.current, &:hover {
-                        color: $color2020_primary_blue_bright;
+                        color: $header_link_text;
                     }
 					
 					// Turn off
@@ -222,7 +222,7 @@ body {
 		position: absolute;
         top: -12px;
         left: 14px;
-		stroke: $color2020_primary_blue_bright;						
+		stroke: $header_link_text;						
         line, circle {
             fill: none;
             stroke-width: 3;
@@ -263,10 +263,10 @@ body.content {
 	}
 	.menu-control-open {
 		&:before, &:after {
-			border-top-color: $color2020_primary_blue_bright;
+			border-top-color: $header_link_text;
 		}
 		svg {
-			stroke: $color2020_primary_blue_bright;	
+			stroke: $header_link_text;	
 		}
 	}
 }

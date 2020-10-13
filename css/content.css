@@ -97,7 +97,7 @@ body > header h1, body > header nav {
   letter-spacing: 0.75px;
 }
 body > header h1 a {
-  color: #02a8ce;
+  color: #006e88;
   display: block;
 }
 body > header a {
@@ -106,7 +106,7 @@ body > header a {
 }
 body > header h1 a:hover:after, body > header h1 a:active:after, body > header nav a:not(.current):hover:after, body > header nav a:not(.current):active:after {
   content: "";
-  background-color: #02a8ce;
+  background-color: #006e88;
   bottom: 0;
   height: 3px;
   left: 0;
@@ -114,12 +114,12 @@ body > header h1 a:hover:after, body > header h1 a:active:after, body > header n
   width: 100%;
 }
 body > header nav a {
-  color: #02a8ce;
+  color: #006e88;
 }
 @media (min-width: 576px) {
   body > header nav a.current:after {
     content: "";
-    background-color: #02a8ce;
+    background-color: #006e88;
     bottom: 0;
     height: 3px;
     left: 0;
@@ -151,7 +151,7 @@ body > header .menu-inner, body > header nav a {
   color: #ffffff;
 }
 body > header .menu-inner {
-  background-color: #02a8ce;
+  background-color: #006e88;
   box-sizing: border-box;
   height: 100%;
   overflow: hidden;
@@ -213,7 +213,7 @@ body > header nav a {
     transition: none;
   }
   body > header nav a.current, body > header nav a:hover {
-    color: #02a8ce;
+    color: #006e88;
   }
 }
 body.home {
@@ -285,7 +285,7 @@ body.home > header h1 a, body.home > header nav a, body.home > header .menu-cont
   position: absolute;
   top: -12px;
   left: 14px;
-  stroke: #02a8ce;
+  stroke: #006e88;
 }
 .menu-control-open svg line, .menu-control-open svg circle {
   fill: none;
@@ -320,10 +320,10 @@ body.home > header h1 a, body.home > header nav a, body.home > header .menu-cont
   }
 }
 body.content .menu-control-open:before, body.content .menu-control-open:after {
-  border-top-color: #02a8ce;
+  border-top-color: #006e88;
 }
 body.content .menu-control-open svg {
-  stroke: #02a8ce;
+  stroke: #006e88;
 }
 
 @media (min-width: 768px) {
@@ -746,6 +746,16 @@ What happened to V1? There wasn't one, this is V2 to fit inline with the rest of
 .work-item.blue .img-container {
   background-color: #486eca;
 }
+.work-item.blue--bright .btn {
+  border-color: #02a8ce;
+}
+.work-item.blue--bright:focus .btn, .work-item.blue--bright:hover .btn, .work-item.blue--bright:active .btn {
+  background-color: #02a8ce;
+  color: #f4f4f4;
+}
+.work-item.blue--bright .img-container {
+  background-color: #02a8ce;
+}
 .work-item.black .btn {
   border-color: #707070;
 }
@@ -757,11 +767,11 @@ What happened to V1? There wasn't one, this is V2 to fit inline with the rest of
   background-color: #464646;
 }
 .work-item.green .btn {
-  border-color: #12b2b2;
-  color: #12b2b2;
+  border-color: #097171;
+  color: #097171;
 }
 .work-item.green:focus .btn, .work-item.green:hover .btn, .work-item.green:active .btn {
-  background-color: #12b2b2;
+  background-color: #097171;
   color: #f4f4f4;
 }
 .work-item.green .img-container {
@@ -838,6 +848,11 @@ What happened to V1? There wasn't one, this is V2 to fit inline with the rest of
   max-width: 95%;
   max-height: 256px;
 }
+.work-item img.special--alien {
+  border: 3px solid #ffffff;
+  border-radius: 7px;
+  max-width: 55%;
+}
 
 ul.work-items {
   display: grid;
@@ -866,13 +881,13 @@ ul.work-items .work-item p {
   margin-bottom: 0;
 }
 ul.work-items .work-item span.link {
-  color: #4f899f;
+  color: #006e88;
   margin-top: 1rem;
   text-align: center;
 }
 ul.work-items .work-item:hover span.link {
   text-decoration: underline;
-  color: #3e6c7d;
+  color: #004555;
 }
 @media (min-width: 768px) {
   ul.work-items {
@@ -946,7 +961,7 @@ body.content main h1, body.content main h2, body.work main h1, body.work main h2
   text-align: center;
 }
 body.content main h1, body.work main h1 {
-  color: #12b2b2;
+  color: #006e88;
   font-size: 1.375rem;
   margin-bottom: 0;
   line-height: 175%;
@@ -982,7 +997,7 @@ body.content main article .grid-12col .copy p {
 }
 body.content main article .grid-12col .meta {
   grid-template-columns: 1fr 1fr;
-  color: #4f899f;
+  color: #006e88;
   font-size: 0.875rem;
   margin-bottom: 2.625rem;
 }
@@ -1001,7 +1016,7 @@ body.content main article .grid-12col .meta ul li::marker {
   color: #feb11b;
 }
 body.content main article h2 {
-  color: #4f899f;
+  color: #006e88;
   font-size: 1.125rem;
   font-weight: 400;
   margin-bottom: 2.375rem;
@@ -1016,7 +1031,7 @@ body.content main article figure {
   margin-top: 0;
 }
 body.content main article figure figcaption {
-  color: #4f899f;
+  color: #006e88;
   margin-bottom: 1.5rem;
   width: 25px;
 }
@@ -1176,11 +1191,14 @@ body.content main .about ul.colours li.secondary_orange:before {
   background-color: #f57f3f;
 }
 
-main a:not(.btn), main span.link {
-  color: #4f899f;
+main a:not(.btn),
+main span.link {
+  color: #006e88;
 }
-main a:not(.btn):hover, main a:not(.btn):active, main span.link:hover, main span.link:active {
-  color: #3e6c7d;
+main a:not(.btn):hover, main a:not(.btn):active,
+main span.link:hover,
+main span.link:active {
+  color: #004555;
 }
 
 .btn {

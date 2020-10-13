@@ -57,6 +57,21 @@ What happened to V1? There wasn't one, this is V2 to fit inline with the rest of
             background-color: $color2020_primary_blue_dark; 
         }
     }
+    &.blue--bright { 
+        .btn {
+            border-color: $color2020_primary_blue_bright;
+        }
+        &:focus, &:hover, &:active {
+            .btn {
+                background-color: $color2020_primary_blue_bright;
+                color: $color2020_primary_off_white;
+            }
+        }
+        .img-container {
+            background-color: $color2020_primary_blue_bright; 
+        }
+    }
+    
     &.black {
         .btn {
             border-color: $color2020_primary_black;
@@ -73,12 +88,12 @@ What happened to V1? There wasn't one, this is V2 to fit inline with the rest of
     }
     &.green {
         .btn {
-            border-color: $color2020_primary_green_bright;
-            color: $color2020_primary_green_bright;
+            border-color: #097171;
+            color: #097171;;
         }
         &:focus, &:hover, &:active {
             .btn {
-                background-color: $color2020_primary_green_bright;
+                background-color: #097171;;
                 color: $color2020_primary_off_white;
             }
         }
@@ -161,6 +176,12 @@ What happened to V1? There wasn't one, this is V2 to fit inline with the rest of
         margin: 0 auto;
         max-width: 95%;
         max-height: 256px;
+        
+            &.special--alien {
+                    border: 3px solid #ffffff;
+                    border-radius: 7px;
+                    max-width: 55%;
+            }
     }
 }
 
@@ -192,6 +213,7 @@ ul.work-items {
         }
         span.link {
             color: $color_textLink;
+            //color: rgb(45, 75, 87);
             margin-top: 1rem;
             text-align: center;
         }

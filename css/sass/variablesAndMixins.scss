@@ -148,6 +148,8 @@ $font_sans_serif: 'Woodford Bourne', 'Lato', 'Futura', 'Helvetica', sans-serif;
 
 	$color2020_solid_black: #464646;
 
+	$color_special_alienGreen: #028a46;
+	$color_accessible_primary_green: #006e88;
 
 	// // Legacy colours
 	  $color_primary_teal: #14B4B5;
@@ -164,12 +166,19 @@ $font_sans_serif: 'Woodford Bourne', 'Lato', 'Futura', 'Helvetica', sans-serif;
 	$color_secondary_grey: #a7a7a7;
 
 	// // Colour assignment
-	$content_heading: $color2020_primary_green_bright;
 	$content_sub_heading: $color2020_primary_green_dark;
 	$content_text: $color2020_primary_black;
-	$content_text_alt: $color2020_primary_green_dark;
-	$color_textLink: $color2020_primary_green_dark;
+	$content_text_alt: $color_accessible_primary_green;
+	$color_textLink: $color_accessible_primary_green;
+
+	// // The following have been commented out as they do not meet AA WAVE accessibility:
+	// $content_heading: $color2020_primary_green_bright;
+
+	// // The following are the accessible replacements
+	$content_heading: $color_accessible_primary_green;
 	$color_textLink_hover: darken($color_textLink, 10%);
+	
+	$header_link_text: $color_accessible_primary_green;
 
 // Mixins
 @mixin fontBodyStandard {

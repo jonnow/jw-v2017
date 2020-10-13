@@ -84,7 +84,7 @@ body.content, body.work {
 		}
 
 		h1 {
-			color: $color2020_primary_green_bright;
+			color: $header_link_text;
 			font-size: $font_body_h1;
 			margin-bottom: 0;
 			@include breakpointAbove(lg) {
@@ -145,7 +145,7 @@ body.content {
 			}
 
 			h2 {
-				color: $color2020_primary_green_dark;
+				color: $content_heading;
 				font-size: $font_body_h2;
 				font-weight: 400;
 				margin-bottom: $margin_title_small;
@@ -162,7 +162,7 @@ body.content {
 				margin-top: 0;
 
 				figcaption {
-					color: $content_text_alt;
+					color: $content_heading;
 					margin-bottom: $pad_body_small;
 					width: 25px;
 				}
@@ -171,7 +171,7 @@ body.content {
 					&:not(.no-shadow) {
 						@include dropShadow_individual(#9b9b9b);
 					}
-					
+
 					&.browser {
 						border: 7px solid #ffffff;
 						border-radius: 12px;
@@ -182,7 +182,6 @@ body.content {
 					&.mobile, &.ids {
 						@include dropShadow_individual(#cecece);
 					}
-
 				}
 			}
 
@@ -224,7 +223,8 @@ body.content {
 }
 
 main { 
-	a:not(.btn), span.link {
+	a:not(.btn),
+	span.link {
 		color: $color_textLink;
 		&:hover, &:active {
 			color: $color_textLink_hover;
