@@ -95,10 +95,13 @@ body.content, body.work {
 
 		p {
 			font-size: $font_body_p;
+			line-height: 180%;
 		}
 
 		img {
-			@include dropShadow_individual(#cecece);
+			&:not(.no-shadow) {
+				@include dropShadow_individual(#9b9b9b);
+			}
 			display: block;
 			margin-left: auto;
 			margin-right: auto;
@@ -169,8 +172,8 @@ body.content {
 
 				img {
 					&.browser {
-						border: 10px solid #dfdfdf;
-						border-radius: 15px;
+						border: 7px solid #ffffff;
+						border-radius: 12px;
 						box-sizing: border-box;
 						@include dropShadow_normal();
 					}

@@ -71,6 +71,21 @@ What happened to V1? There wasn't one, this is V2 to fit inline with the rest of
             background-color: $color2020_solid_black;
         }
     }
+    &.green {
+        .btn {
+            border-color: $color2020_primary_green_bright;
+            color: $color2020_primary_green_bright;
+        }
+        &:focus, &:hover, &:active {
+            .btn {
+                background-color: $color2020_primary_green_bright;
+                color: $color2020_primary_off_white;
+            }
+        }
+        .img-container {
+            background-color: $color2020_primary_green_bright;
+        }
+    }
 
     &.orange {
         .btn {
@@ -126,6 +141,10 @@ What happened to V1? There wasn't one, this is V2 to fit inline with the rest of
                 }
             }
         }
+
+        img {
+            max-width: 300px;
+        }
     }
 
     .img-container, .copy-container {
@@ -140,6 +159,9 @@ What happened to V1? There wasn't one, this is V2 to fit inline with the rest of
     img {       
         margin: 0 auto;
         box-shadow: 0 0 5px 0 $color2020_solid_black;  
+        &.no-shadow {
+            box-shadow: none;
+        }
     }
 }
 

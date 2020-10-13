@@ -756,6 +756,17 @@ What happened to V1? There wasn't one, this is V2 to fit inline with the rest of
 .work-item.black .img-container {
   background-color: #464646;
 }
+.work-item.green .btn {
+  border-color: #12b2b2;
+  color: #12b2b2;
+}
+.work-item.green:focus .btn, .work-item.green:hover .btn, .work-item.green:active .btn {
+  background-color: #12b2b2;
+  color: #f4f4f4;
+}
+.work-item.green .img-container {
+  background-color: #12b2b2;
+}
 .work-item.orange .btn {
   border-color: #F26818;
 }
@@ -811,6 +822,9 @@ What happened to V1? There wasn't one, this is V2 to fit inline with the rest of
 .work-item.work-item--featured .meta ul li:not(:last-child):after {
   content: ", ";
 }
+.work-item.work-item--featured img {
+  max-width: 300px;
+}
 .work-item .img-container, .work-item .copy-container {
   padding: 1rem;
 }
@@ -821,6 +835,9 @@ What happened to V1? There wasn't one, this is V2 to fit inline with the rest of
 .work-item img {
   margin: 0 auto;
   box-shadow: 0 0 5px 0 #464646;
+}
+.work-item img.no-shadow {
+  box-shadow: none;
 }
 
 ul.work-items {
@@ -942,12 +959,15 @@ body.content main h1, body.work main h1 {
 }
 body.content main p, body.work main p {
   font-size: 1rem;
+  line-height: 180%;
 }
 body.content main img, body.work main img {
-  filter: drop-shadow(0px 0px 4px #cecece);
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+body.content main img:not(.no-shadow), body.work main img:not(.no-shadow) {
+  filter: drop-shadow(0px 0px 4px #9b9b9b);
 }
 
 .content .meta, .work .meta {
@@ -1005,8 +1025,8 @@ body.content main article figure figcaption {
   width: 25px;
 }
 body.content main article figure img.browser {
-  border: 10px solid #dfdfdf;
-  border-radius: 15px;
+  border: 7px solid #ffffff;
+  border-radius: 12px;
   box-sizing: border-box;
   box-shadow: 0 0 5px 0 #dfdfdf;
 }

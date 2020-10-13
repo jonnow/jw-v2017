@@ -4,4 +4,5 @@ fonts/aleo-regular-webfont.ttf
 fonts/aleo-regular-webfont.woff
 fonts/aleo-regular-webfont.svg
 minified/index.html
-images/dribbble-logo.ai
+*.ai
+compressed/
