@@ -224,7 +224,7 @@ ul.work-items {
     }
 
     @include breakpointAbove(md) {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
         .work-item {
             height: 21rem;
 
@@ -233,5 +233,8 @@ ul.work-items {
             align-self: end;
             }
         }
+    }
+    @include breakpointAbove(lg) {
+        grid-template-columns: repeat(3, 1fr);
     }
 }

@@ -64,6 +64,8 @@ img.profile {
 
      // Colours used (see colophon)
      ul.colours {
+        //grid-column: b-start / c-end;
+        //grid-row: 2;
         grid-column: b;
         margin-bottom: 2.5rem;
         padding-left: 0;

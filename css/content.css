@@ -891,7 +891,7 @@ ul.work-items .work-item:hover span.link {
 }
 @media (min-width: 768px) {
   ul.work-items {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
   ul.work-items .work-item {
     height: 21rem;
@@ -899,6 +899,11 @@ ul.work-items .work-item:hover span.link {
   ul.work-items .work-item span.link {
     margin-top: auto;
     align-self: end;
+  }
+}
+@media (min-width: 992px) {
+  ul.work-items {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
