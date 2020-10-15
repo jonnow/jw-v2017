@@ -168,8 +168,20 @@ body.content {
 				}
 
 				img {
+					
+					// img:not(.profile) {
+					// 	max-width: 100%; // All images should fit on the page.
+					// 	@include breakpointAbove(sm) {
+					// 		max-width: 50%;
+					// 	}
+					// }
+
 					&:not(.no-shadow) {
 						@include dropShadow_individual(#cecece);
+					}
+
+					&.full-size {
+						width: 100%;
 					}
 
 					&.add-border {
@@ -212,13 +224,6 @@ body.content {
 			img {
 				&.profile {
 					border-radius: $border_radius_standard;
-				}
-			}
-
-			img:not(.profile) {
-				max-width: 100%; // All images should fit on the page.
-				@include breakpointAbove(sm) {
-					max-width: 50%;
 				}
 			}
 		}
