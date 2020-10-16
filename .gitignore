@@ -6,3 +6,5 @@ fonts/aleo-regular-webfont.svg
 minified/index.html
 *.ai
 compressed/
+.user.ini
+web.config
