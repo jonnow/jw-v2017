@@ -1044,7 +1044,7 @@ body.content main article figure {
 body.content main article figure figcaption {
   color: #006e88;
   margin-bottom: 1.5rem;
-  width: 25px;
+  width: 115px;
 }
 body.content main article figure img:not(.no-shadow) {
   filter: drop-shadow(0px 0px 4px #cecece);
