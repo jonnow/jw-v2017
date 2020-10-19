@@ -548,7 +548,6 @@ body.home .projectWrapper .image {
     max-width: 30rem;
   }
   body.home .projectWrapper .image.browserProject {
-    width: 75%;
     max-width: 40rem;
   }
 }
@@ -606,6 +605,9 @@ body.home .brightBg {
 }
 body.home .brightBg .scroll {
   stroke: #464646;
+}
+body.home .flowThrough a {
+  margin: 4rem auto;
 }
 
 @keyframes menuFlyIn {
@@ -812,6 +814,11 @@ What happened to V1? There wasn't one, this is V2 to fit inline with the rest of
 @media (min-width: 768px) {
   .work-item.work-item--featured p {
     margin-bottom: 2.625rem;
+  }
+}
+@media (min-width: 768px) {
+  .work-item.work-item--featured p {
+    margin-bottom: 4.625rem;
   }
 }
 @media (min-width: 768px) {

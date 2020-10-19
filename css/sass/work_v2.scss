@@ -130,6 +130,10 @@ What happened to V1? There wasn't one, this is V2 to fit inline with the rest of
         }
         p {
             @include p_standardMargin();
+
+            @include breakpointAbove(md) {
+                margin-bottom: 4.625rem;
+            }
         }
         @include breakpointAbove(md) {
             align-items: stretch;

@@ -216,7 +216,7 @@ body.home {
                     max-width: 30rem;
                 }
                 &.browserProject {
-                    width: 75%;
+                    //width: 75%; // Removed to make base size larger
                     max-width: 40rem;
                 }
             }
@@ -279,6 +279,12 @@ body.home {
         color: $color2020_solid_black;
         .scroll {
             stroke: $color2020_solid_black;
+        }
+    }
+
+    .flowThrough {
+        a {
+            margin: 4rem auto;
         }
     }
 }

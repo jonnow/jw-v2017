@@ -20,7 +20,7 @@
         <meta property="og:title" content="Jonno Witts - UX Designer and Front-end Developer" />
         <meta property="og:type" content="website" />
         <meta property="og:description" content="The portfolio of Jonno Witts, a UX/UI Designer and Front-end Developer. Available for contract work!" />
-        <meta property="og:image" content="https://www.jonnowitts.com/images/thumbnail.png" />
+        <meta property="og:image" content="https://www.jonnowitts.com/images/shared/thumbnail.png" />
         <meta property="og:url" content="https://www.jonnowitts.com" />
         <meta property="og:locale" content="en_GB" />
 
@@ -370,9 +370,11 @@
             <section id="_featured">
                 <div class="projectWrapper green grid_RtL">
                     <div class="image browserProject">
-                        <picture>
-                            <img src="images/case-studies/_landing/fsa-logo.png" alt="An illustrated web browser displaying the finance dashboard." />
-                        </picture>
+                        <img srcset="images/home/caseStudies/fsa_logo.png 616w,
+                                     images/home/caseStudies/fsa_logo@2x.png 1231w"
+                            sizes="(max-width: 900px) 100hw,
+                                    50hw"
+                             alt="A recreated version of the Foods Standards Agency logo showing two forks interconnected on a circle." />
                     </div>
                     <div class="text">
                         <h2>Food Standards Agency</h2>
@@ -393,9 +395,11 @@
                 </div>
                 <div class="projectWrapper orange" id="_second">
                     <div class="image browserProject">
-                        <picture>
-                            <img src="images/home/gamesessions.png" alt="The GameSessions homepage design for a large screen" />
-                        </picture>
+                        <img srcset="images/home/caseStudies/gamesessions_gems.png 909w,
+                                        images/home/caseStudies/gamesessions_gems@2x.png 1817w"
+                            sizes="(max-width: 900px) 100hw,
+                                    50hw" 
+                            alt="The GameSessions homepage design on a desktop browser" />
                     </div>
                     <div class="text">
                         <h2>GameSessions</h2>
@@ -417,10 +421,10 @@
                 <div class="projectWrapper blue longHeading grid_RtL" id="_third">
                     <div class="image mobileProject">
                         <picture>
-                            <source srcset="images/home/musicdoc/swbiybi_mobile@2x.png" media="(min-width: 1280px)">
-                            <source srcset="images/home/musicdoc/swbiybi_mobile.png" media="(min-width: 780px)">
-                            <source srcset="images/home/musicdoc/swbiybi_mobile@0.75x.png" media="(min-width: 640px)">
-                            <source srcset="images/home/musicdoc/swbiybi_mobile@0.5x.png" media="(min-width: 320px)">
+                            <source srcset="images/home/caseStudies/musicdoc/swbiybi_mobile@2x.png" media="(min-width: 1280px)">
+                            <source srcset="images/home/caseStudies/musicdoc/swbiybi_mobile.png" media="(min-width: 780px)">
+                            <source srcset="images/home/caseStudies/musicdoc/swbiybi_mobile@0.75x.png" media="(min-width: 640px)">
+                            <source srcset="images/home/caseStudies/musicdoc/swbiybi_mobile@0.5x.png" media="(min-width: 320px)">
                             <img src="images/projects/musicdoc/musicdoc_mob@0.5x.png" alt="An illustrated phone displaying the 'So, Which Band is your Boyfriend In?' homepage as it appears on a mobile device." />
                         </picture>
                     </div>
@@ -439,12 +443,11 @@
                 </div>
                 <div class="projectWrapper projectWrapper--last yellow brightBg longHeading" id="_last">
                     <div class="image browserProject">
-                        <picture>
-                            <source srcset="images/home/finance@2x.png" media="(min-width: 780px)">
-                            <source srcset="images/home/finance.png" media="(min-width: 640px)">
-                            <source srcset="images/home/finance@0.75x.png" media="(min-width: 320px)">
-                            <img src="images/projects/finance.png" alt="An illustrated web browser displaying the finance dashboard." />
-                        </picture>
+                        <img srcset="images/home/caseStudies/financialDashboard.png 909w,
+                        images/home/caseStudies/financialDashboard@2x.png 1817w"
+                            sizes="(max-width: 900px) 100hw,
+                                    50hw" 
+                            alt="Prototype financial web app dashboard on a tablet computer" />
                     </div>
                     <div class="text">
                         <h2>Prototype financial dashboard</h2>
