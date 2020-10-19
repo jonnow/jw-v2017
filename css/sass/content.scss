@@ -315,7 +315,11 @@ a.btn {
 	a.btn {
 		margin: 0 auto 2.65rem;
 		padding: .8rem $pad_body_small;
-		width: $button_width_standard_cta;
+		width: 100%;
+		box-sizing: border-box;
+		@include breakpointAbove(md) {
+			width: $button_width_standard_cta;
+		}
 		&.btn-secondary {
 			border: 2px solid $color2020_primary_green_bright;
 			&:hover, &:active {
