@@ -70,6 +70,7 @@
                             <p>Alien is one of my favourite films and when Alien: Isolation was revealed, it went straight on my radar. Creative Assembly did such an amazing job recreating the look and feel of Ridley Scott's 1979 classic. The lo-fi, retro-futuristic aesthetic was achieved, in part, by taking the UI, transferring it to VHS tapes and recording the playback through a CRT tv. Other nice touches are the inclusion of the Xbox’s Kinect Sensor that allows you to peak out and the lets the Xenomorph hear you...unfortunately I didn’t realise this until after a few encounters.</p>
                             <p>To give a more CRT feel to everything I’ve added a blur on the edges of everything, created as an SVG filter. The dashed lines on the radar are achieved with the <strong>dash-array</strong> and <strong>dash-offset</strong> CSS properties. The directional indicators (to the left, right and bottom) light up by checking for the current location of the ping on the circumference. If it is within their space they begin to “light up”. As the ping moves away they fade off again.</p>
                             <p>The original plan was to just have the ping move with the mouse movement. I took this a step further, making use of the device compass available on mobile devices. I did two years of games development at university and was able to use knowledge and code to implement the movement around a circle (converting the code from C# into JavaScript).</p>
+                            <p>Please note: this uses experimental technology and may not work on your browser. During <a href="../assets/alien/test.html" title="Test if your browser supports the device orientation functionality">testing in 2020 I found that the only mobile browser that worked was the one built into the Pocket app on iOS. However, I have <a href="../assets/alien/index.html">uploaded the demo</a> if you wish to try it out.
                             <h2>Where next?</h2>
                             <p>This could just be the start of something much more. If you’re interested in collaborating I have a bunch of ideas of where this could go from here:</p>
                             <ul>
@@ -98,10 +99,6 @@
                             <figcaption>Device orientation</figcaption>
                             <img src="../images/case-studies/tracker/motion.gif" alt="A person using the tracker on their phone, showing the device orientation functionality.">
                         </figure>
-                        <!-- <figure>
-                            <figcaption>Grain effect</figcaption>
-                            <img class="standard" src="../assets/static.gif" alt="An animated gif of a video grain effect" />
-                        </figure> -->
                         <a class="btn btn-primary" href="../assets/alien/index.html" title="Try out the Alien tracker">Try out the tracker<br>(mobile)</a>
                 
                     </div>

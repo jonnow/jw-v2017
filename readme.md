@@ -29,6 +29,11 @@ To use a media query in the code:
 }
 ```
 
+Added a back to top button on longer pages. This is implemented by adding the class 'longContent' on the body (where it already has a 'content' class) and placing the following HTML below the header element and above the main div element in the article.
+```
+<div class="backToTop btn" id="backToTop">Back to top</div>
+```
+
 The current roadmap is:
 * v1 Flat HTML structure, basic pages, no blog
 * v2 Vue built over the top, code modularised.

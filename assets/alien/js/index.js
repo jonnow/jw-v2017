@@ -1,11 +1,14 @@
 var pageCoords,
     newPageCoords,
-    offset = -175,
-    offsetPlusVal = 7.6,
+    //offset = -175,
+    offset = 0,
+    //offsetPlusVal = 7.6,
+    offsetPlusVal = 1,
     ping = $('#ping'),
     pingCx = $('#ping').attr('cx'),
     pingCy = $('#ping').attr('cy'),
-    moveVal = 320,
+    //moveVal = 320,
+    moveVal = 0.1,
     
     // Initial colour in HSL format
     green = 'hsl(150,100%,15%)',
@@ -35,7 +38,6 @@ var a, b;
 
 if (window.DeviceOrientationEvent) {
     window.addEventListener("deviceorientation", deviceOrientationListener);
-
 } else {
     alert("Sorry, your browser doesn't support Device Orientation");
 }
@@ -47,7 +49,7 @@ function deviceOrientationListener(event) {
     
     var newPageCoords = event.pageX;
 
-    a = Math.round(event.alpha);
+    a = event.alpha;
 
     if(a > b) {
       $('.delta').text('a > b');
@@ -79,7 +81,7 @@ function deviceOrientationListener(event) {
 var angle = 180;
 
 function movePing(clockwise) {
-  var speed = 1,
+  var speed = 100,
       temp;
   // increase the angle of rotation
   
