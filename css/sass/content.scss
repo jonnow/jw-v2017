@@ -331,6 +331,33 @@ a.btn {
 }
 // // End buttons
 
+.backToTop {
+	position: -webkit-sticky;
+	position: sticky;
+	left: 0;
+	top: 90vh;
+	
+    background-color: $color2020_primary_green_dark;
+    color: $color2020_primary_white;
+	margin-left: auto;
+	margin-bottom: -30px;
+	padding: 0.8rem;
+	
+	@include breakpointAbove(lg) {
+		margin-bottom: $margin_p_bottom_medium;
+		top: 83.2vh; // this should align it correctly with any further links
+	}
+	@media screen and (min-width: 1600px) {
+		margin-right: -100px;
+	}
+	width: 125px;
+	z-index: 2;
+	&:hover, &:active {
+		box-shadow: 0 0 4px 0 $color2020_solid_black;
+		cursor: pointer;
+	}
+}
+
 // Page footer styling
 body > footer {
 	@include fontBodyStandard;
