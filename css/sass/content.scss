@@ -32,7 +32,7 @@ body {
 			grid-area: c;
 		}
 
-		.meta {
+		.meta-container {
 			// Specific for the content pages
 			grid-area: b;
 		}
@@ -110,7 +110,7 @@ body.content, body.work {
 
 // Content (and about (via external Sass file)) styles
 .content, .work {
-	.meta {
+	.meta-item {
 		display: grid;
 		column-gap: 10px;
 	}
@@ -123,22 +123,30 @@ body.content {
 				.copy p {
 					margin-top: 0;
 				}
-				.meta {
+				.meta-container {
+					display: flex;
+					flex-direction: column;
+					@include breakpointAbove(md) {
+						width: 70%;
+					}
+				}
+				.meta-item {
 					grid-template-columns: 1fr 1fr;
 					color: $content_text_alt;
 					font-size: $font_body_smallText;
 					margin-bottom: 2.625rem;
-					@include breakpointAbove(md) {
-						width: 70%;
-					}
-
+					
 					span {
 						display: block;
 					}
 					ul {
 						margin: 0;
-						li {
-							@include bulletPoints($color2020_primary_yellow);
+						&.tags li {
+							@include bulletPoints($color_accessible_primary_green);
+						}
+
+						&.outputs li {
+							@include bulletPoints($color2020_secondary_orange);
 						}
 					}
 				}
@@ -161,11 +169,15 @@ body.content {
 				margin-right: 0;
 				margin-top: 0;
 
+				@include breakpointAbove(sm) {
+
+					+ figure {
+						margin-top: 4.5rem;		
+					}
+				}
+
 				figcaption {
 					color: $content_heading;
-					margin-bottom: $pad_body_small;
-					//width: 25px;
-					width: 115px;
 				}
 
 				img {
@@ -176,6 +188,10 @@ body.content {
 					// 		max-width: 50%;
 					// 	}
 					// }
+
+					&.special-alien {
+						border-radius: 5px;
+					}
 
 					&:not(.no-shadow) {
 						@include dropShadow_individual(#cecece);
