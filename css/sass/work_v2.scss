@@ -146,6 +146,7 @@ What happened to V1? There wasn't one, this is V2 to fit inline with the rest of
         }
 
         .meta {
+            display: grid;
             font-size: $font_body_smallText;
             grid-template-columns: auto 1fr;
             ul {
@@ -179,7 +180,7 @@ What happened to V1? There wasn't one, this is V2 to fit inline with the rest of
         box-shadow: none;
         margin: 0 auto;
         max-width: 95%;
-        max-height: 256px;
+        max-height: 100%;
         
             &.special--alien {
                     border: 3px solid #ffffff;
@@ -218,6 +219,7 @@ ul.work-items {
         span.link {
             color: $color_textLink;
             //color: rgb(45, 75, 87);
+            font-size: $font_body_smallText;
             margin-top: 1rem;
             text-align: center;
         }
