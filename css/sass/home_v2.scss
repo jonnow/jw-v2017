@@ -135,6 +135,13 @@ body.home {
         @include breakpointAbove(md){
             position: static;
         }
+
+        &.mc_green {
+            background-color: $color_masterchief_green;
+            .btn:hover {
+                color: $color2020_primary_yellow;
+            }
+        }
         &.yellow { 
             background-color: $color2020_primary_yellow; 
             .btn:hover {

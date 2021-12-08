@@ -29,6 +29,21 @@ What happened to V1? There wasn't one, this is V2 to fit inline with the rest of
         @include dropShadow_dark();
     }
 
+    &.mc_green {
+        .btn {
+            border-color: $color2020_primary_yellow;
+        }
+        &:focus, &:hover, &:active {
+            .btn {
+                background-color: $color2020_primary_yellow;
+                color: $color2020_solid_black;
+            }
+        }
+        .img-container {
+            background-color: $color_masterchief_green;
+        }
+    }
+
     &.yellow { 
         .btn {
             border-color: $color2020_primary_yellow;
