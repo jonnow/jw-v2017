@@ -333,7 +333,7 @@ a.btn {
 		padding: .6rem $pad_body_small;
 		width: $button_width_small_cta;
 		@include breakpointAbove(lg) {
-			margin-top: 1.75rem auto 0;
+			margin: 1.75rem auto 0;
 			width: $button_width_standard_cta;
 		}
 		&:focus, &:hover, &:active {
