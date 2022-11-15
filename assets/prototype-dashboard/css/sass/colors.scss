@@ -1,0 +1,31 @@
+$primary_main: #3b61e2;
+$primary_dark: #6241d8;
+$primary_light: #1b92cb;
+
+$primary_secondary_main: #bbc6ed;
+
+$primary_black: #191919;
+$primary_white: #f2f2f2;
+$clean_white: #ffffff;
+
+$secondary_bg_light: #d8e0e7;
+$secondary_red: #ff2a1a;
+$secondary_yellow: #ffb917;
+$secondary_orange: #ff5517;
+$secondary_blue: #13e2c7;
+$secondary_rust: #cb541b;
+$secondary_green: #11ba4d;
+
+// Theme colours
+$primary_main_text: $primary_white;
+$primary_input_bg: $clean_white;
+
+$primary_body_text: $primary_main;
+
+
+// Dark mode colours
+$dark_main_bg: #100f19;
+$dark_main_off_dark: #1d2856; // input borders
+$dark_primary_body_text: $primary_white; // text
+$dark_highlight_text: #13e2c7; // links
+$dark_shadow: #05050a;

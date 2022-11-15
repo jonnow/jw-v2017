@@ -1,0 +1,87 @@
+  /* Club Sandwich Menu by Jonno Witts - https://codepen.io/jonnowitts/pen/YQLRYE */
+header {
+    position: relative;
+    overflow: hidden;
+    height: 3.8rem;
+    transition: all .5s ease;
+    &.menu-open {
+      height: 15rem;
+    }
+    nav {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      align-items: center;
+    }
+
+    h1 {
+      font-size: 1.8rem;
+    }
+
+    .menu-show {
+      position: relative;
+      z-index: 5;
+      margin-left: 1rem;
+      display: block;
+      float: left;
+    }
+}
+  
+.menu {
+    position: absolute;
+    right: 0;
+    top: 1rem;
+    width: 30%;
+    
+    overflow: hidden;
+    transition: all .3s ease-in-out;
+    a {
+      margin-left: .5rem;
+      display:inline-block; 
+      transform: none;
+      transition: none; 
+      &.btn-help {
+        margin-left: 1rem;
+      }
+    }
+    .menu-inner {
+      padding: 0;
+      width: 100%;
+    }
+}
+
+a.madeIn {
+  display: block;
+  letter-spacing: 1px;
+  padding: 1rem .625rem;
+  color: $dark_highlight_text;
+  &:hover {
+    background-color: lighten($primary_main, 5%);
+  }
+}
+
+    
+  // This media query styles the menu for a large environment (think a desktop)
+   @media screen and (min-width: $minWidth) {
+    header {
+      position: static;
+      height: 100%;
+
+      .menu-show {
+        display: none;
+      }
+
+      .menu {
+        position: absolute;
+        top: .625rem;
+        right: .625rem;
+        overflow: visible;
+        background-color: transparent;
+        width: 50%;
+        height: auto; 
+        a {
+          margin-left: 1rem;
+        }
+      }
+    }
+  }

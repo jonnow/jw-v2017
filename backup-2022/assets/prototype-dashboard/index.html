@@ -1,0 +1,253 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Prototype Financial Dashboard</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="action-menu">
+            <span class="menu-show btn-icon"><img src="images/menu.svg" /><b>menu</b></span>
+            <h1 class="logo"><a class="showHome" href="/">Logo</a></h1>
+            <ul>
+                <li><a href="#" class="showHome">Home</a></li>
+                <li><a href="#" class="showStepView">New task</a></li>
+                <li><a href="#" class="showTableView">To do</a></li>
+                <li><a href="#" class="showTableView">Review items</a></li>                
+            </ul>
+            <a class="madeIn" href="https://www.jonnowitts.com">Made by Jonno Witts</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner">
+                <nav>
+                    <a href="#" class="dark-mode btn-icon" title="dark mode"><b>Dark mode</b></a>
+                    <a href="#" class="btn-help btn-icon" title="help"><b>Help</b></a>
+                    <a href="#" class="btn btn-primary">M Strauss</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <div id="homeView" class="view home-view">
+        <div class="overview">
+            <div class="overview-inner-grid">
+                <div class="quick-actions">
+                    <a href="#" class="showStepView btn btn-primary">New Task</a>
+                    <ul class="recent-actions">
+                        <li><a href="#" class="btn btn-secondary">Political donation</a></li>
+                        <li><a href="#" class="btn btn-secondary">Gift</a></li>
+                        <li><a href="#" class="btn btn-secondary">Certificate</a></li>
+                        <li><a href="#" class="btn btn-secondary">Transaction</a></li>
+                    </ul>
+                    <ul class="new-actions">
+                        <li><a href="#" class="btn btn-secondary">Certificate</a></li>
+                        <li><a href="#" class="btn btn-secondary">Entertainment</a></li>
+                        <li><a href="#" class="btn btn-secondary">Gift</a></li>
+                        <li><a href="#" class="btn btn-secondary">Holdings</a></li>
+                        <li><a href="#" class="btn btn-secondary">Political donation</a></li>
+                        <li><a href="#" class="btn btn-secondary">Trade request</a></li>
+                    </ul>
+                </div>
+                <div class="summary" id="toDos">
+                    <h2><span>To do</span>
+                        <span class="showTableView small-text-link">View all</span>
+                    </h2>
+                    <ul>
+                        <li class="showTableView"><span class="count">1</span><span class="todo-item">Trade Request</span></li>
+                        <li class="showTableView"><span class="count">1</span><span class="todo-item">Gift</span></li>
+                        <li class="showTableView"><span class="count">30</span><span class="todo-item">Political donations</span></li>
+                    </ul>
+                </div>
+                
+                <div class="summary" id="reviews">
+                    <h2><span>Review</span>
+                        <span class="small-text-link">View all</span>
+                    </h2>
+                    <ul>
+                        <li class="showTableView"><span class="count">2</span><span class="todo-item">Outside activity</span></li>
+                        <li class="showTableView"><span class="count">7</span><span class="todo-item">Cases</span></li>
+                        <li class="showTableView"><span class="count">3</span><span class="todo-item">Entertainment</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="pinned-items">
+            <article class="item">
+                <h2><span>Entertainments pending review</span>
+                    <a href="#" class="showTableView small-text-link">View all</a>
+                </h2>
+                <ul>
+                    <li><a class="showTableView" href="#">ENTS257461: Gave Entertainment</a></li>
+                    <li><a class="showTableView" href="#">ENTS257462: Recevied Entertainment</a></li>
+                    <li><a class="showTableView" href="#">ENTS257461: Gave Entertainment</a></li>
+                    <li><a class="showTableView" href="#">ENTS257462: Recevied Entertainment</a></li>
+                    <li><a class="showTableView" href="#">ENTS257461: Gave Entertainment</a></li>
+                    <li><a class="showTableView" href="#">ENTS257462: Recevied Entertainment</a></li>
+                </ul>
+            </article>
+            <article class="item">
+                <h2><span>Trade requests pending review</span>
+                    <a href="#" class="showTableView small-text-link">View all</a>
+                </h2>
+                <ul>
+                    <li><a class="showTableView" href="#">TR345 - Buy 10 CEY CENTAMIN PLC NVP...</a></li>
+                </ul>
+            </article>
+            <article class="item">
+                <h2><span>Gifts pending review</span></h1>
+                <ul>
+                    <li><a class="showTableView" href="#">GIFT257461: Gave Gift of 250.00 in Gift Certificate...</a></li>
+                    <li><a class="showTableView" href="#">GIFT212664: Gave Gift of 65.00 in Gift Certificate...</a></li>
+                </ul>
+            </article>
+        </div>
+    </div>
+    <div id="stepView" class="view stepped-process" style="display:none;">
+        <div class="steps-nav">
+            <ol>
+                <li class="step-1 active">Declaration<br>type</li>
+                <li class="step-2">Declare<br>entertainment</li>
+                <li class="step-3">Entertainment<br>details</li>
+                <li class="step-4">Confirmation</li>
+            </ol>
+        </div>
+        <div class="steps-wizard">
+            <div class="steps-step step-1">
+                <a href="#" class="goto-2 btn btn-large btn-primary">Declare entertainment given</a>
+                <span class="btn-divider">or</span>
+                <a href="#" class="goto-2 btn btn-large btn-primary">Declare entertainment received</a>
+            </div>
+            <div class="steps-step step-2">
+                    <a href="#" class="goto-3 btn btn-large btn-primary">Make declaration for myself</a>
+                    <span class="btn-divider">or</span>
+                    <a href="#" class="goto-3 btn btn-large btn-primary">Make declaration for another user</a>
+            </div>
+            <div class="steps-step step-3">
+                <form>
+                    <div class="row">
+                        <label>Approximate value</label>
+                        <input type="text" />
+                        <select>
+                            <option>USD ($)</option>
+                            <option>GBP (£)</option>
+                            <option>NZD ($NZ)</option>
+                            <option>AUD ($AU)</option>
+                        </select>
+                    </div>
+                    <div class="row">
+                        <label>Total entertainment value</label>
+                        <input type="text" />
+                    </div>
+                    <div class="row">
+                        <label>Entertainment date</label>
+                        <input type="text" />
+                    </div>
+                    <div class="row">
+                        <label>Business purpose</label>
+                        <input type="text" />
+                    </div>
+                    <div class="row">
+                        <label>Entertainment type</label>
+                        <input type="text" />
+                    </div>
+                    <div class="row">
+                        <label>Location</label>
+                        <input type="text" />
+                    </div>
+                    <div class="row">
+                        <label>Name of venue</label>
+                        <input type="text" />
+                    </div>
+                    <div class="row">
+                        <label class="va-top">Additional details</label>
+                        <textarea></textarea>
+                    </div>
+                    <div class="buttons">
+                        <a href="#" class="goto-4 btn btn-secondary">Save draft</a>
+                        <a href="#" class="goto-4 btn btn-success">Create</a>
+                    </div>
+                </form>
+            </div>
+            <div class="steps-step noflex step-4">
+                <p class="feedback">Entertainment declaration was successfully submitted for review</p>
+                <span class="icon icon-huge">
+                    TICK
+                    <img src="images/tick.svg" />
+                </span>
+                <div class="btn-row">
+                    <a href="#" class="showHome btn btn-secondary">Home</a>
+                    <a href="#" class="showStepView btn btn-primary">Create another</a>
+                </div>
+            </div>
+            <a href="#" class="btn btn-secondary back-btn">Back</a>
+        </div> 
+        <!-- End stepped process -->
+    </div>
+    <div id="tableView" class="view table-view" style="display:none;">
+        <div class="table-search-view">
+            <label>
+              custom table view  
+            </label>
+            <form>
+                <select>
+                    <option>Financial Year 2019/20</option>
+                    <option>Financial Year 2018/19</option>
+                    <option>Financial Year 2017/18</option>
+                </select>
+                <div class="date-row">
+                    <input class="date-item" type="number" max="31" placeholder="mm">
+                    <input class="date-item" type="number" max="12" placeholder="dd">
+                    <input class="date-item" type="number" min="1900" placeholder="yyyy">
+                </div>
+                <a href="#" class="btn btn-primary">apply</a>
+            </form>
+            <a href="#" class="btn btn-success">save view</a>
+        </div>
+        <table>
+            <thead>
+                <th style="text-align: left;">Name</th>
+                <th>Date <i>mm-dd-yyyy</i></th>
+                <th>Value ($)</th>
+                <th>Author</th>
+                <th>Market active</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>UI Holdings</td>
+                    <td style="text-align: center;">12-24-2018</td>
+                    <td style="text-align: center;">2345,1124</td>
+                    <td style="text-align: center;">Jonno Witts</td>
+                    <td style="text-align: center;"><span class="market-active-icon active">active</span></td>
+                </tr>
+                <tr>
+                    <td>Broker account</td>
+                    <td style="text-align: center;">12-24-2018</td>
+                    <td style="text-align: center;">35,00</td>
+                    <td style="text-align: center;">Jonno Witts</td>
+                    <td style="text-align: center;"><span class="market-active-icon">inactive</span></td>
+                </tr>
+                <tr>
+                    <td>UI Holdings</td>
+                    <td style="text-align: center;">12-24-2018</td>
+                    <td style="text-align: center;">765,4028</td>
+                    <td style="text-align: center;">Jonno Witts</td>
+                    <td style="text-align: center;"><span class="market-active-icon active">active</span></td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="table-pagination">
+            <a href="#" class="arw arw-l"><img src="images/arw-l.svg" />prev</a>
+            <a href="#" class="page active">1</a>
+            <a href="#" class="page">2</a>
+            <a href="#" class="page">3</a>
+            <a href="#" class="arw arw-r">next <img src="images/arw-r.svg" /></a>
+        </div>
+        <a href="#" class="btn btn-secondary back-btn">Back</a>
+    </div>
+
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>

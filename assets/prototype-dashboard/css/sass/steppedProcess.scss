@@ -1,0 +1,145 @@
+.steps-nav {
+    width: 100%;
+    padding-top: 1rem;
+    margin: 0 auto;
+    ol {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+        grid-column-gap: calc(#{$stdPad} * 2);
+        li {
+            cursor: pointer;
+            color: $primary_secondary_main;
+            text-align: right;
+            width: 80%;
+            padding-bottom: 1rem;
+            border-bottom: $borderSize solid $primary_secondary_main;
+            margin: 0 auto 2rem;
+            &.active {
+                color: $primary_body_text;
+                border-bottom-color: $primary_body_text;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: $minWidth) {
+    .steps-nav {
+        width: 90%;
+        padding-top: calc(#{$stdPad} * 6);
+    }
+}
+
+@media screen and (min-width: 1281px) {
+    .steps-nav ol {
+        grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    }
+}
+
+.steps-wizard {
+    min-height: 25rem;
+    .steps-step {
+        &.active:not(.noflex) {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        &.active.noflex {
+            text-align: center;
+        }
+        .btn-divider {
+            margin: 0 2rem;
+        }
+
+        form {
+            width: 80%;
+            .row {
+                margin-bottom: 1rem;
+            }
+            label {
+                display: inline-block;
+                text-align: right;
+                width: 42%;
+                margin-right: 2%;
+                &.va-top {
+                    vertical-align: top;
+                }
+            }
+            input, textarea {
+                width: 35%;
+            }
+            select, a:not(.btn) {
+                width: 15%;
+                margin-left: 2%;
+            }
+            .buttons {
+                margin-top: calc(#{$stdPad}*2);
+                display: flex;
+                justify-content: flex-end;
+                .btn:last-child {
+                    margin-left: calc(#{$stdPad*1.5});
+                }
+            }
+        }
+        @media screen and (min-width: $minWidth) {
+            form {
+                min-width: 40%;
+                max-width: 50rem;
+                margin-right: 10rem;
+            }
+        }
+
+        .feedback {
+            display: block;
+            font-size: 125%;
+        }
+        .icon {
+            display: block;
+            margin: 4rem auto;
+            position: relative;
+            text-indent: 100%;
+            overflow: hidden;
+            width: 15rem;
+            height: 15rem;
+            border-radius: 50%;
+            border: .625rem solid $secondary_green;
+            img {
+                height: 100%;
+                width: 100%;
+                position: absolute;
+                left: 0;
+                top: 0;
+            }
+        }
+        .btn-row {
+            display: block;
+            width: 50%;
+            margin: 4rem auto;
+            .btn {
+                min-width: 6rem;
+                &:first-child {
+                    margin-right: 4rem;
+                }
+            }
+        }
+    }
+
+
+
+    position: relative;
+    .back-btn {
+        position: absolute;
+        bottom: $stdPad;
+    }
+
+    padding: $stdPad;
+}
+
+@media screen and (min-width: $minWidth) {
+    
+    .steps-wizard {
+        min-height: 5rem;
+        .steps-step {
+            padding-top: 2rem;
+        }
+    }
+}

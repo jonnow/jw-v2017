@@ -1,0 +1,129 @@
+.form {
+    .page-intro {
+        background-color: var(--col-main-grey);
+    }
+    header.site-header,
+    header.site-header .hero {
+        height: 44vh;
+    }
+
+    h1 {
+        @media screen and (min-width: 768px) {
+            width: 50%;
+        }
+
+        font-weight: bold;
+    }
+    
+    section.page-intro {
+        position: relative;
+        z-index: 2;
+        padding-bottom: 40px;
+        padding-top: 40px;
+        > .content {
+            @media screen and (min-width: 768px) {
+                > .col:first-child {
+                    width: 40%;
+                    padding-top: 40px;
+                    padding-right: 40px;
+                }
+                > .col:last-child {
+                    // form holder
+                    width: 60%;
+                    max-width: 700px;
+                }
+            }
+        }
+    }
+}
+
+form, form .tag, form input, form textarea {
+    color: var(--col-main-white);
+}
+
+form {    
+    background-color: var(--col-main-teal);
+    padding: 20px;
+    margin-top: 20px;
+    @media screen and (min-width: 768px) {
+        margin-top: -200px;
+        padding: 40px;
+    }
+    .row, .row-full {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .row {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        .col {
+            width: 45%;
+        }
+    }
+    label {
+        display: block;
+        margin-bottom: 10px;
+        font-size: 1.25rem;
+    }
+    input, textarea {
+        border: none;
+        background: none;
+        transition: border .15s ease;
+        padding: 5px;
+        &:active {
+            border-color: var(--col-main-grey);
+        }
+    }
+    input {
+        font-size: 1.5rem;
+        width: 100%;
+        border-radius: 0;
+        border-bottom: 3px solid var(--col-main-white);
+    }
+    textarea {
+        font-size: 1.3rem;
+        line-height: 1.5;
+        width: 100%;
+        border: 3px solid var(--col-main-white);
+        font-family: 'Stag sans', calibri, sans-serif;
+    }
+    button {
+        background-color: var(--col-main-white);
+        color: var(--col-main-teal);
+        width: 100%;
+        padding: 10px;
+        border: 3px solid var(--col-main-white);
+        transition: all .15s ease;
+        &:hover {
+            cursor: pointer;
+            background-color: var(--col-main-teal);
+            border-color: var(--col-main-white);
+            color: var(--col-main-white);
+        }
+    }
+
+    .feedback {
+        margin-top: 100px;
+        margin-bottom: 100px;
+        align-self: center;
+        font-family: Stag, serif;
+        line-height: 1.25;
+        font-size: 24px;
+        @media screen and (min-width: 768px) {
+            line-height: 1.5;
+            font-size: 36px;
+            &.positive {
+                padding-left: 100px;
+            }
+        }
+        &.positive {
+            .fa {
+                position: absolute;
+                left: 0;
+                top: 0;
+                font-size: 60px;
+            }
+        }
+    }
+}

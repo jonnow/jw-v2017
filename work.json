@@ -1,0 +1,96 @@
+[
+    {
+        "id": 1,
+        "title": "Alien:Isolation Scanner",
+        "subTitle": "Personal Project",
+        "blurb": "Building an Alien inspired mobile motion tracker",
+        "tags": [
+            "UI",
+            "Development",
+            "Fun"
+        ],
+        "urlName": "alien-isolation"
+    },
+    {
+        "id": 2,
+        "title": "Orbsys",
+        "subTitle": "Small Business Website",
+        "blurb": "Establishing the online presence of a small business",
+        "tags": [
+            "Design",
+            "WordPress",
+            "Client engagement",
+            "Legacy work"
+        ],
+        "urlName": "orbsys"
+    },
+    {
+        "id": 3,
+        "title": "Music documentary",
+        "subTitle": "Documentary Film Website",
+        "blurb": "Extending the reach of a documentary about gender in the UK music scene",
+        "tags": [
+            "Design",
+            "UX/UI",
+            "WordPress",
+            "Client engagement"
+        ],
+        "urlName": "music-documentary"
+    },
+    {
+        "id": 4,
+        "title": "Financial dashboard",
+        "subTitle": "Interview Test",
+        "blurb": "Prototype business dashboard",
+        "tags": [
+            "Design",
+            "UX/UI",
+            "Rapid prototyping",
+            "Adobe XD",
+            "User research",
+            "User testing"
+        ],
+        "urlName": "finance-dashboard"
+    },
+    {
+        "id": 5,
+        "title": "GameSessions",
+        "subTitle": "Designing and developing an online store for PC game subscriptions",
+        "blurb": "Designing a new PC game subscription service and store",
+        "tags": [
+            "Design",
+            "UX/UI",
+            "Adobe XD",
+            "ASP.Net MVC",
+            "Front-end development"
+        ],
+        "urlName": "gamesessions"
+    },
+    {
+        "id": 6,
+        "title": "Foods Standards Agency",
+        "subTitle": "Researching and designing the operations that enable the food supply chain",
+        "blurb": "Rethinking the systems that get our food from the fark to fork",
+        "tags": [
+            "Adobe XD",
+            "Design",
+            "User research",
+            "UX/UI",
+            "Rapid prototyping"
+        ],
+        "urlName": "fsa"
+    },
+    {
+        "id": 7,
+        "title": "Master Chief Theme",
+        "subTitle": "Personal project",
+        "blurb": "A dark theme for Visual Studio Code",
+        "tags": [
+            "UI",
+            "Adobe XD",
+            "Design",
+            "Fun"
+        ],
+        "urlName": "master-chief-theme"
+    }
+]

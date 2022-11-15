@@ -1,0 +1,79 @@
+body.dark-mode-on {
+    background-color: $dark_main_bg;
+
+    .home-view {
+        .pinned-items .item 
+        {
+            li a {
+                color: $dark_primary_body_text;
+            }
+            h2 a { 
+                color: $dark_highlight_text;
+            }
+        }
+    }
+
+    .quick-actions ul.recent-actions, .home-view .pinned-items {
+            border-top-color: $dark_primary_body_text;
+    }
+
+    .summary, .pinned-items article {
+        background-color: $dark_main_off_dark;
+        color: $dark_primary_body_text;
+        box-shadow: 0 0 2px 1px $dark_shadow;
+        h2 {
+            color: $dark_primary_body_text;
+        }
+        h2 .small-text-link {
+            color: $dark_highlight_text;
+            border-bottom-color: $dark_highlight_text;
+        }
+    }
+
+    .steps-nav ol li.active {
+        color: $dark_highlight_text;
+        border-bottom-color: $dark_highlight_text;
+    }
+
+    .table-view table {
+        border-top-color: $primary_main;
+        border-bottom-color: $primary_main;
+        thead {
+            border-bottom-color: $primary_main;
+        }
+        tbody tr {
+            color: $dark_primary_body_text;
+            border-bottom-color: $dark_main_off_dark;
+            &:nth-child(odd) {
+                background-color: transparent;
+            }
+        }
+    }
+
+    .table-pagination {
+        a.arw, .page {
+            color: $dark_primary_body_text;
+        }
+    }
+
+    .btn-divider, label, .feedback, th, .summary ul li, .pinned-items article ul li a {
+        color: $dark_primary_body_text;
+    }
+
+    .summary ul li, .pinned-items .item li a {
+        &:hover {
+            color: $dark_highlight_text;
+        }
+    }
+
+   
+
+    input, select, textarea {
+        background-color: $dark_main_bg;
+        border-color: $dark_main_off_dark;
+        color: $dark_primary_body_text;
+        &:focus {
+            outline: $dark_highlight_text auto 5px;
+        }
+    }    
+}

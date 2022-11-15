@@ -1,0 +1,419 @@
+$home_intro_backgroundColor: $color2020_primary_blue_bright;
+
+body.home {
+    color: $color2020_primary_white;
+    background-color: $home_intro_backgroundColor;
+    > header {
+        position: absolute;
+        top: 0;
+        overflow: visible;
+        .menu-inner {
+            background-color: $color2020_primary_black;
+        }
+    }
+    @include breakpointAbove(md) {
+        > header {
+            height: 4.375rem; 
+            .menu-inner {
+                background: none;
+            }
+        }
+    }
+
+    main p {
+        font-size: $size_22;
+    }
+
+    .intro, .projectWrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        min-height: 80vh;
+        padding-left: $pad_body_small;
+        padding-right: $pad_body_small;
+        @include breakpointAbove(md) {
+            display: grid;
+            height: 100vh;
+            align-items: center;
+            grid-template-columns: 50% 50%;
+            grid-template-rows: 1fr;
+            grid-template-areas: 
+                "left right"
+                "readOn readOn";
+        }
+
+        .text {
+            margin-left: auto;
+            margin-right: auto;
+            //@media screen min-width() and max-width()
+                max-width: 37.5rem;
+                grid-row: 1;
+            //}
+            p {
+                margin-bottom: 1.25rem;
+            }
+
+            a {
+                margin-left: auto;
+                margin-right: auto;
+                @include breakpointAbove(md) {
+                    margin-left: 0;
+                    margin-right: 0;
+                }
+            }
+        }
+
+        .mac, .image {
+            justify-self: center;
+            padding-left: $pad_body_small;
+            padding-right: $pad_body_small;
+        }
+    }
+
+    .intro {
+        .mac, .text {
+            opacity: 0;
+        }
+
+        .mac {
+            grid-column: right; 
+            margin: 5rem auto 1.5rem;
+            overflow: hidden;
+            width: 65%;
+            //animation: onLoadFadeIn 3s forwards, onLoadMoveIn_mac_small 3s forwards;
+            @include breakpointAbove(md) {
+                margin-top: 1rem;
+                width: 55%;
+            //    animation: onLoadFadeIn 3s forwards, onLoadMoveIn_mac_large 3s forwards;
+            }
+            .hello {
+                stroke-dasharray: 325px;
+                stroke-dashoffset: 325px;
+                animation: writeHello 1.3s linear .4s forwards, onLoadFadeIn 3s forwards;;
+            }
+        }
+
+        .text {
+            font-size: 1.3rem;
+            .cta {
+                font-size: 1rem;
+            }
+            @include breakpointAbove(md) {
+                grid-column: left;
+            }
+        }
+    }
+
+    &.ac .intro {
+        .mac, .text {
+            opacity: 1;
+        }
+    }
+
+    &:not(.ac) {
+        .intro {
+            .mac {
+                animation: onLoadFadeIn 3s forwards, onLoadMoveIn_mac_small 3s forwards;
+                @include breakpointAbove(md) {
+                    animation: onLoadFadeIn 3s forwards, onLoadMoveIn_mac_large 3s forwards;
+                }
+            }
+            .text {
+                animation: onLoadFadeIn 3s 1750ms forwards;
+                @include breakpointAbove(md) {
+                    animation: onLoadFadeIn 3s 1750ms forwards, onLoadMoveIn_txt 3s 1750ms forwards;        
+                }
+            }
+        }
+    }
+
+    .projectWrapper {
+        box-sizing: border-box;
+        padding-top: $pad_body_small;
+        padding-bottom: $pad_body_small;
+        position: relative;
+        @include breakpointAbove(md){
+            position: static;
+        }
+
+        &.mc_green {
+            background-color: $color_masterchief_green;
+            .btn:hover {
+                color: $color2020_primary_yellow;
+            }
+        }
+        &.yellow { 
+            background-color: $color2020_primary_yellow; 
+            .btn:hover {
+                    color: $color2020_primary_yellow;
+            }
+        }
+        &.blue { 
+            background-color: $color2020_primary_blue_dark; 
+            .btn:hover {
+                color: $color2020_primary_blue_dark;
+            }
+        }
+        &.black {
+            background-color: $color2020_solid_black;
+            .btn:hover {
+                color: $color2020_solid_black;
+            }
+        }
+
+        &.orange {
+            // This is way, way, way too bright.
+            //background-color: $color2020_secondary_orange;
+            $color_special_orange: #e07232;
+            background-color:$color_special_orange;
+            .btn:hover {
+                color: $color_special_orange;
+            }
+        }
+
+        &.green {
+            background-color: $color2020_primary_green_bright;
+            .btn:hover {
+                color: $color2020_primary_green_bright;
+            }
+        }
+
+        .text {
+            box-sizing: border-box;
+            width: 100%;
+            h2 {
+                position: absolute;
+                top: $pad_body_small;
+                left: $pad_body_small;
+                right: $pad_body_small;  
+                text-align: center;                  
+            }
+            @include breakpointAbove(md) {
+                width: 80%;
+                h2 {
+                    position: static;
+                    text-align: left;
+                }
+            }
+        }
+        
+        &.longHeading h2 {
+            font-size: 20px;
+        }
+
+        .image {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            box-sizing: border-box;
+            margin-top: ($pad_body_small * 2.5);
+            margin-bottom: $pad_body_small;
+            width: 100%;
+            @include breakpointAbove(md) {
+                grid-column: right;
+                justify-self: center;
+                margin-top: 0;
+                margin-bottom: 0;
+                &.mobileProject {
+                    max-height: 100%;
+                    width: 50%;
+                    max-width: 20rem;
+                }
+                &.trackerProject {
+                    max-width: 30rem;
+                }
+                &.browserProject {
+                    //width: 75%; // Removed to make base size larger
+                    max-width: 40rem;
+                }
+            }
+        }
+
+        &.grid_RtL {
+            .text {
+                grid-column: right;
+            }
+            .image {
+                grid-column: left;
+            }
+        }
+    }
+
+    .scroll {
+        @include breakpointBelow(md) {
+            justify-self: end;
+            margin-top: auto;
+        }
+        grid-area: readOn;
+        stroke: $color2020_primary_white;
+        stroke-width: 4;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        fill: none;
+        margin: 0 auto;
+        transform: translate3d(0, 1rem, 0);
+        transition: all .5s ease;
+        @include breakpointAbove(md) {
+            padding-bottom: 1.3rem;
+        }
+        
+        span {
+            position: absolute;
+            width: 1px;
+
+            height: 1px;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0,0,0,0);
+        }
+        &.bouncy svg {
+            animation: 5.5s bouncy infinite;
+            animation-delay: 2s;
+        }
+
+        &.fadeIn {
+            opacity: 1;
+            transform: translate3d(0, 0, 0);
+            &.loadIn {
+                opacity: 0;
+                animation: onLoadFadeIn 3s forwards;
+                animation-delay: 1.3s;
+            }
+        }
+    }
+
+    .brightBg {
+        color: $color2020_solid_black;
+        .scroll {
+            stroke: $color2020_solid_black;
+        }
+    }
+
+    .flowThrough {
+        a {
+            margin: 4rem auto;
+        }
+    }
+}
+
+// // Animations
+@keyframes menuFlyIn {
+    to {
+        transform: translate3d(0,0,0);
+    }
+}
+
+
+@keyframes bouncy {
+    40% {
+        transform: translate3d(0,0,0);
+    }
+
+    46% {
+        transform: translate3d(0,-1.5rem,0);
+    }
+
+    48% {
+        transform: translate3d(0,0,0);
+    }
+
+    50% {
+        transform: translate3d(0,-.8rem,0);
+    }
+
+    52% {
+        transform: translate3d(0,0,0);
+    }
+
+    53% {
+        transform: translate3d(0,-.3rem,0);
+    }
+
+    54% {
+        transform: translate3d(0,0,0);
+    }
+}
+
+@keyframes onLoadFadeIn {
+    15% {
+        opacity: 0;
+    }
+
+    45% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes onLoadMoveIn_mac_small {
+    0% {
+        // transform: translate3d(-2rem, 0, 0);
+        transform: translate3d(0, 2rem, 0);
+    }
+    15% {
+        // transform: translate3d(2rem, 0, 0);
+        transform: translate3d(0, 2rem, 0);
+    }
+
+    45% {
+        transform: translate3d(0, 0, 0);
+    }
+    60% {
+        transform: translate3d(0, 0, 0);
+    }
+    100% {
+        transform: translate3d(0, 0,0);
+    }
+}
+
+@keyframes onLoadMoveIn_mac_large {
+    0% {
+        // transform: translate3d(-2rem, 0, 0);
+        transform: translate3d(-75%, 2rem, 0);
+    }
+    15% {
+        // transform: translate3d(2rem, 0, 0);
+        transform: translate3d(-75%, 2rem, 0);
+    }
+
+    45% {
+        transform: translate3d(-75%, 0, 0);
+    }
+    60% {
+        transform: translate3d(-75%, 0, 0);
+    }
+    100% {
+        transform: translate3d(0,0,0);
+    }
+}
+
+@keyframes onLoadMoveIn_p {
+    0% {
+        transform: translate3d(100%, 0, 0);
+    }
+}
+
+@keyframes onLoadMoveIn_txt {
+    0% {
+        transform: translate3d(2rem, 0, 0);
+    }
+    15% {
+        transform: translate3d(-2rem, 0, 0);
+    }
+
+    45% {
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes writeHello {
+    0% {
+        stroke-dashoffset: 325;
+    }
+    100% {
+        stroke-dashoffset: 0;
+    }
+}

@@ -1,0 +1,261 @@
+/* This file contains all the styling for the case studies home page, not the case studies themselves. That can be found in the content.scss file.
+
+What happened to V1? There wasn't one, this is V2 to fit inline with the rest of the site v2.
+
+- Jonno 14:00 30/09/20 */
+.work {
+    display: flex;
+    flex-direction: column;
+    footer {
+        margin-top: auto;
+    }
+}
+
+// Generic work items
+.work-item {
+    background-color: $color2020_primary_grey;
+    color: $color2020_solid_black;
+    display: flex;
+    overflow: hidden;
+    text-decoration: none;
+    transition: all .15s ease-in-out;
+
+    &, .img-container {
+        border-radius: $border_radius_large;
+    }
+    
+    .img-container, img,
+    &:focus, &:hover, &:active {
+        @include dropShadow_dark();
+    }
+
+    &.mc_green {
+        .btn {
+            border-color: $color2020_primary_yellow;
+        }
+        &:focus, &:hover, &:active {
+            .btn {
+                background-color: $color2020_primary_yellow;
+                color: $color2020_solid_black;
+            }
+        }
+        .img-container {
+            background-color: $color_masterchief_green;
+        }
+    }
+
+    &.yellow { 
+        .btn {
+            border-color: $color2020_primary_yellow;
+        }
+        &:focus, &:hover, &:active {
+            .btn {
+                background-color: $color2020_primary_yellow;
+                color: $color2020_solid_black;
+            }
+        }
+        .img-container {
+            background-color: $color2020_primary_yellow; 
+        }
+    }
+    &.blue { 
+        .btn {
+            border-color: $color2020_primary_blue_dark;
+        }
+        &:focus, &:hover, &:active {
+            .btn {
+                background-color: $color2020_primary_blue_dark;
+                color: $color2020_primary_off_white;
+            }
+        }
+        .img-container {
+            background-color: $color2020_primary_blue_dark; 
+        }
+    }
+    &.blue--bright { 
+        .btn {
+            border-color: $color2020_primary_blue_bright;
+        }
+        &:focus, &:hover, &:active {
+            .btn {
+                background-color: $color2020_primary_blue_bright;
+                color: $color2020_primary_off_white;
+            }
+        }
+        .img-container {
+            background-color: $color2020_primary_blue_bright; 
+        }
+    }
+    
+    &.black {
+        .btn {
+            border-color: $color2020_primary_black;
+        }
+        &:focus, &:hover, &:active {
+            .btn {
+                background-color: $color2020_primary_black;
+                color: $color2020_primary_off_white;
+            }
+        }
+        .img-container {
+            background-color: $color2020_solid_black;
+        }
+    }
+    &.green {
+        .btn {
+            border-color: #097171;
+            color: #097171;;
+        }
+        &:focus, &:hover, &:active {
+            .btn {
+                background-color: #097171;;
+                color: $color2020_primary_off_white;
+            }
+        }
+        .img-container {
+            background-color: $color2020_primary_green_bright;
+        }
+    }
+
+    &.orange {
+        .btn {
+            border-color: $color2020_secondary_orange;
+        }
+        &:focus, &:hover, &:active {
+            .btn {
+                background-color: $color2020_secondary_orange;
+                color: $color2020_primary_off_white;
+            }
+        }
+        .img-container {
+            background-color: $color2020_secondary_orange;
+        }
+    }
+
+    &.work-item--featured {
+        flex-direction: column;
+        .btn {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            
+            @include breakpointAbove(md) {
+                width: $button_width_small_cta;
+            }
+        }
+        p {
+            @include p_standardMargin();
+
+            @include breakpointAbove(md) {
+                margin-bottom: 4.625rem;
+            }
+        }
+        @include breakpointAbove(md) {
+            align-items: stretch;
+            flex-direction: row-reverse;
+            grid-column: b / c;
+
+            .img-container, .copy-container {
+                width: 50%;
+            }
+        }
+
+        .meta {
+            display: grid;
+            font-size: $font_body_smallText;
+            grid-template-columns: auto 1fr;
+            ul {
+                justify-self: end;
+                list-style: none;
+                li {
+                    display: inline;
+                    &:not(:last-child):after{
+                        content: ', ';
+    
+                    }
+                }
+            }
+        }
+
+        img {
+            max-width: 300px;
+        }
+    }
+
+    .img-container, .copy-container {
+        padding: 1rem;
+    }
+
+    .img-container {
+        display: flex;
+        align-items: center;
+    }
+    
+    img {       
+        box-shadow: none;
+        margin: 0 auto;
+        max-width: 95%;
+        max-height: 100%;
+        
+            &.special--alien {
+                    border: 3px solid #ffffff;
+                    border-radius: 7px;
+                    max-width: 55%;
+            }
+    }
+}
+
+ul.work-items {
+    display: grid;
+    column-gap: 1rem;
+    margin-top: $margin_p_bottom_medium;
+    padding-left: 0;
+    row-gap: $margin_p_bottom_medium;
+    
+    li {
+        list-style: none;
+    }
+    .work-item {
+        flex-direction: column;
+        overflow: hidden;
+
+        .img-container {
+            border-radius: $border_radius_large;
+            height: 187px;
+        }
+        .copy-container {
+            height: 40%;
+            display: flex;
+            flex-direction: column;
+        }
+        p {
+            margin-bottom: 0;
+        }
+        span.link {
+            color: $color_textLink;
+            //color: rgb(45, 75, 87);
+            font-size: $font_body_smallText;
+            margin-top: 1rem;
+            text-align: center;
+        }
+        &:hover span.link {
+            text-decoration: underline;
+            color: $color_textLink_hover;
+        }
+    }
+
+    @include breakpointAbove(md) {
+        grid-template-columns: repeat(2, 1fr);
+        .work-item {
+            height: 21rem;
+
+            span.link {
+                margin-top: auto;
+                align-self: end;
+            }
+        }
+    }
+    @include breakpointAbove(lg) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

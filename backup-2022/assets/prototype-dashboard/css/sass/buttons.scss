@@ -1,0 +1,162 @@
+.btn {
+    display: inline-block;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    line-height: 150%;
+    padding: .3rem 1rem;
+}
+
+.btn-primary {
+    background-color: $primary_main;
+    color: $primary_main_text;
+    transition: all .1s ease;
+    &:hover {
+        background-color: darken($primary_main, 5%);
+    }
+}
+
+.btn-secondary {
+    background-color: $primary_secondary_main;
+    color: $primary_main;
+    transition: all .1s ease;
+    &:hover {
+        background-color: darken($primary_secondary_main, 5%);
+    }
+}
+
+.btn-success {
+    background-color: $secondary_green;
+    color: $primary_white;
+    transition: all .1s ease;
+    &:hover {
+        background-color: darken($secondary_green, 5%);
+    }
+}
+
+.btn-large {
+    font-size: 125%;
+    padding: 1rem;
+}
+
+
+// Nav buttons
+nav .btn {
+    padding-top: .3rem;
+}
+
+// Help button
+.btn-icon {
+    overflow: hidden;
+    
+    text-align: center;
+    text-decoration: none;
+    height: 1.8rem;
+    width: 1.8rem;
+    border-radius: 50%;
+    line-height: 118%;
+    
+    b {
+        overflow: hidden;
+        position: absolute;
+        top: -100%;
+        width: 1px;
+        height: 1px;
+    }
+}
+
+.btn-help {
+    background-color: transparent;
+    color: $primary_white;
+    border: 3px solid $primary_white;
+    &:before {
+        content: '?';
+        margin-top: 1px;
+        font-size: 125%;
+        display: block;
+    }
+}
+
+.dark-mode {
+    background-color: $secondary_yellow;
+    position: relative;
+    &:after {
+        content: '';
+        display: block;
+        height: 100%;
+        width: 100%;
+        background-color: $primary_main;
+        border-radius: 50%;
+        position: absolute;
+        top: -35%;
+        left: -35%;
+        transition: all .5s ease-in;
+    }
+    &.animate {
+        &:after {
+            animation: goDark .65s ease-in;
+        }
+    }
+    &.active:after {
+       background-color: $dark_main_bg;
+    }
+}
+
+@keyframes goDark {
+    0% {
+        top: -35%;
+        left: -35%;
+    }
+    50% {
+        top: -0%;
+        left: -0%;
+    }
+
+    100% {
+        top: -35%;
+        left: -35%;
+    }
+}
+
+@media screen and (max-width: $minWidth) {
+    .btn-help {
+        color: $primary_white;
+    }    
+}
+
+@media screen and (min-width: $minWidth) {
+    .btn-icon {
+        overflow: hidden;
+        text-align: center;
+        text-decoration: none;
+
+        height: 1.8rem;
+        width: 1.8rem;
+        border-radius: 50%;
+        line-height: 118%;
+        
+        b {
+            overflow: hidden;
+            position: absolute;
+            top: -100%;
+            width: 1px;
+            height: 1px;
+        }
+    }
+
+    .btn-help {
+        color: $primary_main;
+        border-color: $primary_main;
+    }
+
+    .dark-mode {
+        &:after {
+            background-color: $primary_white;
+        }
+        &.active:after {
+            background-color: $dark_main_bg;
+        }
+    }
+
+
+}
