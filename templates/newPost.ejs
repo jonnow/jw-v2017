@@ -1,0 +1,36 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create a new blog post</title>
+</head>
+<body>
+    <h1>Create a new blog post</h1>
+    <form method="post" action="new-post">
+        <label for="post_title">
+            Post title<br>
+            <input type="text" id="post_title" name="post_title">
+        </label>
+        <br><br>
+        <label for="post_subTitle">
+            Post sub-title<br>
+            <input type="text" id="post_subTitle" name="post_subTitle">
+        </label>
+        <br><br>
+        <label for="post_blurb">
+            Post blurb<br>
+            <input type="text" id="post_blurb" name="post_blurb">
+        </label>
+        <br><br>
+        <button type="submit" id="submitBtn">Create post</button>
+    </form>
+    <script>
+        document.getElementById('submitBtn').addEventListener('click', (e) => {
+            e.preventDefault();
+            alert(e);
+        })
+    </script>
+
+</body>
+</html>

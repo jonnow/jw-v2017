@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-67002710-2"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-67002710-2');
+        </script>
+
+        
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+        <title>Alien: Isolation Tracker case study | Jonno Witts</title>
+
+        <meta name="description" content="How I built an Alien: Isolation tracker with HTML, CSS and JavaScript.">
+        <meta property="og:title" content="Jonno Witts - UX Designer and Front-end Developer" />
+        <meta property="og:type" content="website" />
+        <meta property="og:description" content="How I built an Alien: Isolation tracker with HTML, CSS and JavaScript." />
+        <meta property="og:image" content="https://www.jonnowitts.com/images/shared/thumbnail.png" />
+        <meta property="og:url" content="https://www.jonnowitts.com/work/alien-isolation.html" />
+        <meta property="og:locale" content="en_GB" />
+
+        <meta name="twitter:site" content="@jonnowitts" />
+        <meta name="twitter:creator" content="@jonnowitts" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:image:alt" content="A line drawing of an Apple Macintosh computer with 'Hello' written on the screen." />
+        
+        
+        <link rel="stylesheet" href="https://use.typekit.net/vvx5hrc.css">
+        <link rel="stylesheet" href="../css/content.css" />
+        
+    </head>
+    <body id="body" class="case-study content">
+        <header>
+            <h1><a href="../index.html">Jonno Witts</a></h1>
+            <span class="menu-control-open" id="menuControlOpen">
+                <svg width="10" height="15">
+                    <circle r="3" cx="5" cy="5"></circle>
+                    <line x1="5" x2="5" y1="7" y2="13"></line>
+                </svg>
+                Menu
+            </span>
+            <div class="menu">
+                <div class="menu-inner-shadow">
+                    <div class="menu-inner">
+                        <span class="menu-control-close" id="menuControlClose">Close</span>
+                        <nav>
+                            <a href="../index.html">Home</a>
+                            <a href="../work.html" class="current">Work</a>
+                            <a href="../about.html">About</a>
+                        </nav>
+                        <span class="version">Version 2.0</span>
+                        <span class="madeIn">Made in York, England</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main>
+            <article>
+                <header>
+                    <h1>Alien Motion Tracker</h1>
+                    <h2>Personal project</h2>
+                    <div class="intro grid-12col">
+                        <div class="copy">
+                            <p>An homage to Alien: Isolation - A front-end code version of the motion tracker built with SVG, CSS and making use of JavaScript’s device motion.</p>
+                            <p>Alien is one of my favourite films and when Alien: Isolation was revealed, it went straight on my radar. Creative Assembly did such an amazing job recreating the look and feel of Ridley Scott's 1979 classic. The lo-fi, retro-futuristic aesthetic was achieved, in part, by taking the UI, transferring it to VHS tapes and recording the playback through a CRT tv. Other nice touches are the inclusion of the Xbox’s Kinect Sensor that allows you to peak out and the lets the Xenomorph hear you...unfortunately I didn’t realise this until after a few encounters.</p>
+                            <p>To give a more CRT feel to everything I’ve added a blur on the edges of everything, created as an SVG filter. The dashed lines on the radar are achieved with the <strong>dash-array</strong> and <strong>dash-offset</strong> CSS properties. The directional indicators (to the left, right and bottom) light up by checking for the current location of the ping on the circumference. If it is within their space they begin to “light up”. As the ping moves away they fade off again.</p>
+                            <p>The original plan was to just have the ping move with the mouse movement. I took this a step further, making use of the device compass available on mobile devices. I did two years of games development at university and was able to use knowledge and code to implement the movement around a circle (converting the code from C# into JavaScript).</p>
+                            <p>Please note: this uses experimental technology and may not work on your browser. During <a href="../assets/alien/test.html" title="Test if your browser supports the device orientation functionality">testing in 2020 I found that the only mobile browser that worked was the one built into the Pocket app on iOS. However, I have <a href="../assets/alien/index.html">uploaded the demo</a> if you wish to try it out.
+                            <h2>Where next?</h2>
+                            <p>This could just be the start of something much more. If you’re interested in collaborating I have a bunch of ideas of where this could go from here:</p>
+                            <ul>
+                                <li>A ping that moves in all directions (up and down as well as around).</li>
+                                <li>Network this to have two devices pinging at each other in real-time.</li>
+                                <li>Add sound effects to the ping.</li>
+                                <li>Have a “pulse” fire out from the centre to update the ping (and have the ping fade away like a real radar).</li>
+                                <li>A loading screen in-keeping with the retro aesthetic.</li>
+                            </ul>
+                        </div>
+                        <div class="meta">
+                            <div class="meta-item">
+                                <span>Filed under:</span>
+                                <ul class="outputs">
+                                    <li>UI</li>
+                                    <li>Development</li>
+                                    <li>Fun</li>
+                                </ul>
+                            </div>                     
+                        </div>   
+                    </header>
+                    <div class="article-content">
+                        <figure>
+                            <figcaption>Tracker</figcaption>
+                            <img class="special-alien" src="../images/case-studies/tracker/alien-tracker@l.png" alt="The tracker showing a moving object.">
+                        </figure>
+                        <figure>
+                            <figcaption>Device orientation</figcaption>
+                            <img src="../images/case-studies/tracker/motion.gif" alt="A person using the tracker on their phone, showing the device orientation functionality.">
+                        </figure>
+                        <a class="btn btn-primary" href="../assets/alien/index.html" title="Try out the Alien tracker">Try out the tracker<br>(mobile)</a>
+                
+                    </div>
+                </div>
+            </article>
+        </main>
+        <footer>&copy; 2021 Jonno Witts</footer>        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script>
+            var body = document.body;
+            var openMenu = document.getElementById('menuControlOpen');
+            var closeMenu = document.getElementById('menuControlClose');
+
+            openMenu.addEventListener('click', function(e) {
+               body.classList.toggle('menu--active');
+            });
+
+             closeMenu.addEventListener('click', function(e) {
+                body.classList.toggle('menu--active');
+            });
+        </script>
+        <script src="../script/script.min.js"></script>
+    </body>
+</html>

@@ -1,0 +1,75 @@
+:root {
+    --col-main-teal: #00828b;
+    --col-main-blue: #3F8DBA;
+    --col-main-white: #ffffff;
+    --col-main-grey: #E6E6E6;
+    --col-main-purple: #9A2677;
+    --col-main-pink: #CC2D69;
+    --col-main-orange: #CB6028;
+    --col-main-offBlack: #262626;
+    --col-main-deepPurple: #371C58;
+    --col-main-grey: #eaeaea;
+    --col-main-black: #323C42;
+    --col-main-offBlack: #707070;
+    --col-secondary-blue: #659BBA;
+    --col-logoBorder-grey: #C1C1C1;
+    --col-tint-teal-lighter: hsl(from var(--col-main-teal) h s calc(l - 5%)); 
+    --col-bright-teal: #50ACAB;
+    --col-bright-orange: #E39134;
+}
+
+.splash-page {
+    background-color: var(--col-main-teal);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 30vh;
+}
+
+.splash-page::after {
+    content: '';
+    position: absolute;
+    left: 100px;
+    bottom: 0;
+    z-index: -1;
+    overflow:visible;
+    opacity: .1;
+    background: url('../images/UoH-Torch-2020-White.svg') no-repeat;
+    background-size: contain;
+    height: 80%;
+    width: 50%;
+}
+
+.splash-page, .splash-page a {
+    color: var(--col-main-white);
+}
+
+.splash-page a:hover{
+    text-decoration: none;
+}
+
+ul {
+    width: 500px;
+    margin: 0 auto!important;
+}
+
+ul li {
+    margin-bottom: 20px;
+}
+
+a.button {
+    display: block;
+    background-color: var(--col-bright-teal);
+    padding: 20px;
+    width: 200px;
+    margin-top: 100px;
+    margin-left: 400px;
+    text-decoration: none;
+    transition: all .15s ease;
+    font-size: 40px;
+}
+
+a.button:hover {
+    background-color: var(--col-main-white);
+    color: var(--col-bright-teal);
+}

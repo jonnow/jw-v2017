@@ -1,0 +1,48 @@
+$stdTransition: .5s;
+$borderSize: 2px;
+$stdPad: .625rem;
+
+@import 'reset';
+@import 'media_widths';
+@import 'colors';
+@import 'fonts';
+
+body {
+    background-color: $primary_white;
+    transition: all .5s ease;
+}
+
+@import 'buttons';
+@import 'action_menu_section';
+
+h2, .pinned-item .item a {
+    color: $primary_main;
+}
+
+
+@media screen and (min-width: $minWidth) {
+    .overview {
+        flex-grow: 1;
+    }
+}
+
+@import 'layout';
+
+input, select, textarea {
+    padding: .3rem .5rem;
+    background-color: $primary_input_bg;
+    font-size: 100%;
+    font-family: inherit;
+    border: 1px solid $clean_white;
+    transition: all $stdTransition ease-in;
+    &:focus {
+        border-color: $primary_body_text;
+    }
+}
+
+th, label {
+    transition: all $stdTransition ease-in;
+}
+
+// dark mode restyling
+@import 'dark_mode';

@@ -1,0 +1,35 @@
+@import 'club_sandwich';
+
+header {
+    background-color: $primary_main;
+    .logo {
+        display: block;
+        text-align: center;
+        margin-bottom: 1.5rem;
+    }
+    ul a, h1 a {
+        color: $primary_main_text;
+        text-decoration: none;
+    }
+}
+
+.action-menu {
+    li {
+        display: block;
+        padding: $stdPad;
+        margin-bottom: 0;
+        cursor: pointer;
+        transition: all $stdTransition ease;
+        &:hover {
+            background-color: lighten($primary_main, 5%);
+        }
+    }     
+}
+
+@media screen and (min-width: $minWidth) {
+    body {
+        min-height: 100vh;
+        display: grid;
+        grid-template-columns: 16rem 1fr;
+    }   
+}

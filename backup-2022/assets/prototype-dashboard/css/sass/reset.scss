@@ -1,0 +1,30 @@
+*,*:before,*:after {
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 100%; // 10px based on 16px origin
+	line-height: 135%;
+}
+body {
+	margin:0;
+}
+ol, ul {
+	list-style: none;	
+	padding-left: 0;
+}
+blockquote, q {
+	quotes: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+section {
+	margin: 0;
+}
+
+
+input, select, textarea {
+	border: none;
+}

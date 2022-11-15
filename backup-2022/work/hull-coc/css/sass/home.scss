@@ -1,0 +1,275 @@
+.homepage {
+    .page-intro {
+        background-color: var(--col-main-grey);
+        .video-embed {
+            border: 20px solid var(--col-homee-red);
+        }
+        @media screen and (max-width: 768px) {
+            &.copy {
+                padding-bottom: 0;
+            }
+        
+            .video-embed {
+                width: 100vw;
+                margin-top: 20px;
+                margin-left: -20px;
+                > .video {
+                    width: 100%;
+                }
+            }
+        }
+        .video-embed {
+            @media screen and (min-width: 768px) and (orientation: portrait) {
+                margin-top: 20px;
+            }
+            @media screen and (min-width: 920px) {
+                margin-left: 20px;
+            }
+        }
+        .video {
+            width: 100%;
+            max-width: 100%;
+            @media screen and (min-width: 768px) {
+                //max-width: 90%;
+                //padding-left: 10%;
+                margin-top: 0;
+            }
+
+        }
+    }
+
+    header.site-header,
+    header.site-header .hero {
+        height: 70vh;
+        @media screen and (min-width: 360px) {
+            height: 63vh;
+        }
+
+        @media screen and (min-width: 390px) {
+            height: 64vh;
+        }
+
+        @media screen and (min-width: 400px) {
+            height: 62vh;
+        }
+        @media screen and (min-width: 420px) {
+            height: 44vh;
+        }
+        @media screen and (min-width: 500px) {
+            height: 54vh;
+        }
+        @media screen and (min-width: 860px) {
+            //height: 56vh;
+            height: 528px;
+            padding-bottom: 0;
+        }
+        @media screen and (max-width: 915px) and (orientation: landscape) {
+            //height: 72vh;
+            height: 77vh;
+        }
+    }
+
+    // @media screen and (min-width: 100px)and (orientation: landscape) {
+    //     header.site-header .hero .content { 
+    //         padding-top: 35vh;
+    //     }
+    // }
+
+    header.site-header .hero h1 {
+        font-size: 28px;
+        font-size: 1.75rem;
+        @media screen and (min-width: 390px) {
+            font-size: 2.6rem;
+        }
+
+        @media screen and (min-width: 480px) {
+            font-size: 50px;
+            font-size: 3.125rem;
+        }
+        @media screen and (min-width: 480px) and (orientation: landscape) {
+            font-size: 42px;
+            font-size: 2.5rem;
+            width: 45%;
+        }
+        @media screen and (min-width: 600px) and (orientation: landscape) {
+            width: 56%;
+        }
+
+        @media screen and (min-width: 860px) {
+            font-size: 60px;
+            width: 60%;
+        }
+
+        @media screen and (min-width: 925px) {
+            font-size: 70px;
+        }
+
+        @media screen and (min-width: 1280px) {
+            width: 50%;
+        }
+
+        font-weight: bold;
+    }
+}
+
+/* Project list styling (homepage) */
+ul.project-list {
+    li, .project-info {
+        display: flex;
+        flex-direction: column;
+    }
+    .project-info {
+        justify-content: space-between;
+        padding: 20px;
+        height: 200px;
+        position: relative;
+        &:before {
+            content: '';
+            position: absolute;
+            top: 30%;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            transform: skewY(4deg);
+            transform-origin: 100% 100%;
+        }
+        > * {
+            position: relative;
+        }
+    }
+    li.teal {
+        background-color: var(--col-main-teal);
+        color: var(--col-main-white) ;
+        .project-info:before {
+            background-color: var(--col-main-teal);
+        }
+    }
+
+    li.purple {
+        background-color: var(--col-main-purple);
+        color: var(--col-main-white);
+        .project-info:before {
+            background-color: var(--col-main-purple);
+        }
+    }
+
+    li.orange {
+        background-color: var(--col-main-orange);
+        color: var(--col-main-white) ;
+        .project-info:before {
+            background-color: var(--col-main-orange);
+        }
+    }
+    h3 {
+        font-size: 28px;
+        font-weight: 500;
+        margin-bottom: 0;
+        word-break:normal;
+    }
+    a {
+        font-weight: 400;
+        color: var(--col-main-white);
+    }
+
+    img {
+        object-fit: cover;
+        height: 300px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    ul.project-list {
+        display: flex;
+        flex-direction: row;
+        align-items: stretch;
+        li {
+            flex-grow: 1;
+            width: 200px;
+            border-bottom: none;
+        }
+        .project-info {
+            height: 280px;
+        }
+
+        h3 {
+            font-size: 24px;
+            line-height: 1.25;
+            
+        }
+
+        img {
+            height: 290px;
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    ul.project-list {
+        .project-info {
+            height: 380px;
+            padding: 40px 20px;
+        }
+        h3 {
+            font-size: 32px;
+            line-height: 1.25;
+        }
+        a {
+            font-size: 24px;
+        }
+        img {
+            height: 380px;
+        }
+    }
+
+    section.image-quote {
+        display: flex;
+        justify-content: center;
+        padding-bottom: calc(80px + 80px);
+        img {
+            margin-left: -500px;
+            height: 527px;
+            max-width: 855px;
+        }
+        .quote-container {
+            position: absolute;
+            bottom: 60px;
+            left: 50%;
+            width: 640px;
+            blockquote {
+                p {
+                    font-size: 30px;
+                }
+            }
+            .quote-info {
+                .name {
+                    font-size: 36px;
+                    font-weight: 400;
+                    margin-bottom: 5px;
+                }
+                .meta {
+                    font-size: 20px;
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    ul.project-list {
+        .project-info {
+            height: 300px;
+            padding: 40px 20px;
+        }
+        h3 {
+            font-size: 36px;
+        }
+        a {
+            font-size: 26px;
+        }
+        img {
+            height: 380px;
+        }
+    }
+}
+/* End project list styles */

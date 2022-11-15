@@ -1,0 +1,30 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/images/icons/favicon.ico">
+    <title>Document</title>
+</head>
+<body>
+    <h1><%= pageHeading %> </h1>
+    <% if (typeof isBlog !== 'undefined' && isBlog == true) { %>
+     <p>Blog entries</p>
+     <% work.forEach(item => { %>
+        <div>
+            <h2><%= item.title %>
+                <span><%= item.subTitle %></span>
+            </h2>
+            <p><%= item.blurb %></p>
+            <p>Filed under:</p>
+            <ul>
+            <% for( let i = 0; i < item.tags.length; i++ ) { %>
+                <li><%= item.tags[i] %></li>
+            <% } %>
+            </ul>
+            <a href='/work/<%= item.urlName %>.html'>Read more</a>
+        </div>
+     <% }) %>
+    <% } %>
+</body>
+</html>

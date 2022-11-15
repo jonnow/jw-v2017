@@ -1,0 +1,147 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+$radarWidth: 600px;
+
+$bright-green: #00ff80;
+$dull-green: #004b26;
+
+body {
+ background-color: black;
+ background: url('../../static.gif');
+}
+
+span {
+  color: white;
+}
+
+.container {
+  margin: 0 auto;
+  width: 800px;
+}
+
+.base {
+  position: relative;
+  width: $radarWidth;
+  height: $radarWidth;
+  margin: 0 auto;
+}
+ 
+.svgClip {
+  position: absolute;
+  left: 0px;
+  top: 120px;
+  /*
+  To calculate with a Sass variable you need to use string interpolation - I.E. Replacing a variable/placeholder with the value - https://en.wikipedia.org/wiki/String_interpolation
+  */
+  clip: rect(0px, calc(#{$radarWidth}/2), calc(#{$radarWidth}/2), 0px);
+  transform: rotate3d(0,0,1,45deg);
+  
+  rect {
+    stroke-width: 30;
+    fill: none;
+    height: 100%;
+    width: 100%;
+  }
+  
+  circle:not(.ping) {
+    stroke: #00ff80;
+    stroke-width: 3;
+    fill: none;
+  }
+  
+  
+  .ping {
+    fill: url(#ping-bg);
+    stroke: none;  
+  }
+}
+
+svg {
+  display: block;
+  height: $radarWidth;
+  width: $radarWidth;
+  margin: 0 auto;
+  
+  circle.stroked {
+    opacity: .75;
+    &.five-metre {
+      stroke-dasharray: 20;
+      stroke-dashoffset: 16;
+    }
+    
+    &.ten-metre {
+      stroke-dasharray: 20;
+    stroke-dashoffset: 21.2;
+    }
+    
+    &.fifteen-metre {
+      stroke-dasharray: 20;
+      stroke-dashoffset: 6.5;
+    }
+  }
+  
+  .directional-line {
+    stroke: #00ff80;
+    stroke-width: 2;
+    &.side {
+      opacity: .5;
+    }
+    &.forward {
+      opacity: .75;
+    }
+  }
+}
+
+.containing-lines {
+  transform: rotate3d(0,0,1,45deg);
+  .container-line {
+    stroke: #6defa1;
+    stroke-width: 5;
+  }
+}
+
+.directional-indicators {
+  position: absolute;
+  top: 0;
+  left: 0;
+  path {
+    stroke: $dull-green;
+    stroke-width: 30;
+    fill: none;
+  }
+}
+
+.side-detect {
+  stroke: #00ff80;
+}
+
+.objective {
+  height: 100%;
+  width: 100%;
+  stroke-dasharray: 190 2220;
+  stroke-dashoffset: -190;
+  stroke-width: 40;
+  stroke: $bright-green;
+  fill: none;
+}
+
+.objective-cover {
+  height: calc(100% - 40px);
+  width: calc(100% - 40px);
+  fill: none;
+}
+
+//  Just to make it slightly responsive
+@media screen and (max-width: 600px) {  
+  .base, svg {
+    width: 300px;
+    height: 300px;
+  }
+  
+  .svgClip {
+    top: 60px;
+    clip: rect(0px, calc(#{300px}/2), calc(#{300px}/2), 0px);
+  }
+}
