@@ -1,0 +1,19 @@
+{
+  "name": "jonnowitts.com",
+  "version": "2.0",
+  "description": "Custom code for jonnowitts.com. Version 2 has been built with a Fastify backend.",
+  "homepage": "https://www.jonnowitts.com",
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  },
+  "scripts": {
+    "start": "node server",
+    "devStart": "nodemon server"
+  },
+  "dependencies": {
+    "@fastify/swagger": "^8.1.0",
+    "@fastify/view": "^7.1.2",
+    "fastify": "^4.9.2",
+    "uuid": "^9.0.0"
+  }
+}
