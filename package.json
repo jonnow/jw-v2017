@@ -1,0 +1,20 @@
+{
+  "name": "jw-v2022",
+  "version": "1.0.0",
+  "main": "server.js",
+  "author": "Jonno Witts",
+  "license": "ISC",
+  "scripts": {
+    "start": "node server",
+    "dev": "nodemon server"
+  },
+  "dependencies": {
+    "@fastify/swagger": "^8.1.0",
+    "@fastify/swagger-ui": "^1.2.0",
+    "fastify": "^4.9.2",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
