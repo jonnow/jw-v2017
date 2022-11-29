@@ -1,30 +1,3 @@
-<<<<<<< HEAD
-const fastify = require('fastify')({logger:true})
-
-const PORT = 3000
-
-
-fastify.register(require('@fastify/swagger'), {})
-fastify.register(require('@fastify/swagger-ui'), {
-    routePrefix: '/docs',
-    uiConfig: {
-        docExpansion: 'full',
-        deepLinking: false
-    },
-    uiHooks: {
-        onRequest: function (request, reply, next) { next() },
-        preHandler: function (request, reply, next) { next() }
-    },
-    staticCSP: true,
-    transformStaticCSP: (header) => header,
-    transformSpecification: (swaggerObject, request, reply) => { return swaggerObject },
-    transformSpecificationClone: true
-})
-
-fastify.register(require('./routes/item'))
-
-
-=======
 const fastify = require('fastify')({logger: true})
 const path = require('path')
 const PORT = 3000
@@ -77,24 +50,14 @@ fastify.get('/wittr', (req,reply) => {
     reply.view('views/wittr/feed.njk', { title: "My Wittr Feed" })
 })
  
->>>>>>> a32c5bf44882e47861ef30b5d1a39e9d4f2f09e9
 const start = async() => {
     try {
         await fastify.listen(PORT)
         fastify.swagger()
-<<<<<<< HEAD
-    } catch(err) {
-        fastify.log.error(err)
-=======
     } catch (error) {
         fastify.log.error(error)
->>>>>>> a32c5bf44882e47861ef30b5d1a39e9d4f2f09e9
         process.exit(1)
     }
 }
 
-<<<<<<< HEAD
 start()
-=======
-start()
->>>>>>> a32c5bf44882e47861ef30b5d1a39e9d4f2f09e9
