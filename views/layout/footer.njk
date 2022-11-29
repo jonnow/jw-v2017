@@ -1,0 +1,44 @@
+<footer>&copy; 2022 Jonno Witts</footer>        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script>
+            var body = document.body;
+            var openMenu = document.getElementById('menuControlOpen'); // or whatever triggers the toggle
+            var closeMenu = document.getElementById('menuControlClose'); // or whatever triggers the toggle
+
+            openMenu.addEventListener('click', function(e) {
+               body.classList.toggle('menu--active'); // or whatever your active class is
+            });
+
+             closeMenu.addEventListener('click', function(e) {
+                body.classList.toggle('menu--active'); // or whatever your active class is
+            });
+
+            // function rand_col() {
+            //     var color,
+            //         listItems = document.getElementById('colour_list').children,
+            //         prevCol = '';
+
+            //     for(var i = 0; i< listItems.length; i++) {
+            //         do {
+            //             color = GetCol();
+            //         }
+            //         while(prevCol == color)
+
+            //         listItems[i].className = color;
+            //         prevCol = color;
+            //     }
+            // }
+
+            // function GetCol() {
+            //     var dots = ['green_bright', 'green_dark','yellow','blue_bright','blue_dark','black','orange'];
+            //     var col = dots[Math.floor(Math.random() * dots.length)];
+            //     return col;
+            // }
+
+            // rand_col();
+
+            
+        </script>
+        <script src="script/script.min.js"></script>
+    </body>
+</html>

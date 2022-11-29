@@ -8,9 +8,10 @@
   },
   "scripts": {
     "start": "node server",
-    "devStart": "nodemon server"
+    "devStart": "nodemon -e js,html,njk,css server"
   },
   "dependencies": {
+    "@fastify/static": "^6.5.1",
     "@fastify/swagger": "^8.1.0",
     "@fastify/view": "^7.1.2",
     "fastify": "^4.9.2",

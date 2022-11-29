@@ -1,7 +1,14 @@
 const fastify = require('fastify')({logger: true})
+const path = require('path')
 const PORT = 3000
 
 fastify.register(require('./routes/items'));
+
+// Used to render files in the public folder - CSS etc
+fastify.register(require('@fastify/static'), {
+    root: path.join(__dirname, 'public'),
+    prefix: '/public/'
+})
 
 fastify.register(require('@fastify/swagger'), {
     routePrefix: '/docs',
@@ -11,6 +18,13 @@ fastify.register(require('@fastify/swagger'), {
             title: { title: 'test'}
         }
     }
+})
+
+fastify.register(require("@fastify/view"), {
+    engine: {
+        nunjucks: require('nunjucks')
+    },
+    viewExt: 'njk'
 })
 
 // fastify.register(require('@fastify/swagger'), {
@@ -31,6 +45,10 @@ fastify.register(require('@fastify/swagger'), {
 //         info: { title: 'fastify-api' },
 //     },
 // })
+
+fastify.get('/wittr', (req,reply) => {
+    reply.view('views/wittr/feed.njk', { title: "My Wittr Feed" })
+})
  
 const start = async() => {
     try {
