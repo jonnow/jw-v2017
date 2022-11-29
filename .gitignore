@@ -8,3 +8,4 @@ minified/index.html
 compressed/
 .user.ini
 web.config
+node_modules/
